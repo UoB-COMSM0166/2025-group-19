@@ -11,14 +11,16 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 
 ## Your Group
 
-Add a group photo here!
+![groupPhoto](https://github.com/user-attachments/assets/ed444ef8-22ce-410e-9d05-1c2d5bb0d39b)
 
-- Group member 1, name, email, role
-- Group member 2, name, email, role
-- Group member 3, name, email, role
-- Group member 4, name, email, role
-- Group member 5, name, email, role
-- Group member 6, name, email, role
+| Name | Email  | Role |
+| -------- | -------- | -------- |
+| Hsin-Hsien Ho (Erik) | fp24955@bristol.ac.uk | TBD |
+| Mingqiao Fan (Daisy) | yi24612@bristol.ac.uk | TBD |
+| Shinchuan Chen (Lucas) | wj24296@bristol.ac.uk | TBD |
+| Yu-Jin Chen (Elle) | nj24628@bristol.ac.uk |TBD |
+| Lee Areta | wb24440@bristol.ac.uk | TBD |
+| Mikas Vong | tg24484@bristol.ac.uk | TBD |
 
 ## Project Report
 
