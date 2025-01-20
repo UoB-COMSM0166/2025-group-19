@@ -24,92 +24,14 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 
 ## Game Research
 
-### Block :purple_circle:
-> Gameplay reference: [link](https://www.youtube.com/watch?v=aU1Hrpr2igM)
+# Game Mechanics Overview
 
-#### Game mechanics:
-1. **Collision Detection for Bricks**
-   - Check if the ball collides with any brick and ensure the ball's direction changes correctly based on the angle of collision
-2. **Managing Multiple Balls**
-   - Handle multiple balls simultaneously, correctly tracking each ball's position, direction, and speed
-3. **Implementing Power-Ups**
-   - Implement power-ups that impact the game state, such as paddle enlargement, adding more balls, or altering ball behavior
-4. **Game Rendering and Performance**
-   - Ensure real-time rendering of the game screen, especially with multiple balls and bricks, which may lead to performance bottlenecks
-5. **Game Logic and Level Design**
-   - Design multiple levels with varying brick layouts and gradually increasing difficulty
-6. **Physics Simulation**
-   - Simulate basic physical rules for ball movement, such as velocity vectors and angle reflections
-
-
-### Bombie :bomb:
-> Gameplay reference: [link](https://www.youtube.com/watch?v=W5vcOb7laG0)
-
-#### Game mechanics:
-1. **Game Engine or Canvas**
-   - Set up a canvas to render the game scene
-2. **Game Map Design**
-   - Represent the map with a 2D array  
-   - Include destructible walls, indestructible walls, and empty spaces
-3. **Character Controls**
-   - Player character movement control (up, down, left, right)
-   - Player can place bombs and control their explosions
-4. **Bomb and Explosion Logic**
-   - Set bomb delay time and explosion range 
-   - Explosions destroy destructible walls, enemies, or affect the player
-5. **Enemy AI**
-   - Enemies move randomly or track the player
-   - Enemies set bombs and avoid the player's bombs
-6. **Collision Detection**
-   - Detect collisions between the player, walls, and bombs
-   - Detect explosions with destructible items or the player
-7. **Game Progression and End Conditions**
-   - Set game objectives (e.g., eliminate all enemies, survive until time runs out)
-   - Determine player death or game over conditions
-8. **Sound and Visual Effects**
-   - Add explosion sounds, character movement sounds, etc.  
-   - Include animation effects (e.g., explosions, character actions)
-
-
-### Temple Escape :hindu_temple:
-> Gameplay reference: [link](https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1)
-
-#### Game mechanics:
-1. **Character Movement**
-   - Character an be controlled by swiping or arrow keys
-   - Moves in a straight line and only stopping when you hit a wall
-2. **Maze Design & Obstacles**
-   - Note what walls can be stopped on
-   - Ensure there is only one set path through each maze
-   - How traps & enemies are timed, activated, and the amount of damage done to the character
-3. **Location and Boundary Detection**
-   - Follow where the character is and how it interacts with collectable & traps
-4. **Power-ups & Outfits**
-   - Power-ups either allow extra lives/protection against traps or give bonus points & coins
-   - Each outfit gives a unique perk
-5. **Rendering**
-   - Only one section of the map shown at a time, so need to make sure that the player can travel between different sections without performance issues
-6. **Level Progression**
-   - For non-story based approach: end of game is determined by how many levels have been created
-   - Points collected in each level determined by collection of stars and dots
-   - Additional missions that give rewards based on completing quantifiable challenges
-
-
-### Ladder Master :ladder:
-> Gameplay reference: [link](https://www.youtube.com/watch?v=OkTk5ky-GWc)
-
-> Game involves a character running forward and collecting ‘ladders’ so that it can climb up a wall (to progress in the game). The ‘ladders’ on the ground are in three different colors and the player has to make sure the character only collects ‘ladders’ that match the character’s color.
-
-#### Game mechanics:
-1. **2D**
-   - The game is originally in 3D but we can modify it to crossing a river instead of climbing up a wall
-2. **Controls**
-   - Arrow keys movement of the character
-   - Optional / put obstacles
-   - Optional / make it more confusing for player - width of river can be varying, sometimes jumping across is sufficient, but if too wide - need long enough ladder
-3. **Character Colour Change**
-   - Color of the character can be changed by running through certain spots 
-   - Optional / we can make this color change random to make it harder for the player
+| Game         | Gameplay Reference                                                                 | Mechanics                                                                                                                        |
+|--------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| **Block** :purple_circle: | [Watch Gameplay](https://www.youtube.com/watch?v=aU1Hrpr2igM)                                            | - **Collision Detection for Bricks**: Detect ball collisions with bricks and adjust the ball's direction.                       <br> - **Managing Multiple Balls**: Track positions, directions, and speeds for multiple balls.                                   <br> - **Implementing Power-Ups**: Add power-ups like paddle enlargement, extra balls, or modified ball behavior.                 <br> - **Game Rendering and Performance**: Real-time rendering with optimization for multiple balls and bricks.                    <br> - **Game Logic and Level Design**: Create multiple levels with varying layouts and increasing difficulty.                    <br> - **Physics Simulation**: Simulate ball movement using velocity vectors and angle reflections.                                  |
+| **Bombie** :bomb:          | [Watch Gameplay](https://www.youtube.com/watch?v=W5vcOb7laG0)                                            | - **Game Engine or Canvas**: Render the game scene on a canvas.                                                                 <br> - **Game Map Design**: Represent the map with a 2D array including destructible walls, indestructible walls, and empty spaces. <br> - **Character Controls**: Enable player movement and bomb placement.                                                     <br> - **Bomb and Explosion Logic**: Add bomb delay, explosion range, and wall destruction mechanics.                               <br> - **Enemy AI**: Enemies move randomly or track players, place bombs, and avoid explosions.                                      <br> - **Collision Detection**: Detect collisions between players, walls, bombs, and explosions.                                    <br> - **Game Progression and End Conditions**: Define objectives, game-over conditions, and progression rules.                       <br> - **Sound and Visual Effects**: Include explosion sounds, animations, and movement effects.                                     |
+| **Temple Escape** :hindu_temple: | [Watch Gameplay](https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1) | - **Character Movement**: Use swiping or arrow keys to move in straight lines, stopping only at walls.                           <br> - **Maze Design & Obstacles**: Design single-path mazes with traps, timed enemies, and walls that can stop characters.         <br> - **Location and Boundary Detection**: Track character interaction with collectables and traps.                                 <br> - **Power-ups & Outfits**: Add power-ups for extra lives or bonus points; provide outfits with unique perks.                     <br> - **Rendering**: Display only one map section at a time for smooth transitions between areas.                                     <br> - **Level Progression**: Define game end based on level count or story progression; reward points for stars, dots, and missions. |
+| **Ladder Master** :ladder: | [Watch Gameplay](https://www.youtube.com/watch?v=OkTk5ky-GWc)                                            | - **2D Gameplay**: Simplify the original 3D concept to crossing a river instead of climbing walls.                               <br> - **Controls**: Move the character using arrow keys; optionally include obstacles or vary river widths.                        <br> - **Character Color Change**: Change the character's color by interacting with specific spots; make color changes random for difficulty. |
 
 ## Project Report
 
