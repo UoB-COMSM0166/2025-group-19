@@ -24,90 +24,92 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 
 ## Game Research
 
-### Block
-Gameplay reference: [link](https://www.youtube.com/watch?v=aU1Hrpr2igM)
+### Block :purple_circle:
+> Gameplay reference: [link](https://www.youtube.com/watch?v=aU1Hrpr2igM)
 
-#### Game mechanics
+#### Game mechanics:
 1. **Collision Detection for Bricks**
-⋅⋅⋅Check if the ball collides with any brick and ensure the ball's direction changes correctly based on the angle of collision
+   - Check if the ball collides with any brick and ensure the ball's direction changes correctly based on the angle of collision
 2. **Managing Multiple Balls**
-⋅⋅⋅Handle multiple balls simultaneously, correctly tracking each ball's position, direction, and speed
+   - Handle multiple balls simultaneously, correctly tracking each ball's position, direction, and speed
 3. **Implementing Power-Ups**
-⋅⋅⋅Implement power-ups that impact the game state, such as paddle enlargement, adding more balls, or altering ball behavior
+   - Implement power-ups that impact the game state, such as paddle enlargement, adding more balls, or altering ball behavior
 4. **Game Rendering and Performance**
-⋅⋅⋅Ensure real-time rendering of the game screen, especially with multiple balls and bricks, which may lead to performance bottlenecks
+   - Ensure real-time rendering of the game screen, especially with multiple balls and bricks, which may lead to performance bottlenecks
 5. **Game Logic and Level Design**
-⋅⋅⋅Design multiple levels with varying brick layouts and gradually increasing difficulty
+   - Design multiple levels with varying brick layouts and gradually increasing difficulty
 6. **Physics Simulation**
-⋅⋅⋅Simulate basic physical rules for ball movement, such as velocity vectors and angle reflections
+   - Simulate basic physical rules for ball movement, such as velocity vectors and angle reflections
 
 
-### Bombie
-Gameplay reference: [link](https://www.youtube.com/watch?v=W5vcOb7laG0)
+### Bombie :bomb:
+> Gameplay reference: [link](https://www.youtube.com/watch?v=W5vcOb7laG0)
 
-#### Game mechanics
+#### Game mechanics:
 1. **Game Engine or Canvas**
-⋅⋅⋅Set up a canvas to render the game scene
+   - Set up a canvas to render the game scene
 2. **Game Map Design**
-⋅⋅⋅Represent the map with a 2D array  
-⋅⋅⋅Include destructible walls, indestructible walls, and empty spaces
+   - Represent the map with a 2D array  
+   - Include destructible walls, indestructible walls, and empty spaces
 3. **Character Controls**
-⋅⋅⋅Player character movement control (up, down, left, right)
-⋅⋅⋅Player can place bombs and control their explosions
+   - Player character movement control (up, down, left, right)
+   - Player can place bombs and control their explosions
 4. **Bomb and Explosion Logic**
-⋅⋅⋅Set bomb delay time and explosion range 
-⋅⋅⋅Explosions destroy destructible walls, enemies, or affect the player
+   - Set bomb delay time and explosion range 
+   - Explosions destroy destructible walls, enemies, or affect the player
 5. **Enemy AI**
-⋅⋅⋅Enemies move randomly or track the player
-⋅⋅⋅Enemies set bombs and avoid the player's bombs
+   - Enemies move randomly or track the player
+   - Enemies set bombs and avoid the player's bombs
 6. **Collision Detection**
-⋅⋅⋅Detect collisions between the player, walls, and bombs
-⋅⋅⋅Detect explosions with destructible items or the player
+   - Detect collisions between the player, walls, and bombs
+   - Detect explosions with destructible items or the player
 7. **Game Progression and End Conditions**
-⋅⋅⋅Set game objectives (e.g., eliminate all enemies, survive until time runs out)
-⋅⋅⋅Determine player death or game over conditions
+   - Set game objectives (e.g., eliminate all enemies, survive until time runs out)
+   - Determine player death or game over conditions
 8. **Sound and Visual Effects**
-⋅⋅⋅Add explosion sounds, character movement sounds, etc.  
-⋅⋅⋅Include animation effects (e.g., explosions, character actions)
+   - Add explosion sounds, character movement sounds, etc.  
+   - Include animation effects (e.g., explosions, character actions)
 
-### Temple Escape
-Gameplay reference: [link](https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1)
 
-#### Game mechanics
+### Temple Escape :hindu_temple:
+> Gameplay reference: [link](https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1)
+
+#### Game mechanics:
 1. **Character Movement**
-⋅⋅⋅Character an be controlled by swiping or arrow keys
-⋅⋅⋅Moves in a straight line and only stopping when you hit a wall
+   - Character an be controlled by swiping or arrow keys
+   - Moves in a straight line and only stopping when you hit a wall
 2. **Maze Design & Obstacles**
-⋅⋅⋅Note what walls can be stopped on
-⋅⋅⋅Ensure there is only one set path through each maze
-⋅⋅⋅How traps are timed, activated, and the amount of damage done to the character
+   - Note what walls can be stopped on
+   - Ensure there is only one set path through each maze
+   - How traps & enemies are timed, activated, and the amount of damage done to the character
 3. **Location and Boundary Detection**
-⋅⋅⋅Follow where the character is and how it interacts with collectable & traps
+   - Follow where the character is and how it interacts with collectable & traps
 4. **Power-ups & Outfits**
-⋅⋅⋅Power-ups either allow extra lives/protection against traps or give bonus points & coins
-⋅⋅⋅Each outfit gives a unique perk
+   - Power-ups either allow extra lives/protection against traps or give bonus points & coins
+   - Each outfit gives a unique perk
 5. **Rendering**
-⋅⋅⋅Only one section of the map shown at a time, so need to make sure that the player can travel between different sections without performance issues
+   - Only one section of the map shown at a time, so need to make sure that the player can travel between different sections without performance issues
 6. **Level Progression**
-⋅⋅⋅For non-story based approach: end of game is determined by how many levels have been created
-⋅⋅⋅Points collected in each level determined by collection of stars and dots
-⋅⋅⋅Additional missions that give rewards based on completing quantifiable challenges
+   - For non-story based approach: end of game is determined by how many levels have been created
+   - Points collected in each level determined by collection of stars and dots
+   - Additional missions that give rewards based on completing quantifiable challenges
 
-### Ladder Master
-Gameplay reference: [link](https://www.youtube.com/watch?v=OkTk5ky-GWc)
 
-Game involves a character running forward and collecting ‘ladders’ so that it can climb up a wall (to progress in the game). The ‘ladders’ on the ground are in three different colors and the player has to make sure the character only collects ‘ladders’ that match the character’s color.
+### Ladder Master :ladder:
+> Gameplay reference: [link](https://www.youtube.com/watch?v=OkTk5ky-GWc)
 
-#### Game mechanics
+> Game involves a character running forward and collecting ‘ladders’ so that it can climb up a wall (to progress in the game). The ‘ladders’ on the ground are in three different colors and the player has to make sure the character only collects ‘ladders’ that match the character’s color.
+
+#### Game mechanics:
 1. **2D**
-⋅⋅⋅The game is originally in 3D but we can modify it to crossing a river instead of climbing up a wall
+   - The game is originally in 3D but we can modify it to crossing a river instead of climbing up a wall
 2. **Controls**
-⋅⋅⋅Arrow keys movement of the character
-⋅⋅⋅Optional / put obstacles
-⋅⋅⋅Optional / make it more confusing for player - width of river can be varying, sometimes jumping across is sufficient, but if too wide - need long enough ladder
+   - Arrow keys movement of the character
+   - Optional / put obstacles
+   - Optional / make it more confusing for player - width of river can be varying, sometimes jumping across is sufficient, but if too wide - need long enough ladder
 3. **Character Colour Change**
-⋅⋅⋅Color of the character can be changed by running through certain spots 
-⋅⋅⋅Optional / we can make this color change random to make it harder for the player
+   - Color of the character can be changed by running through certain spots 
+   - Optional / we can make this color change random to make it harder for the player
 
 ## Project Report
 
