@@ -22,6 +22,9 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 | Lee Areta | wb24440@bristol.ac.uk | TBD |
 | Mikas Vong | tg24484@bristol.ac.uk | TBD |
 
+##Introduction
+Our game is inspired by the classic block breaker game. In its traditional form, a ball bounces around the screen, breaking blocks upon impact. The player controls a paddle at the bottom, ensuring the ball stays in play while aiming to clear all the blocks. Our version introduces varying difficulty levels, each with unique mechanics. For example, some levels will feature changing ball speeds when specific blocks are destroyed, moving blocks, changing ball size, and other dynamic challenges to keep the gameplay engaging and unpredictable.
+
 ## Game Research
 
 ### Game Mechanics Overview
