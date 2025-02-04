@@ -5,7 +5,7 @@
 
 | Week | Description  | Link |
 | -------- | -------- | -------- |
-| Week1 |  |  |
+| Week1 | [Link](https://github.com/UoB-COMSM0166/github-intro) | this page |
 | Week2 |  |  |
 | Week3 |  |  |
 | Week4 |  |  |
