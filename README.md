@@ -31,7 +31,6 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 | Lee Areta | wb24440@bristol.ac.uk | TBD |
 | Mikas Vong | tg24484@bristol.ac.uk | TBD |
 
-
 ## Project Report
 
 ### Introduction
