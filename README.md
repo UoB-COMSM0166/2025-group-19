@@ -5,10 +5,10 @@
 
 | Week | Description  | Link |
 | -------- | -------- | -------- |
-| Week1 |  |  |
-| Week2 |  |  |
-| Week3 |  |  |
-| Week4 |  |  |
+| Week1 | Gaming Ideas | [Link](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week01/Readme.md) |
+| Week2 | p5.js Workshop | [Link](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week02/Readme.md) |
+| Week3 | Paper prototyping | [Link](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/Week03/ideas) |
+| Week4 | Requirements | [Link](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week04/Readme.md) |
 
 ## Your Game
 
@@ -30,23 +30,6 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 | Yu-Jin Chen (Elle) | nj24628@bristol.ac.uk |TBD |
 | Lee Areta | wb24440@bristol.ac.uk | TBD |
 | Mikas Vong | tg24484@bristol.ac.uk | TBD |
-
-## Introduction
-Our game is inspired by the classic block breaker game. In its traditional form, a ball bounces around the screen, breaking blocks upon impact. The player controls a paddle at the bottom, ensuring the ball stays in play while aiming to clear all the blocks. Our version introduces varying difficulty levels, each with unique mechanics. For example, some levels will feature changing ball speeds when specific blocks are destroyed, moving blocks, changing ball size, and other dynamic challenges to keep the gameplay engaging and unpredictable.
-
-## Game Research
-
-### Game Mechanics Overview
-
-| Game         | Gameplay Reference                                                                 | Mechanics                                                                                                                        |
-|--------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| **Block** :purple_circle: | [Watch Gameplay](https://www.youtube.com/watch?v=aU1Hrpr2igM)                                            | - **Collision Detection for Bricks**: Detect ball collisions with bricks and adjust the ball's direction.                       <br> - **Managing Multiple Balls**: Track positions, directions, and speeds for multiple balls.                                   <br> - **Implementing Power-Ups**: Add power-ups like paddle enlargement, extra balls, or modified ball behavior.                 <br> - **Game Rendering and Performance**: Real-time rendering with optimization for multiple balls and bricks.                    <br> - **Game Logic and Level Design**: Create multiple levels with varying layouts and increasing difficulty.                    <br> - **Physics Simulation**: Simulate ball movement using velocity vectors and angle reflections.                                  |
-| **Bombie** :bomb:          | [Watch Gameplay](https://www.youtube.com/watch?v=W5vcOb7laG0)                                            | - **Game Engine or Canvas**: Render the game scene on a canvas.                                                                 <br> - **Game Map Design**: Represent the map with a 2D array including destructible walls, indestructible walls, and empty spaces. <br> - **Character Controls**: Enable player movement and bomb placement.                                                     <br> - **Bomb and Explosion Logic**: Add bomb delay, explosion range, and wall destruction mechanics.                               <br> - **Enemy AI**: Enemies move randomly or track players, place bombs, and avoid explosions.                                      <br> - **Collision Detection**: Detect collisions between players, walls, bombs, and explosions.                                    <br> - **Game Progression and End Conditions**: Define objectives, game-over conditions, and progression rules.                       <br> - **Sound and Visual Effects**: Include explosion sounds, animations, and movement effects.                                     |
-| **Temple Escape** :hindu_temple: | [Watch Gameplay](https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1) | - **Character Movement**: Use swiping or arrow keys to move in straight lines, stopping only at walls.                           <br> - **Maze Design & Obstacles**: Design single-path mazes with traps, timed enemies, and walls that can stop characters.         <br> - **Location and Boundary Detection**: Track character interaction with collectables and traps.                                 <br> - **Power-ups & Outfits**: Add power-ups for extra lives or bonus points; provide outfits with unique perks.                     <br> - **Rendering**: Display only one map section at a time for smooth transitions between areas.                                     <br> - **Level Progression**: Define game end based on level count or story progression; reward points for stars, dots, and missions. |
-| **Ladder Master** :ladder: | [Watch Gameplay](https://www.youtube.com/watch?v=OkTk5ky-GWc)                                            | - **2D Gameplay**: Simplify the original 3D concept to crossing a river instead of climbing walls.                               <br> - **Controls**: Move the character using arrow keys; optionally include obstacles or vary river widths.                        <br> - **Character Color Change**: Change the character's color by interacting with specific spots; make color changes random for difficulty. |
-| **Level Devil** 😈 | [Watch Gameplay](https://www.youtube.com/watch?v=nn2EUssloa4)                                            | - **Deceptive Traps**: Hidden spikes, fake platforms, and paths that mislead players.                                            <br> - **Conditional Mechanics**: Triggers and elements like springboards behave differently based on player actions.            <br> - **Trial-and-Error Progression**: Players must memorize safe paths and solve puzzles through experimentation.                  <br> - **Dynamic Triggers**: Hidden switches alter the environment, activating platforms or deactivating traps.                      <br> - **Troll Design**: Misleading visual cues (e.g., fake doors or signs) challenge player patience and observation skills.         |
-
-
 
 ## Project Report
 
