@@ -1,6 +1,15 @@
 # 2025-group-19
 2025 COMSM0166 group 19
 
+## Assignments
+
+| Week | Description  | Link |
+| -------- | -------- | -------- |
+| Week1 |  |  |
+| Week2 |  |  |
+| Week3 |  |  |
+| Week4 |  |  |
+
 ## Your Game
 
 Link to your game [PLAY HERE](https://peteinfo.github.io/COMSM0166-project-template/)
