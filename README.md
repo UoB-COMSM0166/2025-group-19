@@ -8,7 +8,7 @@
 | Week1 | Gaming Ideas | [Link](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week01/Readme.md) |
 | Week2 | p5.js Workshop | [Link](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week02/Readme.md) |
 | Week3 | Paper prototyping | [Link](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/Week03/ideas) |
-| Week4 | Requirements | [Link](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week04/Readme.md) |
+| Week4 | Requirements | [Workshop](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week04/Workshop.md) [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week04/Readme.md) |
 
 ## Your Game
 
