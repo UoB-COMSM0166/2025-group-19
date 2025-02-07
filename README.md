@@ -1,6 +1,10 @@
 # 2025-group-19
 2025 COMSM0166 group 19
 
+## Useful Link
+- [Karban]()
+- [Design](https://whimsical.com/everyone-in-workspace-GYJZVKc8QnFvaS99Hd7Can)
+
 ## Assignments
 
 | Week | Description  | Link |
