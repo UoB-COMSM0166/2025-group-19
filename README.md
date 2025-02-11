@@ -6,18 +6,19 @@
 - [Design](https://whimsical.com/everyone-in-workspace-GYJZVKc8QnFvaS99Hd7Can)
 
 ## Assignments
-
 | Week | Description  | Link |
 | -------- | -------- | -------- |
-| Week1 | Gaming Ideas | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week01/Readme.md) |
-| Week2 | p5.js Workshop | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week02/Readme.md) |
-| Week3 | Paper prototyping | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/Week03/Readme.md) <br> [Video Link 1](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/Week03/ideas/block) <br> [Video Link 2](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/Week03/ideas/level_devil) |
-| Week4 | Requirements | [Workshop](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week04/Workshop.md) <br> [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week04/Readme.md) |
-| Week5 | Requirements | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week05/Readme.md) |
+| Week 01 | Gaming Ideas | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week01/Readme.md) |
+| Week 02 | p5.js Workshop | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week02/Readme.md) |
+| Week 03 | Paper prototyping | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/Week03/Readme.md) <br> [Video Link 1](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/Week03/ideas/block) <br> [Video Link 2](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/Week03/ideas/level_devil) |
+| Week 04 | Requirements | [Workshop](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week04/Workshop.md) <br> [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week04/Readme.md) |
+| Week 05 | Object Orientated Design | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/Week05/Readme.md) |
+
+## Assignments
 
 ## Your Game
 
-Link to your game [PLAY HERE](https://peteinfo.github.io/COMSM0166-project-template/)
+Link to your game [PLAY HERE](https://uob-comsm0166.github.io/2025-group-19/)
 
 Your game lives in the [/docs](/docs) folder, and is published using Github pages to the link above.
 
