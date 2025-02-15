@@ -2,7 +2,7 @@
 2025 COMSM0166 group 19
 
 ## Useful Link
-- [Karban](https://app.zenhub.com/workspaces/group-19-2025-67a4d47de1f37c0010df5ced/home)
+- [Kanban](https://app.zenhub.com/workspaces/group-19-2025-67a4d47de1f37c0010df5ced/home)
 - [Design](https://whimsical.com/everyone-in-workspace-GYJZVKc8QnFvaS99Hd7Can)
 
 ## Assignments
