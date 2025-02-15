@@ -9,7 +9,7 @@ function preload() {
 
 function setup() {
   createCanvas(800, 600);
-  currentScene = new ChooseStage();
+  currentScene = new WelcomePage();
 }
 
 function draw() {
@@ -17,10 +17,12 @@ function draw() {
   currentScene.update();
   currentScene.display();
 
-  if (currentScene.isCleared()) {
-    currentScene = new ChooseStage();
-  } else if (currentScene.isGameOver()) {
-    currentScene = new ChooseStage();
+  if (currentScene instanceof BasicStage) {
+    if (currentScene.isCleared()) {
+      currentScene.showWinDialog();
+    } else if (currentScene.isGameOver()) {
+      currentScene.showLoseDialog();
+    }
   }
 }
 
