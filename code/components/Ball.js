@@ -25,12 +25,12 @@ class Ball {
       }
     }
   
-    checkCollision(paddle, bricks) {
+    checkCollision(paddle, bricks, powerUps) {
       if (this.y + this.radius > paddle.y && this.x > paddle.x && this.x < paddle.x + paddle.width) {
         this.speedY *= -1;
         this.y = paddle.y - this.radius;
       }
-  
+    
       for (let brick of bricks) {
         if (!brick.isDestroyed &&
             this.x > brick.x &&
@@ -39,10 +39,14 @@ class Ball {
             this.y + this.radius > brick.y) {
           this.speedY *= -1;
           brick.isDestroyed = true;
+    
+          if (brick.shouldDropTool) {
+            powerUps.push(new Tool(brick.x + brick.width / 2, brick.y + brick.height / 2));
+          }
           break;
         }
       }
-    }
+    }    
   
     isOutOfBounds() {
       return this.y - this.radius > height;

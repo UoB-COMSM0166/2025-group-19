@@ -4,7 +4,7 @@ let bgMusic;
 
 function preload() {
   skyBackground = loadImage('assets/images/skyBackground.webp');
-  bgMusic = loadSound('assets/sounds/bgMusic.mp3');
+  // bgMusic = loadSound('assets/sounds/bgMusic.mp3');
 }
 
 function setup() {
