@@ -24,6 +24,6 @@ function keyPressed() {
 function mousePressed() {
   if (!bgMusic.isPlaying()) {
     bgMusic.loop();
-    bgMusic.setVolume(0);
+    bgMusic.setVolume(0.5);
   }
 }
