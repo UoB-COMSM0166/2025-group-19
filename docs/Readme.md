@@ -86,6 +86,3 @@ Ensure you have Node.js installed on your system.
 ## Customization
 - Modify `Stage01Controller.js` and `Stage02Controller.js` to create custom levels.
 - Adjust `Ball.js`, `Paddle.js`, and `Brick.js` to fine-tune game mechanics.
-
-## License
-This project is licensed under the MIT License.
