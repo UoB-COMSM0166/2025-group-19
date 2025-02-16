@@ -1,5 +1,6 @@
-class ChooseStage {
-  constructor() {
+class StageMapView {
+  constructor(controller) {
+    this.controller = controller;
     this.title = "Choose Your Stage";
     this.options = ["Stage01", "Stage02"];
     this.selectedIndex = 0;
@@ -30,11 +31,8 @@ class ChooseStage {
     } else if (key === 'ArrowDown') {
       this.selectedIndex = (this.selectedIndex + 1) % this.options.length;
     } else if (key === 'Enter') {
-      if (this.options[this.selectedIndex] === "Stage01") {
-        currentScene = new Stage01(skyBackground, "Stage01");
-      } else if (this.options[this.selectedIndex] === "Stage02") {
-        currentScene = new Stage02(skyBackground, "Stage02");
-      }
+      const selectedStage = this.options[this.selectedIndex];
+      this.controller.switchToStage(selectedStage);
     }
   }
 

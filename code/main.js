@@ -1,4 +1,4 @@
-let currentScene;
+let mainController;
 let skyBackground;
 let bgMusic;
 
@@ -9,30 +9,21 @@ function preload() {
 
 function setup() {
   createCanvas(1000, 600);
-  currentScene = new WelcomePage();
+  pageController = new PageController();
 }
 
 function draw() {
-  background(0);
-  currentScene.update();
-  currentScene.display();
-
-  if (currentScene instanceof BasicStage) {
-    if (currentScene.isCleared()) {
-      currentScene.showWinDialog();
-    } else if (currentScene.isGameOver()) {
-      currentScene.showLoseDialog();
-    }
-  }
+  pageController.update();
+  pageController.display();
 }
 
 function keyPressed() {
-  currentScene.handleKeyPress(key);
+  pageController.handleKeyPress(key);
 }
 
 function mousePressed() {
   if (!bgMusic.isPlaying()) {
     bgMusic.loop();
-    bgMusic.setVolume(0.5);
+    bgMusic.setVolume(0);
   }
 }
