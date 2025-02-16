@@ -1,4 +1,4 @@
-class Sidebar {
+class SidebarView {
   constructor(stageName) {
       this.stageName = stageName;
       this.score = 0;
