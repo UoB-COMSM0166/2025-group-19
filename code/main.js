@@ -8,7 +8,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(1000, 600);
   currentScene = new WelcomePage();
 }
 

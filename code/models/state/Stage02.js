@@ -1,6 +1,7 @@
 class Stage02 extends BasicStage {
-    constructor(bgImage) {
-      super(bgImage);
+    constructor(bgImage, stageName) {
+      console.log("stage02:", stageName);
+      super(bgImage, stageName);
       this.rows = 20;
       this.cols = 5;
       this.brickWidth = width / this.cols;

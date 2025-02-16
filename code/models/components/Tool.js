@@ -7,17 +7,17 @@ class Tool {
     this.type = random(['ballGrow', 'ballShrink', 'paddleGrow', 'paddleMax', 'paddleShrink']);
   }
 
-  display() {
-    fill(0, 0, 255);
-    textSize(16);
-    textAlign(CENTER, CENTER);
+  display(canvas = window) {
+    canvas.fill(0, 0, 255);
+    canvas.textSize(16);
+    canvas.textAlign(CENTER, CENTER);
     let symbol = '';
     if (this.type === 'ballGrow') symbol = '<B>';
     if (this.type === 'ballShrink') symbol = '<S>';
     if (this.type === 'paddleGrow') symbol = '<->';
     if (this.type === 'paddleMax') symbol = '<<->>';
     if (this.type === 'paddleShrink') symbol = '>-<';
-    text(symbol, this.x, this.y);
+    canvas.text(symbol, this.x, this.y);
   }
 
   update() {

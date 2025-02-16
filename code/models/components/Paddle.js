@@ -7,9 +7,9 @@ class Paddle {
       this.speed = 7;
     }
   
-    display() {
-      fill(255);
-      rect(this.x, this.y, this.width, this.height);
+    display(canvas = window) {
+      canvas.fill(255);
+      canvas.rect(this.x, this.y, this.width, this.height);
     }
   
     move() {

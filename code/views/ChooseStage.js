@@ -31,9 +31,9 @@ class ChooseStage {
       this.selectedIndex = (this.selectedIndex + 1) % this.options.length;
     } else if (key === 'Enter') {
       if (this.options[this.selectedIndex] === "Stage01") {
-        currentScene = new Stage01(skyBackground);
+        currentScene = new Stage01(skyBackground, "Stage01");
       } else if (this.options[this.selectedIndex] === "Stage02") {
-        currentScene = new Stage02(skyBackground);
+        currentScene = new Stage02(skyBackground, "Stage02");
       }
     }
   }
