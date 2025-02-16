@@ -10,7 +10,7 @@ class PaddleSizeEffect extends Effect {
     } else if (this.sizeType === 'short') {
       paddle.width = 50;
     } else if (this.sizeType === 'max') {
-      paddle.width = width;
+      paddle.width = paddle.gameWidth;
     }
   }
 }
