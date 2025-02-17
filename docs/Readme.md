@@ -36,7 +36,8 @@ code/
 │   ├── WelcomeView.js
 │   ├── StageMapView.js
 │   ├── GameView.js
-│   └── SidebarView.js
+│   ├── SidebarView.js
+│   └── ScrollingBackground.js
 │
 ├── styles/
 │   └── style.css
