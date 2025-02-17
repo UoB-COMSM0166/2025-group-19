@@ -4,12 +4,18 @@ class WelcomeView {
       this.title = "Zodiac Catch (Half)";
       this.options = ["Start", "Setting", "Information"];
       this.selectedIndex = 0;
+      this.roadAnimation = new ScrollingBackground(roadImg);
     }
   
-    update() {}
+    update() {
+      this.roadAnimation.update();
+    }
   
     display() {
-      background(0);
+      createCanvas(windowWidth, windowHeight); // full size screen
+      background('#6EB6FF');
+      this.roadAnimation.display();
+      this.roadAnimation.update();
       fill(255);
       textSize(40);
       textAlign(CENTER, CENTER);

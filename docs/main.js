@@ -1,10 +1,12 @@
 let mainController;
 let skyBackground;
 let bgMusic;
+let roadImg;
 
 function preload() {
   skyBackground = loadImage('assets/images/skyBackground.webp');
   bgMusic = loadSound('assets/sounds/bgMusic.mp3');
+  roadImg = loadImage('assets/images/road.png');
 }
 
 function setup() {
