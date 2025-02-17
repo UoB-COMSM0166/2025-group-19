@@ -1,6 +1,14 @@
 body {
-    margin: 0;
-    background-color: #111;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-  }
+  margin: 0;
+  background-color: #111;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* TODO: If "display: block" is not added, 
+the full-size screen will have a scrollbar. */
+/*  
+canvas {
+  display: block;
+}
+*/
