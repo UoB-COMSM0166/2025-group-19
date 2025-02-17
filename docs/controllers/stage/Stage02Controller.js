@@ -1,6 +1,14 @@
 class Stage02Controller extends StageController {
   constructor(state, view, sidebar, pageController) {
     super(state, view, sidebar, pageController);
+    this.toolDropRate = 0.7; // 40% dropping rate
+    this.toolProbabilities = {
+      ballGrow: 0.5,
+      ballShrink: 0.5,
+      paddleGrow: 0.6,
+      paddleMax: 0.3,
+      paddleShrink: 0.8,
+    };
   }
   initBricks() {
     this.state.bricks = [];

@@ -27,7 +27,8 @@ class Ball {
     }
   }
 
-  checkCollision(paddle, bricks, powerUps, sidebar) {
+  checkCollision(paddle, bricks, tools, sidebar, stageController) {
+    // Ball collision with paddle
     if (
       this.y + this.radius > paddle.y &&
       this.y - this.radius < paddle.y + paddle.height &&
@@ -38,6 +39,7 @@ class Ball {
       this.y = paddle.y - this.radius;
     }
 
+    // Ball collision with bricks
     for (let brick of bricks) {
       if (
         !brick.isDestroyed &&
@@ -50,11 +52,16 @@ class Ball {
         brick.isDestroyed = true;
         sidebar.addScore(100);
 
-        if (brick.shouldDropTool) {
-          powerUps.push(
-            new Tool(brick.x + brick.width / 2, brick.y + brick.height / 2)
-          );
+        // Generate tool (power-up) via stageController with probability
+        const tool = stageController.generateTool(
+          brick.x + brick.width / 2,
+          brick.y + brick.height / 2
+        );
+
+        if (tool) {
+          tools.push(tool);
         }
+
         break;
       }
     }

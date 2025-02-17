@@ -6,11 +6,35 @@ class StageController {
       this.pageController = pageController;
       this.showingDialog = false;
       this.dialogText = '';
+      this.toolDropRate = 0; // tool dropping rate
+      this.toolProbabilities = {}; // dropping tool array
       this.initBricks();
   }
 
   initBricks() {
     throw new Error('initBricks() should be implemented by subclass!');
+  }
+
+  generateTool(x, y) {
+    if (Math.random() > this.toolDropRate) {
+      return null;
+    }
+    const toolTypes = Object.keys(this.toolProbabilities);
+    const probabilities = Object.values(this.toolProbabilities);
+    const selectedToolType = this.weightedRandom(toolTypes, probabilities);
+    return new Tool(x, y, selectedToolType);
+  }
+
+  weightedRandom(items, weights) {
+    const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+    let randomValue = Math.random() * totalWeight;
+
+    for (let i = 0; i < items.length; i++) {
+      randomValue -= weights[i];
+      if (randomValue <= 0) {
+        return items[i];
+      }
+    }
   }
 
   update() {
@@ -20,7 +44,7 @@ class StageController {
 
       for (let ball of this.state.balls) {
           ball.update();
-          ball.checkCollision(this.state.paddle, this.state.bricks, this.state.tools, this.sidebar);
+          ball.checkCollision(this.state.paddle, this.state.bricks, this.state.tools, this.sidebar, this);
       }
 
       for (let i = this.state.tools.length - 1; i >= 0; i--) {
@@ -87,7 +111,6 @@ class StageController {
 
   showWinDialog() {
       this.showingDialog = true;
-      console.log("this.state.stageName:", this.state.stageName);
       this.dialogText = this.state.stageName === 'Stage01' ? 'You Win! Go to Stage 02? (Y/N)' : 'You Win! Congratulations! (Press N to return)';
 
       this.onYes = () => {
