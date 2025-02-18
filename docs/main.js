@@ -12,6 +12,7 @@ function preload() {
 function setup() {
   createCanvas(1000, 600);
   pageController = new PageController();
+  mouseController = new MouseController(pageController, bgMusic);
 }
 
 function draw() {
@@ -21,11 +22,17 @@ function draw() {
 
 function keyPressed() {
   pageController.handleKeyPress(key);
+  if (pageController.currentPage instanceof StageController) {
+    pageController.currentPage.keyboardController.handleKeyPressed(key);
+  }
+}
+
+function keyReleased() {
+  if (pageController.currentPage instanceof StageController) {
+    pageController.currentPage.keyboardController.handleKeyReleased(key);
+  }
 }
 
 function mousePressed() {
-  if (!bgMusic.isPlaying()) {
-    bgMusic.loop();
-    bgMusic.setVolume(0.5);
-  }
+  mouseController.handleMousePressed(mouseX, mouseY);
 }

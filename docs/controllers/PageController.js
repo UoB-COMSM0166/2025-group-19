@@ -1,20 +1,20 @@
 class PageController {
     constructor() {
-      this.currentScene = new WelcomeView(this);
+      this.currentPage = new WelcomeView(this);
     }
   
     switchToStage(stageName) {
       const bgImage = skyBackground;
       const state = new StageState(stageName, bgImage);
       const sidebar = new SidebarView(stageName);
-      const game = new GameView(state);
+      const gameview = new GameView(state);
     
       switch (stageName) {
         case 'Stage01':
-          this.currentScene = new Stage01Controller(state, game, sidebar, this);
+          this.currentPage = new Stage01Controller(state, gameview, sidebar, this);
           break;
         case 'Stage02':
-          this.currentScene = new Stage02Controller(state, game, sidebar, this);
+          this.currentPage = new Stage02Controller(state, gameview, sidebar, this);
           break;
         default:
           console.error('Unknown: ' + stageName);
@@ -23,23 +23,23 @@ class PageController {
     }
   
     switchToWelcome() {
-      this.currentScene = new WelcomeView(this);
+      this.currentPage = new WelcomeView(this);
     }
   
-    switchToChooseStage() {
-      this.currentScene = new StageMapView(this);
+    switchToStageMap() {
+      this.currentPage = new StageMapView(this);
     }
   
     update() {
-      this.currentScene.update();
+      this.currentPage.update();
     }
   
     display() {
-      this.currentScene.display();
+      this.currentPage.display();
     }
   
     handleKeyPress(key) {
-      this.currentScene.handleKeyPress(key);
+      this.currentPage.handleKeyPress(key);
     }
   }
   

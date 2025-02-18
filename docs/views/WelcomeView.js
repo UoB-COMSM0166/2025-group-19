@@ -40,7 +40,7 @@ class WelcomeView {
       } else if (key === 'Enter') {
         const selectedOption = this.options[this.selectedIndex];
         if (selectedOption === "Start") {
-          this.controller.switchToChooseStage();
+          this.controller.switchToStageMap();
         } else if (selectedOption === "Setting") {
           alert("under construction ...");
         } else if (selectedOption === "Information") {
