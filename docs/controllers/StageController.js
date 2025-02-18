@@ -77,6 +77,9 @@ class StageController {
               this.pageController.switchToStage('Stage 02');
               break;
           case 'Stage 02':
+            this.pageController.switchToStage('Stage 03');
+              break;
+          case 'Stage 03':
               this.pageController.switchToWelcome();
               break;
           default:
@@ -138,6 +141,15 @@ class StageController {
           case 'paddleShrink':
               new PaddleSizeEffect('short').applyEffect(this.state.balls, this.state.paddle);
               break;
+        //   case 'timeIncrease':
+        //       new TimeEffect('add').applyEffect(this.sidebar);
+        //       break;
+        //   case 'timeDecrease':
+        //       new TimeEffect('minus').applyEffect(this.sidebar);
+        //       break;
+        //   case 'paddleReverse':
+        //       new PaddleDirectionEffect('reverse').applyEffect(this.state.balls, this.state.paddle);
+        //       break;
       }
   }
 }

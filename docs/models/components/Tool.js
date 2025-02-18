@@ -4,7 +4,9 @@ class Tool {
     this.y = y;
     this.size = 20;
     this.speed = 3;
-    this.type = random(['ballGrow', 'ballShrink', 'paddleGrow', 'paddleMax', 'paddleShrink']);
+    // this.type = random(['ballGrow', 'ballShrink', 'paddleGrow', 'paddleMax', 'paddleShrink']);
+    // this.type = random(['ballGrow', 'ballShrink', 'paddleGrow', 'paddleMax', 'paddleShrink', 'timeIncrease', 'timeDecrease', 'paddleReverse']);
+    this.type = random(['timeIncrease', 'timeDecrease', 'paddleReverse']);
   }
 
   display(canvas = window) {
@@ -17,6 +19,9 @@ class Tool {
     if (this.type === 'paddleGrow') symbol = '<->';
     if (this.type === 'paddleMax') symbol = '<<->>';
     if (this.type === 'paddleShrink') symbol = '>-<';
+    if (this.type === 'timeIncrease') symbol = 'T+';
+    if (this.type === 'timeDecrease') symbol = 'T-';
+    if (this.type === 'paddleReverse') symbol = '>=R=<';
     canvas.text(symbol, this.x, this.y);
   }
 
