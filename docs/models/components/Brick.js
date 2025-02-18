@@ -6,7 +6,6 @@ class Brick {
       this.height = height;
       this.isDestroyed = false;
       this.isRed = isRed;
-      this.shouldDropTool = random() < 0.3; // dropping tools is 30%
     }
   
     display(canvas = window) {
@@ -16,4 +15,3 @@ class Brick {
       }
     }
   }
-  

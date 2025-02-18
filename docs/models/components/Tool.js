@@ -1,10 +1,10 @@
 class Tool {
-  constructor(x, y) {
+  constructor(x, y, type) {
     this.x = x;
     this.y = y;
     this.size = 20;
     this.speed = 3;
-    this.type = random(['ballGrow', 'ballShrink', 'paddleGrow', 'paddleMax', 'paddleShrink']);
+    this.type = type;
   }
 
   display(canvas = window) {

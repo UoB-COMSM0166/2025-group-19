@@ -6,6 +6,8 @@ class Paddle {
     this.y = gameHeight - this.height - 10;
     this.speed = 7;
     this.gameWidth = gameWidth;
+    this.isMovingLeft = false;
+    this.isMovingRight = false;
   }
 
   display(canvas = window) {
@@ -13,12 +15,20 @@ class Paddle {
     canvas.rect(this.x, this.y, this.width, this.height);
   }
 
-  move() {
-    if (keyIsDown(LEFT_ARROW)) {
+  update() {
+    if (this.isMovingLeft) {
       this.x = max(this.x - this.speed, 0);
     }
-    if (keyIsDown(RIGHT_ARROW)) {
+    if (this.isMovingRight) {
       this.x = min(this.x + this.speed, this.gameWidth - this.width);
     }
+  }
+
+  moveLeft(isMoving) {
+    this.isMovingLeft = isMoving;
+  }
+
+  moveRight(isMoving) {
+    this.isMovingRight = isMoving;
   }
 }
