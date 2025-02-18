@@ -6,9 +6,8 @@ class PaddleDirectionEffect extends Effect {
 
 	applyEffect(stageController) {
     const paddle = stageController.state.paddle;
-
-    if (this.sizeType === 'reverse') {
-			paddle.reverse = true;
+    if(this.sizeType === 'reverse') {
+			paddle.reverse = true; 
     }
   }
 
@@ -16,5 +15,6 @@ class PaddleDirectionEffect extends Effect {
     const paddle = stageController.state.paddle;
 		paddle.reverse = false;
 	}
+
 }
 

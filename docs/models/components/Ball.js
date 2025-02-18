@@ -48,9 +48,16 @@ class Ball {
         this.y - this.radius < brick.y + brick.height &&
         this.y + this.radius > brick.y
       ) {
-        this.speedY *= -1;
-        brick.isDestroyed = true;
-        sidebar.addScore(100);
+        if(brick.isRed) {  
+          // if brick is red it won't break
+          // instead, ball gets eaten (will lose immediately if only one ball in play)
+          this.x = this.gameHeight;
+          this.y = this.gameWidth;
+        } else {
+          this.speedY *= -1;
+          brick.isDestroyed = true;
+          sidebar.addScore(100);
+        }
 
         // Generate tool (power-up) via stageController with probability
         const tool = stageController.generateTool(
@@ -58,7 +65,7 @@ class Ball {
           brick.y + brick.height / 2
         );
 
-        if (tool) {
+        if (tool && !brick.isRed) {
           tools.push(tool);
         }
 

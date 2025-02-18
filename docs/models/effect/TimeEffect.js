@@ -15,7 +15,6 @@ class TimeEffect extends Effect {
 				sidebar.timer -= 10;
         break;
     }
-
 	}
 
 	removeEffect(stageController) {
