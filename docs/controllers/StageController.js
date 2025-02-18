@@ -4,11 +4,11 @@ class StageController {
       this.view = view;
       this.sidebar = sidebar;
       this.pageController = pageController;
+      this.effectController = new EffectController(this);
       this.showingDialog = false;
       this.dialogText = '';
       this.toolDropRate = 0; // tool dropping rate
       this.toolProbabilities = {}; // dropping tool array
-      this.activeEffects = []; // tracking effect array
       this.ballRadius = 10; // shoting ball size
       this.initBricks();
   }
@@ -145,51 +145,7 @@ class StageController {
   }
 
   applyToolEffect(tool) {
-    let effect = null;
-    switch (tool.type) {
-      case 'ballGrow':
-        effect = new BallSizeEffect('big');
-        break;
-      case 'ballShrink':
-        effect = new BallSizeEffect('small');
-        break;
-      case 'paddleGrow':
-        effect = new PaddleSizeEffect('long');
-        break;
-      case 'paddleMax':
-        effect = new PaddleSizeEffect('max');
-        break;
-      case 'paddleShrink':
-        effect = new PaddleSizeEffect('short');
-        break;
-    }
-
-    if (effect) {
-      this.activateEffect(effect);
-    }
-  }
-
-  activateEffect(effect) {
-    // remove same type effect
-    this.removeSameTypeEffect(effect);
-
-    effect.activate(this);
-    this.activeEffects.push(effect);
-  }
-
-  removeSameTypeEffect(newEffect) {
-    this.activeEffects = this.activeEffects.filter(effect => {
-      if (effect.constructor === newEffect.constructor) {
-        effect.clearTimer(); // clear timer
-        effect.removeEffect(this); // remove effect
-        return false;
-      }
-      return true;
-    });
-  }
-
-  removeActiveEffect(effect) {
-    this.activeEffects = this.activeEffects.filter(e => e !== effect);
+    this.effectController.applyToolEffect(tool);
   }
 }
  
