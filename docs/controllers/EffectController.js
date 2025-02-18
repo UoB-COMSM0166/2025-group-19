@@ -22,6 +22,9 @@ class EffectController {
         case 'paddleShrink':
           effect = new PaddleSizeEffect('short');
           break;
+        case 'ballSpeedUp':
+          effect = new BallSpeedEffect('twotimes');
+          break;
       }
 
       if (effect) {

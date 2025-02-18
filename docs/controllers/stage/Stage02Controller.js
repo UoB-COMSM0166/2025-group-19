@@ -8,12 +8,13 @@ class Stage02Controller extends StageController {
       paddleGrow: 0.6,
       paddleMax: 0.3,
       paddleShrink: 0.8,
+      ballSpeedUp: 0.5
     };
   }
   initBricks() {
     this.state.bricks = [];
-    for (let i = 0; i < 15; i++) {
-      for (let j = 0; j < 12; j++) {
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 10; j++) {
         this.state.bricks.push(new Brick(
           j * 60 + 50,
           i * 30 + 50,
