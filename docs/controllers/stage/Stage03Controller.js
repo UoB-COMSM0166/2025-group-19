@@ -1,6 +1,17 @@
 class Stage03Controller extends StageController {
   constructor(state, view, sidebar, pageController) {
     super(state, view, sidebar, pageController);
+    this.toolDropRate = 0.6;
+    this.toolProbabilities = {
+      // ballGrow: 0.5,
+      // ballShrink: 0.5,
+      // paddleGrow: 0.6,
+      // paddleMax: 0.3,
+      // paddleShrink: 0.8,
+			timeIncrease: 0.5,
+			timeDecrease: 0.5,
+			paddleReverse: 0.7,
+    };
   }
   initBricks() {
     this.state.bricks = [];
@@ -17,38 +28,25 @@ class Stage03Controller extends StageController {
   }
 
   goToNextStage() {
-    this.pageController.switchToStage('Stage04');
+    this.pageController.switchToStage('Stage02');
   }
-
-  applyToolEffect(tool) {
-      switch (tool.type) {
-          // case 'ballGrow':
-          //     new BallSizeEffect('big').applyEffect(this.state.balls, this.state.paddle);
-          //     break;
-          // case 'ballShrink':
-          //     new BallSizeEffect('small').applyEffect(this.state.balls, this.state.paddle);
-          //     break;
-          // case 'paddleGrow':
-          //     new PaddleSizeEffect('long').applyEffect(this.state.balls, this.state.paddle);
-          //     break;
-          // case 'paddleMax':
-          //     new PaddleSizeEffect('max').applyEffect(this.state.balls, this.state.paddle);
-          //     break;
-          // case 'paddleShrink':
-          //     new PaddleSizeEffect('short').applyEffect(this.state.balls, this.state.paddle);
-          //     break;
-					case 'timeIncrease':
-							new TimeEffect('add').applyEffect(this.sidebar);
-							break;
-					case 'timeDecrease':
-							new TimeEffect('minus').applyEffect(this.sidebar);
-							break;
-					case 'paddleReverse':
-							new PaddleDirectionEffect('reverse').applyEffect(this.state.balls, this.state.paddle);
-							break;
-      }
-  }
-
 }
+
+  // applyToolEffect(tool) {
+  //     switch (tool.type) {
+
+	// 				case 'timeIncrease':
+	// 						new TimeEffect('add').applyEffect(this.sidebar);
+	// 						break;
+	// 				case 'timeDecrease':
+	// 						new TimeEffect('minus').applyEffect(this.sidebar);
+	// 						break;
+	// 				case 'paddleReverse':
+	// 						new PaddleDirectionEffect('reverse').applyEffect(this.state.balls, this.state.paddle);
+	// 						break;
+  //     }
+  // }
+
+
 
 

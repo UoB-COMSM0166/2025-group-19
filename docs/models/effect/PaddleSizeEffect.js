@@ -1,16 +1,27 @@
 class PaddleSizeEffect extends Effect {
-  constructor(sizeType) {
-    super();
+  constructor(sizeType, duration = 10000) {
+    super(duration);
     this.sizeType = sizeType;
+    this.originalWidth = 100;
   }
 
-  applyEffect(balls, paddle) {
-    if (this.sizeType === 'long') {
-      paddle.width = 150;
-    } else if (this.sizeType === 'short') {
-      paddle.width = 50;
-    } else if (this.sizeType === 'max') {
-      paddle.width = paddle.gameWidth;
+  applyEffect(stageController) {
+    const paddle = stageController.state.paddle;
+    switch (this.sizeType) {
+      case 'long':
+        paddle.width = 150;
+        break;
+      case 'max':
+        paddle.width = paddle.gameWidth;
+        break;
+      case 'short':
+        paddle.width = 50;
+        break;
     }
+  }
+
+  removeEffect(stageController) {
+    const paddle = stageController.state.paddle;
+    paddle.width = this.originalWidth;
   }
 }

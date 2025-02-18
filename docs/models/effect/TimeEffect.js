@@ -1,16 +1,27 @@
 class TimeEffect extends Effect {
-	constructor(sizeType) {
-		super();
-		this.sizeType = sizeType;
+  constructor(sizeType, duration = 10000) {
+    super(duration);
+    this.sizeType = sizeType;
+  }
+
+	applyEffect(stageController) {
+		const sidebar = stageController.sidebar;
+
+		switch (this.sizeType) {
+      case 'add':
+				sidebar.timer += 10;
+        break;
+      case 'minus':
+				sidebar.timer -= 10;
+        break;
+    }
+
 	}
 
-	applyEffect(sidebar) {
-    if (this.sizeType === 'add') {
-      sidebar.timer += 10;
-    } else if (this.sizeType === 'minus') {
-      sidebar.timer -= 10;
-    } 
-	}
+	removeEffect(stageController) {
+    //
+  }
+
 
 }
 
