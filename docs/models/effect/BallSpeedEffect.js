@@ -12,14 +12,14 @@ class BallSpeedEffect extends Effect {
     const balls = stageController.state.balls;
     // const ballSpeedMultiplier = null;
     if (this.speedType === 'twotimes'){
-      this.multiplier = 2;
+      this.multiplier = 1.5;
     }
     else {
       throw new Error("applyEffect() should be given how many times");
     }
 
-    balls.forEach(ball => ball.speedX *= this.ballSpeedMultiplier);
-    balls.forEach(ball => ball.speedY *= this.ballSpeedMultiplier);
+    balls.forEach(ball => ball.speedX *= this.multiplier);
+    balls.forEach(ball => ball.speedY *= this.multiplier);
     stageController.update;
   }
 
