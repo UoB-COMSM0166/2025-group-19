@@ -7,14 +7,14 @@ class PageController {
       const bgImage = skyBackground;
       const state = new StageState(stageName, bgImage);
       const sidebar = new SidebarView(stageName);
-      const game = new GameView(state);
+      const gameview = new GameView(state);
     
       switch (stageName) {
         case 'Stage01':
-          this.currentScene = new Stage01Controller(state, game, sidebar, this);
+          this.currentScene = new Stage01Controller(state, gameview, sidebar, this);
           break;
         case 'Stage02':
-          this.currentScene = new Stage02Controller(state, game, sidebar, this);
+          this.currentScene = new Stage02Controller(state, gameview, sidebar, this);
           break;
         default:
           console.error('Unknown: ' + stageName);
@@ -26,7 +26,7 @@ class PageController {
       this.currentScene = new WelcomeView(this);
     }
   
-    switchToChooseStage() {
+    switchToStageMap() {
       this.currentScene = new StageMapView(this);
     }
   
