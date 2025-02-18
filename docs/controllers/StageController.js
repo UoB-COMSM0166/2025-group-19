@@ -5,6 +5,7 @@ class StageController {
       this.sidebar = sidebar;
       this.pageController = pageController;
       this.effectController = new EffectController(this);
+      this.keyboardController = new KeyboardController(this.state.paddle, () => this.shootBall());
       this.showingDialog = false;
       this.dialogText = '';
       this.toolDropRate = 0; // tool dropping rate
@@ -24,6 +25,17 @@ class StageController {
   togglePause() {
     this.paused = !this.paused;
     this.sidebar.setPauseState(this.paused);
+  }
+
+  shootBall() {
+    const ball = new Ball(
+      this.state.paddle.x + this.state.paddle.width / 2,
+      this.state.paddle.y - 10,
+      this.state.gameWidth,
+      this.state.gameHeight,
+      10
+    );
+    this.state.balls.push(ball);
   }
 
   generateTool(x, y) {
@@ -51,7 +63,7 @@ class StageController {
   update() {
       if (this.showingDialog || this.paused) return;
 
-      this.state.paddle.move();
+      this.state.paddle.update();
 
       for (let ball of this.state.balls) {
           ball.update();
@@ -106,16 +118,6 @@ class StageController {
   }
 
   handleKeyPress(key) {
-    if (key === ' ') {
-      this.state.balls.push(new Ball(
-        this.state.paddle.x + this.state.paddle.width / 2,
-        this.state.paddle.y - 10,
-        this.state.gameWidth,
-        this.state.gameHeight,
-        this.ballRadius, // shotting ball size
-      ));
-    }
-
     if (this.showingDialog) {
       if (key === 'Y' || key === 'y') {
           this.onYes();

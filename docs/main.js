@@ -20,6 +20,15 @@ function draw() {
 
 function keyPressed() {
   pageController.handleKeyPress(key);
+  if (pageController.currentPage instanceof StageController) {
+    pageController.currentPage.keyboardController.handleKeyPressed(key);
+  }
+}
+
+function keyReleased() {
+  if (pageController.currentPage instanceof StageController) {
+    pageController.currentPage.keyboardController.handleKeyReleased(key);
+  }
 }
 
 function mousePressed() {
