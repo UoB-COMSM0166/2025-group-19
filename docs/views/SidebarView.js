@@ -42,7 +42,6 @@ class SidebarView {
       );
       this.canvas.fill(255);
       this.canvas.textAlign(CENTER, CENTER);
-      console.log("sidebar this.isPaused:", this.isPaused);
       this.canvas.text(
         this.isPaused ? 'RESUME' : 'PAUSE',
         this.pauseButtonX + this.pauseButtonWidth / 2,
