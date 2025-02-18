@@ -10,11 +10,20 @@ class StageController {
       this.toolDropRate = 0; // tool dropping rate
       this.toolProbabilities = {}; // dropping tool array
       this.ballRadius = 10; // shoting ball size
+      this.paused = false;
       this.initBricks();
+      this.sidebar.onPauseClick = () => {
+        this.togglePause();
+      };
   }
 
   initBricks() {
     throw new Error('initBricks() should be implemented by subclass!');
+  }
+
+  togglePause() {
+    this.paused = !this.paused;
+    this.sidebar.setPauseState(this.paused);
   }
 
   generateTool(x, y) {
@@ -40,7 +49,7 @@ class StageController {
   }
 
   update() {
-      if (this.showingDialog) return;
+      if (this.showingDialog || this.paused) return;
 
       this.state.paddle.move();
 
@@ -79,8 +88,21 @@ class StageController {
       this.view.display();
       this.sidebar.display();
       if (this.showingDialog) {
-          this.displayDialog();
+        this.displayDialog();
+      } else if (this.paused) {
+        this.displayPauseMenu();
       }
+  }
+
+  displayPauseMenu() {
+    fill(0, 0, 0, 200);
+    rect(100, 200, 600, 200, 20);
+    fill(255);
+    textAlign(CENTER, CENTER);
+    textSize(24);
+    text('Paused', 400, 250);
+    textSize(18);
+    text('Press C: Continue / Press M: Return to Menu', 400, 300);
   }
 
   handleKeyPress(key) {
@@ -92,6 +114,28 @@ class StageController {
         this.state.gameHeight,
         this.ballRadius, // shotting ball size
       ));
+    }
+
+    if (this.showingDialog) {
+      if (key === 'Y' || key === 'y') {
+          this.onYes();
+      } else if (key === 'N' || key === 'n') {
+          this.onNo();
+      }
+    }
+
+    if (key === 'P' || key === 'p') {
+      this.paused = !this.paused;
+    }
+
+    if (this.paused) {
+      if (key === 'C' || key === 'c') {
+        this.paused = false;
+      }
+
+      if (key === 'M' || key === 'm') {
+        this.pageController.switchToWelcome();
+      }
     }
   }
 

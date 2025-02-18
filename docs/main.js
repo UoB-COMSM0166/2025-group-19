@@ -10,6 +10,7 @@ function preload() {
 function setup() {
   createCanvas(1000, 600);
   pageController = new PageController();
+  mouseController = new MouseController(pageController, bgMusic);
 }
 
 function draw() {
@@ -22,8 +23,5 @@ function keyPressed() {
 }
 
 function mousePressed() {
-  if (!bgMusic.isPlaying()) {
-    bgMusic.loop();
-    bgMusic.setVolume(0.5);
-  }
+  mouseController.handleMousePressed(mouseX, mouseY);
 }
