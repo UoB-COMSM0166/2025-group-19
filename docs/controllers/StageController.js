@@ -8,6 +8,8 @@ class StageController {
       this.dialogText = '';
       this.toolDropRate = 0; // tool dropping rate
       this.toolProbabilities = {}; // dropping tool array
+      this.activeEffects = []; // tracking effect array
+      this.ballRadius = 10; // shoting ball size
       this.initBricks();
   }
 
@@ -82,17 +84,15 @@ class StageController {
   }
 
   handleKeyPress(key) {
-      if (key === ' ') {
-          this.state.balls.push(new Ball(this.state.paddle.x + this.state.paddle.width / 2, this.state.paddle.y - 10, this.state.gameWidth, this.state.gameHeight));
-      }
-
-      if (this.showingDialog) {
-          if (key === 'Y' || key === 'y') {
-              this.onYes();
-          } else if (key === 'N' || key === 'n') {
-              this.onNo();
-          }
-      }
+    if (key === ' ') {
+      this.state.balls.push(new Ball(
+        this.state.paddle.x + this.state.paddle.width / 2,
+        this.state.paddle.y - 10,
+        this.state.gameWidth,
+        this.state.gameHeight,
+        this.ballRadius, // shotting ball size
+      ));
+    }
   }
 
   goToNextStage() {
@@ -145,23 +145,51 @@ class StageController {
   }
 
   applyToolEffect(tool) {
-      switch (tool.type) {
-          case 'ballGrow':
-              new BallSizeEffect('big').applyEffect(this.state.balls, this.state.paddle);
-              break;
-          case 'ballShrink':
-              new BallSizeEffect('small').applyEffect(this.state.balls, this.state.paddle);
-              break;
-          case 'paddleGrow':
-              new PaddleSizeEffect('long').applyEffect(this.state.balls, this.state.paddle);
-              break;
-          case 'paddleMax':
-              new PaddleSizeEffect('max').applyEffect(this.state.balls, this.state.paddle);
-              break;
-          case 'paddleShrink':
-              new PaddleSizeEffect('short').applyEffect(this.state.balls, this.state.paddle);
-              break;
+    let effect = null;
+    switch (tool.type) {
+      case 'ballGrow':
+        effect = new BallSizeEffect('big');
+        break;
+      case 'ballShrink':
+        effect = new BallSizeEffect('small');
+        break;
+      case 'paddleGrow':
+        effect = new PaddleSizeEffect('long');
+        break;
+      case 'paddleMax':
+        effect = new PaddleSizeEffect('max');
+        break;
+      case 'paddleShrink':
+        effect = new PaddleSizeEffect('short');
+        break;
+    }
+
+    if (effect) {
+      this.activateEffect(effect);
+    }
+  }
+
+  activateEffect(effect) {
+    // remove same type effect
+    this.removeSameTypeEffect(effect);
+
+    effect.activate(this);
+    this.activeEffects.push(effect);
+  }
+
+  removeSameTypeEffect(newEffect) {
+    this.activeEffects = this.activeEffects.filter(effect => {
+      if (effect.constructor === newEffect.constructor) {
+        effect.clearTimer(); // clear timer
+        effect.removeEffect(this); // remove effect
+        return false;
       }
+      return true;
+    });
+  }
+
+  removeActiveEffect(effect) {
+    this.activeEffects = this.activeEffects.filter(e => e !== effect);
   }
 }
  
