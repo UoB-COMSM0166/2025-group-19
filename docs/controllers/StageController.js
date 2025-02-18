@@ -11,6 +11,8 @@ class StageController {
       this.toolDropRate = 0; // tool dropping rate
       this.toolProbabilities = {}; // dropping tool array
       this.ballRadius = 10; // shoting ball size
+      this.ballSpeedX = random (-3, 3);
+      this.ballSpeedY = -5;
       this.paused = false;
       this.initBricks();
       this.sidebar.onPauseClick = () => {
@@ -33,7 +35,9 @@ class StageController {
       this.state.paddle.y - 10,
       this.state.gameWidth,
       this.state.gameHeight,
-      10
+      10,
+      this.ballSpeedX,
+      this.ballSpeedY
     );
     this.state.balls.push(ball);
   }

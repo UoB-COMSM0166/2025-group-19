@@ -2,15 +2,11 @@ class BallSpeedEffect extends Effect {
   constructor(speedType, duration = 10000) {
     super(duration);
     this.speedType = speedType;
-    // this.originalSpeedX = ball.speedX;
-    // this.orgiinalSpeedY = ball.speedY;
-    // this.originalRadius = 10;
     this.multiplier = null;
   }
 
   applyEffect(stageController) {
     const balls = stageController.state.balls;
-    // const ballSpeedMultiplier = null;
     if (this.speedType === 'twotimes'){
       this.multiplier = 1.5;
     }
@@ -21,6 +17,8 @@ class BallSpeedEffect extends Effect {
     balls.forEach(ball => ball.speedX *= this.multiplier);
     balls.forEach(ball => ball.speedY *= this.multiplier);
     stageController.update;
+    stageController.ballSpeedX *= this.multiplier;
+    stageController.ballSpeedY *= this.multiplier;
   }
 
   removeEffect(stageController) {
@@ -28,8 +26,7 @@ class BallSpeedEffect extends Effect {
 
     balls.forEach(ball => ball.speedX /= this.multiplier);
     balls.forEach(ball => ball.speedY /= this.multiplier);
-    // balls.forEach(ball => ball.speedX = this.originalSpeedX);
-    // balls.forEach(ball => ball.speedY = this.originalSpeedY);
-    // stageController.update; 
+    stageController.ballSpeedX /= this.multiplier;
+    stageController.ballSpeedY /= this.multiplier;
   }
 }

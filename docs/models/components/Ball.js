@@ -1,10 +1,10 @@
 class Ball {
-  constructor(x, y, gameWidth, gameHeight, radius = 10) {
+    constructor(x, y, gameWidth, gameHeight, radius = 10, ballSpeedX = random(-3,3), ballSpeedY = -5) {
     this.radius = radius;
     this.x = x;
     this.y = y;
-    this.speedX = random(-3, 3);
-    this.speedY = -5;
+    this.speedX = ballSpeedX;
+    this.speedY = ballSpeedY;
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
   }
