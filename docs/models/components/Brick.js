@@ -1,11 +1,12 @@
 class Brick {
-    constructor(x, y, width, height, isRed = false) {
+    constructor(x, y, width, height, isRed = false, isBomb = false) {
       this.x = x;
       this.y = y;
       this.width = width;
       this.height = height;
       this.isDestroyed = false;
       this.isRed = isRed;
+      this.isBomb = isBomb;
     }
   
     display(canvas = window) {
