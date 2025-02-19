@@ -7,6 +7,12 @@ function preload() {
   skyBackground = loadImage('assets/images/skyBackground.webp');
   bgMusic = loadSound('assets/sounds/bgMusic.mp3');
   roadImg = loadImage('assets/images/road.png');
+  mouseImg = loadImage('assets/images/characters/mouse.png');
+  cowImg = loadImage('assets/images/characters/cow.png');
+  tigerImg = loadImage('assets/images/characters/tiger.png');
+  rabbitImg = loadImage('assets/images/characters/rabbit.png');
+  dragonImg = loadImage('assets/images/characters/dragon.png');
+  snakeImg = loadImage('assets/images/characters/snake.png');
 }
 
 function setup() {
