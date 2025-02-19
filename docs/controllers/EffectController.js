@@ -23,7 +23,7 @@ class EffectController {
           effect = new PaddleSizeEffect('short');
           break;
         case 'ballSpeedUp':
-          effect = new BallSpeedEffect('twotimes');
+          effect = new BallSpeedEffect('speedUp');
           break;
       }
 
