@@ -5,17 +5,19 @@ class WelcomeView {
       this.options = ["Start", "Setting", "Information"];
       this.selectedIndex = 0;
       this.roadAnimation = new ScrollingBackground();
+      this.animalAnimation = new AnimalAnimation(this.roadAnimation.imgHeight);
     }
   
     update() {
       this.roadAnimation.update();
+      this.animalAnimation.update();
     }
   
     display() {
       createCanvas(windowWidth, windowHeight); // full size screen
       background('#6EB6FF');
       this.roadAnimation.display();
-      this.roadAnimation.update();
+      this.animalAnimation.display();
       fill(255);
       textSize(40);
       textAlign(CENTER, CENTER);
