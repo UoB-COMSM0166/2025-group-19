@@ -1,4 +1,4 @@
-class ScrollingBackground {
+class RoadAnimation {
   constructor(speed = 0.3, numImages = 20) {
     this.img = roadImg;
     this.speed = speed;

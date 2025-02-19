@@ -37,7 +37,9 @@ code/
 │   ├── StageMapView.js
 │   ├── GameView.js
 │   ├── SidebarView.js
-│   └── ScrollingBackground.js
+│   ├── AnimalAnimation.js
+│   ├── CloudAnimation.js
+│   └── RoadAnimation.js
 │
 ├── styles/
 │   └── style.css

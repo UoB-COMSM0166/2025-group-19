@@ -3,13 +3,17 @@ class WelcomeView {
     this.controller = controller;
     this.textSettings();
     this.selectedIndex = 0;
-    this.roadAnimation = new ScrollingBackground();
+    this.roadAnimation = new RoadAnimation();
     this.animalAnimation = new AnimalAnimation(this.roadAnimation.imgHeight);
+    this.cloudAnimation1 = new CloudAnimation(1, 30);
+    //this.cloudAnimation2 = new CloudAnimation(2, 110, 130, 0.5);
   }
 
   update() {
     this.roadAnimation.update();
     this.animalAnimation.update();
+    this.cloudAnimation1.update();
+    //this.cloudAnimation2.update();
   }
   
   display() {
@@ -17,6 +21,8 @@ class WelcomeView {
     background('#6EB6FF'); // blue
     this.roadAnimation.display();
     this.animalAnimation.display();
+    this.cloudAnimation1.display();
+    //this.cloudAnimation2.display();
     //this.displayTitleImg();
     this.displayTitle();
     this.displaySubtitle();
@@ -45,7 +51,7 @@ class WelcomeView {
     textFont(boutiqueBitmaFont);
     this.title = "ZODIAC CATCH";
     this.subtitle = "(HALF)";
-    this.versionDescription = "VERSION 0.5";
+    this.versionDescription = "Version 0.5";
     this.options = ["START", "SETTING", "INFORMATION"];
     this.titleX = windowWidth / 2;
     this.titleY = windowHeight / 4;
