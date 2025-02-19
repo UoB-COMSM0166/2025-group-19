@@ -25,6 +25,9 @@ class EffectController {
         case 'ballSpeedUp':
           effect = new BallSpeedEffect('speedUp');
           break;
+        case 'gravityUp':
+          effect = new GravityEffect('gravityUp');
+          break;
       }
 
       if (effect) {

@@ -13,6 +13,7 @@ class StageController {
       this.ballRadius = 10; // shoting ball size
       this.ballSpeedX = random (-3, 3);
       this.ballSpeedY = -5;
+      this.gravityOn = false;
       this.paused = false;
       this.initBricks();
       this.sidebar.onPauseClick = () => {
@@ -37,7 +38,8 @@ class StageController {
       this.state.gameHeight,
       10,
       this.ballSpeedX,
-      this.ballSpeedY
+      this.ballSpeedY,
+      this.gravityOn
     );
     this.state.balls.push(ball);
   }

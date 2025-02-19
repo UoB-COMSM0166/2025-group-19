@@ -8,7 +8,8 @@ class Stage02Controller extends StageController {
       paddleGrow: 0.6,
       paddleMax: 0.3,
       paddleShrink: 0.8,
-      ballSpeedUp: 0.8
+      ballSpeedUp: 0.8,
+      gravityUp: 0.8
     };
   }
   initBricks() {
