@@ -43,7 +43,8 @@ class StageController {
         this.state.paddle.y - 10,
         this.state.gameWidth,
         this.state.gameHeight,
-        10
+        this.ballRadius
+        
       );
       this.state.balls.push(ball);
       this.ballRemain--;
