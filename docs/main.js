@@ -13,6 +13,8 @@ function preload() {
   rabbitImg = loadImage('assets/images/characters/rabbit.png');
   dragonImg = loadImage('assets/images/characters/dragon.png');
   snakeImg = loadImage('assets/images/characters/snake.png');
+  zodiacCatchImg = loadImage('assets/images/zodiacCatch.png');
+  boutiqueBitmaFont = loadFont('assets/font/BoutiqueBitmap9x9_Bold_1.5.ttf');
 }
 
 function setup() {
