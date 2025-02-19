@@ -51,6 +51,14 @@ class Ball {
         this.speedY *= -1;
         brick.isDestroyed = true;
         sidebar.addScore(100);
+        //Destroy whole row if isBomb
+        if (brick.isBomb){
+          for (let loopBrick of bricks){
+            if (loopBrick.y === brick.y){
+              loopBrick.isDestroyed = true;
+            }
+          }
+        }
 
         // Generate tool (power-up) via stageController with probability
         const tool = stageController.generateTool(

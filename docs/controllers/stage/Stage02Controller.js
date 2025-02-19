@@ -20,7 +20,7 @@ class Stage02Controller extends StageController {
       
       console.log("Brick data received:", data, " brickwidth: ", brickWidth, " brickHeight: ", brickHeight); 
       for (let brickData of data.bricks) {
-        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight);
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, false, brickData.bomb);
         this.state.bricks.push(brick);
       }
     });

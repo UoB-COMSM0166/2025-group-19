@@ -11,7 +11,16 @@ class Brick {
   
     display(canvas = window) {
       if (!this.isDestroyed) {
-        canvas.fill(this.isRed ? 255 : 0, this.isRed ? 0 : 255, 0);
+        this.colour = null;
+        if (this.isRed){
+          canvas.fill(255, 0, 0);
+        }
+        else if (this.isBomb){
+          canvas.fill(0,0,255);
+        }
+        else{
+          canvas.fill(0,255,0);
+        }
         canvas.rect(this.x, this.y, this.width, this.height);
       }
     }
