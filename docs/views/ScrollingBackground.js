@@ -1,6 +1,6 @@
 class ScrollingBackground {
-  constructor(img, speed = 0.3, numImages = 20) {
-    this.img = img;
+  constructor(speed = 0.3, numImages = 20) {
+    this.img = roadImg;
     this.speed = speed;
     this.numImages = numImages;
     this.x = [];
@@ -8,9 +8,9 @@ class ScrollingBackground {
     this.imgHeight = 0;
 
     // Calculate the size for the image
-    this.imgHeight = height * 0.1; 
+    this.imgHeight = windowHeight * 0.1; // if use height, its setting will come from main.js's createCanvas(1000, 600);. 
     this.imgWidth = (this.img.width / this.img.height) * this.imgHeight; // Maintain the original aspect ratio
-  
+
     // Make the first image start from the far right of the canvas
     for (let i = 0; i < this.numImages; i++) {
       if (i === 0) {

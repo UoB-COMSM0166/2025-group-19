@@ -4,7 +4,7 @@ class WelcomeView {
       this.title = "Zodiac Catch (Half)";
       this.options = ["Start", "Setting", "Information"];
       this.selectedIndex = 0;
-      this.roadAnimation = new ScrollingBackground(roadImg);
+      this.roadAnimation = new ScrollingBackground();
     }
   
     update() {
