@@ -41,7 +41,7 @@ class EffectController {
     activateEffect(effect) {
       console.log("activeEffects:", this.activeEffects);
       this.removeSameTypeEffect(effect);
-      effect.activate(this.stageController);
+      effect.activate(this.stageController, this);
       this.activeEffects.push(effect);
     }
 
