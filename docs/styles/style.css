@@ -7,8 +7,7 @@ body {
 
 /* TODO: If "display: block" is not added, 
 the full-size screen will have a scrollbar. */
-/*  
+/**/
 canvas {
   display: block;
 }
-*/
