@@ -4,10 +4,6 @@ class Stage03Controller extends StageController {
     this.toolDropRate = 0.4;
     this.toolProbabilities = {
       ballGrow: 0.5,
-      // ballShrink: 0.5,
-      // paddleGrow: 0.6,
-      // paddleMax: 0.3,
-      // paddleShrink: 0.8,
 			timeIncrease: 0.5,
 			timeDecrease: 0.5,
 			paddleReverse: 0.7,
