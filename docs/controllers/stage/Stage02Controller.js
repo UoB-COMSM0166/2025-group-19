@@ -1,19 +1,20 @@
 class Stage02Controller extends StageController {
   constructor(state, view, sidebar, pageController) {
     super(state, view, sidebar, pageController);
-    this.toolDropRate = 0.7; // 70% dropping rate
+    this.toolDropRate = 0.3; // 70% dropping rate
     this.toolProbabilities = {
-      ballGrow: 0.5,
-      ballShrink: 0.5,
-      paddleGrow: 0.6,
-      paddleMax: 0.3,
-      paddleShrink: 0.8,
+      ballGrow: 0,
+      ballShrink: 0,
+      paddleGrow: 0,
+      paddleMax: 0,
+      paddleShrink: 0,
       ballSpeedUp: 0.8,
-      gravityUp: 0.8
+      gravityUp: 0.0
     };
   }
   initBricks() {
     this.state.bricks = [];
+    console.log("bricks initialized, length: ", this.state.bricks.length); 
     
     loadJSON("./models/components/StagePattern/Stage02.json", (data) => {
       let brickWidth = data.width;

@@ -38,7 +38,7 @@ class EffectController {
     activateEffect(effect) {
       console.log("activeEffects:", this.activeEffects);
       this.removeSameTypeEffect(effect);
-      effect.activate(this.stageController);
+      effect.activate(this.stageController, this);
       this.activeEffects.push(effect);
     }
 
@@ -53,6 +53,7 @@ class EffectController {
       });
     }
 
+    //this is not called!!
     removeActiveEffect(effect) {
       this.activeEffects = this.activeEffects.filter(e => e !== effect);
     }

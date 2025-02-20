@@ -5,6 +5,7 @@ class Ball {
     this.y = y;
     this.speedX = ballSpeedX;
     this.speedY = ballSpeedY;
+    console.log("speedX: ",this.speedX, " speedY: ", this.speedY)
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
     this.gravityOn = gravityOn;

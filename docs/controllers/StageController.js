@@ -11,8 +11,7 @@ class StageController {
       this.toolDropRate = 0; // tool dropping rate
       this.toolProbabilities = {}; // dropping tool array
       this.ballRadius = 10; // shoting ball size
-      this.ballSpeedX = random (-3, 3);
-      this.ballSpeedY = -5;
+      this.speedMultiplier = 1;
       this.gravityOn = false;
       this.paused = false;
       this.initBricks();
@@ -37,7 +36,8 @@ class StageController {
       this.state.gameWidth,
       this.state.gameHeight,
       10,
-      this.ballSpeedX,
+      random(-3,3)*this.speedMultiplier,
+      -5*this.speedMultiplier,
       this.ballSpeedY,
       this.gravityOn
     );

@@ -11,14 +11,13 @@ class BallSpeedEffect extends Effect {
       this.multiplier = 1.5;
     }
     else {
-      throw new Error("applyEffect() should be given how many times");
+      throw new Error("applyEffect() should be 'speedUp'");
     }
 
     balls.forEach(ball => ball.speedX *= this.multiplier);
     balls.forEach(ball => ball.speedY *= this.multiplier);
-    stageController.update;
-    stageController.ballSpeedX *= this.multiplier;
-    stageController.ballSpeedY *= this.multiplier;
+    // stageController.update;
+    stageController.speedMultiplier = this.multiplier;
   }
 
   removeEffect(stageController) {
@@ -26,7 +25,6 @@ class BallSpeedEffect extends Effect {
 
     balls.forEach(ball => ball.speedX /= this.multiplier);
     balls.forEach(ball => ball.speedY /= this.multiplier);
-    stageController.ballSpeedX /= this.multiplier;
-    stageController.ballSpeedY /= this.multiplier;
+    stageController.speedMultiplier = 1;
   }
 }
