@@ -6,17 +6,17 @@
 [PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/)
 
 # Table of Contents
-- [1. Team Members]()
-- [2. Introduction]()
-- [3. Requirements]()
-- [4. Design]()
-- [5. Kanban]()
-- [6. Implementation]()
-- [7. Evaluation]()
-- [8. Process]()
-- [9. Conclusion]()
-- [10. References]()
-- [11. Weekly Assignments Preview]()
+- [1. Team Members](#1-team-members)
+- [2. Introduction](#2-introduction)
+- [3. Requirements](#3-requirements)
+- [4. Design](#4-design)
+- [5. Kanban](#5-kanban)
+- [6. Implementation](#6-implementation)
+- [7. Evaluation](#7-evaluation)
+- [8. Process](#8-process)
+- [9. Conclusion](#9-conclusion)
+- [10. References](#10-references)
+- [11. Weekly Assignments Preview](#11-weekly-assignments-preview)
 
 # 1. Team Members
 
