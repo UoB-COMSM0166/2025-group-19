@@ -36,7 +36,10 @@ code/
 │   ├── WelcomeView.js
 │   ├── StageMapView.js
 │   ├── GameView.js
-│   └── SidebarView.js
+│   ├── SidebarView.js
+│   ├── AnimalAnimation.js
+│   ├── CloudAnimation.js
+│   └── RoadAnimation.js
 │
 ├── styles/
 │   └── style.css
