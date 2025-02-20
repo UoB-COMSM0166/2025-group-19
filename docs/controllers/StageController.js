@@ -4,23 +4,70 @@ class StageController {
       this.view = view;
       this.sidebar = sidebar;
       this.pageController = pageController;
+      this.effectController = new EffectController(this);
+      this.keyboardController = new KeyboardController(this.state.paddle, () => this.shootBall());
       this.showingDialog = false;
       this.dialogText = '';
+      this.toolDropRate = 0; // tool dropping rate
+      this.toolProbabilities = {}; // dropping tool array
+      this.ballRadius = 10; // shoting ball size
+      this.paused = false;
       this.initBricks();
+      this.sidebar.onPauseClick = () => {
+        this.togglePause();
+      };
   }
 
   initBricks() {
     throw new Error('initBricks() should be implemented by subclass!');
   }
 
-  update() {
-      if (this.showingDialog) return;
+  togglePause() {
+    this.paused = !this.paused;
+    this.sidebar.setPauseState(this.paused);
+  }
 
-      this.state.paddle.move();
+  shootBall() {
+    const ball = new Ball(
+      this.state.paddle.x + this.state.paddle.width / 2,
+      this.state.paddle.y - 10,
+      this.state.gameWidth,
+      this.state.gameHeight,
+      10
+    );
+    this.state.balls.push(ball);
+  }
+
+  generateTool(x, y) {
+    if (Math.random() > this.toolDropRate) {
+      return null;
+    }
+    const toolTypes = Object.keys(this.toolProbabilities);
+    const probabilities = Object.values(this.toolProbabilities);
+    const selectedToolType = this.weightedRandom(toolTypes, probabilities);
+    return new Tool(x, y, selectedToolType);
+  }
+
+  weightedRandom(items, weights) {
+    const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+    let randomValue = Math.random() * totalWeight;
+
+    for (let i = 0; i < items.length; i++) {
+      randomValue -= weights[i];
+      if (randomValue <= 0) {
+        return items[i];
+      }
+    }
+  }
+
+  update() {
+      if (this.showingDialog || this.paused) return;
+
+      this.state.paddle.update();
 
       for (let ball of this.state.balls) {
           ball.update();
-          ball.checkCollision(this.state.paddle, this.state.bricks, this.state.tools, this.sidebar);
+          ball.checkCollision(this.state.paddle, this.state.bricks, this.state.tools, this.sidebar, this);
       }
 
       for (let i = this.state.tools.length - 1; i >= 0; i--) {
@@ -53,22 +100,45 @@ class StageController {
       this.view.display();
       this.sidebar.display();
       if (this.showingDialog) {
-          this.displayDialog();
+        this.displayDialog();
+      } else if (this.paused) {
+        this.displayPauseMenu();
       }
   }
 
+  displayPauseMenu() {
+    fill(0, 0, 0, 200);
+    rect(100, 200, 600, 200, 20);
+    fill(255);
+    textAlign(CENTER, CENTER);
+    textSize(24);
+    text('Paused', 400, 250);
+    textSize(18);
+    text('Press C: Continue / Press M: Return to Menu', 400, 300);
+  }
+
   handleKeyPress(key) {
-      if (key === ' ') {
-          this.state.balls.push(new Ball(this.state.paddle.x + this.state.paddle.width / 2, this.state.paddle.y - 10, this.state.gameWidth, this.state.gameHeight));
+    if (this.showingDialog) {
+      if (key === 'Y' || key === 'y') {
+          this.onYes();
+      } else if (key === 'N' || key === 'n') {
+          this.onNo();
+      }
+    }
+
+    if (key === 'P' || key === 'p') {
+      this.paused = !this.paused;
+    }
+
+    if (this.paused) {
+      if (key === 'C' || key === 'c') {
+        this.paused = false;
       }
 
-      if (this.showingDialog) {
-          if (key === 'Y' || key === 'y') {
-              this.onYes();
-          } else if (key === 'N' || key === 'n') {
-              this.onNo();
-          }
+      if (key === 'M' || key === 'm') {
+        this.pageController.switchToWelcome();
       }
+    }
   }
 
   goToNextStage() {
@@ -87,7 +157,6 @@ class StageController {
 
   showWinDialog() {
       this.showingDialog = true;
-      console.log("this.state.stageName:", this.state.stageName);
       this.dialogText = this.state.stageName === 'Stage01' ? 'You Win! Go to Stage 02? (Y/N)' : 'You Win! Congratulations! (Press N to return)';
 
       this.onYes = () => {
@@ -122,23 +191,7 @@ class StageController {
   }
 
   applyToolEffect(tool) {
-      switch (tool.type) {
-          case 'ballGrow':
-              new BallSizeEffect('big').applyEffect(this.state.balls, this.state.paddle);
-              break;
-          case 'ballShrink':
-              new BallSizeEffect('small').applyEffect(this.state.balls, this.state.paddle);
-              break;
-          case 'paddleGrow':
-              new PaddleSizeEffect('long').applyEffect(this.state.balls, this.state.paddle);
-              break;
-          case 'paddleMax':
-              new PaddleSizeEffect('max').applyEffect(this.state.balls, this.state.paddle);
-              break;
-          case 'paddleShrink':
-              new PaddleSizeEffect('short').applyEffect(this.state.balls, this.state.paddle);
-              break;
-      }
+    this.effectController.applyToolEffect(tool);
   }
 }
  
