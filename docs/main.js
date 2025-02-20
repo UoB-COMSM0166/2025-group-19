@@ -23,6 +23,7 @@ function preload() {
 
 function setup() {
   createCanvas(1000, 600);
+  textFont(boutiqueBitmaFont);
   pageController = new PageController();
   mouseController = new MouseController(pageController, bgMusic);
 }

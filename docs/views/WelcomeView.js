@@ -48,7 +48,6 @@ class WelcomeView {
   }
 
   textSettings(){
-    textFont(boutiqueBitmaFont);
     this.title = "ZODIAC CATCH";
     this.subtitle = "(HALF)";
     this.versionDescription = "Version 0.5";
