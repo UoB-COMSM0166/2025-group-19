@@ -8,10 +8,13 @@ class GravityEffect extends Effect {
   applyEffect(stageController) {
     const balls = stageController.state.balls;
     balls.forEach(ball => ball.gravityOn = true);
+    stageController.gravityOn = true;
+    console.log("Gravity Effect gravityOn: "+stageController.gravityOn);
   }
 
   removeEffect(stageController) {
     const balls = stageController.state.balls;
     balls.forEach(ball => ball.gravityOn = false);
+    stageController.gravityOn = false;
   }
 }

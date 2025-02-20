@@ -30,6 +30,7 @@ class StageController {
   }
 
   shootBall() {
+    console.log("StageController shootball gravityOn: "+this.gravityOn);
     const ball = new Ball(
       this.state.paddle.x + this.state.paddle.width / 2,
       this.state.paddle.y - 10,
@@ -38,7 +39,6 @@ class StageController {
       10,
       random(-3,3)*this.speedMultiplier,
       -5*this.speedMultiplier,
-      this.ballSpeedY,
       this.gravityOn
     );
     this.state.balls.push(ball);
