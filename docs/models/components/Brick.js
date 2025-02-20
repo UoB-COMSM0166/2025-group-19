@@ -5,7 +5,6 @@ class Brick {
     this.width = width;
     this.height = height;
     this.isDestroyed = false;
-    // this.isRed = isRed;
     this.isBomb = isBomb;
     this.red = R;
     this.green = G;
@@ -14,7 +13,6 @@ class Brick {
 
   display(canvas = window) {
     if (!this.isDestroyed) {
-      // this.colour = null;
       if (this.isBomb){
         canvas.fill(0,0,255, 255); //bomb is blue 
       }

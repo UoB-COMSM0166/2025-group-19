@@ -10,6 +10,8 @@ class Stage02Controller extends StageController {
       paddleShrink: 0.8,
     };
   }
+
+  //Copy this to own Stage0xController
   initBricks() {
     this.state.bricks = [];
     console.log("bricks initialized, length: ", this.state.bricks.length); 
@@ -22,8 +24,7 @@ class Stage02Controller extends StageController {
       for (let brickData of data.bricks) {
         let colorValues = data.colour[brickData.colour];
         let [r, g, b] = colorValues;
-        console.log("Stage02Controller: " + r+" "+g+" "+b);
-        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, false, brickData.bomb, r, g, b);
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, r, g, b);
         this.state.bricks.push(brick);
       }
     });
