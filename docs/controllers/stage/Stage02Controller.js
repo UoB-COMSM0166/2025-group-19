@@ -10,18 +10,24 @@ class Stage02Controller extends StageController {
       paddleShrink: 0.8,
     };
   }
+
+  //Copy this to own Stage0xController
   initBricks() {
     this.state.bricks = [];
-    for (let i = 0; i < 15; i++) {
-      for (let j = 0; j < 12; j++) {
-        this.state.bricks.push(new Brick(
-          j * 60 + 50,
-          i * 30 + 50,
-          60,
-          30
-        ));
+    console.log("bricks initialized, length: ", this.state.bricks.length); 
+    
+    loadJSON("./models/components/StagePattern/Stage02.json", (data) => {
+      let brickWidth = data.width;
+      let brickHeight = data.height;  
+      
+      console.log("Brick data received:", data, " brickwidth: ", brickWidth, " brickHeight: ", brickHeight); 
+      for (let brickData of data.bricks) {
+        let colorValues = data.colour[brickData.colour];
+        let [r, g, b] = colorValues;
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, r, g, b);
+        this.state.bricks.push(brick);
       }
-    }
+    });
   }
 
   goToNextStage() {
