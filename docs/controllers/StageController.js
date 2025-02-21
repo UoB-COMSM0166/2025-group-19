@@ -10,8 +10,9 @@ class StageController {
       this.dialogText = '';
       this.toolDropRate = 0; // tool dropping rate
       this.toolProbabilities = {}; // dropping tool array
-      this.ballRadius = 10; // shoting ball size
+      this.ballRadius = Ball.normalSizeBall; // shoting ball size
       this.paused = false;
+      this.isBricksLoaded = false;
       this.initBricks();
       this.sidebar.onPauseClick = () => {
         this.togglePause();
@@ -61,6 +62,7 @@ class StageController {
   }
 
   update() {
+      if (!this.isBricksLoaded) return;
       if (this.showingDialog || this.paused) return;
 
       this.state.paddle.update();
@@ -89,7 +91,6 @@ class StageController {
           this.state.isStageFailed = true;
           this.showLoseDialog();
       }
-
       if (this.state.bricks.length === 0) {
           this.state.isStageCleared = true;
           this.showWinDialog();
