@@ -8,6 +8,7 @@ class Paddle {
     this.gameWidth = gameWidth;
     this.isMovingLeft = false;
     this.isMovingRight = false;
+    this.toggleOffset = 10;
   }
 
   display(canvas = window) {
@@ -22,6 +23,7 @@ class Paddle {
     if (this.isMovingRight) {
       this.x = min(this.x + this.speed, this.gameWidth - this.width);
     }
+  
   }
 
   moveLeft(isMoving) {
@@ -30,5 +32,12 @@ class Paddle {
 
   moveRight(isMoving) {
     this.isMovingRight = isMoving;
+  }
+
+  togglePosition() {
+      this.y -= this.toggleOffset;
+    setTimeout(() => {
+      this.y += this.toggleOffset;
+    }, 150);
   }
 }
