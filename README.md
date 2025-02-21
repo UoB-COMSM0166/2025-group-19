@@ -23,14 +23,14 @@
 
 <div align="center">
 
-| No.  | Name | Email | Role |
+| No.  | Name | Email | Role | 
 | :-: | :-: | :-: | :-: |
-| 01 | Hsin-Hsien Ho (Erik) | fp24955@bristol.ac.uk | TBD |
-| 02 | Mingqiao Fan (Daisy) | yi24612@bristol.ac.uk | TBD |
-| 03 | Shinchuan Chen (Lucas) | wj24296@bristol.ac.uk | TBD |
-| 04 | Yu-Jin Chen (Elle) | nj24628@bristol.ac.uk |TBD |
-| 05 | Lee Areta | wb24440@bristol.ac.uk | TBD |
-| 06 |Mikas Vong | tg24484@bristol.ac.uk | TBD |
+| 01 | Hsin-Hsien Ho (Erik) | fp24955@bristol.ac.uk | `Developer` |
+| 02 | Mingqiao Fan (Daisy) | yi24612@bristol.ac.uk | `Developer` |
+| 03 | Shinchuan Chen (Lucas) | wj24296@bristol.ac.uk | `Developer` |
+| 04 | Yu-Jin Chen (Elle) | nj24628@bristol.ac.uk | `Developer` |
+| 05 | Lee Areta | wb24440@bristol.ac.uk | `Developer` |
+| 06 |Mikas Vong | tg24484@bristol.ac.uk | `Developer` |
 
 </div>
 
@@ -56,6 +56,7 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 </p>
 
 ---
+
 # Requirements
 ## Early Stages design & Ideation process
 | Game         | Gameplay Reference                                                                 | Mechanics                                                                                                                        |
