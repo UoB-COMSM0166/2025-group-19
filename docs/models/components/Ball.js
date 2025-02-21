@@ -1,5 +1,9 @@
 class Ball {
-  constructor(x, y, gameWidth, gameHeight, radius = 10) {
+  static smallSizeBall = 8;
+  static normalSizeBall = 15;
+  static bigSizeBall = 25;
+
+  constructor(x, y, gameWidth, gameHeight, radius=Ball.normalSizeBall) {
     this.radius = radius;
     this.x = x;
     this.y = y;
@@ -28,7 +32,6 @@ class Ball {
   }
 
   checkCollision(paddle, bricks, tools, sidebar, stageController) {
-    // Ball collision with paddle
     if (
       this.y + this.radius > paddle.y &&
       this.y - this.radius < paddle.y + paddle.height &&
@@ -38,41 +41,64 @@ class Ball {
       this.speedY *= -1;
       this.y = paddle.y - this.radius;
     }
-
-    // Ball collision with bricks
+    let hitBricks = [];
     for (let brick of bricks) {
       if (
         !brick.isDestroyed &&
-        this.x > brick.x &&
-        this.x < brick.x + brick.width &&
-        this.y - this.radius < brick.y + brick.height &&
-        this.y + this.radius > brick.y
+        this.x + this.radius > brick.x &&
+        this.x - this.radius < brick.x + brick.width &&
+        this.y + this.radius > brick.y &&
+        this.y - this.radius < brick.y + brick.height
       ) {
-        // tiger's middle paw won't break
-        // instead, ball gets eaten (will lose immediately if only one ball in play)
-        if(brick.isUnbreakable) {  
+        if (brick.isUnbreakable) {
           this.x = this.gameHeight;
           this.y = this.gameWidth;
         } else {
-          this.speedY *= -1;
-          brick.isDestroyed = true;
+          hitBricks.push(brick);
+        }
+      }
+    }
+
+    if (hitBricks.length > 0) {
+      // destroy the brick by its size
+      if (this.radius == Ball.smallSizeBall) {
+        hitBricks.forEach(brick => {
+          if (brick.damageLevel < 2) {
+            brick.damageLevel += 1;
+          } else {
+            brick.isDestroyed = true;
+            sidebar.addScore(100);
+          }
+        });
+      } else if (this.radius == Ball.bigSizeBall) {
+        for (let i = 0; i < Math.min(3, hitBricks.length); i++) {
+          hitBricks[i].isDestroyed = true;
           sidebar.addScore(100);
         }
+      } else if (this.radius == Ball.normalSizeBall){
+        hitBricks[0].isDestroyed = true;
+        sidebar.addScore(100);
+      } else {
+        throw new Error('unknown size of balls!!');
+      }
 
-        // Generate tool (power-up) via stageController with probability
+      // generate tools
+      hitBricks.forEach(brick => {
         const tool = stageController.generateTool(
           brick.x + brick.width / 2,
           brick.y + brick.height / 2
         );
 
-        if (tool && !brick.isRed) {
+        if (tool) {
           tools.push(tool);
         }
+      });
 
-        break;
-      }
+      // reverse Y speed
+      this.speedY *= -1;
     }
   }
+
 
   isOutOfBounds() {
     return this.y - this.radius > this.gameHeight;
