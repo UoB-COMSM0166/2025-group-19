@@ -68,14 +68,16 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 | **Level Devil** 😈 | [Watch Gameplay](https://www.youtube.com/watch?v=nn2EUssloa4)                                            | - **Deceptive Traps**: Hidden spikes, fake platforms, and paths that mislead players.                                            <br> - **Conditional Mechanics**: Triggers and elements like springboards behave differently based on player actions.            <br> - **Trial-and-Error Progression**: Players must memorize safe paths and solve puzzles through experimentation.                  <br> - **Dynamic Triggers**: Hidden switches alter the environment, activating platforms or deactivating traps.                      <br> - **Troll Design**: Misleading visual cues (e.g., fake doors or signs) challenge player patience and observation skills.         |
 
 
+
 ## User Stories
 
 ## Paper Prototype
 <p align="center">
-  <b>Figure 1</b><br>
+  <b>Figure 3</b><br>
   <i>Paper Prototype - Block</i><br>
   <img src="./assets/paper-prototype-block.gif" width="500" alt="Block" style="border: 5px solid black;">
 </p>
+
 ---
 
 # Design
@@ -91,7 +93,31 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 # Process
 ## Zenhub Kanban
 
+In our project, we use ZenHub as our project management tool due to its key advantages:
+
+1. **Seamless GitHub Integration**: ZenHub is embedded directly within GitHub, enabling developers to manage tasks without switching between platforms, improving efficiency.
+2. **Browser Extension Support**: ZenHub offers a browser extension that integrates seamlessly into the GitHub repository interface, allowing project management directly within the repo view.
+3. **Epics Support**: ZenHub provides Epics to group related issues and manage larger tasks, a feature that GitHub Projects lacks.
+
+Additionally, ZenHub’s deep integration ensures that creating or updating issues in ZenHub is synchronized with GitHub in real-time, maintaining data consistency. Overall, ZenHub’s capabilities and tight GitHub integration make it an ideal choice for our project management.
+
+<p align="center">
+  <b>Figure</b><br>
+  <i>Zenhub integrate Github</i><br>
+  <img src="./assets/zenhub.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
+
+
 ## Whimsical Wireframe
+
+We use Whimsical to store and organize our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It provides real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for efficient planning and coordination.
+
+<p align="center">
+  <b>Figure</b><br>
+  <i>Whimsical</i><br>
+  <img src="./assets/whimsical.gif" width="500" alt="Block" style="border: 5px solid black;">
+</p>
+
 ---
 # Conclusion
 
