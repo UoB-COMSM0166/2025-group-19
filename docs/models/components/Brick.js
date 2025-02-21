@@ -1,3 +1,9 @@
+const BrickDamageLevel = Object.freeze({
+  NO_DAMAGE: 0,
+  CRACKED: 1,
+  BROKEN: 2
+});
+
 class Brick {
   constructor(x, y, width, height, isBomb = false, R = 0, G = 0, B = 0) {
     this.x = x;
@@ -9,18 +15,24 @@ class Brick {
     this.red = R;
     this.green = G;
     this.blue = B;
+    this.damageLevel = BrickDamageLevel.NO_DAMAGE;
   }
 
   display(canvas = window) {
     if (!this.isDestroyed) {
-      if (this.isBomb){
-        canvas.fill(0,0,255, 255); //bomb is blue 
-      }
-      else {
+      canvas.noStroke();
+      if (this.isBomb) {
+        canvas.fill(0, 0, 255, 255);
+      } else {
         canvas.fill(this.red, this.green, this.blue, 255);
       }
       canvas.rect(this.x, this.y, this.width, this.height);
-      console.log(`Brick at (${this.x}, ${this.y}) Color: RGB(${this.red}, ${this.green}, ${this.blue})`);
+      if (this.damageLevel === BrickDamageLevel.CRACKED) {
+        canvas.stroke(50);
+        canvas.line(this.x, this.y, this.x + this.width, this.y + this.height);
+      } else if (this.damageLevel === BrickDamageLevel.BROKEN) {
+        this.isDestroyed = true;
+      }
     }
   }
 }
