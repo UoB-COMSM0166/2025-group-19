@@ -60,25 +60,124 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 
 # Requirements
 ## Early Stages design & Ideation process
-| Game         | Gameplay Reference                                                                 | Mechanics                                                                                                                        |
-|--------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| **Block** :purple_circle: | [Watch Gameplay](https://www.youtube.com/watch?v=aU1Hrpr2igM)                                            | - **Collision Detection for Bricks**: Detect ball collisions with bricks and adjust the ball's direction.                       <br> - **Managing Multiple Balls**: Track positions, directions, and speeds for multiple balls.                                   <br> - **Implementing Power-Ups**: Add power-ups like paddle enlargement, extra balls, or modified ball behavior.                 <br> - **Game Rendering and Performance**: Real-time rendering with optimization for multiple balls and bricks.                    <br> - **Game Logic and Level Design**: Create multiple levels with varying layouts and increasing difficulty.                    <br> - **Physics Simulation**: Simulate ball movement using velocity vectors and angle reflections.                                  |
-| **Bombie** :bomb:          | [Watch Gameplay](https://www.youtube.com/watch?v=W5vcOb7laG0)                                            | - **Game Engine or Canvas**: Render the game scene on a canvas.                                                                 <br> - **Game Map Design**: Represent the map with a 2D array including destructible walls, indestructible walls, and empty spaces. <br> - **Character Controls**: Enable player movement and bomb placement.                                                     <br> - **Bomb and Explosion Logic**: Add bomb delay, explosion range, and wall destruction mechanics.                               <br> - **Enemy AI**: Enemies move randomly or track players, place bombs, and avoid explosions.                                      <br> - **Collision Detection**: Detect collisions between players, walls, bombs, and explosions.                                    <br> - **Game Progression and End Conditions**: Define objectives, game-over conditions, and progression rules.                       <br> - **Sound and Visual Effects**: Include explosion sounds, animations, and movement effects.                                     |
-| **Temple Escape** :hindu_temple: | [Watch Gameplay](https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1) | - **Character Movement**: Use swiping or arrow keys to move in straight lines, stopping only at walls.                           <br> - **Maze Design & Obstacles**: Design single-path mazes with traps, timed enemies, and walls that can stop characters.         <br> - **Location and Boundary Detection**: Track character interaction with collectables and traps.                                 <br> - **Power-ups & Outfits**: Add power-ups for extra lives or bonus points; provide outfits with unique perks.                     <br> - **Rendering**: Display only one map section at a time for smooth transitions between areas.                                     <br> - **Level Progression**: Define game end based on level count or story progression; reward points for stars, dots, and missions. |
-| **Ladder Master** :ladder: | [Watch Gameplay](https://www.youtube.com/watch?v=OkTk5ky-GWc)                                            | - **2D Gameplay**: Simplify the original 3D concept to crossing a river instead of climbing walls.                               <br> - **Controls**: Move the character using arrow keys; optionally include obstacles or vary river widths.                        <br> - **Character Color Change**: Change the character's color by interacting with specific spots; make color changes random for difficulty. |
-| **Level Devil** 😈 | [Watch Gameplay](https://www.youtube.com/watch?v=nn2EUssloa4)                                            | - **Deceptive Traps**: Hidden spikes, fake platforms, and paths that mislead players.                                            <br> - **Conditional Mechanics**: Triggers and elements like springboards behave differently based on player actions.            <br> - **Trial-and-Error Progression**: Players must memorize safe paths and solve puzzles through experimentation.                  <br> - **Dynamic Triggers**: Hidden switches alter the environment, activating platforms or deactivating traps.                      <br> - **Troll Design**: Misleading visual cues (e.g., fake doors or signs) challenge player patience and observation skills.         |
+<table>
+    <tr>
+        <th>Game Type</th>
+        <th>Game Inspiration</th>
+        <th>Game Description</th>
+        <th>Possible Game Twists</th>
+    </tr>
+    <tr>
+        <td><strong>Block</strong> 🟣</td>
+        <td><a href="https://www.youtube.com/watch?v=aU1Hrpr2igM" target="_blank">Watch Gameplay</a></td>
+        <td>
+            A classic ball-and-brick game where players break bricks by bouncing a ball off a paddle.
+        </td>
+        <td>
+            - Power-Ups: Special bricks drop power-ups like paddle enlargement or extra balls. <br>
+            - Multi-Ball Chaos: Introduce multiple balls with different behaviors.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Bombie</strong> 💣</td>
+        <td><a href="https://www.youtube.com/watch?v=W5vcOb7laG0" target="_blank">Watch Gameplay</a></td>
+        <td>
+            A bomb-based strategy game where players place bombs to destroy walls and eliminate opponents.
+        </td>
+        <td>
+            - Smart AI Opponents: Enemies can strategically place bombs and evade explosions. <br>
+            - Customizable Maps: Players can modify the layout and design of the battlefield. <br>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Temple Escape</strong> ⛩️</td>
+        <td><a href="https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1" target="_blank">Watch Gameplay</a></td>
+        <td>
+            A maze-based puzzle game where players move in straight lines until they hit a wall.
+        </td>
+        <td>
+            - Traps & Timed Puzzles: Moving obstacles force players to think ahead. <br>
+            - Power-ups & Outfits: Collectables provide unique perks. <br>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Ladder Master</strong> 🪜</td>
+        <td><a href="https://www.youtube.com/watch?v=OkTk5ky-GWc" target="_blank">Watch Gameplay</a></td>
+        <td>
+            A challenging platformer where players must time movements carefully to cross obstacles.
+        </td>
+        <td>
+            - 2D River Crossing: Instead of climbing, make it about crossing a river with unstable platforms. <br>
+            - Character Color Change: Random color changes affect mechanics.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Level Devil</strong> 😈</td>
+        <td><a href="https://www.youtube.com/watch?v=nn2EUssloa4" target="_blank">Watch Gameplay</a></td>
+        <td>
+            A tricky platformer filled with deceptive mechanics and unexpected traps.
+        </td>
+        <td>
+            - Hidden Traps: Fake platforms and misleading paths test the player's observation skills. <br>
+            - Dynamic Triggers: Actions change the level unpredictably. <br>
+        </td>
+    </tr>
+</table>
 
-## Epics & User Stories
-| **Epic**                                         | **Stakeholder**            | **User Story**                                                                                     | **Requirement**                                                                                                             |
-|--------------------------------------------------|----------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| **Creating an intriguing and various game experience** | **User**                   | As a user, I want certain bricks to drop power-ups, such as double points or paddle expansion, to add variety to the game. | Given certain bricks contain a specific power-up, when the players break one of these bricks, then the corresponding power-up, such as double points or paddle expansion, will drop for the player to collect. |
-|                                                  | **Speedrun Competitor**    | As a speedrun competitor, I want to have different records to pass the game.                     | Given the game has time trials, when I play the game, then I can try to beat my previous records and climb the leaderboard. |
-| **Let our kids play a game without violence**     | **Parents**                | As a parent, I want to make sure that my kids are playing appropriate games, so that they don’t neglect their studies or get addicted to video games. | Given the kid mode is on, when kids play the game, then the game will kick them out if they play longer than the time limit. |
-|                                                  | **Parents & Physics Teachers** | As parents and physics teachers, I want my kids or students to play the game without violence. | Given I want to let my kids know that it would be entertaining with physical game experience. |
-| **Try to learn from failure and frustrations**    | **Parents**                | As parents, I want my children to train their focus and reaction speed.                          | Given the increasing difficulty of levels, when the speed of the board increases, then the child needs to focus more and react fast to complete the level. |
-|                                                  | **Positive Reinforcer**    | As a person who does better with positive encouragement, I want there to be a reward system, so that I’m more motivated to keep playing and complete harder levels. | Given there is a completion ladder, when a certain level is completed/threshold is met, then rewards such as a new background theme or user icon will be granted. |
-| **Accessible to visually impaired**              | **Visually Impaired User** | As a visually impaired or colour blind user, I want accessible features such as larger texts or easily recognisable blocks, so that I can play the game with minimal trouble. | Given I am in colour blind mode, when I play, then blocks with special effects will be designated by shapes instead of colours. |
-| **Educational**                                   | **Physics Teacher**        | As a physics teacher/professor, I want to make use of the game mechanics and physics in an educational setting, so that my students have a more visual and interesting way to learn about physics. | Given I want to show the concept of momentum to kids, when the kids are in the game, then there can be playback so that the motion can be observed in more detail (maximized with angles, velocity, etc shown). |
+## User Stories & Epics
+<table>
+    <tr>
+        <th>Epic</th>
+        <th>Stakeholder</th>
+        <th>User Story</th>
+        <th>Requirement</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Creating an intriguing and various game experience</td>
+        <td>User</td>
+        <td>As a user, I want certain bricks to drop power-ups, such as double points or paddle expansion, to add variety to the game.</td>
+        <td>Given certain bricks contain a specific power-up, when the players break one of these bricks, then the corresponding power-up, such as double points or paddle expansion, will drop for the player to collect.</td>
+    </tr>
+    <tr>
+        <td>Speedrun Competitor</td>
+        <td>As a speedrun competitor, I want to have different records to pass the game.</td>
+        <td>Given the game has time trials, when I play the game, then I can try to beat my previous records and climb the leaderboard.</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Let our kids play a game without violence</td>
+        <td>Parents</td>
+        <td>As a parent, I want to make sure that my kids are playing appropriate games, so that they don’t neglect their studies or get addicted to video games.</td>
+        <td>Given the kid mode is on, when kids play the game, then the game will kick them out if they play longer than the time limit.</td>
+    </tr>
+    <tr>
+        <td>Parents & Physics Teachers</td>
+        <td>As parents and physics teachers, I want my kids or students to play the game without violence.</td>
+        <td>Given I want to let my kids know that it would be entertaining with physical game experience.</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Try to learn from failure and frustrations</td>
+        <td>Parents</td>
+        <td>As parents, I want my children to train their focus and reaction speed.</td>
+        <td>Given the increasing difficulty of levels, when the speed of the board increases, then the child needs to focus more and react fast to complete the level.</td>
+    </tr>
+    <tr>
+        <td>Positive Reinforcer</td>
+        <td>As a person who does better with positive encouragement, I want there to be a reward system, so that I’m more motivated to keep playing and complete harder levels.</td>
+        <td>Given there is a completion ladder, when a certain level is completed/threshold is met, then rewards such as a new background theme or user icon will be granted.</td>
+    </tr>
+    <tr>
+        <td>Accessible to visually impaired</td>
+        <td>Visually Impaired User</td>
+        <td>As a visually impaired or colour blind user, I want accessible features such as larger texts or easily recognisable blocks, so that I can play the game with minimal trouble.</td>
+        <td>Given I am in colour blind mode, when I play, then blocks with special effects will be designated by shapes instead of colours.</td>
+    </tr>
+    <tr>
+        <td>Educational</td>
+        <td>Physics Teacher</td>
+        <td>As a physics teacher/professor, I want to make use of the game mechanics and physics in an educational setting, so that my students have a more visual and interesting way to learn about physics.</td>
+        <td>Given I want to show the concept of momentum to kids, when the kids are in the game, then there can be playback so that the motion can be observed in more detail (maximized with angles, velocity, etc shown).</td>
+    </tr>
+</table>
 
 ## Paper Prototype
 <p align="center">
