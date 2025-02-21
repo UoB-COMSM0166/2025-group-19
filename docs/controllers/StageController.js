@@ -16,6 +16,9 @@ class StageController {
       this.state.balls = []; // Will not generate ball in the beginning.
       this.ballRemain = 10; // Remain Ball
       this.timer = 60; // Remain time
+      this.toolProbabilities = {}; // dropping tool array
+      this.ballRadius = Ball.normalSizeBall; // shoting ball size
+      this.isBricksLoaded = false;
       this.initBricks();
       this.startTimer(); // Start the timer.
       this.sidebar.onPauseClick = () => {
@@ -27,7 +30,23 @@ class StageController {
   }
 
   initBricks() {
-    throw new Error('initBricks() should be implemented by subclass!');
+    this.state.bricks = [];
+    const jsonPath = this.getStageJsonPath();
+    loadJSON(jsonPath, (data) => {
+      let brickWidth = data.width;
+      let brickHeight = data.height;
+      for (let brickData of data.bricks) {
+        let colorValues = data.colour[brickData.colour];
+        let [r, g, b] = colorValues;
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, r, g, b);
+        this.state.bricks.push(brick);
+      }
+      this.isBricksLoaded = true;
+    });
+  }
+
+  getStageJsonPath() {
+    throw new Error('getStageJsonPath() should be implemented by subclass!');
   }
 
   togglePause() {
@@ -81,6 +100,7 @@ class StageController {
   }
 
   update() {
+      if (!this.isBricksLoaded) return;
       if (this.showingDialog || this.paused) return;
 
       this.state.paddle.update();
@@ -111,7 +131,6 @@ class StageController {
           this.state.isStageFailed = true;
           this.showLoseDialog();
       }
-
       if (this.state.bricks.length === 0) {
           this.state.isStageCleared = true;
           this.showWinDialog();
