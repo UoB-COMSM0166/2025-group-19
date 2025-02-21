@@ -20,7 +20,23 @@ class StageController {
   }
 
   initBricks() {
-    throw new Error('initBricks() should be implemented by subclass!');
+    this.state.bricks = [];
+    const jsonPath = this.getStageJsonPath();
+    loadJSON(jsonPath, (data) => {
+      let brickWidth = data.width;
+      let brickHeight = data.height;
+      for (let brickData of data.bricks) {
+        let colorValues = data.colour[brickData.colour];
+        let [r, g, b] = colorValues;
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, r, g, b);
+        this.state.bricks.push(brick);
+      }
+      this.isBricksLoaded = true;
+    });
+  }
+
+  getStageJsonPath() {
+    throw new Error('getStageJsonPath() should be implemented by subclass!');
   }
 
   togglePause() {
