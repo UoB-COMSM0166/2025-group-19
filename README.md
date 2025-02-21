@@ -37,7 +37,7 @@
 ---
 # Introduction
 
-Our game is inspired by the classic brick breaker from the nostalgic era of 1999-2000 (Figure 1). However, we are not merely recreating the old classic—we are giving it a fresh, creative twist. The game incorporates six animals from the Chinese Zodiac, each representing a unique level. Players progress through these levels, collecting each animal as a reward, gaining a sense of achievement with every success.
+Our game is inspired by the classic brick breaker from the nostalgic era of 1999-2000 (Figure 1). However, we are not merely recreating the old classic—we are giving it a fresh, creative twist. The game incorporates six animals from the Chinese Zodiac (Figure 2), each representing a unique level. Players progress through these levels, collecting each animal as a reward, gaining a sense of achievement with every success.
 
 Each level introduces a distinct visual theme and brick mechanism tailored to the animal it represents, offering new challenges and keeping the gameplay engaging. As players advance, the difficulty increases, putting their skills to the test through ball reflections, speed control, and precision. Additionally, we’ve integrated features such as multi-ball management and power-ups to further enhance the experience.
 
@@ -47,6 +47,12 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
   <b>Figure 1</b><br>
   <i>Block</i><br>
   <img src="./assets/block-through.gif" width="500" alt="Block" style="border: 5px solid black;">
+</p>
+
+<p align="center">
+  <b>Figure 2</b><br>
+  <i>Zodiac Catch</i><br>
+  <img src="./assets/zodiac-catch.gif" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
 ---
