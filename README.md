@@ -6,20 +6,18 @@
 [PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/)
 
 # Table of Contents
-- [1. Team Members](#1-team-members)
-- [2. Introduction](#2-introduction)
-- [3. Requirements](#3-requirements)
-- [4. Design](#4-design)
-- [5. Kanban](#5-kanban)
-- [6. Implementation](#6-implementation)
-- [7. Evaluation](#7-evaluation)
-- [8. Process](#8-process)
-- [9. Conclusion](#9-conclusion)
-- [10. References](#10-references)
-- [11. Weekly Assignments Preview](#11-weekly-assignments-preview)
+- [Team Members](#team-members)
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Design](#design)
+- [Implementation](#implementation)
+- [Evaluation](#evaluation)
+- [Process](#process)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 ---
-# 1. Team Members
+# Team Members
 
 ![groupPhoto](https://github.com/user-attachments/assets/ed444ef8-22ce-410e-9d05-1c2d5bb0d39b)
 
@@ -37,7 +35,7 @@
 </div>
 
 ---
-# 2. Game Introduction
+# Introduction
 
 Our game is inspired by the classic brick breaker from the nostalgic era of 1999-2000 (Figure 1). However, we are not merely recreating the old classic—we are giving it a fresh, creative twist. The game incorporates six animals from the Chinese Zodiac, each representing a unique level. Players progress through these levels, collecting each animal as a reward, gaining a sense of achievement with every success.
 
@@ -52,7 +50,7 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 </p>
 
 ---
-# 3. Requirements
+# Requirements
 ## Early Stages design & Ideation process
 | Game         | Gameplay Reference                                                                 | Mechanics                                                                                                                        |
 |--------------|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
@@ -73,34 +71,21 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 </p>
 ---
 
-# 4. Design
+# Design
 ## Class Diagrams
 ## Sequence Diagram
 
 ---
-# 5. Implementation
+# Implementation
 
 ---
-# 6. Evaluation
+# Evaluation
 ---
-# 7. Process
+# Process
 ## Zenhub Kanban
 
 ## Whimsical Wireframe
 ---
-# 8. Conclusion
+# Conclusion
 
-# 9. References
-
-
-<div align="center">
-
-| Name | Email | Role |
-| :-: | :-: | :-: |
-| Week 01 | Gaming Ideas | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week01/Readme.md) |
-| Week 02 | p5.js Workshop | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week02/Readme.md) |
-| Week 03 | Paper prototyping | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/assignments/Week03/Readme.md) <br> [Video Link 1](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/assignments/Week03/ideas/block) <br> [Video Link 2](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/assignments/Week03/ideas/level_devil) |
-| Week 04 | Requirements | [Workshop](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week04/Workshop.md) <br> [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week04/Readme.md) |
-| Week 05 | Object Orientated Design | [Homework](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week05/Readme.md) |
-
-</div>
+# References
