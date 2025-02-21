@@ -191,7 +191,7 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
   <i>Prototype - Zodiac Catch</i><br>
   <img src="./assets/prototype-zodiac-catch.gif" width="500" alt="Block" style="border: 5px solid black;">
 </p>
----
+
 
 # Design
 ## Class Diagrams
