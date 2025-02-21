@@ -1,9 +1,10 @@
 # 2025-group-19
 2025 COMSM0166 group 19
 
-## Demo Link
+## Link
 
-[PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/)
+[PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/) <br>
+[Weekly Assignment 📚](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Readme.md)
 
 # Table of Contents
 - [Team Members](#team-members)
@@ -67,9 +68,17 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 | **Ladder Master** :ladder: | [Watch Gameplay](https://www.youtube.com/watch?v=OkTk5ky-GWc)                                            | - **2D Gameplay**: Simplify the original 3D concept to crossing a river instead of climbing walls.                               <br> - **Controls**: Move the character using arrow keys; optionally include obstacles or vary river widths.                        <br> - **Character Color Change**: Change the character's color by interacting with specific spots; make color changes random for difficulty. |
 | **Level Devil** 😈 | [Watch Gameplay](https://www.youtube.com/watch?v=nn2EUssloa4)                                            | - **Deceptive Traps**: Hidden spikes, fake platforms, and paths that mislead players.                                            <br> - **Conditional Mechanics**: Triggers and elements like springboards behave differently based on player actions.            <br> - **Trial-and-Error Progression**: Players must memorize safe paths and solve puzzles through experimentation.                  <br> - **Dynamic Triggers**: Hidden switches alter the environment, activating platforms or deactivating traps.                      <br> - **Troll Design**: Misleading visual cues (e.g., fake doors or signs) challenge player patience and observation skills.         |
 
-
-
-## User Stories
+## Epics & User Stories
+| **Epic**                                         | **Stakeholder**            | **User Story**                                                                                     | **Requirement**                                                                                                             |
+|--------------------------------------------------|----------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| **Creating an intriguing and various game experience** | **User**                   | As a user, I want certain bricks to drop power-ups, such as double points or paddle expansion, to add variety to the game. | Given certain bricks contain a specific power-up, when the players break one of these bricks, then the corresponding power-up, such as double points or paddle expansion, will drop for the player to collect. |
+|                                                  | **Speedrun Competitor**    | As a speedrun competitor, I want to have different records to pass the game.                     | Given the game has time trials, when I play the game, then I can try to beat my previous records and climb the leaderboard. |
+| **Let our kids play a game without violence**     | **Parents**                | As a parent, I want to make sure that my kids are playing appropriate games, so that they don’t neglect their studies or get addicted to video games. | Given the kid mode is on, when kids play the game, then the game will kick them out if they play longer than the time limit. |
+|                                                  | **Parents & Physics Teachers** | As parents and physics teachers, I want my kids or students to play the game without violence. | Given I want to let my kids know that it would be entertaining with physical game experience. |
+| **Try to learn from failure and frustrations**    | **Parents**                | As parents, I want my children to train their focus and reaction speed.                          | Given the increasing difficulty of levels, when the speed of the board increases, then the child needs to focus more and react fast to complete the level. |
+|                                                  | **Positive Reinforcer**    | As a person who does better with positive encouragement, I want there to be a reward system, so that I’m more motivated to keep playing and complete harder levels. | Given there is a completion ladder, when a certain level is completed/threshold is met, then rewards such as a new background theme or user icon will be granted. |
+| **Accessible to visually impaired**              | **Visually Impaired User** | As a visually impaired or colour blind user, I want accessible features such as larger texts or easily recognisable blocks, so that I can play the game with minimal trouble. | Given I am in colour blind mode, when I play, then blocks with special effects will be designated by shapes instead of colours. |
+| **Educational**                                   | **Physics Teacher**        | As a physics teacher/professor, I want to make use of the game mechanics and physics in an educational setting, so that my students have a more visual and interesting way to learn about physics. | Given I want to show the concept of momentum to kids, when the kids are in the game, then there can be playback so that the motion can be observed in more detail (maximized with angles, velocity, etc shown). |
 
 ## Paper Prototype
 <p align="center">
