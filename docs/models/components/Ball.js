@@ -48,9 +48,9 @@ class Ball {
         this.y - this.radius < brick.y + brick.height &&
         this.y + this.radius > brick.y
       ) {
-        if(brick.isRed) {  
-          // if brick is red it won't break
-          // instead, ball gets eaten (will lose immediately if only one ball in play)
+        // tiger's middle paw won't break
+        // instead, ball gets eaten (will lose immediately if only one ball in play)
+        if(brick.isUnbreakable) {  
           this.x = this.gameHeight;
           this.y = this.gameWidth;
         } else {

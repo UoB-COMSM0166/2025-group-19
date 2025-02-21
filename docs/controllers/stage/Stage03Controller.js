@@ -12,42 +12,44 @@ class Stage03Controller extends StageController {
 
   }
 
-	initBricks() {
-    this.state.bricks = [];
-    for (let i = 0; i < 5; i++) {
-      for (let j = 0; j < 10; j++) {
-        this.state.bricks.push(new Brick(
-          j * 60 + 50,
-          i * 30 + 50,
-          60,
-          30
-        ));
-      }
-    }
-  }
 
-	regenerateBricks() {    
+	initBricks() {
 		this.state.bricks = [];
-    for (let i = 0; i < 5; i++) {
-      for (let j = 0; j < 10; j++) {
-				if(j === 4 || j === 5) {
-        	this.state.bricks.push(new Brick(    
-          	j * 60 + 50,
-          	i * 30 + 50,
-          	60,
-          	30, true
-        	));
-				} else {
-        	this.state.bricks.push(new Brick(
-          	j * 60 + 50,
-          	i * 30 + 50,
-          	60,
-          	30
-        	));
-				}
-      }
-    }
-  }
+		console.log("bricks initialized, length: ", this.state.bricks.length); 
+			
+		loadJSON("./models/components/StagePattern/Stage03_1.json", (data) => {
+			let brickWidth = data.width;
+			let brickHeight = data.height;  
+				
+			console.log("Brick data received:", data, " brickwidth: ", brickWidth, " brickHeight: ", brickHeight); 
+			for (let brickData of data.bricks) {
+				let colorValues = data.colour[brickData.colour];
+				let [r, g, b] = colorValues;
+				let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.unbreakable, r, g, b);
+				this.state.bricks.push(brick);
+			}
+		});
+	}
+
+
+	// second form of tiger: angry paw
+	transformIntoPaw() {
+		this.state.bricks = [];
+		console.log("bricks initialized, length: ", this.state.bricks.length); 
+		
+		loadJSON("./models/components/StagePattern/Stage03_2.json", (data) => {
+			let brickWidth = data.width;
+			let brickHeight = data.height;  
+			
+			console.log("Brick data received:", data, " brickwidth: ", brickWidth, " brickHeight: ", brickHeight); 
+			for (let brickData of data.bricks) {
+				let colorValues = data.colour[brickData.colour];
+				let [r, g, b] = colorValues;
+				let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.unbreakable, r, g, b);
+				this.state.bricks.push(brick);
+			}
+		});
+	}
 
 
 	update() {
@@ -80,11 +82,14 @@ class Stage03Controller extends StageController {
 			this.showLoseDialog();
 	}
 
-		if (this.state.bricks.length === 0) {
+		// checks to see if all bricks besides unbreakable ones have been destroyed
+		if (this.state.bricks.filter(brick => !brick.isUnbreakable).length === 0) {
 			if(this.regenerate === true) {
-				this.regenerateBricks();
+				this.transformIntoPaw();
 				this.regenerate = false;
 			} else {
+				// removes all unbreakable bricks before ending level
+				this.state.bricks = (this.state.bricks.filter(brick => !brick.isDestroyed && !brick.isUnbreakable));
 				this.showWinDialog();
 			}
 		}
