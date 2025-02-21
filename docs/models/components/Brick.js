@@ -20,7 +20,6 @@ class Brick {
 
   display(canvas = window) {
     if (!this.isDestroyed) {
-      canvas.noStroke();
       if (this.isBomb) {
         canvas.fill(0, 0, 255, 255);
       } else {
@@ -29,10 +28,20 @@ class Brick {
       canvas.rect(this.x, this.y, this.width, this.height);
       if (this.damageLevel === BrickDamageLevel.CRACKED) {
         canvas.stroke(50);
-        canvas.line(this.x, this.y, this.x + this.width, this.y + this.height);
+        let seventhW = this.width / 7;
+        let seventhH = this.height / 7;
+        for (let i = 1; i <= 6; i++) {
+          let xPos = this.x + i * seventhW;
+          canvas.line(xPos, this.y, xPos, this.y + this.height);
+        }
+        for (let i = 1; i <= 6; i++) {
+          let yPos = this.y + i * seventhH;
+          canvas.line(this.x, yPos, this.x + this.width, yPos);
+        }
       } else if (this.damageLevel === BrickDamageLevel.BROKEN) {
         this.isDestroyed = true;
       }
     }
   }
+
 }

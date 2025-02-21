@@ -3,7 +3,7 @@ class Ball {
   static normalSizeBall = 15;
   static bigSizeBall = 25;
 
-  constructor(x, y, gameWidth, gameHeight, radius) {
+  constructor(x, y, gameWidth, gameHeight, radius=Ball.normalSizeBall) {
     this.radius = radius;
     this.x = x;
     this.y = y;
@@ -14,7 +14,6 @@ class Ball {
   }
 
   display(canvas = window) {
-    canvas.noStroke();
     canvas.fill(255, 204, 0);
     canvas.circle(this.x, this.y, this.radius * 2);
   }
