@@ -9,14 +9,24 @@ class StageController {
       this.showingDialog = false;
       this.dialogText = '';
       this.toolDropRate = 0; // tool dropping rate
+      this.toolProbabilities = {}; // drop
+      // ping tool array
+      this.ballRadius = 10; // shoting ball size
+      this.paused = false;
+      this.state.balls = []; // Will not generate ball in the beginning.
+      this.ballRemain = 10; // Remain Ball
+      this.timer = 60; // Remain time
       this.toolProbabilities = {}; // dropping tool array
       this.ballRadius = Ball.normalSizeBall; // shoting ball size
-      this.paused = false;
       this.isBricksLoaded = false;
       this.initBricks();
+      this.startTimer(); // Start the timer.
       this.sidebar.onPauseClick = () => {
         this.togglePause();
       };
+
+      
+
   }
 
   initBricks() {
@@ -45,14 +55,26 @@ class StageController {
   }
 
   shootBall() {
-    const ball = new Ball(
-      this.state.paddle.x + this.state.paddle.width / 2,
-      this.state.paddle.y - 10,
-      this.state.gameWidth,
-      this.state.gameHeight,
-      this.ballRadius
-    );
-    this.state.balls.push(ball);
+
+    if (this.ballRemain > 0){
+      const ball = new Ball(
+        this.state.paddle.x + this.state.paddle.width / 2,
+        this.state.paddle.y - 10,
+        this.state.gameWidth,
+        this.state.gameHeight,
+        this.ballRadius
+        
+      );
+      this.state.balls.push(ball);
+      this.ballRemain--;
+      console.log(`Ball shot! Remaining balls: ${this.ballRemain}`);
+
+      //Make sure when shoot ball, update sidebar simutanously.
+      this.sidebar.update(this.sidebar.score, this.ballRemain, this.state.timer);
+    } else {
+      console.log(`No more balls left! Cannot shoot.`);
+    }
+
   }
 
   generateTool(x, y) {
@@ -103,14 +125,21 @@ class StageController {
       this.state.balls = this.state.balls.filter(ball => !ball.isOutOfBounds());
       this.state.bricks = this.state.bricks.filter(brick => !brick.isDestroyed);
 
-      if (this.state.balls.length === 0) {
+
+      // Lose if ballRemain == 0;
+      if (this.state.balls.length === 0 && this.ballRemain === 0) {
           this.state.isStageFailed = true;
           this.showLoseDialog();
       }
       if (this.state.bricks.length === 0) {
           this.state.isStageCleared = true;
           this.showWinDialog();
+          clearInterval(this.timerInterval); // Clear timer when win
+
       }
+
+      //update sidebar
+      this.sidebar.update(this.sidebar.score, this.ballRemain, this.timer);
   }
 
   display() {
@@ -209,6 +238,23 @@ class StageController {
 
   applyToolEffect(tool) {
     this.effectController.applyToolEffect(tool);
+  }
+
+  startTimer(){
+    this.timerInterval = setInterval(() => {
+      if(this.showingDialog || this.paused) return;
+
+      this.timer--;
+      console.log(`Remaining time: ${this.timer}.`);
+      this.sidebar.update(this.sidebar.score, this.ballRemain, this.timer);
+
+      if(this.timer <= 0){
+        this.timer = 0;
+        this.state.isStageFailed = true;
+        this.showLoseDialog();
+        clearInterval(this.timerInterval);
+      }
+    }, 1000);
   }
 }
  

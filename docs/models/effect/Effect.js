@@ -21,7 +21,7 @@ class Effect {
 
     this.timer = setTimeout(() => {
       this.removeEffect(stageController);
-      EffectController.removeActiveEffect(this);
+      stageController.effectController.removeActiveEffect(this); // Make sure effect has been remove.
     }, this.duration);
   }
 
