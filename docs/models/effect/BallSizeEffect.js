@@ -11,14 +11,15 @@ class BallSizeEffect extends Effect {
 
     balls.forEach(ball => ball.radius = ballRadius);
     stageController.ballRadius = ballRadius; // new ball size
+    balls.forEach(ball => ball.radius = ballRadius);
   }
 
   removeEffect(stageController) {
     const balls = stageController.state.balls;
-
-    balls.forEach(ball => ball.radius = this.originalRadius);
     stageController.ballRadius = this.originalRadius; // new ball will be reset
+    balls.forEach(ball => ball.radius = this.originalRadius);
   }
+  
 }
 
 

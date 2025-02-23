@@ -18,14 +18,14 @@ class Paddle {
 
   update() {
     if (this.isMovingLeft) {
-      if(this.reverse) {
+      if (this.reverse) {
         this.x = min(this.x + this.speed, this.gameWidth - this.width);
       } else {
         this.x = max(this.x - this.speed, 0);
       }
     }
     if (this.isMovingRight) {
-      if(this.reverse) {
+      if (this.reverse) {
         this.x = max(this.x - this.speed, 0);
       } else {
         this.x = min(this.x + this.speed, this.gameWidth - this.width);

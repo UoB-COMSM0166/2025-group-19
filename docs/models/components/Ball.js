@@ -50,6 +50,7 @@ class Ball {
         this.y + this.radius > brick.y &&
         this.y - this.radius < brick.y + brick.height
       ) {
+        // unbreakable blocks 'eat' any balls that touch them
         if (brick.isUnbreakable) {
           this.x = this.gameHeight;
           this.y = this.gameWidth;

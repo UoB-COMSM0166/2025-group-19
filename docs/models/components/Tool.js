@@ -19,7 +19,7 @@ class Tool {
     if (this.type === 'paddleShrink') symbol = '>-<';
     if (this.type === 'timeIncrease') symbol = 'T+';
     if (this.type === 'timeDecrease') symbol = 'T-';
-    if (this.type === 'paddleReverse') symbol = '>=R=<';
+    if (this.type === 'paddleReverse') symbol = '==R==';
     canvas.text(symbol, this.x, this.y);
   }
 

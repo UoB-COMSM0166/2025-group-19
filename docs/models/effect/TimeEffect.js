@@ -5,14 +5,12 @@ class TimeEffect extends Effect {
   }
 
 	applyEffect(stageController) {
-		const sidebar = stageController.sidebar;
-		
 		switch (this.sizeType) {
       case 'add':
-				sidebar.timer += 10;
+				stageController.timer += 10;
         break;
       case 'minus':
-				sidebar.timer -= 10;
+				stageController.timer -= 10;
         break;
     }
 	}
