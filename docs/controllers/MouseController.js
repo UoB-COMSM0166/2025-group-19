@@ -16,7 +16,7 @@ class MouseController {
       // background music
       if (!this.bgMusic.isPlaying()) {
         this.bgMusic.loop();
-        this.bgMusic.setVolume(0);
+        this.bgMusic.setVolume(0.5);
       }
 
       // currentPage mouse event

@@ -12,10 +12,10 @@ class Stage03Controller extends StageController {
 	
 
 	getStageJsonPath() {
-		if (this.form === 1) {
+		if (this.form === CurrentForm.STAGE1) {
 			this.regenerate = true;
     	return "./models/components/StagePattern/Stage03_1.json";
-		} else if (this.form === 2) {
+		} else if (this.form === CurrentForm.STAGE2) {
 			return "./models/components/StagePattern/Stage03_2.json";
 		}
   }

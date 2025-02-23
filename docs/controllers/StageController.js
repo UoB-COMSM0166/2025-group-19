@@ -1,3 +1,8 @@
+const CurrentForm = Object.freeze({
+  STAGE1: 1,
+  STAGE2: 2
+});
+
 class StageController {
   constructor(state, view, sidebar, pageController) {
       this.state = state;
@@ -14,12 +19,12 @@ class StageController {
       this.ballRadius = 10; // shoting ball size
       this.paused = false;
       this.state.balls = []; // Will not generate ball in the beginning.
-      this.ballRemain = 10; // Remain Ball
-      this.timer = 60; // Remain time
+      this.ballRemain = 1000; // Remain Ball
+      this.timer = 600; // Remain time
       this.toolProbabilities = {}; // dropping tool array
       this.ballRadius = Ball.normalSizeBall; // shoting ball size
       this.isBricksLoaded = false;
-      this.form = 1; // which form is animal in (default = 1)
+      this.form = CurrentForm.STAGE1; // which form is animal in (default = 1)
       this.regenerate = false;
       this.secondFormLoaded = false; 
       this.initBricks();
@@ -42,14 +47,14 @@ class StageController {
         let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.unbreakable, r, g, b);
         this.state.bricks.push(brick);
       }
-      if (this.form === 1) {
+      if (this.form === CurrentForm.STAGE1) {
         this.isBricksLoaded = true;
-      } else if (this.form === 2) {
+      } else if (this.form === CurrentForm.STAGE2) {
         this.secondFormLoaded = true;
       }
 
       if (this.regenerate) {
-        this.form += 1;
+        this.form = CurrentForm.STAGE2;
       }
 
     });
@@ -111,7 +116,7 @@ class StageController {
 
   update() {
       if (!this.isBricksLoaded) return;
-      if (!this.regenerate && !this.secondFormLoaded && (this.form == 2)) return;
+      if (!this.regenerate && !this.secondFormLoaded && (this.form === CurrentForm.STAGE2)) return;
       if (this.showingDialog || this.paused) return;
 
       console.log("helloooooo");
