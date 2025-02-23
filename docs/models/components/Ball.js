@@ -9,7 +9,8 @@ class Ball {
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
     this.gravityOn = gravityOn;
-    this.gravity = 0.1;           // add this value to speedY in update() to immitate acceleration
+    this.gravity = 0.1;
+    this.gravityToggled = 0.05;           // add this value to speedY in update() to immitate acceleration
   }
 
   display(canvas = window) {
@@ -17,10 +18,15 @@ class Ball {
     canvas.circle(this.x, this.y, this.radius * 2);
   }
 
-  update() {
+  update(state) {
     
     if (this.gravityOn){
-      this.speedY += this.gravity;
+      if (state.paddle.toggleOn){
+        this.speedY += this.gravityToggled;
+      }
+      else{
+        this.speedY += this.gravity;
+      }
     }
     
     this.x += this.speedX;
@@ -46,13 +52,6 @@ class Ball {
       this.speedY *= -1;
       this.y = paddle.y - this.radius;
     }
-
-    // Limit height when gravityOn === true
-    // if (stageController.gravityOn &&
-    //   this.y === 400 
-    // ){
-    //   this.speedY *= -1;
-    // }
 
     // Ball collision with bricks
     for (let brick of bricks) {

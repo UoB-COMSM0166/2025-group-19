@@ -9,6 +9,7 @@ class Paddle {
     this.isMovingLeft = false;
     this.isMovingRight = false;
     this.toggleOffset = 10;
+    this.toggleOn = false;
   }
 
   display(canvas = window) {
@@ -35,9 +36,13 @@ class Paddle {
   }
 
   togglePosition() {
-      this.y -= this.toggleOffset;
+    this.toggleOn = true;
+    console.log("toggleOn: "+ this.toggleOn);
+    this.y -= this.toggleOffset;
     setTimeout(() => {
       this.y += this.toggleOffset;
-    }, 150);
+      this.toggleOn = false;
+    }, 300);
+    console.log("toggleOn"+ this.toggleOn);
   }
 }

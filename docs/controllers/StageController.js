@@ -72,7 +72,7 @@ class StageController {
       this.state.paddle.update();
 
       for (let ball of this.state.balls) {
-          ball.update();
+          ball.update(this.state);
           ball.checkCollision(this.state.paddle, this.state.bricks, this.state.tools, this.sidebar, this);
       }
 
