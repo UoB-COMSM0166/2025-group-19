@@ -1,3 +1,8 @@
+const CurrentForm = Object.freeze({
+  STAGE1: 1,
+  STAGE2: 2
+});
+
 class StageController {
   constructor(state, view, sidebar, pageController) {
       this.state = state;
@@ -9,19 +14,56 @@ class StageController {
       this.showingDialog = false;
       this.dialogText = '';
       this.toolDropRate = 0; // tool dropping rate
-      this.toolProbabilities = {}; // dropping tool array
+      this.toolProbabilities = {}; // drop
+      // ping tool array
       this.ballRadius = 10; // shoting ball size
       this.speedMultiplier = 1;
       this.gravityOn = false;
       this.paused = false;
+      this.state.balls = []; // Will not generate ball in the beginning.
+      this.ballRemain = 10; // Remain Ball
+      this.timer = 60; // Remain time
+      this.toolProbabilities = {}; // dropping tool array
+      this.ballRadius = Ball.normalSizeBall; // shoting ball size
+      this.isBricksLoaded = false;
+      this.form = CurrentForm.STAGE1; // which form is animal in (default = 1)
+      this.regenerate = false;
+      this.secondFormLoaded = false; 
       this.initBricks();
+      this.startTimer(); // Start the timer.
       this.sidebar.onPauseClick = () => {
         this.togglePause();
       };
+
   }
 
   initBricks() {
-    throw new Error('initBricks() should be implemented by subclass!');
+    this.state.bricks = [];
+    const jsonPath = this.getStageJsonPath();
+    loadJSON(jsonPath, (data) => {
+      let brickWidth = data.width;
+      let brickHeight = data.height;
+      for (let brickData of data.bricks) {
+        let colorValues = data.colour[brickData.colour];
+        let [r, g, b] = colorValues;
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.unbreakable, r, g, b);
+        this.state.bricks.push(brick);
+      }
+      if (this.form === CurrentForm.STAGE1) {
+        this.isBricksLoaded = true;
+      } else if (this.form === CurrentForm.STAGE2) {
+        this.secondFormLoaded = true;
+      }
+
+      if (this.regenerate) {
+        this.form = CurrentForm.STAGE2;
+      }
+
+    });
+  }
+
+  getStageJsonPath() {
+    throw new Error('getStageJsonPath() should be implemented by subclass!');
   }
 
   togglePause() {
@@ -30,18 +72,29 @@ class StageController {
   }
 
   shootBall() {
-    console.log("StageController shootball gravityOn: "+this.gravityOn);
+
+    if (this.ballRemain > 0){
+      console.log("StageController shootball gravityOn: "+this.gravityOn);
     const ball = new Ball(
-      this.state.paddle.x + this.state.paddle.width / 2,
-      this.state.paddle.y - 10,
-      this.state.gameWidth,
-      this.state.gameHeight,
-      10,
-      random(-3,3)*this.speedMultiplier,
-      -5*this.speedMultiplier,
-      this.gravityOn
-    );
-    this.state.balls.push(ball);
+        this.state.paddle.x + this.state.paddle.width / 2,
+        this.state.paddle.y - 10,
+        this.state.gameWidth,
+        this.state.gameHeight,
+        this.ballRadius,
+        random(-3,3)*this.speedMultiplier,
+        -5*this.speedMultiplier,
+        this.gravityOn
+      );
+      this.state.balls.push(ball);
+      this.ballRemain--;
+      console.log(`Ball shot! Remaining balls: ${this.ballRemain}`);
+
+      //Make sure when shoot ball, update sidebar simutanously.
+      this.sidebar.update(this.sidebar.score, this.ballRemain, this.state.timer);
+    } else {
+      console.log(`No more balls left! Cannot shoot.`);
+    }
+
   }
 
   generateTool(x, y) {
@@ -67,8 +120,11 @@ class StageController {
   }
 
   update() {
+      if (!this.isBricksLoaded) return;
+      if (!this.regenerate && !this.secondFormLoaded && (this.form === CurrentForm.STAGE2)) return;
       if (this.showingDialog || this.paused) return;
 
+      console.log("helloooooo");
       this.state.paddle.update();
 
       for (let ball of this.state.balls) {
@@ -91,15 +147,29 @@ class StageController {
       this.state.balls = this.state.balls.filter(ball => !ball.isOutOfBounds());
       this.state.bricks = this.state.bricks.filter(brick => !brick.isDestroyed);
 
-      if (this.state.balls.length === 0) {
+
+      // Lose if ballRemain == 0;
+      if (this.state.balls.length === 0 && this.ballRemain === 0) {
           this.state.isStageFailed = true;
           this.showLoseDialog();
       }
+      if (this.state.bricks.filter(brick => !brick.isUnbreakable).length === 0) {
+          if (this.regenerate) {
+              // if animal has 2nd form, generates new set of bricks
+              this.regenerate = false;
+              this.initBricks();
+          } else {
+              // removes all unbreakable bricks before ending level
+              this.state.bricks = (this.state.bricks.filter(brick => !brick.isDestroyed && !brick.isUnbreakable));
+              this.state.isStageCleared = true;
+              this.showWinDialog();
+              clearInterval(this.timerInterval); // Clear timer when win
+          }
 
-      if (this.state.bricks.length === 0) {
-          this.state.isStageCleared = true;
-          this.showWinDialog();
       }
+
+      //update sidebar
+      this.sidebar.update(this.sidebar.score, this.ballRemain, this.timer);
   }
 
   display() {
@@ -153,6 +223,9 @@ class StageController {
               this.pageController.switchToStage('Stage 02');
               break;
           case 'Stage 02':
+            this.pageController.switchToStage('Stage 03');
+              break;
+          case 'Stage 03':
               this.pageController.switchToWelcome();
               break;
           default:
@@ -198,6 +271,23 @@ class StageController {
 
   applyToolEffect(tool) {
     this.effectController.applyToolEffect(tool);
+  }
+
+  startTimer(){
+    this.timerInterval = setInterval(() => {
+      if(this.showingDialog || this.paused) return;
+
+      this.timer--;
+      console.log(`Remaining time: ${this.timer}.`);
+      this.sidebar.update(this.sidebar.score, this.ballRemain, this.timer);
+
+      if(this.timer <= 0){
+        this.timer = 0;
+        this.state.isStageFailed = true;
+        this.showLoseDialog();
+        clearInterval(this.timerInterval);
+      }
+    }, 1000);
   }
 }
  

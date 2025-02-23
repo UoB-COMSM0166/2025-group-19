@@ -28,6 +28,15 @@ class EffectController {
         case 'gravityUp':
           effect = new GravityEffect('gravityUp');
           break;
+        case 'timeIncrease':
+          effect = new TimeEffect('add');
+          break;
+        case 'timeDecrease':
+          effect = new TimeEffect('minus');
+          break;
+        case 'paddleReverse':
+          effect = new PaddleDirectionEffect('reverse');
+          break;
       }
 
       if (effect) {
@@ -53,7 +62,6 @@ class EffectController {
       });
     }
 
-    //this is not called!!
     removeActiveEffect(effect) {
       this.activeEffects = this.activeEffects.filter(e => e !== effect);
     }

@@ -10,6 +10,7 @@ class Paddle {
     this.isMovingRight = false;
     this.toggleOffset = 10;
     this.toggleOn = false;
+    this.reverse = false;
   }
 
   display(canvas = window) {
@@ -19,12 +20,19 @@ class Paddle {
 
   update() {
     if (this.isMovingLeft) {
-      this.x = max(this.x - this.speed, 0);
+      if (this.reverse) {
+        this.x = min(this.x + this.speed, this.gameWidth - this.width);
+      } else {
+        this.x = max(this.x - this.speed, 0);
+      }
     }
     if (this.isMovingRight) {
-      this.x = min(this.x + this.speed, this.gameWidth - this.width);
+      if (this.reverse) {
+        this.x = max(this.x - this.speed, 0);
+      } else {
+        this.x = min(this.x + this.speed, this.gameWidth - this.width);
+      }
     }
-  
   }
 
   moveLeft(isMoving) {
@@ -46,3 +54,7 @@ class Paddle {
     console.log("toggleOn"+ this.toggleOn);
   }
 }
+
+
+
+
