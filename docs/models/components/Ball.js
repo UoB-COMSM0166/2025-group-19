@@ -9,12 +9,11 @@ class Ball {
     this.y = y;
     this.speedX = ballSpeedX;
     this.speedY = ballSpeedY;
-    console.log("speedX: ",this.speedX, " speedY: ", this.speedY)
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
     this.gravityOn = gravityOn;
     this.gravity = 0.1;
-    this.gravityToggled = 0.05;           // add this value to speedY in update() to immitate acceleration
+    this.gravityToggled = 0.05;    // add this value to speedY in update() to immitate acceleration
   }
 
   display(canvas = window) {
@@ -23,23 +22,19 @@ class Ball {
   }
 
   update(state) {
-    
     if (this.gravityOn){
       if (state.paddle.toggleOn){
-        this.speedY += this.gravityToggled;
+        // this.speedY += this.gravityToggled;
       }
       else{
-        this.speedY += this.gravity;
+        // this.speedY += this.gravity;
       }
     }
-    
     this.x += this.speedX;
     this.y += this.speedY;
-
     if (this.x - this.radius < 0 || this.x + this.radius > this.gameWidth) {
       this.speedX *= -1;
     }
-
     if (this.y - this.radius < 0) {
       this.speedY *= -1;
     }
@@ -66,7 +61,6 @@ class Ball {
         this.y + this.radius > brick.y &&
         this.y - this.radius < brick.y + brick.height
       ) {
-        
         //Destroy whole row if isBomb
         if (brick.isBomb){
           for (let i = 0; i < bricks.length; i++){
@@ -75,7 +69,6 @@ class Ball {
               }
             }
         }
-        
         // unbreakable blocks 'eat' any balls that touch them
         if (brick.isUnbreakable) {
           this.x = this.gameHeight;
@@ -108,8 +101,7 @@ class Ball {
       } else {
         throw new Error('unknown size of balls!!');
       }
-        
-        // generate tools
+      // generate tools
       hitBricks.forEach(brick => {
         const tool = stageController.generateTool(
           brick.x + brick.width / 2,
@@ -120,7 +112,6 @@ class Ball {
           tools.push(tool);
         }
       });
-
       // reverse Y speed
       this.speedY *= -1;
     }

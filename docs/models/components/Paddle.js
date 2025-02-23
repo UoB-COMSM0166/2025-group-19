@@ -45,13 +45,11 @@ class Paddle {
 
   togglePosition() {
     this.toggleOn = true;
-    console.log("toggleOn: "+ this.toggleOn);
     this.y -= this.toggleOffset;
     setTimeout(() => {
       this.y += this.toggleOffset;
       this.toggleOn = false;
     }, 300);
-    console.log("toggleOn"+ this.toggleOn);
   }
 }
 

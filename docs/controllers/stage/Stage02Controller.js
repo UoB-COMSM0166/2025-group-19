@@ -3,12 +3,12 @@ class Stage02Controller extends StageController {
     super(state, view, sidebar, pageController);
     this.toolDropRate = 0.3;
     this.toolProbabilities = {
-      ballGrow: 0.1,
-      ballShrink: 0.1,
-      paddleGrow: 0.1,
-      paddleMax: 0.1,
-      paddleShrink: 0.1,
-      ballSpeedUp: 0.5,
+      ballGrow: 0,
+      ballShrink: 0,
+      paddleGrow: 0,
+      paddleMax: 0,
+      paddleShrink: 0,
+      ballSpeedUp: 0,
       gravityUp: 0.5
     };
   }

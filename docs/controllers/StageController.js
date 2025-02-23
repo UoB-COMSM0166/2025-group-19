@@ -74,8 +74,7 @@ class StageController {
   shootBall() {
 
     if (this.ballRemain > 0){
-      console.log("StageController shootball gravityOn: "+this.gravityOn);
-    const ball = new Ball(
+      const ball = new Ball(
         this.state.paddle.x + this.state.paddle.width / 2,
         this.state.paddle.y - 10,
         this.state.gameWidth,
@@ -124,7 +123,6 @@ class StageController {
       if (!this.regenerate && !this.secondFormLoaded && (this.form === CurrentForm.STAGE2)) return;
       if (this.showingDialog || this.paused) return;
 
-      console.log("helloooooo");
       this.state.paddle.update();
 
       for (let ball of this.state.balls) {
@@ -143,10 +141,8 @@ class StageController {
               this.state.tools.splice(i, 1);
           }
       }
-
       this.state.balls = this.state.balls.filter(ball => !ball.isOutOfBounds());
       this.state.bricks = this.state.bricks.filter(brick => !brick.isDestroyed);
-
 
       // Lose if ballRemain == 0;
       if (this.state.balls.length === 0 && this.ballRemain === 0) {
@@ -167,7 +163,6 @@ class StageController {
           }
 
       }
-
       //update sidebar
       this.sidebar.update(this.sidebar.score, this.ballRemain, this.timer);
   }
