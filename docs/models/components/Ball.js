@@ -9,11 +9,14 @@ class Ball {
     this.y = y;
     this.speedX = ballSpeedX;
     this.speedY = ballSpeedY;
+    // this.originalSpeedY = ballSpeedY;
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
     this.gravityOn = gravityOn;
-    this.gravity = 0.1;
-    this.gravityToggled = 0.05;    // add this value to speedY in update() to immitate acceleration
+    this.gravity = 0.1;               // add this value to speedY in update() to immitate acceleration 
+    this.increaseSpeed = false;
+    this.incSpeedVal = 1.5;
+    this.incSpeedTime = 1200;
   }
 
   display(canvas = window) {
@@ -23,15 +26,23 @@ class Ball {
 
   update(state) {
     if (this.gravityOn){
-      if (state.paddle.toggleOn){
-        // this.speedY += this.gravityToggled;
-      }
-      else{
-        // this.speedY += this.gravity;
-      }
+      this.speedY += this.gravity;
     }
+    if (this.increaseSpeed == true && abs(this.speedY) <= 7.5){
+      this.speedY *= this.incSpeedVal;
+      console.log("increased speed");
+
+      setTimeout(() => {
+        this.speedY = Math.sign(this.speedY) * 5; 
+        console.log("speed reset to", this.speedY);
+      }, this.incSpeedTime);
+    }
+    // if (this.increaseSpeed == false){
+    //   this.speedY = this.originalSpeedY;
+    // }
     this.x += this.speedX;
     this.y += this.speedY;
+    
     if (this.x - this.radius < 0 || this.x + this.radius > this.gameWidth) {
       this.speedX *= -1;
     }
@@ -50,6 +61,12 @@ class Ball {
     ) {
       this.speedY *= -1;
       this.y = paddle.y - this.radius;
+      if (stageController.state.paddle.toggleOn == true){
+        this.increaseSpeed = true;
+        setTimeout(() => {
+          this.increaseSpeed = false;
+        }, 300);
+      }
     }
     // Ball collision with bricks
     let hitBricks = [];

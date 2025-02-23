@@ -1,7 +1,7 @@
 class Stage02Controller extends StageController {
   constructor(state, view, sidebar, pageController) {
     super(state, view, sidebar, pageController);
-    this.toolDropRate = 0.3;
+    this.toolDropRate = 0;
     this.toolProbabilities = {
       ballGrow: 0,
       ballShrink: 0,
@@ -9,7 +9,7 @@ class Stage02Controller extends StageController {
       paddleMax: 0,
       paddleShrink: 0,
       ballSpeedUp: 0,
-      gravityUp: 0.5
+      gravityUp: 0
     };
   }
 
