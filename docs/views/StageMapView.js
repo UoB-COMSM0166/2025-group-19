@@ -2,7 +2,7 @@ class StageMapView {
   constructor(controller) {
     this.controller = controller;
     this.title = "Choose Your Stage";
-    this.options = ["Stage01", "Stage02"];
+    this.options = ["Stage01", "Stage02", "Stage03"];
     this.selectedIndex = 0;
   }
 

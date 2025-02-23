@@ -8,6 +8,7 @@ class Paddle {
     this.gameWidth = gameWidth;
     this.isMovingLeft = false;
     this.isMovingRight = false;
+    this.reverse = false;
   }
 
   display(canvas = window) {
@@ -17,10 +18,18 @@ class Paddle {
 
   update() {
     if (this.isMovingLeft) {
-      this.x = max(this.x - this.speed, 0);
+      if (this.reverse) {
+        this.x = min(this.x + this.speed, this.gameWidth - this.width);
+      } else {
+        this.x = max(this.x - this.speed, 0);
+      }
     }
     if (this.isMovingRight) {
-      this.x = min(this.x + this.speed, this.gameWidth - this.width);
+      if (this.reverse) {
+        this.x = max(this.x - this.speed, 0);
+      } else {
+        this.x = min(this.x + this.speed, this.gameWidth - this.width);
+      }
     }
   }
 
@@ -32,3 +41,7 @@ class Paddle {
     this.isMovingRight = isMoving;
   }
 }
+
+
+
+

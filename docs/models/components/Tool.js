@@ -17,6 +17,9 @@ class Tool {
     if (this.type === 'paddleGrow') symbol = '<->';
     if (this.type === 'paddleMax') symbol = '<<->>';
     if (this.type === 'paddleShrink') symbol = '>-<';
+    if (this.type === 'timeIncrease') symbol = 'T+';
+    if (this.type === 'timeDecrease') symbol = 'T-';
+    if (this.type === 'paddleReverse') symbol = '==R==';
     canvas.text(symbol, this.x, this.y);
   }
 

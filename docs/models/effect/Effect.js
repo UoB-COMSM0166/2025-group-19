@@ -12,7 +12,7 @@ class Effect {
     throw new Error("removeEffect() should be implemented by subclass!");
   }
 
-  activate(stageController) {
+  activate(stageController, effectController) {
     this.applyEffect(stageController);
 
     if (this.timer) {

@@ -1,3 +1,8 @@
+const CurrentForm = Object.freeze({
+  STAGE1: 1,
+  STAGE2: 2
+});
+
 class StageController {
   constructor(state, view, sidebar, pageController) {
       this.state = state;
@@ -19,13 +24,14 @@ class StageController {
       this.toolProbabilities = {}; // dropping tool array
       this.ballRadius = Ball.normalSizeBall; // shoting ball size
       this.isBricksLoaded = false;
+      this.form = CurrentForm.STAGE1; // which form is animal in (default = 1)
+      this.regenerate = false;
+      this.secondFormLoaded = false; 
       this.initBricks();
       this.startTimer(); // Start the timer.
       this.sidebar.onPauseClick = () => {
         this.togglePause();
       };
-
-      
 
   }
 
@@ -38,10 +44,19 @@ class StageController {
       for (let brickData of data.bricks) {
         let colorValues = data.colour[brickData.colour];
         let [r, g, b] = colorValues;
-        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, r, g, b);
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.unbreakable, r, g, b);
         this.state.bricks.push(brick);
       }
-      this.isBricksLoaded = true;
+      if (this.form === CurrentForm.STAGE1) {
+        this.isBricksLoaded = true;
+      } else if (this.form === CurrentForm.STAGE2) {
+        this.secondFormLoaded = true;
+      }
+
+      if (this.regenerate) {
+        this.form = CurrentForm.STAGE2;
+      }
+
     });
   }
 
@@ -101,8 +116,10 @@ class StageController {
 
   update() {
       if (!this.isBricksLoaded) return;
+      if (!this.regenerate && !this.secondFormLoaded && (this.form === CurrentForm.STAGE2)) return;
       if (this.showingDialog || this.paused) return;
 
+      console.log("helloooooo");
       this.state.paddle.update();
 
       for (let ball of this.state.balls) {
@@ -131,10 +148,18 @@ class StageController {
           this.state.isStageFailed = true;
           this.showLoseDialog();
       }
-      if (this.state.bricks.length === 0) {
-          this.state.isStageCleared = true;
-          this.showWinDialog();
-          clearInterval(this.timerInterval); // Clear timer when win
+      if (this.state.bricks.filter(brick => !brick.isUnbreakable).length === 0) {
+          if (this.regenerate) {
+              // if animal has 2nd form, generates new set of bricks
+              this.regenerate = false;
+              this.initBricks();
+          } else {
+              // removes all unbreakable bricks before ending level
+              this.state.bricks = (this.state.bricks.filter(brick => !brick.isDestroyed && !brick.isUnbreakable));
+              this.state.isStageCleared = true;
+              this.showWinDialog();
+              clearInterval(this.timerInterval); // Clear timer when win
+          }
 
       }
 
@@ -193,6 +218,9 @@ class StageController {
               this.pageController.switchToStage('Stage 02');
               break;
           case 'Stage 02':
+            this.pageController.switchToStage('Stage 03');
+              break;
+          case 'Stage 03':
               this.pageController.switchToWelcome();
               break;
           default:
