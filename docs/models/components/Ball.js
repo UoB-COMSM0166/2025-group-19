@@ -1,5 +1,5 @@
 class Ball {
-    static smallSizeBall = 8;
+  static smallSizeBall = 8;
   static normalSizeBall = 15;
   static bigSizeBall = 25;
 

@@ -8,7 +8,7 @@ class Stage02Controller extends StageController {
       paddleGrow: 0.1,
       paddleMax: 0.1,
       paddleShrink: 0.1,
-      ballSpeedUp: 0,
+      ballSpeedUp: 0.5,
       gravityUp: 0.5
     };
   }
