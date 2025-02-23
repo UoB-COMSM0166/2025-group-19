@@ -16,6 +16,9 @@ class PageController {
         case 'Stage02':
           this.currentPage = new Stage02Controller(state, gameview, sidebar, this);
           break;
+        case 'Stage03':
+          this.currentPage = new Stage03Controller(state, gameview, sidebar, this);
+          break;
         default:
           console.error('Unknown: ' + stageName);
           this.switchToWelcome();

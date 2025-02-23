@@ -22,6 +22,15 @@ class EffectController {
         case 'paddleShrink':
           effect = new PaddleSizeEffect('short');
           break;
+        case 'timeIncrease':
+          effect = new TimeEffect('add');
+          break;
+        case 'timeDecrease':
+          effect = new TimeEffect('minus');
+          break;
+        case 'paddleReverse':
+          effect = new PaddleDirectionEffect('reverse');
+          break;
       }
 
       if (effect) {
@@ -32,7 +41,7 @@ class EffectController {
     activateEffect(effect) {
       console.log("activeEffects:", this.activeEffects);
       this.removeSameTypeEffect(effect);
-      effect.activate(this.stageController);
+      effect.activate(this.stageController, this);
       this.activeEffects.push(effect);
     }
 
