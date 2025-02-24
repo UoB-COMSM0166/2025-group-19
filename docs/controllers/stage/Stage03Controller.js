@@ -3,9 +3,9 @@ class Stage03Controller extends StageController {
     super(state, view, sidebar, pageController);
     this.toolDropRate = 0.3;
     this.toolProbabilities = {
-      ballGrow: 0.1,
+      ballGrow: 0.2,
 			timeIncrease: 0.1,
-			timeDecrease: 0.2,
+			timeDecrease: 0.3,
 			paddleReverse: 0.5,
     };
   }
