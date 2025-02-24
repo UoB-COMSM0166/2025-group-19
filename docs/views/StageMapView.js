@@ -2,7 +2,7 @@ class StageMapView {
   constructor(pageController) {
     this.pageController = pageController;
     this.title = "Enter Your Birthday !";
-    this.yearInput = "";
+    this.yearInput = "1984";
     this.monthInput = "";
     this.dayInput = "";
     this.zodiacSigns = [
@@ -91,8 +91,12 @@ class StageMapView {
       this.calculateZodiac(parseInt(this.yearInput));
     } else if (key === 'ArrowLeft') {
       this.selectedIndex = (this.selectedIndex - 1 + this.zodiacSigns.length) % this.zodiacSigns.length;
+      this.yearInput = (parseInt(this.yearInput) - 1).toString();
+      this.calculateZodiac(parseInt(this.yearInput));
     } else if (key === 'ArrowRight') {
       this.selectedIndex = (this.selectedIndex + 1) % this.zodiacSigns.length;
+      this.yearInput = (parseInt(this.yearInput) + 1).toString();
+      this.calculateZodiac(parseInt(this.yearInput));
     }
   }
 
@@ -101,7 +105,6 @@ class StageMapView {
     if (mouseX > width / 2 - 100 && mouseX < width / 2 + 100 &&
         mouseY > height * 0.75 && mouseY < height * 0.75 + 50) {
         const selectedStage = this.zodiacSigns[this.selectedIndex];
-        console.log(selectedStage);
         this.pageController.switchToStage(selectedStage);
     }
 
