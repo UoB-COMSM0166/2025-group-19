@@ -21,6 +21,7 @@ class PageController {
           break;
         default:
           console.error('Unknown: ' + stageName);
+          alert("under construction ...");
           this.switchToWelcome();
       }
     }
