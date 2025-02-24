@@ -37,6 +37,9 @@ class EffectController {
         case 'paddleReverse':
           effect = new PaddleDirectionEffect('reverse');
           break;
+        case 'infiniteBall':
+          effect = new BallInfiniteEffect();
+          break;
       }
 
       if (effect) {
@@ -45,7 +48,6 @@ class EffectController {
     }
 
     activateEffect(effect) {
-      console.log("activeEffects:", this.activeEffects);
       this.removeSameTypeEffect(effect);
       effect.activate(this.stageController, this);
       this.activeEffects.push(effect);

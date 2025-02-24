@@ -22,6 +22,7 @@ class Tool {
     if (this.type === 'timeIncrease') symbol = 'T+';
     if (this.type === 'timeDecrease') symbol = 'T-';
     if (this.type === 'paddleReverse') symbol = '==R==';
+    if (this.type === 'infiniteBall') symbol = '∞';
     canvas.text(symbol, this.x, this.y);
   }
 
