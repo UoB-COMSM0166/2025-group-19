@@ -10,13 +10,13 @@ class PageController {
       const gameview = new GameView(state);
     
       switch (stageName) {
-        case 'Stage01':
+        case 'Rat':
           this.currentPage = new Stage01Controller(state, gameview, sidebar, this);
           break;
-        case 'Stage02':
+        case 'Ox':
           this.currentPage = new Stage02Controller(state, gameview, sidebar, this);
           break;
-        case 'Stage03':
+        case 'Tiger':
           this.currentPage = new Stage03Controller(state, gameview, sidebar, this);
           break;
         default:
