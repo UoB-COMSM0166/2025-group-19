@@ -3,7 +3,7 @@ class Ball {
   static normalSizeBall = 15;
   static bigSizeBall = 25;
 
-  constructor(x, y, gameWidth, gameHeight, radius=Ball.normalSizeBall, ballSpeedX = random(-3,3), ballSpeedY = -5, gravityOn = false) {
+  constructor(x, y, gameWidth, gameHeight, radius=Ball.normalSizeBall, ballSpeedX = random(-3,3), ballSpeedY = -10, gravityOn = false) {
     this.radius = radius;
     this.x = x;
     this.y = y;
@@ -28,7 +28,7 @@ class Ball {
     if (this.gravityOn){
       this.speedY += this.gravity;
     }
-    if (this.increaseSpeed == true && abs(this.speedY) <= 7.5){
+    if (this.increaseSpeed == true && abs(this.speedY) <= 15){
       this.speedY *= this.incSpeedVal;
       console.log("increased speed");
 
