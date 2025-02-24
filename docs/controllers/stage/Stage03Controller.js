@@ -10,7 +10,6 @@ class Stage03Controller extends StageController {
 			paddleReverse: 0.5,
     };
   }
-	
 
 	getStageJsonPath() {
 		if (this.form === CurrentForm.STAGE1) {
@@ -21,11 +20,7 @@ class Stage03Controller extends StageController {
 		}
   }
 
-
   goToNextStage() {
-    this.pageController.switchToStage('Stage04');
+    this.pageController.switchToStage('Rabbit');
   }
 }
-
-
-

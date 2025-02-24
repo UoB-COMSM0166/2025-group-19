@@ -19,10 +19,12 @@ class MouseController {
         this.bgMusic.setVolume(0.5);
       }
 
-      // currentPage mouse event
+      // based on page
       const currentPage = this.pageController.currentPage;
       if (currentPage instanceof StageController) {
-        currentPage.sidebar.handleMousePressed(mx, my);
+          currentPage.sidebar.handleMousePressed(mx, my);
+      } else if (currentPage instanceof StageMapView) {
+          currentPage.handleMousePressed(mx, my);
       }
     }
 }

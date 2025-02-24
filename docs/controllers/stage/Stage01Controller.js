@@ -14,6 +14,6 @@ class Stage01Controller extends StageController {
   }
 
   goToNextStage() {
-    this.pageController.switchToStage('Stage02');
+    this.pageController.switchToStage('Ox');
   }
 }
