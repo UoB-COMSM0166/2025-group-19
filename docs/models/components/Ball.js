@@ -3,14 +3,20 @@ class Ball {
   static normalSizeBall = 15;
   static bigSizeBall = 25;
 
-  constructor(x, y, gameWidth, gameHeight, radius=Ball.normalSizeBall) {
+  constructor(x, y, gameWidth, gameHeight, radius=Ball.normalSizeBall, ballSpeedX = random(-3,3), ballSpeedY = -5, gravityOn = false) {
     this.radius = radius;
     this.x = x;
     this.y = y;
-    this.speedX = random(-3, 3);
-    this.speedY = -5;
+    this.speedX = ballSpeedX;
+    this.speedY = ballSpeedY;
+    // this.originalSpeedY = ballSpeedY;
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
+    this.gravityOn = gravityOn;
+    this.gravity = 0.1;               // add this value to speedY in update() to immitate acceleration 
+    this.increaseSpeed = false;
+    this.incSpeedVal = 1.5;
+    this.incSpeedTime = 1200;
   }
 
   display(canvas = window) {
@@ -18,20 +24,35 @@ class Ball {
     canvas.circle(this.x, this.y, this.radius * 2);
   }
 
-  update() {
+  update(state) {
+    if (this.gravityOn){
+      this.speedY += this.gravity;
+    }
+    if (this.increaseSpeed == true && abs(this.speedY) <= 7.5){
+      this.speedY *= this.incSpeedVal;
+      console.log("increased speed");
+
+      setTimeout(() => {
+        this.speedY = Math.sign(this.speedY) * 5; 
+        console.log("speed reset to", this.speedY);
+      }, this.incSpeedTime);
+    }
+    // if (this.increaseSpeed == false){
+    //   this.speedY = this.originalSpeedY;
+    // }
     this.x += this.speedX;
     this.y += this.speedY;
-
+    
     if (this.x - this.radius < 0 || this.x + this.radius > this.gameWidth) {
       this.speedX *= -1;
     }
-
     if (this.y - this.radius < 0) {
       this.speedY *= -1;
     }
   }
 
   checkCollision(paddle, bricks, tools, sidebar, stageController) {
+    // Ball collision with paddle
     if (
       this.y + this.radius > paddle.y &&
       this.y - this.radius < paddle.y + paddle.height &&
@@ -40,7 +61,14 @@ class Ball {
     ) {
       this.speedY *= -1;
       this.y = paddle.y - this.radius;
+      if (stageController.state.paddle.toggleOn == true){
+        this.increaseSpeed = true;
+        setTimeout(() => {
+          this.increaseSpeed = false;
+        }, 300);
+      }
     }
+    // Ball collision with bricks
     let hitBricks = [];
     for (let brick of bricks) {
       if (
@@ -50,6 +78,14 @@ class Ball {
         this.y + this.radius > brick.y &&
         this.y - this.radius < brick.y + brick.height
       ) {
+        //Destroy whole row if isBomb
+        if (brick.isBomb){
+          for (let i = 0; i < bricks.length; i++){
+            if (bricks[i].y === brick.y){
+              bricks[i].isDestroyed = true;
+              }
+            }
+        }
         // unbreakable blocks 'eat' any balls that touch them
         if (brick.isUnbreakable) {
           this.x = this.gameHeight;
@@ -82,7 +118,6 @@ class Ball {
       } else {
         throw new Error('unknown size of balls!!');
       }
-
       // generate tools
       hitBricks.forEach(brick => {
         const tool = stageController.generateTool(
@@ -94,7 +129,6 @@ class Ball {
           tools.push(tool);
         }
       });
-
       // reverse Y speed
       this.speedY *= -1;
     }

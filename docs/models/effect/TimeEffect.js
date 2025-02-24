@@ -10,7 +10,14 @@ class TimeEffect extends Effect {
 				stageController.timer += 10;
         break;
       case 'minus':
-				stageController.timer -= 10;
+				if(stageController.timer <= 10) {
+					stageController.timer = 0;
+					stageController.state.isStageFailed = true;
+					stageController.showLoseDialog();
+        	clearInterval(stageController.timerInterval);
+				} else {
+					stageController.timer -= 10;
+				}
         break;
     }
 	}

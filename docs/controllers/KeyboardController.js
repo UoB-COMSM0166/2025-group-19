@@ -6,6 +6,7 @@ class KeyboardController {
         moveLeft: 'ArrowLeft',
         moveRight: 'ArrowRight',
         shootBall: ' ',
+        togglePaddle: 'q'
       };
     }
 
@@ -26,6 +27,9 @@ class KeyboardController {
         }
         if (key === this.keyBindings.shootBall && this.onShootBall) {
             this.onShootBall();
+        }
+        if (key === this.keyBindings.togglePaddle){
+            this.paddle.togglePosition();
         }
     }
 

@@ -8,6 +8,8 @@ class Paddle {
     this.gameWidth = gameWidth;
     this.isMovingLeft = false;
     this.isMovingRight = false;
+    this.toggleOffset = 10;
+    this.toggleOn = false;
     this.reverse = false;
   }
 
@@ -39,6 +41,15 @@ class Paddle {
 
   moveRight(isMoving) {
     this.isMovingRight = isMoving;
+  }
+
+  togglePosition() {
+    this.toggleOn = true;
+    this.y -= this.toggleOffset;
+    setTimeout(() => {
+      this.y += this.toggleOffset;
+      this.toggleOn = false;
+    }, 300);
   }
 }
 
