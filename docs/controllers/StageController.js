@@ -81,7 +81,7 @@ class StageController {
         this.state.gameHeight,
         this.ballRadius,
         random(-3,3)*this.speedMultiplier,
-        -5*this.speedMultiplier,
+        -10*this.speedMultiplier,
         this.gravityOn
       );
       this.state.balls.push(ball);
@@ -273,7 +273,6 @@ class StageController {
       if(this.showingDialog || this.paused) return;
 
       this.timer--;
-      console.log(`Remaining time: ${this.timer}.`);
       this.sidebar.update(this.sidebar.score, this.ballRemain, this.timer);
 
       if(this.timer <= 0){
