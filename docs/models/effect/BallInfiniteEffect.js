@@ -1,5 +1,5 @@
 class BallInfiniteEffect extends Effect {
-  constructor(sizeType, duration = 10000) {
+  constructor(sizeType, duration = 5000) {
     super(duration);
     this.sizeType = sizeType;
     this.originalBallCount = 0;
