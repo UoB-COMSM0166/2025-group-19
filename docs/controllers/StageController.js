@@ -119,7 +119,6 @@ class StageController {
       if (!this.regenerate && !this.secondFormLoaded && (this.form === CurrentForm.STAGE2)) return;
       if (this.showingDialog || this.paused) return;
 
-      console.log("helloooooo");
       this.state.paddle.update();
 
       for (let ball of this.state.balls) {
