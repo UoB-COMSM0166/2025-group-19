@@ -46,7 +46,5 @@ function keyReleased() {
 }
 
 function mousePressed() {
-  if (pageController.currentPage instanceof StageMapView) {
-    pageController.currentPage.handleMousePressed(mouseX, mouseY);
-  }
+  mouseController.handleMousePressed(mouseX, mouseY);
 }

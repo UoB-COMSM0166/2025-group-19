@@ -106,7 +106,6 @@ class StageMapView {
     }
 
     // Check if Back button is clicked
-    console.log(mouseX, mouseY);
     if (mouseX > width / 2 - 100 && mouseX < width / 2 + 100 &&
         mouseY > height * 0.85 && mouseY < height * 0.85 + 50) {
         this.pageController.switchToWelcome();

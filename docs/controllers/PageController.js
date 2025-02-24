@@ -44,5 +44,9 @@ class PageController {
     handleKeyPress(key) {
       this.currentPage.handleKeyPress(key);
     }
+
+    handleMousePressed(key) {
+      this.currentPage.handleMousePressed(key);
+    }
   }
   
