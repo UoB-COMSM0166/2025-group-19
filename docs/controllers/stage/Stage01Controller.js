@@ -1,11 +1,11 @@
 class Stage01Controller extends StageController {
   constructor(state, view, sidebar, pageController) {
     super(state, view, sidebar, pageController);
-    this.toolDropRate = 0.4; // 70% dropping rate
+    this.toolDropRate = 0.5; // 50% dropping rate
     this.toolProbabilities = {
-      ballGrow: 0.1,
-      ballShrink: 0.8
-      ,
+      ballGrow: 0.3,
+      ballShrink: 0.3,
+      infiniteBall: 0.3,
     };
   }
 
@@ -14,6 +14,6 @@ class Stage01Controller extends StageController {
   }
 
   goToNextStage() {
-    this.pageController.switchToStage('Stage02');
+    this.pageController.switchToStage('Ox');
   }
 }

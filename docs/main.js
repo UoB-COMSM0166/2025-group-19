@@ -6,13 +6,12 @@ let roadImg;
 function preload() {
   skyBackground = loadImage('assets/images/skyBackground.webp');
   bgMusic = loadSound('assets/sounds/bgMusic.mp3'); 
-  // characters
-  mouseImg = loadImage('assets/images/characters/mouse.png');
-  cowImg = loadImage('assets/images/characters/cow.png');
-  tigerImg = loadImage('assets/images/characters/tiger.png');
-  rabbitImg = loadImage('assets/images/characters/rabbit.png');
-  dragonImg = loadImage('assets/images/characters/dragon.png');
-  snakeImg = loadImage('assets/images/characters/snake.png');
+  mouseImg = loadImage('assets/images/characters/Rat.png');
+  cowImg = loadImage('assets/images/characters/Ox.png');
+  tigerImg = loadImage('assets/images/characters/Tiger.png');
+  rabbitImg = loadImage('assets/images/characters/Rabbit.png');
+  dragonImg = loadImage('assets/images/characters/Dragon.png');
+  snakeImg = loadImage('assets/images/characters/Snake.png');
   // welcome-page
   roadImg = loadImage('assets/images/welcome-page/road.png');
   cloudImg1 = loadImage('assets/images/welcome-page/cloud-1.png');
