@@ -22,6 +22,12 @@ class EffectController {
         case 'paddleShrink':
           effect = new PaddleSizeEffect('short');
           break;
+        case 'ballSpeedUp':
+          effect = new BallSpeedEffect('speedUp');
+          break;
+        case 'gravityUp':
+          effect = new GravityEffect('gravityUp');
+          break;
         case 'timeIncrease':
           effect = new TimeEffect('add');
           break;

@@ -17,6 +17,8 @@ class StageController {
       this.toolProbabilities = {}; // drop
       // ping tool array
       this.ballRadius = 10; // shoting ball size
+      this.speedMultiplier = 1;
+      this.gravityOn = false;
       this.paused = false;
       this.state.balls = []; // Will not generate ball in the beginning.
       this.ballRemain = 10; // Remain Ball
@@ -77,8 +79,10 @@ class StageController {
         this.state.paddle.y - 10,
         this.state.gameWidth,
         this.state.gameHeight,
-        this.ballRadius
-        
+        this.ballRadius,
+        random(-3,3)*this.speedMultiplier,
+        -5*this.speedMultiplier,
+        this.gravityOn
       );
       this.state.balls.push(ball);
       this.ballRemain--;
@@ -122,7 +126,7 @@ class StageController {
       this.state.paddle.update();
 
       for (let ball of this.state.balls) {
-          ball.update();
+          ball.update(this.state);
           ball.checkCollision(this.state.paddle, this.state.bricks, this.state.tools, this.sidebar, this);
       }
 
@@ -137,10 +141,8 @@ class StageController {
               this.state.tools.splice(i, 1);
           }
       }
-
       this.state.balls = this.state.balls.filter(ball => !ball.isOutOfBounds());
       this.state.bricks = this.state.bricks.filter(brick => !brick.isDestroyed);
-
 
       // Lose if ballRemain == 0;
       if (this.state.balls.length === 0 && this.ballRemain === 0) {
@@ -161,7 +163,6 @@ class StageController {
           }
 
       }
-
       //update sidebar
       this.sidebar.update(this.sidebar.score, this.ballRemain, this.timer);
   }
