@@ -33,10 +33,6 @@ class StageController {
       this.initBorder();
       this.initBricks();
       this.startTimer(); // Start the timer.
-      this.sidebar.onPauseClick = () => {
-        this.togglePause();
-      };
-
   }
 
   initBricks() {
@@ -81,11 +77,6 @@ class StageController {
 
   getStageJsonPath() {
     throw new Error('getStageJsonPath() should be implemented by subclass!');
-  }
-
-  togglePause() {
-    this.paused = !this.paused;
-    this.sidebar.setPauseState(this.paused);
   }
 
   shootBall() {
@@ -249,8 +240,7 @@ class StageController {
 
   showWinDialog() {
       this.showingDialog = true;
-      this.dialogText = this.state.stageName === 'Stage01' ? 'You Win! Go to Stage 02? (Y/N)' : 'You Win! Congratulations! (Press N to return)';
-
+      this.dialogText = 'You Win! Next stage? (Y/N)';
       this.onYes = () => {
           this.goToNextStage();
       };
@@ -277,9 +267,9 @@ class StageController {
       fill(255);
       textAlign(CENTER, CENTER);
       textSize(24);
-      text(this.dialogText, 400, 300);
+      text(this.dialogText, 400, 250);
       textSize(18);
-      text('Press Y: Yes / Press N: No', 400, 340);
+      text('Press Y: Yes / Press N: No', 400, 300);
   }
 
   applyToolEffect(tool) {
