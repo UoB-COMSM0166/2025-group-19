@@ -46,9 +46,8 @@ class PageController {
       this.currentPage.handleKeyPress(key);
     }
 
-    handleKeyRelease(key) {
-      this.currentPage.handleKeyRelease(key);
+    handleKeyReleased(key) {
+      this.currentPage.handleKeyReleased(key);
     }
-
-  }
+}
   

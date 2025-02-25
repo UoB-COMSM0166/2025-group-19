@@ -45,8 +45,9 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  pageController.handleKeyRelease(key);
-  if (pageController.currentPage instanceof StageController) {
+  if (pageController.currentPage instanceof StageMapView) {
+    pageController.handleKeyReleased(key);
+  } else if (pageController.currentPage instanceof StageController) {
     pageController.currentPage.keyboardController.handleKeyReleased(key);
   }
 }

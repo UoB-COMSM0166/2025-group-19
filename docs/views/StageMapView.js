@@ -242,7 +242,7 @@ class StageMapView {
     }
   }
 
-  handleKeyRelease(key) {
+  handleKeyReleased(key) {
     if (key === 'ArrowLeft' || key === 'ArrowRight') {
       clearInterval(this.keyPressInterval);
       this.keyPressInterval = null;
