@@ -12,6 +12,12 @@ function preload() {
   rabbitImg = loadImage('assets/images/characters/Rabbit.png');
   dragonImg = loadImage('assets/images/characters/Dragon.png');
   snakeImg = loadImage('assets/images/characters/Snake.png');
+  horseImg = loadImage('assets/images/characters/Horse.png');
+  goatImg = loadImage('assets/images/characters/Goat.png');
+  monkeyImg = loadImage('assets/images/characters/Monkey.png');
+  roosterImg = loadImage('assets/images/characters/Rooster.png');
+  dogImg = loadImage('assets/images/characters/Dog.png');
+  pigImg = loadImage('assets/images/characters/Pig.png');
   // welcome-page
   roadImg = loadImage('assets/images/welcome-page/road.png');
   cloudImg1 = loadImage('assets/images/welcome-page/cloud-1.png');
