@@ -238,7 +238,11 @@ After developing the core mechanics of the game, we conducted Think Aloud user e
 **Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. It was suggested that using distinct colors or shapes could improve clarity.  
 **Ball-Paddle Collision Mechanics**: One user recommended that the ball should reflect at different angles depending on where it hits the paddle. This would provide players with greater control and add more variety to the gameplay.  
 **Zodiac Year Explanation**: Users wanted more context on the Chinese Zodiac years and how they relate to birthdays. Adding a brief explanation in the stage selection view would help players understand why they should enter their birthdate.  
-
+<p align="center">
+  <b>Figure 2</b><br>
+  <i>Zodiac Catch</i><br>
+  <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
 **Aspects Players Enjoyed:**  
 **Art Design**: Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.  
 **Difficulty Balance**: Players noted that the speed and number of balls provided the right level of challenge, making the game engaging without being too easy or too difficult.  
