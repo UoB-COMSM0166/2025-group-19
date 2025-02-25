@@ -86,8 +86,8 @@ class Ball {
               }
             }
         }
-        // unbreakable blocks 'eat' any balls that touch them
-        if (brick.isUnbreakable) {
+        // black hole blocks 'eat' any balls that touch them
+        if (brick.isBlackHole) {
           this.x = this.gameHeight;
           this.y = this.gameWidth;
         } else {

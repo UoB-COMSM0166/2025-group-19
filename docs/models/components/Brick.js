@@ -5,14 +5,14 @@ const BrickDamageLevel = Object.freeze({
 });
 
 class Brick {
-  constructor(x, y, width, height, isBomb = false, isUnbreakable = false, R = 0, G = 0, B = 0) {
+  constructor(x, y, width, height, isBomb = false, isBlackHole = false, R = 0, G = 0, B = 0) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
     this.isDestroyed = false;
     this.isBomb = isBomb;
-    this.isUnbreakable = isUnbreakable;
+    this.isBlackHole = isBlackHole;
     this.red = R;
     this.green = G;
     this.blue = B;

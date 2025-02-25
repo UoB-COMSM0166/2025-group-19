@@ -46,7 +46,7 @@ class StageController {
       for (let brickData of data.bricks) {
         let colorValues = data.colour[brickData.colour];
         let [r, g, b] = colorValues;
-        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.unbreakable, r, g, b);
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.blackhole, r, g, b);
         this.state.bricks.push(brick);
       }
       if (this.form === CurrentForm.STAGE1) {
@@ -149,14 +149,14 @@ class StageController {
           this.state.isStageFailed = true;
           this.showLoseDialog();
       }
-      if (this.state.bricks.filter(brick => !brick.isUnbreakable).length === 0) {
+      if (this.state.bricks.filter(brick => !brick.isBlackHole).length === 0) {
           if (this.regenerate) {
               // if animal has 2nd form, generates new set of bricks
               this.regenerate = false;
               this.initBricks();
           } else {
-              // removes all unbreakable bricks before ending level
-              this.state.bricks = (this.state.bricks.filter(brick => !brick.isDestroyed && !brick.isUnbreakable));
+              // removes all black hole bricks before ending level
+              this.state.bricks = (this.state.bricks.filter(brick => !brick.isDestroyed && !brick.isBlackHole));
               this.state.isStageCleared = true;
               this.showWinDialog();
               clearInterval(this.timerInterval); // Clear timer when win
