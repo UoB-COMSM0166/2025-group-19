@@ -222,8 +222,7 @@ class StageController {
 
   showWinDialog() {
       this.showingDialog = true;
-      this.dialogText = this.state.stageName === 'Stage01' ? 'You Win! Go to Stage 02? (Y/N)' : 'You Win! Congratulations! (Press N to return)';
-
+      this.dialogText = 'You Win! Next stage? (Y/N)';
       this.onYes = () => {
           this.goToNextStage();
       };
