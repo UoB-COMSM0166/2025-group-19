@@ -31,10 +31,6 @@ class StageController {
       this.secondFormLoaded = false; 
       this.initBricks();
       this.startTimer(); // Start the timer.
-      this.sidebar.onPauseClick = () => {
-        this.togglePause();
-      };
-
   }
 
   initBricks() {
@@ -64,11 +60,6 @@ class StageController {
 
   getStageJsonPath() {
     throw new Error('getStageJsonPath() should be implemented by subclass!');
-  }
-
-  togglePause() {
-    this.paused = !this.paused;
-    this.sidebar.setPauseState(this.paused);
   }
 
   shootBall() {
