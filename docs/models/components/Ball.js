@@ -3,13 +3,14 @@ class Ball {
   static normalSizeBall = 15;
   static bigSizeBall = 25;
 
-  constructor(x, y, gameWidth, gameHeight, radius = Ball.normalSizeBall, ballSpeedX = random(-3, 3), ballSpeedY = -10, gravityOn = false) {
+  constructor(x, y, gameWidth, gameHeight, borderSize, radius = Ball.normalSizeBall, ballSpeedX = random(-3, 3), ballSpeedY = -10, gravityOn = false) {
     this.radius = radius;
     this.x = x;
     this.y = y;
     this.speedX = ballSpeedX;
     this.speedY = ballSpeedY;
-    this.gameWidth = gameWidth;
+    this.borderSize = borderSize;
+    this.gameWidth = gameWidth - this.borderSize;
     this.gameHeight = gameHeight;
     this.gravityOn = gravityOn;
     this.gravity = 0.1;
@@ -23,7 +24,7 @@ class Ball {
     canvas.circle(this.x, this.y, this.radius * 2);
   }
 
-  update(state) {
+  update() {
     if (this.gravityOn) {
       this.speedY += this.gravity;
     }
@@ -32,7 +33,7 @@ class Ball {
       setTimeout(() => (this.speedY = Math.sign(this.speedY) * 5), this.incSpeedTime);
     }
 
-    // avoid speed is zero
+    // 避免速度為零
     const minSpeed = 1;
     if (Math.abs(this.speedX) < minSpeed) this.speedX = Math.sign(this.speedX) !== 0 ? Math.sign(this.speedX) * minSpeed : minSpeed;
     if (Math.abs(this.speedY) < minSpeed) this.speedY = Math.sign(this.speedY) !== 0 ? Math.sign(this.speedY) * minSpeed : minSpeed;
@@ -40,17 +41,17 @@ class Ball {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    // edge checking
-    if (this.x - this.radius < 0) {
-      this.x = this.radius + 1;
+    // 邊界檢查
+    if (this.x - this.radius < this.borderSize) {
+      this.x = this.borderSize + this.radius;
       this.speedX *= -1;
     } else if (this.x + this.radius > this.gameWidth) {
-      this.x = this.gameWidth - this.radius - 1;
+      this.x = this.gameWidth - this.radius;
       this.speedX *= -1;
     }
 
-    if (this.y - this.radius < 0) {
-      this.y = this.radius + 1;
+    if (this.y - this.radius < this.borderSize) {
+      this.y = this.borderSize + this.radius;
       this.speedY *= -1;
     }
   }
@@ -92,7 +93,7 @@ class Ball {
     this.destroyBricks(hitBricks, sidebar);
     this.generateTools(hitBricks, tools, stageController);
 
-    // avoiding stuck in brick
+    // 避免球卡在磚塊內
     if (this.speedY > 0) {
       this.y = hitBricks[0].y - this.radius - 1;
     } else {
@@ -128,7 +129,7 @@ class Ball {
   destroyBricks(hitBricks, sidebar) {
     switch (this.radius) {
       case Ball.smallSizeBall:
-        hitBricks.forEach(brick => (brick.damageLevel < BrickDamageLevel.BROKEN ? brick.damageLevel++ : (brick.isDestroyed = true)));
+        hitBricks.forEach(brick => (brick.damageLevel < 2 ? brick.damageLevel++ : (brick.isDestroyed = true)));
         break;
       case Ball.bigSizeBall:
         hitBricks.slice(0, 3).forEach(brick => (brick.isDestroyed = true));
