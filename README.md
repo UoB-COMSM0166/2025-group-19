@@ -243,6 +243,7 @@ After developing the core mechanics of the game, we conducted Think Aloud user e
   <i>Zodiac Catch</i><br>
   <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
+
 **Aspects Players Enjoyed:**  
 **Art Design**: Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.  
 **Difficulty Balance**: Players noted that the speed and number of balls provided the right level of challenge, making the game engaging without being too easy or too difficult.  
