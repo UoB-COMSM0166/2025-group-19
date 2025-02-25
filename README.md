@@ -229,7 +229,7 @@ This structured approach helped us maintain a clear separation of concerns and f
 ---
 # Evaluation
 ## Qualitative Evaluation
-After developing the core mechanics of the game, we conducted user evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
+After developing the core mechanics of the game, we conducted Think Aloud user evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
 
 **Key Areas of Improvement:**  
 **Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.  
