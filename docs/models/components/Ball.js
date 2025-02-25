@@ -100,7 +100,7 @@ class Ball {
   destroyBricks(hitBricks, sidebar) {
     switch (this.radius) {
       case Ball.smallSizeBall:
-        hitBricks.forEach(brick => (brick.damageLevel < 2 ? brick.damageLevel++ : (brick.isDestroyed = true)));
+        hitBricks.forEach(brick => (brick.damageLevel < BrickDamageLevel.BROKEN ? brick.damageLevel++ : (brick.isDestroyed = true)));
         break;
       case Ball.bigSizeBall:
         hitBricks.slice(0, 3).forEach(brick => (brick.isDestroyed = true));
