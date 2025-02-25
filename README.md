@@ -223,6 +223,7 @@ This structured approach helped us maintain a clear separation of concerns and f
   <i>Sequence Diagram</i><br>
   <img src="./assets/sequence.jpeg" width="500" alt="Block" style="border: 5px solid black;">
 </p>
+
 ---
 # Implementation
 
@@ -231,7 +232,7 @@ This structured approach helped us maintain a clear separation of concerns and f
 ## Qualitative Evaluation
 After developing the core mechanics of the game, we conducted Think Aloud user evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
 
-**Key Areas of Improvement:**  
+### Key Areas of Improvement: 
 **Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.  
 **Paddle Visibility**: The low contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.  
 **Infinity Ball Indicator**: Players struggled to recognize when the Infinity Ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.  
@@ -244,7 +245,7 @@ After developing the core mechanics of the game, we conducted Think Aloud user e
   <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
-**Aspects Players Enjoyed:**  
+### Aspects Players Enjoyed:  
 **Art Design**: Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.  
 **Difficulty Balance**: Players noted that the speed and number of balls provided the right level of challenge, making the game engaging without being too easy or too difficult.  
 **Power-Ups**: The variety and design of the power-ups were enjoyable, adding fun and excitement to the gameplay.  
