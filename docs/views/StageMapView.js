@@ -237,6 +237,8 @@ class StageMapView {
       else if (this.currentFocus === "zodiac") this.currentFocus = "day";
       else if (this.currentFocus === "day") this.currentFocus = "month";
       else if (this.currentFocus === "month") this.currentFocus = "year";
+    } else if (key === 'ArrowDown') {
+      if (this.currentFocus === "zodiac") this.currentFocus = "back";
     }
   }
 
