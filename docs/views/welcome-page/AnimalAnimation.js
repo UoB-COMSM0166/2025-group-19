@@ -14,7 +14,13 @@ class AnimalAnimation {
       { img: tigerImg, y: this.baseY, amplitude: 5, speed: 0.09 },
       { img: rabbitImg, y: this.baseY, amplitude: 5, speed: 0.09 },
       { img: dragonImg, y: this.baseY, amplitude: 5, speed: 0.09 },
-      { img: snakeImg, y: this.baseY, amplitude: 5, speed: 0.09 }
+      { img: snakeImg, y: this.baseY, amplitude: 5, speed: 0.09 },
+      { img: horseImg, y: this.baseY, amplitude: 5, speed: 0.09 },
+      { img: goatImg, y: this.baseY, amplitude: 5, speed: 0.09 },
+      { img: monkeyImg, y: this.baseY, amplitude: 5, speed: 0.09 },
+      { img: roosterImg, y: this.baseY, amplitude: 5, speed: 0.09 },
+      { img: dogImg, y: this.baseY, amplitude: 5, speed: 0.09 },
+      { img: pigImg, y: this.baseY, amplitude: 5, speed: 0.09 }
     ];
 
     // calculate width and height, and store the base Y value

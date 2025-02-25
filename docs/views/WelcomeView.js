@@ -25,7 +25,7 @@ class WelcomeView {
     //this.cloudAnimation2.display();
     //this.displayTitleImg();
     this.displayTitle();
-    this.displaySubtitle();
+    //this.displaySubtitle();
     this.displayVersionDescription();
     this.displayOption();   
   }
@@ -82,6 +82,7 @@ class WelcomeView {
 
   displayVersionDescription(){
     fill(255);
+    noStroke();
     textSize(20);
     textAlign(CENTER, TOP);
     this.versionDescriptionHeight =  textAscent();
