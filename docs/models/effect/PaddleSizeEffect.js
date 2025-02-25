@@ -8,6 +8,7 @@ class PaddleSizeEffect extends Effect {
   applyEffect(stageController) {
     const paddle = stageController.state.paddle;
     this.originalWidth = paddle.width; //Recode current paddle width
+    const centerX = paddle.x + paddle.width / 2;
     switch (this.sizeType) {
       case 'long':
         paddle.width = 150;
@@ -19,6 +20,7 @@ class PaddleSizeEffect extends Effect {
         paddle.width = 50;
         break;
     }
+    paddle.x = Math.max(0, Math.min(paddle.gameWidth - paddle.width, centerX - paddle.width / 2));
   }
 
   removeEffect(stageController) {
