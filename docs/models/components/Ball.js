@@ -3,14 +3,15 @@ class Ball {
   static normalSizeBall = 15;
   static bigSizeBall = 25;
 
-  constructor(x, y, gameWidth, gameHeight, radius=Ball.normalSizeBall, ballSpeedX = random(-3,3), ballSpeedY = -10, gravityOn = false) {
+  constructor(x, y, gameWidth, gameHeight, borderSize, radius=Ball.normalSizeBall, ballSpeedX = random(-3,3), ballSpeedY = -10, gravityOn = false) {
     this.radius = radius;
     this.x = x;
     this.y = y;
     this.speedX = ballSpeedX;
     this.speedY = ballSpeedY;
     // this.originalSpeedY = ballSpeedY;
-    this.gameWidth = gameWidth;
+    this.borderSize = borderSize;
+    this.gameWidth = gameWidth - this.borderSize;
     this.gameHeight = gameHeight;
     this.gravityOn = gravityOn;
     this.gravity = 0.1;               // add this value to speedY in update() to immitate acceleration 
@@ -43,10 +44,10 @@ class Ball {
     this.x += this.speedX;
     this.y += this.speedY;
     
-    if (this.x - this.radius < 0 || this.x + this.radius > this.gameWidth) {
+    if (this.x - this.radius < this.borderSize || this.x + this.radius > this.gameWidth) {
       this.speedX *= -1;
     }
-    if (this.y - this.radius < 0) {
+    if (this.y - this.radius < this.borderSize) {
       this.speedY *= -1;
     }
   }
