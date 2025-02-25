@@ -195,8 +195,24 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 
 # Design
 ## Class Diagrams
-## Sequence Diagram
+<p align="center">
+  <b>Figure 5</b><br>
+  <i>Initial Class Diagram</i><br>
+  <img src="./assets/Initial-Class-Diagram.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
 
+<p align="center">
+  <b>Figure 6</b><br>
+  <i>Updated Class Diagram</i><br>
+  <img src="./assets/classDiagram.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
+
+## Sequence Diagram
+<p align="center">
+  <b>Figure 6</b><br>
+  <i>Sequence Diagram</i><br>
+  <img src="./assets/sequence.jpeg" width="500" alt="Block" style="border: 5px solid black;">
+</p>
 ---
 # Implementation
 
