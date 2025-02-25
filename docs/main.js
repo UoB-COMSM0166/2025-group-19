@@ -45,6 +45,7 @@ function keyPressed() {
 }
 
 function keyReleased() {
+  pageController.handleKeyRelease(key);
   if (pageController.currentPage instanceof StageController) {
     pageController.currentPage.keyboardController.handleKeyReleased(key);
   }
