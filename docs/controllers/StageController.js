@@ -249,9 +249,9 @@ class StageController {
       fill(255);
       textAlign(CENTER, CENTER);
       textSize(24);
-      text(this.dialogText, 400, 300);
+      text(this.dialogText, 400, 250);
       textSize(18);
-      text('Press Y: Yes / Press N: No', 400, 340);
+      text('Press Y: Yes / Press N: No', 400, 300);
   }
 
   applyToolEffect(tool) {
