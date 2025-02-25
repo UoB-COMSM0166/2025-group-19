@@ -30,7 +30,6 @@ function setup() {
   createCanvas(1000, 600);
   textFont(boutiqueBitmaFont);
   pageController = new PageController();
-  mouseController = new MouseController(pageController, bgMusic);
 }
 
 function draw() {
@@ -46,11 +45,9 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  if (pageController.currentPage instanceof StageController) {
+  if (pageController.currentPage instanceof StageMapView) {
+    pageController.handleKeyReleased(key);
+  } else if (pageController.currentPage instanceof StageController) {
     pageController.currentPage.keyboardController.handleKeyReleased(key);
   }
-}
-
-function mousePressed() {
-  mouseController.handleMousePressed(mouseX, mouseY);
 }
