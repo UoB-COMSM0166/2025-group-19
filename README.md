@@ -195,11 +195,21 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 
 # Design
 ## Class Diagrams
+
+After creating the paper prototype and sketching our ideas in wireframes, we moved on to designing our game's system architecture through in-person meetings. This process ensured a shared understanding of Object-Oriented Design and served as a reference for our source code.
+
+In our initial meeting, we identified the game's essential components, such as the ball, paddle, and blocks. We then outlined the functions of each component, the unique features of different game stages, and how these elements interact. From this, we developed a basic class diagram.
 <p align="center">
   <b>Figure 5</b><br>
   <i>Initial Class Diagram</i><br>
   <img src="./assets/Initial-Class-Diagram.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
+
+During our first stage of coding, we decided to adopt the **Model-View-Controller (MVC)** design pattern, as it could accommodate our complex features and multiple game views. This led to a more detailed class diagram, which included:
+- **Controllers** to handle keyboard input, manage game state across different stages, and activate special features.
+- **Views** to define the game's aesthetics and user interface.
+- **Models** to store all game components, including the brick patterns for various stages.
+This structured approach helped us maintain a clear separation of concerns and facilitated scalable development.
 
 <p align="center">
   <b>Figure 6</b><br>
