@@ -31,11 +31,28 @@ class Ball {
       this.speedY *= this.incSpeedVal;
       setTimeout(() => (this.speedY = Math.sign(this.speedY) * 5), this.incSpeedTime);
     }
+
+    // avoid speed is zero
+    const minSpeed = 1;
+    if (Math.abs(this.speedX) < minSpeed) this.speedX = Math.sign(this.speedX) !== 0 ? Math.sign(this.speedX) * minSpeed : minSpeed;
+    if (Math.abs(this.speedY) < minSpeed) this.speedY = Math.sign(this.speedY) !== 0 ? Math.sign(this.speedY) * minSpeed : minSpeed;
+
     this.x += this.speedX;
     this.y += this.speedY;
 
-    if (this.x - this.radius < 0 || this.x + this.radius > this.gameWidth) this.speedX *= -1;
-    if (this.y - this.radius < 0) this.speedY *= -1;
+    // edge checking
+    if (this.x - this.radius < 0) {
+      this.x = this.radius + 1;
+      this.speedX *= -1;
+    } else if (this.x + this.radius > this.gameWidth) {
+      this.x = this.gameWidth - this.radius - 1;
+      this.speedX *= -1;
+    }
+
+    if (this.y - this.radius < 0) {
+      this.y = this.radius + 1;
+      this.speedY *= -1;
+    }
   }
 
   checkCollision(paddle, bricks, tools, sidebar, stageController) {
@@ -74,6 +91,13 @@ class Ball {
     hitBricks.forEach(brick => this.handleSpecialBricks(brick, bricks));
     this.destroyBricks(hitBricks, sidebar);
     this.generateTools(hitBricks, tools, stageController);
+
+    // avoiding stuck in brick
+    if (this.speedY > 0) {
+      this.y = hitBricks[0].y - this.radius - 1;
+    } else {
+      this.y = hitBricks[0].y + hitBricks[0].height + this.radius + 1;
+    }
     this.speedY *= -1;
   }
 
@@ -92,8 +116,12 @@ class Ball {
       bricks.forEach(b => (b.y === brick.y ? (b.isDestroyed = true) : null));
     }
     if (brick.isUnbreakable) {
-      this.x = this.gameHeight;
-      this.y = this.gameWidth;
+      this.speedY *= -1;
+      if (this.speedY > 0) {
+        this.y = brick.y - this.radius - 1;
+      } else {
+        this.y = brick.y + brick.height + this.radius + 1;
+      }
     }
   }
 
