@@ -195,13 +195,120 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 
 # Design
 ## Class Diagrams
+
+After creating the paper prototype and sketching our ideas in wireframes, we moved on to designing our game's system architecture through in-person meetings. This process ensured a shared understanding of Object-Oriented Design and served as a reference for our source code.
+
+In our initial meeting, we identified the game's essential components, such as the ball, paddle, and blocks. We then outlined the functions of each component, the unique features of different game stages, and how these elements interact. From this, we developed a basic class diagram.
+<p align="center">
+  <b>Figure 5</b><br>
+  <i>Initial Class Diagram</i><br>
+  <img src="./assets/Initial-Class-Diagram.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
+
+During our first stage of coding, we decided to adopt the **Model-View-Controller (MVC)** design pattern, as it could accommodate our complex features and multiple game views. This led to a more detailed class diagram, which included:
+- **Controllers** to handle keyboard input, manage game state across different stages, and activate special features.
+- **Views** to define the game's aesthetics and user interface.
+- **Models** to store all game components, including the brick patterns for various stages.
+This structured approach helped us maintain a clear separation of concerns and facilitated scalable development.
+
+<p align="center">
+  <b>Figure 6</b><br>
+  <i>Updated Class Diagram</i><br>
+  <img src="./assets/classDiagram.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
+
 ## Sequence Diagram
+<p align="center">
+  <b>Figure 6</b><br>
+  <i>Sequence Diagram</i><br>
+  <img src="./assets/sequence.jpeg" width="500" alt="Block" style="border: 5px solid black;">
+</p>
 
 ---
 # Implementation
 
 ---
 # Evaluation
+## Qualitative Evaluation
+After developing the core mechanics of the game, we conducted Think Aloud user evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
+
+### Key Areas of Improvement: 
+**Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.  
+**Paddle Visibility**: The low contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.  
+**Infinity Ball Indicator**: Players struggled to recognize when the Infinity Ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.  
+**Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. It was suggested that using distinct colors or shapes could improve clarity.  
+**Ball-Paddle Collision Mechanics**: One user recommended that the ball should reflect at different angles depending on where it hits the paddle. This would provide players with greater control and add more variety to the gameplay.  
+**Zodiac Year Explanation**: Users wanted more context on the Chinese Zodiac years and how they relate to birthdays. Adding a brief explanation in the stage selection view would help players understand why they should enter their birthdate.  
+<p align="center">
+  <b>Figure 2</b><br>
+  <i>Zodiac Catch</i><br>
+  <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
+
+### Aspects Players Enjoyed:  
+**Art Design**: Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.  
+**Difficulty Balance**: Players noted that the speed and number of balls provided the right level of challenge, making the game engaging without being too easy or too difficult.  
+**Power-Ups**: The variety and design of the power-ups were enjoyable, adding fun and excitement to the gameplay.  
+
+## Quantitative Evaluation
+<table align="center">
+  <tr>
+    <th align="center">Interface Issue</th>
+    <th align="center">Issues</th>
+    <th align="center">Heuristic(s)</th>
+    <th align="center">Frequency</th>
+    <th align="center">Impact</th>
+    <th align="center">Persistence</th>
+    <th align="center">Severity</th>
+  </tr>
+  <tr>
+    <td align="center">Stage Map</td>
+    <td align="center">Confusing about how to pin in birthday and why?</td>
+    <td align="center">Visibility of system status, User control and freedom</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+  </tr>
+  <tr>
+    <td align="center">Game View</td>
+    <td align="center">Celing and Sidewall is invisiable</td>
+    <td align="center">User control and freedom</td>
+    <td align="center">2</td>
+    <td align="center">1</td>
+    <td align="center">1</td>
+    <td align="center">1.33</td>
+  </tr>
+  <tr>
+    <td align="center">Game View</td>
+    <td align="center">colour of the background and paddle clash</td>
+    <td align="center">Visibility of system status</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+  </tr>
+  <tr>
+    <td align="center">Game View</td>
+    <td align="center">wish that there were more visual cues to notify that a power up has been eaten</td>
+    <td align="center">Visibility of system status</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+  </tr>
+  <tr>
+    <td align="center">Stage Selection</td>
+    <td align="center">Unclear that user can enter their birth year, may be better to add a cursor
+there</td>
+    <td align="center">Visibility of system status</td>
+    <td align="center">3</td>
+    <td align="center">2</td>
+    <td align="center">1</td>
+    <td align="center">2</td>
+  </tr>
+</table>
+
 ---
 # Process
 ## Zenhub Kanban

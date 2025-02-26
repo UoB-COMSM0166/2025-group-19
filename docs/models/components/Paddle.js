@@ -1,7 +1,8 @@
 class Paddle {
-  constructor(gameWidth, gameHeight) {
+  constructor(gameWidth, gameHeight, borderSize) {
     this.width = 120;
     this.height = 20;
+    this.borderSize = borderSize;
     this.x = gameWidth / 2 - this.width / 2;
     this.y = gameHeight - this.height - 10;
     this.speed = 7;
@@ -21,16 +22,16 @@ class Paddle {
   update() {
     if (this.isMovingLeft) {
       if (this.reverse) {
-        this.x = min(this.x + this.speed, this.gameWidth - this.width);
+        this.x = min(this.x + this.speed, this.gameWidth - this.borderSize - this.width);
       } else {
-        this.x = max(this.x - this.speed, 0);
+        this.x = max(this.x - this.speed, this.borderSize);
       }
     }
     if (this.isMovingRight) {
       if (this.reverse) {
-        this.x = max(this.x - this.speed, 0);
+        this.x = max(this.x - this.speed, this.borderSize);
       } else {
-        this.x = min(this.x + this.speed, this.gameWidth - this.width);
+        this.x = min(this.x + this.speed, this.gameWidth - this.borderSize - this.width);
       }
     }
   }
