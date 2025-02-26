@@ -26,15 +26,13 @@ class StageController {
       this.toolProbabilities = {}; // dropping tool array
       this.ballRadius = Ball.normalSizeBall; // shoting ball size
       this.isBricksLoaded = false;
+      this.isBorderLoaded = false;
       this.form = CurrentForm.STAGE1; // which form is animal in (default = 1)
       this.regenerate = false;
       this.secondFormLoaded = false; 
+      this.initBorder();
       this.initBricks();
       this.startTimer(); // Start the timer.
-      this.sidebar.onPauseClick = () => {
-        this.togglePause();
-      };
-
   }
 
   initBricks() {
@@ -46,7 +44,7 @@ class StageController {
       for (let brickData of data.bricks) {
         let colorValues = data.colour[brickData.colour];
         let [r, g, b] = colorValues;
-        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.unbreakable, r, g, b);
+        let brick = new Brick(brickData.x, brickData.y, brickWidth, brickHeight, brickData.bomb, brickData.blackhole, brickData.border, r, g, b);
         this.state.bricks.push(brick);
       }
       if (this.form === CurrentForm.STAGE1) {
@@ -62,13 +60,23 @@ class StageController {
     });
   }
 
-  getStageJsonPath() {
-    throw new Error('getStageJsonPath() should be implemented by subclass!');
+  initBorder() {
+    this.state.border = [];
+    const borderJsonPath = "./models/components/StagePattern/Border.json";
+    loadJSON(borderJsonPath, (data) => {
+      for (let borderData of data.border) {
+        let colorValues = data.colour[borderData.colour];
+        let [r, g, b] = colorValues;
+        let border = new Brick(borderData.x, borderData.y, borderData.width, borderData.height, borderData.bomb, borderData.blackhole, borderData.isborder, r, g, b);
+        this.state.border.push(border);
+
+        this.isBorderLoaded = true;
+      }
+    });
   }
 
-  togglePause() {
-    this.paused = !this.paused;
-    this.sidebar.setPauseState(this.paused);
+  getStageJsonPath() {
+    throw new Error('getStageJsonPath() should be implemented by subclass!');
   }
 
   shootBall() {
@@ -79,6 +87,7 @@ class StageController {
         this.state.paddle.y - 10,
         this.state.gameWidth,
         this.state.gameHeight,
+        this.state.borderSize,
         this.ballRadius,
         random(-3,3)*this.speedMultiplier,
         -10*this.speedMultiplier,
@@ -119,7 +128,7 @@ class StageController {
   }
 
   update() {
-      if (!this.isBricksLoaded) return;
+      if (!this.isBricksLoaded || !this.isBorderLoaded) return;
       if (!this.regenerate && !this.secondFormLoaded && (this.form === CurrentForm.STAGE2)) return;
       if (this.showingDialog || this.paused) return;
 
@@ -149,14 +158,14 @@ class StageController {
           this.state.isStageFailed = true;
           this.showLoseDialog();
       }
-      if (this.state.bricks.filter(brick => !brick.isUnbreakable).length === 0) {
+      if (this.state.bricks.filter(brick => !brick.isBlackHole).length === 0) {
           if (this.regenerate) {
               // if animal has 2nd form, generates new set of bricks
               this.regenerate = false;
               this.initBricks();
           } else {
-              // removes all unbreakable bricks before ending level
-              this.state.bricks = (this.state.bricks.filter(brick => !brick.isDestroyed && !brick.isUnbreakable));
+              // removes all black hole bricks before ending level
+              this.state.bricks = (this.state.bricks.filter(brick => !brick.isDestroyed && !brick.isBlackHole));
               this.state.isStageCleared = true;
               this.showWinDialog();
               clearInterval(this.timerInterval); // Clear timer when win
@@ -231,8 +240,7 @@ class StageController {
 
   showWinDialog() {
       this.showingDialog = true;
-      this.dialogText = this.state.stageName === 'Stage01' ? 'You Win! Go to Stage 02? (Y/N)' : 'You Win! Congratulations! (Press N to return)';
-
+      this.dialogText = 'You Win! Next stage? (Y/N)';
       this.onYes = () => {
           this.goToNextStage();
       };
@@ -259,9 +267,9 @@ class StageController {
       fill(255);
       textAlign(CENTER, CENTER);
       textSize(24);
-      text(this.dialogText, 400, 300);
+      text(this.dialogText, 400, 250);
       textSize(18);
-      text('Press Y: Yes / Press N: No', 400, 340);
+      text('Press Y: Yes / Press N: No', 400, 300);
   }
 
   applyToolEffect(tool) {
