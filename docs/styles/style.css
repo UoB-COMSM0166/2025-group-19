@@ -1,13 +1,17 @@
+@font-face {
+  font-family: 'BoutiqueBitmap';
+  src: url('../assets/font/BoutiqueBitmap9x9_Bold_1.5.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   background-color: #111;
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'BoutiqueBitmap', sans-serif;
 }
 
-/* TODO: If "display: block" is not added, 
-the full-size screen will have a scrollbar. */
-/**/
 canvas {
   display: block;
 }
