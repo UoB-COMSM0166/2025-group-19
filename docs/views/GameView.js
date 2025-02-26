@@ -17,6 +17,10 @@ class GameView {
             brick.display(this.canvas);
         }
 
+        for (let border of this.stage.border) {
+            border.display(this.canvas);
+        }
+
         for (let tool of this.stage.tools) {
             tool.display(this.canvas);
         }
