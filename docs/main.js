@@ -26,8 +26,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1000, 600);
-  // createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight); // (1000, 600);
   textFont(boutiqueBitmaFont);
   pageController = new PageController();
 }
