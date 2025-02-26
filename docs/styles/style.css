@@ -16,3 +16,32 @@ body {
 canvas {
   display: block;
 }
+
+/* ========= road ========= */
+.road-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%; 
+  overflow: hidden; 
+  /* background-color: red; */
+}
+
+.road-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%; 
+  height: 100%; 
+  /* animation: moveRight 5s linear infinite;*/
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(-100);
+  }
+}
