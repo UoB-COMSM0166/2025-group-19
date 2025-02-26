@@ -21,7 +21,7 @@ class StageController {
       this.gravityOn = false;
       this.paused = false;
       this.state.balls = []; // Will not generate ball in the beginning.
-      this.ballRemain = 1000; // Remain Ball
+      this.ballRemain = 10; // Remain Ball
       this.timer = 300; // Remain time
       this.toolProbabilities = {}; // dropping tool array
       this.ballRadius = Ball.normalSizeBall; // shoting ball size

@@ -117,8 +117,9 @@ class Ball {
       bricks.forEach(b => (b.y === brick.y ? (b.isDestroyed = true) : null));
     }
     if (brick.isBlackHole) {
-      this.x = this.gameWidth;
-      this.y = this.gameHeight;
+      // spits ball back out in random location
+      this.x = Math.floor(Math.random() * this.gameWidth);
+      this.y = Math.floor(Math.random() * this.gameHeight);
       console.log("x: " + this.x + "y: " + this.y);
     }
     if (brick.isUnbreakable) {
