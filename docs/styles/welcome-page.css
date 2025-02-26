@@ -1,0 +1,43 @@
+.welcome-page-container{
+    text-align:center;
+    position: absolute;
+    top: 18%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .title{
+        font-size: 140px;
+        font-weight: bolder;
+        color:#f7e428;
+        padding-bottom: 16px;  
+    }
+
+    .game-version{
+        font-size: 20px;
+        font-weight: bolder;
+        color: white;
+        padding-bottom: 16px;  
+    }
+
+    .menu-option {
+        font-size: 32px;
+        color: white;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+
+    .selected {
+        color: #DD4C03; /* 選中的選項變紅色 */
+        font-weight: bold;
+    }
+}
+
+
+/* screen < 1024px  */
+@media (max-width: 1024px) {
+    .welcome-page-container {
+        font-size: 60px;
+    }
+}
+  
