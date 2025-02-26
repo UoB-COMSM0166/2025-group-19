@@ -1,11 +1,11 @@
 class WelcomeView {
   constructor(controller) {
     this.controller = controller;
-    this.textSettings();
     this.selectedIndex = 0;
     this.roadAnimation = new RoadAnimation();
     this.animalAnimation = new AnimalAnimation(this.roadAnimation.imgHeight);
     this.cloudAnimation1 = new CloudAnimation(1, 30);
+    this.createText(); 
     //this.cloudAnimation2 = new CloudAnimation(2, 110, 130, 0.5);
   }
 
@@ -17,19 +17,41 @@ class WelcomeView {
   }
   
   display() {
-    createCanvas(windowWidth, windowHeight); // full size screen
+    //createCanvas(windowWidth, windowHeight); // full size screen
     background('#6EB6FF'); // blue
     this.roadAnimation.display();
     this.animalAnimation.display();
     this.cloudAnimation1.display();
     //this.cloudAnimation2.display();
-    //this.displayTitleImg();
-    this.displayTitle();
-    //this.displaySubtitle();
-    this.displayVersionDescription();
-    this.displayOption();   
   }
-  
+
+  createText() {
+    // create container
+    this.welcomePageContainer = createElement('div');
+    this.welcomePageContainer.class('welcome-page-container'); 
+    // title
+    this.testTitle = createDiv('ZODIAC CATCH'); 
+    this.testTitle.class('title'); 
+    // version
+    this.testGameVersion = createDiv('Version 0.5');
+    this.testGameVersion.class('game-version');
+    // title and version add to container
+    this.welcomePageContainer.child(this.testTitle);
+    this.welcomePageContainer.child(this.testGameVersion);
+    // menu option
+    this.options = ["START", "SETTING", "INFORMATION"];
+    this.menuOptions = []; 
+    for (let i = 0; i < this.options.length; i++) {
+        let option = createDiv(this.options[i]);
+        option.class('menu-option');
+        if (i === this.selectedIndex) {
+            option.addClass('selected');
+        }
+        this.welcomePageContainer.child(option);
+        this.menuOptions.push(option);
+    }
+  }
+
   handleKeyPress(key) {
     if (key === 'ArrowUp') {
       this.selectedIndex = (this.selectedIndex - 1 + this.options.length) % this.options.length;
@@ -38,6 +60,7 @@ class WelcomeView {
     } else if (key === 'Enter') {
       const selectedOption = this.options[this.selectedIndex];
       if (selectedOption === "START") {
+        this.welcomePageContainer.remove();
         this.controller.switchToStageMap();
       } else if (selectedOption === "SETTING") {
         alert("under construction ...");
@@ -45,71 +68,14 @@ class WelcomeView {
         alert("under construction ...");
       }
     }
-  }
-
-  textSettings(){
-    this.title = "ZODIAC CATCH";
-    this.subtitle = "(HALF)";
-    this.versionDescription = "Version 0.5";
-    this.options = ["START", "SETTING", "INFORMATION"];
-    this.titleX = windowWidth / 2;
-    this.titleY = windowHeight / 4;
-    this.titleHeight = 0;
-    this.versionDescriptionY = 0;
-    this.versionDescriptionHeight = 0;
-    this.optionY = 0;
-  }
-
-  displayTitle(){
-    fill('#f7e428'); // yellow
-    //stroke('#e79724'); // orange stroke
-    stroke('#f7e428');
-    strokeWeight(6); 
-    textSize(140);
-    textAlign(CENTER, CENTER);
-    text(this.title, this.titleX, this.titleY);
-    this.titleHeight =  textAscent();
-    this.versionDescriptionY = this.titleY + this.titleHeight;
-  }
-
-  displaySubtitle(){
-    fill(255);
-    noStroke();
-    textSize(40);
-    textAlign(LEFT, BOTTOM);
-    text(this.subtitle, this.titleX + textWidth(this.title), this.titleY - textAscent());
-  }
-
-  displayVersionDescription(){
-    fill(255);
-    noStroke();
-    textSize(20);
-    textAlign(CENTER, TOP);
-    this.versionDescriptionHeight =  textAscent();
-    this.optionY = this.versionDescriptionY + this.versionDescriptionHeight;
-    text(this.versionDescription, this.titleX,  this.versionDescriptionY);
-  }
-
-  displayOption(){
-    textSize(32);
-    for (let i = 0; i < this.options.length; i++) {
+    // update option style
+    for (let i = 0; i < this.menuOptions.length; i++) {
       if (i === this.selectedIndex) {
-        fill('#DD4C03'); //red
-        noStroke();
+          this.menuOptions[i].addClass('selected');
       } else {
-        fill(255);
-        noStroke();
+          this.menuOptions[i].removeClass('selected');
       }
-      textAlign(CENTER, TOP);
-      text(this.options[i], width / 2, (this.optionY + 30) + i * 60);
     }
-  }
-
-  // will delete this function
-  displayTitleImg(){
-    // use the tiltle image
-    this.titleImg = zodiacCatchImg;
-    image(this.titleImg, width / 2 - this.titleImg.width / 2, windowHeight / 4 - this.titleImg.height / 2, this.titleImg.width, this.titleImg.height);
   }
 }
   
