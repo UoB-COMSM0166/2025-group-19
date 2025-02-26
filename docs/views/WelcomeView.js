@@ -3,7 +3,7 @@ class WelcomeView {
     this.controller = controller;
     this.selectedIndex = 0;
     this.roadAnimation = new RoadAnimation();
-    this.animalAnimation = new AnimalAnimation(this.roadAnimation.imgHeight);
+    this.animalAnimation = new AnimalAnimation();
     this.cloudAnimation1 = new CloudAnimation(1, 30);
     this.createText(); 
     //this.cloudAnimation2 = new CloudAnimation(2, 110, 130, 0.5);
@@ -23,6 +23,11 @@ class WelcomeView {
     this.animalAnimation.display();
     this.cloudAnimation1.display();
     //this.cloudAnimation2.display();
+  }
+
+  resizeWindow(){
+    this.roadAnimation.resizeWindow();
+    this.animalAnimation.resizeWindow();
   }
 
   createText() {
