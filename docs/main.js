@@ -1,7 +1,6 @@
 let mainController;
 let skyBackground;
 let bgMusic;
-let roadImg;
 
 function preload() {
   skyBackground = loadImage('assets/images/skyBackground.webp');
@@ -28,6 +27,7 @@ function preload() {
 
 function setup() {
   createCanvas(1000, 600);
+  // createCanvas(windowWidth, windowHeight);
   textFont(boutiqueBitmaFont);
   pageController = new PageController();
 }
@@ -50,4 +50,9 @@ function keyReleased() {
   } else if (pageController.currentPage instanceof StageController) {
     pageController.currentPage.keyboardController.handleKeyReleased(key);
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  pageController.resizeWindow();
 }
