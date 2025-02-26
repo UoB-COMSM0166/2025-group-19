@@ -7,21 +7,21 @@
     bottom: 0;
 
     .title{
-        font-size: 140px;
+        font-size: clamp(60px, 10vw, 140px);
         font-weight: bolder;
         color:#f7e428;
         padding-bottom: 16px;  
     }
 
     .game-version{
-        font-size: 20px;
+        font-size: clamp(16px, 2vw, 24px);
         font-weight: bolder;
         color: white;
         padding-bottom: 16px;  
     }
 
     .menu-option {
-        font-size: 32px;
+        font-size: clamp(20px, 3vw, 32px);
         color: white;
         margin: 20px 0;
         cursor: pointer;
@@ -35,9 +35,9 @@
 
 
 /* screen < 1024px  */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .welcome-page-container {
         font-size: 60px;
     }
 }
-  
+*/
