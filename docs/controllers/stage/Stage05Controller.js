@@ -6,7 +6,7 @@ class Stage05Controller extends StageController {
       ballGrow: 0.3,
       ballShrink: 0.2,
 			timeIncrease: 0.2,
-			infiniteBall: 0.3,
+			infiniteBall: 0.5,
 			timeDecrease: 0.3,
     };
   }
@@ -21,6 +21,6 @@ class Stage05Controller extends StageController {
   }
 
   goToNextStage() {
-    this.pageController.switchToStage('Rabbit');
+    this.pageController.switchToStage('Snake');
   }
 }
