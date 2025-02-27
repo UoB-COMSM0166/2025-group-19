@@ -1,13 +1,33 @@
 class AnimalAnimation {
   /**
-   * @param {*} initialY 
+   * @param {*} 
    */
-  constructor(initialY) {
-    this.targetHeight = windowHeight * 0.10; // set a uniform height for all animals.
-    this.baseY = windowHeight - initialY - this.targetHeight; // Use the provided initialY to adjust baseY
-    this.baseX = windowWidth / 2;
-    this.interval60 = 60;
+  constructor() {
+    this.positionSetting();
+    this.animalSetting();
+    this.animation();
+  }
 
+  update() {
+    for (let animal of this.animals) {
+      animal.y = animal.baseY + sin(frameCount * animal.speed + animal.timeOffset) * animal.amplitude;
+    }
+  }
+
+  display() {   
+    for (let animal of this.animals) {
+      image(animal.img, animal.x, animal.y, animal.width, animal.height);
+    }
+  }
+
+  resizeWindow() {
+    this.removeAllAnimals();
+    this.positionSetting();
+    this.animalSetting();
+    this.animation();
+  }
+
+  animalSetting(){
     this.animals = [
       { img: mouseImg, y: this.baseY, amplitude: 5, speed: 0.09 },
       { img: cowImg, y: this.baseY, amplitude: 5, speed: 0.09 },
@@ -22,7 +42,16 @@ class AnimalAnimation {
       { img: dogImg, y: this.baseY, amplitude: 5, speed: 0.09 },
       { img: pigImg, y: this.baseY, amplitude: 5, speed: 0.09 }
     ];
+  }
 
+  positionSetting(){
+    this.initialY = windowHeight* 0.1;
+    this.targetHeight = windowHeight * 0.10; // set a uniform height for all animals.
+    this.baseY = windowHeight - this.initialY - this.targetHeight; // Use the provided initialY to adjust baseY
+    this.baseX = windowWidth / 2;
+  }
+
+  animation(){
     // calculate width and height, and store the base Y value
     for (let animal of this.animals) {
       animal.height = this.targetHeight; 
@@ -45,15 +74,7 @@ class AnimalAnimation {
     }
   }
 
-  update() {
-    for (let animal of this.animals) {
-      animal.y = animal.baseY + sin(frameCount * animal.speed + animal.timeOffset) * animal.amplitude;
-    }
-  }
-
-  display() {
-    for (let animal of this.animals) {
-      image(animal.img, animal.x, animal.y, animal.width, animal.height);
-    }
+  removeAllAnimals() {
+    this.animals = []; 
   }
 }
