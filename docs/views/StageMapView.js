@@ -164,21 +164,24 @@ class StageMapView {
 
     let isZodiacActive = this.currentFocus === "zodiac";
     tint(255, isZodiacActive ? 255 : 100);
-    image(this.images[this.zodiacSigns[this.selectedIndex]], width / 2 - 125, height / 1.9, 250, 250);
+    image(this.images[this.zodiacSigns[this.selectedIndex]], width / 2 - 125, height / 2.1
+      , 250, 250);
     noTint();
 
     fill(isZodiacActive ? 255 : 100);
     textSize(40);
     text("<", width / 4, height / 1.6);
     text(">", (3 * width) / 4, height / 1.6);
-    text(this.zodiacSigns[this.selectedIndex], width / 2, height / 1.3);
+    text(this.zodiacSigns[this.selectedIndex], width / 2, height / 1.25
+
+    );
 
     let isBackActive = this.currentFocus === "back";
     fill(isBackActive ? 200 : 100, 0, 0);
-    rect(width / 2 - 100, height * 0.85, 200, 50, 10);
+    rect(width / 2 - 100, height * 0.88, 200, 50, 10);
     fill(255);
     textSize(30);
-    text("Back", width / 2, height * 0.85 + 20);
+    text("Back", width / 2, height * 0.88 + 20);
   }
 
   handleKeyPress(key) {
