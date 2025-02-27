@@ -49,8 +49,12 @@ class PageController {
       this.currentPage.handleKeyPress(key);
     }
 
-    handleMousePressed(key) {
-      this.currentPage.handleMousePressed(key);
+    handleKeyReleased(key) {
+      this.currentPage.handleKeyReleased(key);
     }
-  }
+
+    resizeWindow(){
+      this.currentPage.resizeWindow();
+    }
+}
   

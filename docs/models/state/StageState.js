@@ -5,7 +5,7 @@ class StageState {
     this.borderSize = 10;
     this.stageName = stageName;
     this.bgImage = bgImage;
-    this.paddle = new Paddle(this.gameWidth, this.gameHeight);
+    this.paddle = new Paddle(this.gameWidth, this.gameHeight, this.borderSize);
     this.balls = [new Ball(this.paddle.x + this.paddle.width / 2, this.paddle.y - 10, this.gameWidth, this.gameHeight)];
     this.tools = [];
     this.bricks = [];
