@@ -12,19 +12,22 @@ class PageController {
       const sidebar = new SidebarView(stageName, sidebarCanvas);
 
       switch (stageName) {
-          case 'Rat':
-              this.currentPage = new Stage01Controller(state, gameview, sidebar, this);
-              break;
-          case 'Ox':
-              this.currentPage = new Stage02Controller(state, gameview, sidebar, this);
-              break;
-          case 'Tiger':
-              this.currentPage = new Stage03Controller(state, gameview, sidebar, this);
-              break;
-          default:
-              console.error('Unknown: ' + stageName);
-              alert("under construction ...");
-              this.switchToWelcome();
+        case 'Rat':
+          this.currentPage = new Stage01Controller(state, gameview, sidebar, this);
+          break;
+        case 'Ox':
+          this.currentPage = new Stage02Controller(state, gameview, sidebar, this);
+          break;
+        case 'Tiger':
+          this.currentPage = new Stage03Controller(state, gameview, sidebar, this);
+          break;
+        case 'Dragon':
+          this.currentPage = new Stage05Controller(state, gameview, sidebar, this);
+          break;
+        default:
+          console.error('Unknown: ' + stageName);
+          alert("under construction ...");
+          this.switchToWelcome();
       }
   }
 

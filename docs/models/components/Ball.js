@@ -90,7 +90,7 @@ class Ball {
     if (hitBricks.length === 0) return;
 
     hitBricks.forEach(brick => this.handleSpecialBricks(brick, bricks));
-    this.destroyBricks(hitBricks, sidebar);
+    this.destroyBricks(hitBricks.filter(brick => !brick.isBlackHole), sidebar);
     this.generateTools(hitBricks, tools, stageController);
 
     // 避免球卡在磚塊內
@@ -116,13 +116,10 @@ class Ball {
     if (brick.isBomb) {
       bricks.forEach(b => (b.y === brick.y ? (b.isDestroyed = true) : null));
     }
-    if (brick.isUnbreakable) {
-      this.speedY *= -1;
-      if (this.speedY > 0) {
-        this.y = brick.y - this.radius - 1;
-      } else {
-        this.y = brick.y + brick.height + this.radius + 1;
-      }
+    if (brick.isBlackHole) {
+      // spits ball back out in random location
+      this.x = Math.floor(Math.random() * this.gameWidth);
+      this.y = Math.floor(Math.random() * this.gameHeight);
     }
   }
 
@@ -135,7 +132,9 @@ class Ball {
         hitBricks.slice(0, 3).forEach(brick => (brick.isDestroyed = true));
         break;
       case Ball.normalSizeBall:
-        hitBricks[0].isDestroyed = true;
+        if(hitBricks[0]) {
+          hitBricks[0].isDestroyed = true;
+        }
         break;
       default:
         throw new Error('Unknown ball size!');
