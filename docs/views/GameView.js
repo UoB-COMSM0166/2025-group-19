@@ -1,11 +1,12 @@
 class GameView {
-    constructor(stage) {
+    constructor(stage, gameCanvas) {
         this.stage = stage;
-        this.canvas = createGraphics(800, 600);
+        this.canvas = gameCanvas;
+        this.updateScale();
     }
 
     display() {
-        this.canvas.background(this.stage.bgImage);
+        this.canvas.background('#6EB6FF'); // blue
 
         this.stage.paddle.display(this.canvas);
 
@@ -25,6 +26,23 @@ class GameView {
             tool.display(this.canvas);
         }
 
-        image(this.canvas, 0, 0);
+        image(this.canvas, this.canvasX, this.canvasY, 800 * this.scaleFactor, 600 * this.scaleFactor);
+    }
+
+    resizeWindow() {
+       console.log("GameView");
+       this.updateScale();
+    }
+
+    // Calculate the scaling factor and adjust the centering.
+    updateScale() {
+        console.log("GameView updateScale");
+        let availableHeight = windowHeight * 0.9; //  5% padding
+        this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
+        this.scaledWidth = 1000 * this.scaleFactor;
+        this.scaledHeight = 600 * this.scaleFactor;
+        this.canvasX = (windowWidth - this.scaledWidth) / 2;
+        this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
     }
 }
+
