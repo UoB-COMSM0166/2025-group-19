@@ -120,15 +120,6 @@ class Ball {
       // spits ball back out in random location
       this.x = Math.floor(Math.random() * this.gameWidth);
       this.y = Math.floor(Math.random() * this.gameHeight);
-      console.log("x: " + this.x + "y: " + this.y);
-    }
-    if (brick.isUnbreakable) {
-      this.speedY *= -1;
-      if (this.speedY > 0) {
-        this.y = brick.y - this.radius - 1;
-      } else {
-        this.y = brick.y + brick.height + this.radius + 1;
-      }
     }
   }
 
