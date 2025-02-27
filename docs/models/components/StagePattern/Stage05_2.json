@@ -11,6 +11,7 @@
 			"black": [0, 0, 0]
 
 	},
+	
 	"bricks": [
 		{ "x": 300, "y": 90, "colour": "blood_red" },
 		{ "x": 320, "y": 90, "colour": "blood_red" },
