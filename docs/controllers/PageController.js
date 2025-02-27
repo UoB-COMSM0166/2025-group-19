@@ -49,5 +49,9 @@ class PageController {
     handleKeyReleased(key) {
       this.currentPage.handleKeyReleased(key);
     }
+
+    resizeWindow(){
+      this.currentPage.resizeWindow();
+    }
 }
   

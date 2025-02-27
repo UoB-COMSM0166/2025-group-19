@@ -43,7 +43,7 @@ class RoadAnimation {
     }
   }
 
-  resize() {
+  resizeWindow() {
     this.imgHeight = height * 0.1;
     this.imgWidth = (this.img.width / this.img.height) * this.imgHeight;
 
