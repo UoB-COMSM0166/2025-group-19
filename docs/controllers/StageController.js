@@ -95,12 +95,9 @@ class StageController {
       );
       this.state.balls.push(ball);
       this.ballRemain--;
-      console.log(`Ball shot! Remaining balls: ${this.ballRemain}`);
 
       //Make sure when shoot ball, update sidebar simutanously.
       this.sidebar.update(this.sidebar.score, this.ballRemain, this.state.timer);
-    } else {
-      console.log(`No more balls left! Cannot shoot.`);
     }
 
   }
@@ -312,14 +309,12 @@ class StageController {
   }
 
   resizeWindow(){
-    console.log("=== StageController ===");
     this.view.resizeWindow();
     this.sidebar.resizeWindow();
     this.updateScale();
   }
 
   updateScale() {
-    console.log("StageController updateScale");
     let availableHeight = windowHeight * 0.9; //  5% padding
     this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
     this.scaledWidth = 1000 * this.scaleFactor;
