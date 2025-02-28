@@ -285,6 +285,16 @@ class StageController {
     this.effectController.applyToolEffect(tool);
   }
 
+  updateSidebarItems() {
+    const activeEffects = this.effectController.getActiveEffects();
+    let items = {};
+
+    activeEffects.forEach(effect => {
+      items[effect.toolType] = effect.remainingTime;
+    });
+    this.sidebar.updateItems(items);
+  }
+
   startTimer(){
     this.timerInterval = setInterval(() => {
       if(this.showingDialog || this.paused) return;

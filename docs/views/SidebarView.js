@@ -4,10 +4,10 @@ class SidebarView {
     this.score = 0;
     this.ballCount = 10;
     this.timer = 60;
+    this.items = {};
     this.canvas = sidebarCanvas;
     this.updateScale();
-    this.font = boutiqueBitmaFont;     
-
+    this.font = boutiqueBitmaFont;
   }
 
   addScore(points) {
@@ -21,6 +21,11 @@ class SidebarView {
     this.timer = timeRemaining;
   }
 
+  updateItems(items) {
+    this.items = items;
+    this.display();
+  }
+
   display() {
     this.canvas.background(50);
     this.canvas.fill(255);
@@ -30,7 +35,7 @@ class SidebarView {
 
     // Game Title
     this.canvas.textAlign(CENTER);
-    this.canvas.text("ZODIAC CATCH", 100, 30);
+    this.canvas.text("ZODIAC CATCH", 100, 10);
     this.canvas.textAlign(LEFT);
 
     // Storage for picture
@@ -38,43 +43,30 @@ class SidebarView {
     this.canvas.rect(25, 50, 150, 80, 10); // Picture
     this.canvas.fill(255);
     this.canvas.textAlign(CENTER);
-    this.canvas.text("LOGO / IMAGE", 100, 90);
+    this.canvas.text("LOGO / IMAGE", 100, 80);
     this.canvas.textAlign(LEFT);
 
-    // Stage
+    // Stage Name
     this.canvas.textSize(18);
-    this.canvas.textAlign(CENTER);
-    this.canvas.text("STAGE", 100, 140);
-
-    let stageText = "Unknown Stage";
-    switch(this.stageName) {
-        case 'Stage01': stageText = "Stage 1: Mouse"; break;
-        case 'Stage02': stageText = "Stage 2: Cow"; break;
-        case 'Stage03': stageText = "Stage 3: Tiger"; break;
-        case 'Stage04': stageText = "Stage 4: Rabbit"; break;
-        case 'Stage05': stageText = "Stage 5: Dragon"; break;
-        case 'Stage06': stageText = "Stage 6: Snake"; break;
-        case 'Stage10': stageText = "Stage 10: Rooster"; break;
-        default: stageText = this.stageName;
-    }
-    this.canvas.text(stageText, 100, 165);
-    this.canvas.textAlign(LEFT);
+    this.canvas.textAlign(LEFT, CENTER);
+    this.canvas.text("STAGE: ", 50, 150);
+    this.canvas.text(this.stageName, 130, 150);
 
     // Point
     this.canvas.textSize(18);
-    this.canvas.text("Point", 10, 210);
-    this.canvas.text(`${this.score}`, 10, 240);
+    this.canvas.textAlign(LEFT, CENTER);
+    this.canvas.text("Point: ", 10, 190);
+    this.canvas.text(`${this.score}`, 100, 190);
 
     // Time left
-    this.canvas.textSize(18);
-    this.canvas.text("Time Left", 10, 270);
-    this.canvas.text(`${this.timer} sec`, 10, 300);
+    this.canvas.text("Time: ", 10, 230);
+    this.canvas.text(`${this.timer} s`, 100, 230);
 
     // Remain ball
     this.canvas.textSize(18);
-    this.canvas.text("Balls", 10, 330);
+    this.canvas.text("Balls: ", 10, 270);
     let ballX = 10;
-    let ballY = 360;
+    let ballY = 300;
     this.canvas.textSize(24);
 
     if (this.ballCount === Infinity) {
@@ -91,18 +83,45 @@ class SidebarView {
             }
         }
     }
+    // Items
+    this.canvas.textSize(18);
+    this.canvas.text("Items:", 10, 370);
+
+    let maxPerRow = 5;
+    let itemY = 395;
+    let itemX = 10;
+    let itemCount = 0;
+
+    for (const [itemName, timeLeft] of Object.entries(this.items)) {
+        let tool = new Tool(0, 0, itemName);
+        let itemImage = tool.getImage();
+
+        if (itemImage) {
+            this.canvas.image(itemImage, itemX, itemY, 25, 25);
+        }
+
+        this.canvas.textSize(16);
+        this.canvas.text(`${timeLeft}s`, itemX + 45, itemY + 10);
+
+        itemCount++;
+
+        if (itemCount === maxPerRow) {
+            itemX = 110;
+            itemY = 395;
+        } else {
+            itemY += 40;
+        }
+    }
 
     image(this.canvas, this.canvasX + 800 * this.scaleFactor, this.canvasY, 200 * this.scaleFactor, 600 * this.scaleFactor);
   }
 
   resizeWindow() {
-    console.log("SidebarView");
     this.updateScale();
   }
 
   // Calculate the scaling factor and adjust the centering.
   updateScale() {
-    console.log("SidebarView updateScale");
     let availableHeight = windowHeight * 0.9; //  5% padding
     this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
     this.scaledWidth = 1000 * this.scaleFactor;

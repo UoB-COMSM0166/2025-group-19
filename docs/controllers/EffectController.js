@@ -43,7 +43,7 @@ class EffectController {
       }
 
       if (effect) {
-        effect.toolType = tool.type; //讓ToolType可以傳出去
+        effect.toolType = tool.type;
         this.activateEffect(effect);
       }
     }
@@ -71,8 +71,8 @@ class EffectController {
 
     getActiveEffects() {
       return this.activeEffects.map(effect => ({
-        name: effect.getEffectType(),      // 拿到 effect 名稱
-        remainingTime: effect.getRemainingTime() // 拿到剩餘秒數
+        toolType: effect.getEffectType(),
+        remainingTime: effect.getRemainingTime()
       }));
-    }    
+    }
 }
