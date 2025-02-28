@@ -17,6 +17,7 @@ class Ball {
     this.increaseSpeed = false;
     this.incSpeedVal = 1.5;
     this.incSpeedTime = 1200;
+    this.isBeingAbsorbed = false;
   }
 
   display(canvas = window) {
@@ -93,7 +94,7 @@ class Ball {
       return distB < distA ? brick : closest;
     });
 
-    this.handleSpecialBricks(closestBrick, bricks);
+    this.handleSpecialBricks(closestBrick, bricks, stageController);
     this.destroyBricks([closestBrick], sidebar);
     this.generateTools([closestBrick], tools, stageController);
 
@@ -129,38 +130,40 @@ class Ball {
     );
   }
 
-  handleSpecialBricks(brick, bricks) {
+  handleSpecialBricks(brick, bricks, stageController) {
     if (brick.isBomb) {
       bricks.forEach(b => (b.y === brick.y ? (b.isDestroyed = true) : null));
     }
+
     if (brick.isBlackHole) {
-      // spits ball back out in random location
-      this.x = Math.floor(Math.random() * this.gameWidth);
-      this.y = Math.floor(Math.random() * this.gameHeight);
+      BlackHoleEffect.absorb(this, brick, stageController);
     }
   }
 
   destroyBricks(hitBricks, sidebar) {
-    switch (this.radius) {
-      case Ball.smallSizeBall:
-        hitBricks.forEach(brick => (brick.damageLevel < 2 ? brick.damageLevel++ : (brick.isDestroyed = true)));
-        break;
-      case Ball.bigSizeBall:
-        hitBricks.slice(0, 3).forEach(brick => (brick.isDestroyed = true));
-        break;
-      case Ball.normalSizeBall:
-        if(hitBricks[0]) {
-          hitBricks[0].isDestroyed = true;
-        }
-        break;
-      default:
-        throw new Error('Unknown ball size!');
+    if (this.isBeingAbsorbed) return;
+    const validBricks = hitBricks.filter(brick => !brick.isBlackHole);
+    const damageRules = {
+      [Ball.smallSizeBall]: bricks =>
+        bricks.forEach(brick => (brick.damageLevel < 2 ? brick.damageLevel++ : brick.isDestroyed = true)),
+      [Ball.bigSizeBall]: bricks =>
+        bricks.slice(0, 3).forEach(brick => brick.isDestroyed = true),
+      [Ball.normalSizeBall]: bricks => {
+        if (bricks[0]) bricks[0].isDestroyed = true;
+      }
+    };
+    if (damageRules[this.radius]) {
+      damageRules[this.radius](validBricks);
+    } else {
+      throw new Error(`Unknown ball size: ${this.radius}`);
     }
-    sidebar.addScore(100 * hitBricks.length);
+    sidebar.addScore(100 * validBricks.length);
   }
 
   generateTools(hitBricks, tools, stageController) {
-    hitBricks.forEach(brick => {
+    hitBricks
+    .filter(brick => !brick.isBlackHole)
+    .forEach(brick => {
       const tool = stageController.generateTool(brick.x + brick.width / 2, brick.y + brick.height / 2);
       if (tool) tools.push(tool);
     });
