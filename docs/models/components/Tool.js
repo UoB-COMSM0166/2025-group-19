@@ -20,7 +20,7 @@ class Tool {
     if (this.type === 'infiniteBall') this.img = infiniteBall;
 
     // Calculate the size for the image
-    this.imgHeight = windowHeight * 0.025; // if use height, its setting will come from main.js's createCanvas(1000, 600);. 
+    this.imgHeight = windowHeight * 0.035; // if use height, its setting will come from main.js's createCanvas(1000, 600);. 
     this.imgWidth = (this.img.width / this.img.height) * this.imgHeight; // Maintain the original aspect ratio
   }
 
@@ -36,8 +36,8 @@ class Tool {
     return (
       this.x > paddle.x &&
       this.x < paddle.x + paddle.width &&
-      this.y + this.imgHeight / 2 > paddle.y &&
-      this.y - this.imgHeight / 2 < paddle.y + paddle.height
+      this.y + this.imgHeight > paddle.y &&
+      this.y - this.imgHeight < paddle.y + paddle.height
     );
   }
 

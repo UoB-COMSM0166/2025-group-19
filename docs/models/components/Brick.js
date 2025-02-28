@@ -23,7 +23,7 @@ class Brick {
   display(canvas = window) {
     if (!this.isDestroyed) {
       if (this.isBomb) {
-        canvas.fill(255, 255, 255, 255);
+        canvas.fill(0, 0, 0, 255);
         canvas.rect(this.x, this.y, this.width, this.height);
         canvas.image(bomb, this.x, this.y, 20, 20);
       } else {
