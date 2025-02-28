@@ -12,6 +12,8 @@ class SidebarView {
     this.pauseButtonHeight = 40;
     this.isPaused = false;
     this.onPauseClick = null;
+    this.font = boutiqueBitmaFont;     
+
   }
 
   addScore(points) {
@@ -33,6 +35,7 @@ class SidebarView {
     this.canvas.background(50);
     this.canvas.fill(255);
     this.canvas.textSize(20);
+    this.canvas.textFont(boutiqueBitmaFont);
     this.canvas.textAlign(LEFT, TOP);
 
     // Game Title
