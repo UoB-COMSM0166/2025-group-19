@@ -34,6 +34,7 @@ class StageController {
       this.initBricks();
       this.startTimer(); // Start the timer.
       this.updateScale();
+      this.gameOver = false;
   }
 
   initBricks() {
@@ -248,6 +249,7 @@ class StageController {
 
   showWinDialog() {
     this.showingDialog = true;
+    this.gameOver = true;
     this.dialogText = 'You Win! Next stage? (Y/N)';
     this.onYes = () => {
       this.goToNextStage();
@@ -259,6 +261,7 @@ class StageController {
 
   showLoseDialog() {
     this.showingDialog = true;
+    this.gameOver = true;
     this.dialogText = 'Game Over. Retry? (Y/N)';
 
     this.onYes = () => {
@@ -289,6 +292,7 @@ class StageController {
   }
 
   updateSidebarItems() {
+    if (this.gameOver) return;
     const activeEffects = this.effectController.getActiveEffects();
     let items = {};
 
