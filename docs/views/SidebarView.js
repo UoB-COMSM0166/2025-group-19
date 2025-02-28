@@ -69,30 +69,45 @@ class SidebarView {
     let ballY = 300;
     this.canvas.textSize(24);
 
-    if (this.ballCount === Infinity) {
-        this.canvas.text("∞", ballX, ballY);
+    if ('infiniteBall' in this.items) {
+      // Show infinite Ball and its remaining time
+      let infiniteBallTime = this.items['infiniteBall'];
+      let tool = new Tool(0, 0, 'infiniteBall');
+      let infiniteBallImg = tool.getImage();
+
+      if (infiniteBallImg) {
+          this.canvas.image(infiniteBallImg, ballX, ballY, 25, 25);
+      }
+      this.canvas.textSize(16);
+      this.canvas.text(`${infiniteBallTime}s`, ballX + 40, ballY + 12);
     } else {
-        for (let i = 0; i < this.ballCount; i++) {
-            this.canvas.text("o", ballX, ballY);
-            ballX += 30;
-
-            if (i === 4) { // 5 ball a row
-
-                ballX = 10;
-                ballY += 30;
-            }
-        }
+      // Remain Balls
+      if (this.ballCount === Infinity) {
+          this.canvas.text("∞", ballX, ballY);
+      } else {
+          for (let i = 0; i < this.ballCount; i++) {
+              this.canvas.text("o", ballX, ballY);
+              ballX += 30;
+              if (i === 4) { // 5 ball a row
+                  ballX = 10;
+                  ballY += 30;
+              }
+          }
+      }
     }
     // Items
     this.canvas.textSize(18);
     this.canvas.text("Items:", 10, 370);
 
-    let maxPerRow = 5;
+    let maxPerRow = 4;
     let itemY = 395;
     let itemX = 10;
     let itemCount = 0;
 
     for (const [itemName, timeLeft] of Object.entries(this.items)) {
+        if (itemName === 'infiniteBall') continue;
+        if (itemName === 'timeIncrease') continue;
+        if (itemName === 'timeDecrease') continue;
         let tool = new Tool(0, 0, itemName);
         let itemImage = tool.getImage();
 
