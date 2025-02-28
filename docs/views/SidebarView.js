@@ -78,8 +78,14 @@ class SidebarView {
       if (infiniteBallImg) {
           this.canvas.image(infiniteBallImg, ballX, ballY, 25, 25);
       }
+      if (infiniteBallTime <= 3) {
+        this.canvas.fill(255, 0, 0);
+      } else {
+          this.canvas.fill(255);
+      }
       this.canvas.textSize(16);
       this.canvas.text(`${infiniteBallTime}s`, ballX + 40, ballY + 12);
+      this.canvas.fill(255);
     } else {
       // Remain Balls
       if (this.ballCount === Infinity) {
@@ -116,7 +122,13 @@ class SidebarView {
         }
 
         this.canvas.textSize(16);
+        if (timeLeft <= 3) {
+          this.canvas.fill(255, 0, 0);
+        } else {
+            this.canvas.fill(255);
+        }
         this.canvas.text(`${timeLeft}s`, itemX + 45, itemY + 10);
+        this.canvas.fill(255);
 
         itemCount++;
 
