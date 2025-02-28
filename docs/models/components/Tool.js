@@ -26,8 +26,8 @@ class Tool {
     this.imgWidth = (this.img.width / this.img.height) * this.imgHeight; // Maintain the original aspect ratio
   }
 
-  display() {
-    image(this.img, this.x, this.y, this.imgWidth, this.imgHeight);
+  display(canvas) {
+    canvas.image(this.img, this.x, this.y, this.imgWidth, this.imgHeight);
   }
 
   update() {
