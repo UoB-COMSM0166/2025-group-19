@@ -33,7 +33,6 @@ class Ball {
       setTimeout(() => (this.speedY = Math.sign(this.speedY) * 5), this.incSpeedTime);
     }
 
-    // 避免速度為零
     const minSpeed = 1;
     if (Math.abs(this.speedX) < minSpeed) this.speedX = Math.sign(this.speedX) !== 0 ? Math.sign(this.speedX) * minSpeed : minSpeed;
     if (Math.abs(this.speedY) < minSpeed) this.speedY = Math.sign(this.speedY) !== 0 ? Math.sign(this.speedY) * minSpeed : minSpeed;
@@ -41,7 +40,6 @@ class Ball {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    // 邊界檢查
     if (this.x - this.radius < this.borderSize) {
       this.x = this.borderSize + this.radius;
       this.speedX *= -1;
@@ -89,17 +87,36 @@ class Ball {
     let hitBricks = bricks.filter(brick => this.isCollidingWithBrick(brick));
     if (hitBricks.length === 0) return;
 
-    hitBricks.forEach(brick => this.handleSpecialBricks(brick, bricks));
-    this.destroyBricks(hitBricks.filter(brick => !brick.isBlackHole), sidebar);
-    this.generateTools(hitBricks, tools, stageController);
+    let closestBrick = hitBricks.reduce((closest, brick) => {
+      let distA = Math.hypot(this.x - closest.x, this.y - closest.y);
+      let distB = Math.hypot(this.x - brick.x, this.y - brick.y);
+      return distB < distA ? brick : closest;
+    });
 
-    // 避免球卡在磚塊內
-    if (this.speedY > 0) {
-      this.y = hitBricks[0].y - this.radius - 1;
-    } else {
-      this.y = hitBricks[0].y + hitBricks[0].height + this.radius + 1;
+    this.handleSpecialBricks(closestBrick, bricks);
+    this.destroyBricks([closestBrick], sidebar);
+    this.generateTools([closestBrick], tools, stageController);
+
+    let prevX = this.x - this.speedX;
+    let prevY = this.y - this.speedY;
+    let hitFromLeft = prevX + this.radius <= closestBrick.x;
+    let hitFromRight = prevX - this.radius >= closestBrick.x + closestBrick.width;
+    let hitFromTop = prevY + this.radius <= closestBrick.y;
+    let hitFromBottom = prevY - this.radius >= closestBrick.y + closestBrick.height;
+
+    if (hitFromLeft || hitFromRight) {
+      this.speedX *= -1;
+      this.x = hitFromLeft
+        ? closestBrick.x - this.radius - 1
+        : closestBrick.x + closestBrick.width + this.radius + 1;
     }
-    this.speedY *= -1;
+
+    if (hitFromTop || hitFromBottom) {
+      this.speedY *= -1;
+      this.y = hitFromTop
+        ? closestBrick.y - this.radius - 1
+        : closestBrick.y + closestBrick.height + this.radius + 1;
+    }
   }
 
   isCollidingWithBrick(brick) {
