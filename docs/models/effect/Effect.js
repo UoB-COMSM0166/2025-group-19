@@ -1,7 +1,11 @@
 class Effect {
-  constructor(duration = 10000) { // default 10 s
+  constructor(duration = 10000, toolType = '') { // default 10 s
     this.duration = duration;
     this.timer = null;
+    this.interval = null;
+    this.remainingTime = duration / 1000;
+    this.isPause = false;
+    this.toolType = toolType; // Remenber which tool generate effect.
   }
 
   applyEffect(stageController) {
@@ -15,6 +19,9 @@ class Effect {
   activate(stageController, effectController) {
     this.applyEffect(stageController);
 
+    //Test Can console effect name and seconds
+    console.log(`🎯 Effect ${this.toolType} activated for ${this.duration / 1000} seconds`);
+
     if (this.timer) {
       clearTimeout(this.timer);
     }
@@ -22,6 +29,9 @@ class Effect {
     this.timer = setTimeout(() => {
       this.removeEffect(stageController);
       stageController.effectController.removeActiveEffect(this); // Make sure effect has been remove.
+
+      //Console effect has expired.
+      console.log(`🛑 Effect ${this.toolType} expired.`);
     }, this.duration);
   }
 
