@@ -210,11 +210,17 @@ class StageController {
 
     if (key === 'P' || key === 'p') {
       this.paused = !this.paused;
+      if (this.paused) {
+        this.effectController.pauseEffects();
+      } else {
+        this.effectController.resumeEffects();
+      }
     }
 
     if (this.paused) {
       if (key === 'C' || key === 'c') {
         this.paused = false;
+        this.effectController.resumeEffects();
       }
 
       if (key === 'M' || key === 'm') {

@@ -1,11 +1,11 @@
 class Effect {
-  constructor(duration = 10000, toolType = '') { // default 10 s
+  constructor(duration = 10000, toolType = '') {
     this.duration = duration;
     this.timer = null;
     this.interval = null;
     this.remainingTime = duration / 1000;
-    this.isPause = false;
-    this.toolType = toolType; // Remenber which tool generate effect.
+    this.isPaused = false;
+    this.toolType = toolType;
   }
 
   applyEffect(stageController) {
@@ -18,22 +18,17 @@ class Effect {
 
   activate(stageController) {
     this.applyEffect(stageController);
-    if (this.timer) {
-      clearTimeout(this.timer);
-    }
+    this.startCountdown(stageController);
+  }
 
-    if (this.interval) {
-      clearInterval(this.interval);
-    }
-
-    this.remainingTime = this.duration / 1000;
+  startCountdown(stageController) {
+    if (this.timer) clearTimeout(this.timer);
+    if (this.interval) clearInterval(this.interval);
 
     this.interval = setInterval(() => {
-      if (this.remainingTime > 0) {
+      if (!this.isPaused && this.remainingTime > 0) {
         this.remainingTime -= 1;
         stageController.updateSidebarItems();
-      } else {
-        clearInterval(this.interval);
       }
     }, 1000);
 
@@ -42,14 +37,28 @@ class Effect {
       stageController.effectController.removeActiveEffect(this);
       clearInterval(this.interval);
       stageController.updateSidebarItems();
-    }, this.duration);
+    }, this.remainingTime * 1000);
+  }
+
+  pause() {
+    if (!this.isPaused) {
+      this.isPaused = true;
+      clearTimeout(this.timer);
+      clearInterval(this.interval);
+    }
+  }
+
+  resume(stageController) {
+    if (this.isPaused) {
+      this.isPaused = false;
+      this.startCountdown(stageController);
+    }
   }
 
   clearTimer() {
-    if (this.timer) {
-      clearTimeout(this.timer);
-      this.timer = null;
-    }
+    clearTimeout(this.timer);
+    clearInterval(this.interval);
+    this.timer = null;
   }
 
   getEffectType() {

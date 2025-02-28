@@ -75,4 +75,11 @@ class EffectController {
         remainingTime: effect.getRemainingTime()
       }));
     }
+    pauseEffects() {
+      this.activeEffects.forEach(effect => effect.pause());
+    }
+
+    resumeEffects() {
+      this.activeEffects.forEach(effect => effect.resume(this.stageController));
+    }
 }
