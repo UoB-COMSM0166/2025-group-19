@@ -60,7 +60,13 @@ class SidebarView {
 
     // Time left
     this.canvas.text("Time: ", 10, 230);
+      if (this.timer <= 100) {
+        this.canvas.fill(255, 0, 0);
+    } else {
+        this.canvas.fill(255);
+    }
     this.canvas.text(`${this.timer} s`, 100, 230);
+    this.canvas.fill(255);
 
     // Remain ball
     this.canvas.textSize(18);
