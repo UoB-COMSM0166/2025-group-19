@@ -6,7 +6,7 @@ class KeyboardController {
         moveLeft: 'ArrowLeft',
         moveRight: 'ArrowRight',
         shootBall: ' ',
-        togglePaddle: 'q'
+        togglePaddle: 'ArrowUp'
       };
     }
 
