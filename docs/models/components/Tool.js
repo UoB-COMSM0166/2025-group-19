@@ -1,9 +1,7 @@
 class Tool {
-  constructor(x, y, type, gameHeight) {
+  constructor(x, y, type) {
     this.x = x;
     this.y = y;
-    this.gameHeight = gameHeight;
-    this.size = 20;
     this.speed = 3;
     this.type = type;
     this.imgWidth = 0;
@@ -38,12 +36,12 @@ class Tool {
     return (
       this.x > paddle.x &&
       this.x < paddle.x + paddle.width &&
-      this.y + this.size / 2 > paddle.y &&
-      this.y - this.size / 2 < paddle.y + paddle.height
+      this.y + this.imgHeight / 2 > paddle.y &&
+      this.y - this.imgHeight / 2 < paddle.y + paddle.height
     );
   }
 
   isOutOfBounds() {
-    return this.y - this.size  > this.gameHeight;
+    return this.y - this.imgHeight > height;
   }
 }

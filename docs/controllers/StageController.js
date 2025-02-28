@@ -112,7 +112,7 @@ class StageController {
     const toolTypes = Object.keys(this.toolProbabilities);
     const probabilities = Object.values(this.toolProbabilities);
     const selectedToolType = this.weightedRandom(toolTypes, probabilities);
-    return new Tool(x, y, selectedToolType, this.state.gameHeight);
+    return new Tool(x, y, selectedToolType);
   }
 
   weightedRandom(items, weights) {
