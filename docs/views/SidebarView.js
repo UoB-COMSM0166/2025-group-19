@@ -61,6 +61,7 @@ class SidebarView {
         case 'Stage04': stageText = "Stage 4: Rabbit"; break;
         case 'Stage05': stageText = "Stage 5: Dragon"; break;
         case 'Stage06': stageText = "Stage 6: Snake"; break;
+        case 'Stage10': stageText = "Stage 10: Rooster"; break;
         default: stageText = this.stageName;
     }
     this.canvas.text(stageText, 100, 165);
