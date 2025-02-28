@@ -203,13 +203,13 @@ class StageController {
     text("How to Play", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 2/ 12);
     
     textSize(16 * this.scaleFactor);
-    image(this.arrowImg, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 3/ 12, 80,80);
-    text("< > to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.4/ 12);
-    text(" Up to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 4/ 12);
-    image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 3/ 12, 80,80);
-    text(" Release ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 3.8/ 12);
-    image(this.pKeyImg, this.menuX + this.menuWidth*6 / 8, this.menuY + this.menuHeight * 3.3/ 12, 50,50);
-    text(" Pause game", this.menuX + this.menuWidth *7/ 8, this.menuY + this.menuHeight * 3.8/ 12);
+    image(this.arrowImg, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
+    text("< > to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
+    text(" Up to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
+    image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
+    text("Release ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
+    image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
+    text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
 
     textSize(18 * this.scaleFactor);
     text("Power-Ups", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 5/ 12);
