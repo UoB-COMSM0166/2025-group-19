@@ -1,6 +1,6 @@
 class BlackHoleEffect {
     static absorb(ball, blackHole, stageController) {
-      if (ball.isBeingAbsorbed) return; // 避免重複吸收
+      if (ball.isBeingAbsorbed) return;
       ball.isBeingAbsorbed = true;
   
       function animateAbsorption() {
