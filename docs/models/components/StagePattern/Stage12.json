@@ -127,21 +127,21 @@
 		{ "x": 500, "y": 290, "colour": "lbrown" },
 		{ "x": 520, "y": 290, "colour": "black" },
 
-		{ "x": 340, "y": 290, "colour": "black" },
-		{ "x": 360, "y": 290, "colour": "brown" },
-		{ "x": 380, "y": 290, "colour": "black" },
-		{ "x": 400, "y": 290, "colour": "brown" },
-		{ "x": 420, "y": 290, "colour": "black" },
-		{ "x": 440, "y": 290, "colour": "black" },
-		{ "x": 460, "y": 290, "colour": "black" },
-		{ "x": 480, "y": 290, "colour": "brown" },
-		{ "x": 500, "y": 290, "colour": "black" },
+		{ "x": 340, "y": 310, "colour": "black" },
+		{ "x": 360, "y": 310, "colour": "brown" },
+		{ "x": 380, "y": 310, "colour": "black" },
+		{ "x": 400, "y": 310, "colour": "brown" },
+		{ "x": 420, "y": 310, "colour": "black" },
+		{ "x": 440, "y": 310, "colour": "black" },
+		{ "x": 460, "y": 310, "colour": "black" },
+		{ "x": 480, "y": 310, "colour": "brown" },
+		{ "x": 500, "y": 310, "colour": "black" },
 
-		{ "x": 340, "y": 290, "colour": "black" },
-		{ "x": 360, "y": 290, "colour": "black" },
-		{ "x": 400, "y": 290, "colour": "black" },
-		{ "x": 420, "y": 290, "colour": "black" },
-		{ "x": 480, "y": 290, "colour": "black" },
-		{ "x": 500, "y": 290, "colour": "black" }
+		{ "x": 340, "y": 330, "colour": "black" },
+		{ "x": 360, "y": 330, "colour": "black" },
+		{ "x": 400, "y": 330, "colour": "black" },
+		{ "x": 420, "y": 330, "colour": "black" },
+		{ "x": 480, "y": 330, "colour": "black" },
+		{ "x": 500, "y": 330, "colour": "black" }
 	]
 }
