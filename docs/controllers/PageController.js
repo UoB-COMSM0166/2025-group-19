@@ -30,6 +30,9 @@ class PageController {
         case 'Rooster':
           this.currentPage = new Stage10Controller(state, gameview, sidebar, this);
           break;
+        case 'Pig':
+          this.currentPage = new Stage12Controller(state, gameview, sidebar, this);
+          break;
         default:
           console.error('Unknown: ' + stageName);
           alert("under construction ...");
