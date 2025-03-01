@@ -106,9 +106,11 @@ class WelcomeView {
           this.welcomePageContainer.remove();
           this.controller.switchToStageMap();
         } else if (selectedOption === "SETTING") {
+          this.welcomePageContainer.remove();
           this.popupVisible = true;
           this.display();
         } else if (selectedOption === "INFORMATION") {
+          this.welcomePageContainer.remove();
           this.infoVisible = true;
           this.display();
         }
@@ -131,6 +133,7 @@ class WelcomeView {
       this.infoOption = (this.infoOption + 1) % 2;
     } else if (key === 'q') {
       this.infoVisible = false;
+      this.createText(); 
     }
   }
 
@@ -145,6 +148,7 @@ class WelcomeView {
         this.popupVisible = false;
         this.slider_bgMusic.hide();
         this.slider_soundEffect.hide();
+        this.createText(); 
       } else if (key === 'Enter') {
         this.isInRightContent = true;
       }
