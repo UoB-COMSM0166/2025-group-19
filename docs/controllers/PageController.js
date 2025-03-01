@@ -41,7 +41,6 @@ class PageController {
           this.currentPage = new Stage12Controller(state, gameview, sidebar, this);
           break;
         default:
-          console.error('Unknown: ' + stageName);
           alert("under construction ...");
           this.switchToWelcome();
       }

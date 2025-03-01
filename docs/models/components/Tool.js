@@ -41,6 +41,23 @@ class Tool {
     );
   }
 
+  getImage() {
+    const images = {
+      ballGrow: ballGrow,
+      ballShrink: ballShrink,
+      paddleGrow: paddleGrow,
+      paddleMax: paddleMax,
+      paddleShrink: paddleShrink,
+      ballSpeedUp: ballSpeedUp,
+      gravityUp: gravityUp,
+      timeIncrease: timeIncrease,
+      timeDecrease: timeDecrease,
+      paddleReverse: paddleReverse,
+      infiniteBall: infiniteBall
+    };
+    return images[this.type] || null;
+  }
+
   isOutOfBounds() {
     return this.y - this.imgHeight > height;
   }

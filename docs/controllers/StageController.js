@@ -35,6 +35,7 @@ class StageController {
       this.initBricks();
       this.startTimer(); // Start the timer.
       this.updateScale();
+      this.gameOver = false;
   }
 
   initBricks() {
@@ -96,12 +97,9 @@ class StageController {
       );
       this.state.balls.push(ball);
       this.ballRemain--;
-      console.log(`Ball shot! Remaining balls: ${this.ballRemain}`);
 
       //Make sure when shoot ball, update sidebar simutanously.
       this.sidebar.update(this.sidebar.score, this.ballRemain, this.state.timer);
-    } else {
-      console.log(`No more balls left! Cannot shoot.`);
     }
 
   }
@@ -275,11 +273,17 @@ class StageController {
 
     if (key === 'P' || key === 'p') {
       this.paused = !this.paused;
+      if (this.paused) {
+        this.effectController.pauseEffects();
+      } else {
+        this.effectController.resumeEffects();
+      }
     }
 
     if (this.paused) {
       if (key === 'C' || key === 'c') {
         this.paused = false;
+        this.effectController.resumeEffects();
       }
 
       if (key === 'M' || key === 'm') {
@@ -307,6 +311,7 @@ class StageController {
 
   showWinDialog() {
     this.showingDialog = true;
+    this.gameOver = true;
     this.dialogText = 'You Win! Next stage? (Y/N)';
     this.onYes = () => {
       this.goToNextStage();
@@ -318,6 +323,7 @@ class StageController {
 
   showLoseDialog() {
     this.showingDialog = true;
+    this.gameOver = true;
     this.dialogText = 'Game Over. Retry? (Y/N)';
 
     this.onYes = () => {
@@ -347,6 +353,17 @@ class StageController {
     this.effectController.applyToolEffect(tool);
   }
 
+  updateSidebarItems() {
+    if (this.gameOver) return;
+    const activeEffects = this.effectController.getActiveEffects();
+    let items = {};
+
+    activeEffects.forEach(effect => {
+      items[effect.toolType] = effect.remainingTime;
+    });
+    this.sidebar.updateItems(items);
+  }
+
   startTimer(){
     this.timerInterval = setInterval(() => {
       if(this.showingDialog || this.paused) return;
@@ -364,14 +381,12 @@ class StageController {
   }
 
   resizeWindow(){
-    console.log("=== StageController ===");
     this.view.resizeWindow();
     this.sidebar.resizeWindow();
     this.updateScale();
   }
 
   updateScale() {
-    console.log("StageController updateScale");
     let availableHeight = windowHeight * 0.9; //  5% padding
     this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
     this.scaledWidth = 1000 * this.scaleFactor;

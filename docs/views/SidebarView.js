@@ -4,24 +4,14 @@ class SidebarView {
     this.score = 0;
     this.ballCount = 10;
     this.timer = 60;
+    this.items = {};
     this.canvas = sidebarCanvas;
     this.updateScale();
-    this.pauseButtonX = 50;
-    this.pauseButtonY = 500;
-    this.pauseButtonWidth = 100;
-    this.pauseButtonHeight = 40;
-    this.isPaused = false;
-    this.onPauseClick = null;
-    this.font = boutiqueBitmaFont;     
-
+    this.font = boutiqueBitmaFont;
   }
 
   addScore(points) {
       this.score += points;
-  }
-
-  setPauseState(isPaused) {
-    this.isPaused = isPaused;
   }
 
   // Update data from StageController.js
@@ -29,6 +19,11 @@ class SidebarView {
     this.score = score;
     this.ballCount = ballRemain;
     this.timer = timeRemaining;
+  }
+
+  updateItems(items) {
+    this.items = items;
+    this.display();
   }
 
   display() {
@@ -40,7 +35,7 @@ class SidebarView {
 
     // Game Title
     this.canvas.textAlign(CENTER);
-    this.canvas.text("ZODIAC CATCH", 100, 30);
+    this.canvas.text("ZODIAC CATCH", 100, 10);
     this.canvas.textAlign(LEFT);
 
     // Storage for picture
@@ -48,105 +43,118 @@ class SidebarView {
     this.canvas.rect(25, 50, 150, 80, 10); // Picture
     this.canvas.fill(255);
     this.canvas.textAlign(CENTER);
-    this.canvas.text("LOGO / IMAGE", 100, 90);
+    this.canvas.text("LOGO / IMAGE", 100, 80);
     this.canvas.textAlign(LEFT);
 
-    // Stage
+    // Stage Name
     this.canvas.textSize(18);
-    this.canvas.textAlign(CENTER);
-    this.canvas.text("STAGE", 100, 140);
-
-    let stageText = "Unknown Stage";
-    switch(this.stageName) {
-        case 'Stage01': stageText = "Stage 1: Mouse"; break;
-        case 'Stage02': stageText = "Stage 2: Cow"; break;
-        case 'Stage03': stageText = "Stage 3: Tiger"; break;
-        case 'Stage04': stageText = "Stage 4: Rabbit"; break;
-        case 'Stage05': stageText = "Stage 5: Dragon"; break;
-        case 'Stage06': stageText = "Stage 6: Snake"; break;
-        case 'Stage10': stageText = "Stage 10: Rooster"; break;
-        default: stageText = this.stageName;
-    }
-    this.canvas.text(stageText, 100, 165);
-    this.canvas.textAlign(LEFT);
+    this.canvas.textAlign(LEFT, CENTER);
+    this.canvas.text("STAGE: ", 50, 150);
+    this.canvas.text(this.stageName, 130, 150);
 
     // Point
     this.canvas.textSize(18);
-    this.canvas.text("Point", 10, 210);
-    this.canvas.text(`${this.score}`, 10, 240);
+    this.canvas.textAlign(LEFT, CENTER);
+    this.canvas.text("Point: ", 10, 190);
+    this.canvas.text(`${this.score}`, 100, 190);
 
     // Time left
-    this.canvas.textSize(18);
-    this.canvas.text("Time Left", 10, 270);
-    this.canvas.text(`${this.timer} sec`, 10, 300);
+    this.canvas.text("Time: ", 10, 230);
+      if (this.timer <= 100) {
+        this.canvas.fill(255, 0, 0);
+    } else {
+        this.canvas.fill(255);
+    }
+    this.canvas.text(`${this.timer} s`, 100, 230);
+    this.canvas.fill(255);
 
     // Remain ball
     this.canvas.textSize(18);
-    this.canvas.text("Balls", 10, 330);
+    this.canvas.text("Balls: ", 10, 270);
     let ballX = 10;
-    let ballY = 360;
+    let ballY = 300;
     this.canvas.textSize(24);
 
-    if (this.ballCount === Infinity) {
-        this.canvas.text("∞", ballX, ballY);
+    if ('infiniteBall' in this.items) {
+      // Show infinite Ball and its remaining time
+      let infiniteBallTime = this.items['infiniteBall'];
+      let tool = new Tool(0, 0, 'infiniteBall');
+      let infiniteBallImg = tool.getImage();
+
+      if (infiniteBallImg) {
+          this.canvas.image(infiniteBallImg, ballX, ballY, 25, 25);
+      }
+      if (infiniteBallTime <= 3) {
+        this.canvas.fill(255, 0, 0);
+      } else {
+          this.canvas.fill(255);
+      }
+      this.canvas.textSize(16);
+      this.canvas.text(`${infiniteBallTime}s`, ballX + 40, ballY + 12);
+      this.canvas.fill(255);
     } else {
-        for (let i = 0; i < this.ballCount; i++) {
-            this.canvas.text("o", ballX, ballY);
-            ballX += 30;
+      // Remain Balls
+      if (this.ballCount === Infinity) {
+          this.canvas.text("∞", ballX, ballY);
+      } else {
+          for (let i = 0; i < this.ballCount; i++) {
+              this.canvas.text("o", ballX, ballY);
+              ballX += 30;
+              if (i === 4) { // 5 ball a row
+                  ballX = 10;
+                  ballY += 30;
+              }
+          }
+      }
+    }
+    // Items
+    this.canvas.textSize(18);
+    this.canvas.text("Items:", 10, 370);
 
-            if (i === 4) { // 5 ball a row
+    let maxPerRow = 4;
+    let itemY = 395;
+    let itemX = 10;
+    let itemCount = 0;
 
-                ballX = 10;
-                ballY += 30;
-            }
+    for (const [itemName, timeLeft] of Object.entries(this.items)) {
+        if (itemName === 'infiniteBall') continue;
+        if (itemName === 'timeIncrease') continue;
+        if (itemName === 'timeDecrease') continue;
+        let tool = new Tool(0, 0, itemName);
+        let itemImage = tool.getImage();
+
+        if (itemImage) {
+            this.canvas.image(itemImage, itemX, itemY, 25, 25);
+        }
+
+        this.canvas.textSize(16);
+        if (timeLeft <= 3) {
+          this.canvas.fill(255, 0, 0);
+        } else {
+            this.canvas.fill(255);
+        }
+        this.canvas.text(`${timeLeft}s`, itemX + 45, itemY + 10);
+        this.canvas.fill(255);
+
+        itemCount++;
+
+        if (itemCount === maxPerRow) {
+            itemX = 110;
+            itemY = 395;
+        } else {
+            itemY += 40;
         }
     }
-
-    // Pause 
-    this.canvas.fill(100);
-    this.canvas.rect(
-        this.pauseButtonX,
-        this.pauseButtonY,
-        this.pauseButtonWidth,
-        this.pauseButtonHeight,
-        10
-    );
-    this.canvas.fill(255);
-    this.canvas.textAlign(CENTER, CENTER);
-    this.canvas.text(
-        this.isPaused ? 'RESUME' : 'PAUSE',
-        this.pauseButtonX + this.pauseButtonWidth / 2,
-        this.pauseButtonY + this.pauseButtonHeight / 2
-    );
 
     image(this.canvas, this.canvasX + 800 * this.scaleFactor, this.canvasY, 200 * this.scaleFactor, 600 * this.scaleFactor);
   }
 
-
-
-  handleMousePressed(mx, my) {
-    const relativeX = mx - 800;
-    const relativeY = my;
-    if (
-      relativeX > this.pauseButtonX &&
-      relativeX < this.pauseButtonX + this.pauseButtonWidth &&
-      relativeY > this.pauseButtonY &&
-      relativeY < this.pauseButtonY + this.pauseButtonHeight
-    ) {
-      if (this.onPauseClick) {
-        this.onPauseClick();
-      }
-    }
-  }
-
   resizeWindow() {
-    console.log("SidebarView");
     this.updateScale();
   }
 
   // Calculate the scaling factor and adjust the centering.
   updateScale() {
-    console.log("SidebarView updateScale");
     let availableHeight = windowHeight * 0.9; //  5% padding
     this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
     this.scaledWidth = 1000 * this.scaleFactor;

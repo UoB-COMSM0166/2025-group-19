@@ -30,13 +30,11 @@ class GameView {
     }
 
     resizeWindow() {
-       console.log("GameView");
        this.updateScale();
     }
 
     // Calculate the scaling factor and adjust the centering.
     updateScale() {
-        console.log("GameView updateScale");
         let availableHeight = windowHeight * 0.9; //  5% padding
         this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
         this.scaledWidth = 1000 * this.scaleFactor;
