@@ -1,5 +1,5 @@
 class TimeEffect extends Effect {
-  constructor(sizeType, duration = 10000) {
+  constructor(sizeType, duration = 0) {
     super(duration);
     this.sizeType = sizeType;
   }

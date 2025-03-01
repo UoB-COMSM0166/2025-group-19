@@ -5,6 +5,7 @@ const CurrentForm = Object.freeze({
 
 class StageController {
   constructor(state, view, sidebar, pageController) {
+      this.loadImages();  
       this.state = state;
       this.view = view;
       this.sidebar = sidebar;
@@ -34,6 +35,7 @@ class StageController {
       this.initBricks();
       this.startTimer(); // Start the timer.
       this.updateScale();
+      this.gameOver = false;
   }
 
   initBricks() {
@@ -95,12 +97,9 @@ class StageController {
       );
       this.state.balls.push(ball);
       this.ballRemain--;
-      console.log(`Ball shot! Remaining balls: ${this.ballRemain}`);
 
       //Make sure when shoot ball, update sidebar simutanously.
       this.sidebar.update(this.sidebar.score, this.ballRemain, this.state.timer);
-    } else {
-      console.log(`No more balls left! Cannot shoot.`);
     }
 
   }
@@ -188,8 +187,8 @@ class StageController {
   }
 
   displayPauseMenu() {
-    this.menuWidth = 600 * this.scaleFactor;
-    this.menuHeight = 200 * this.scaleFactor;
+    this.menuWidth = 800 * this.scaleFactor;
+    this.menuHeight = 500 * this.scaleFactor;
     this.menuX = this.canvasX + (this.scaledWidth - this.menuWidth) / 2;
     this.menuY = this.canvasY + (this.scaledHeight - this.menuHeight) / 2;
     fill(0, 0, 0, 200);
@@ -197,9 +196,70 @@ class StageController {
     fill(255);
     textAlign(CENTER, CENTER);
     textSize(24 * this.scaleFactor);
-    text('Paused', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight / 4);
+    text('Paused', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight / 12);
     textSize(18 * this.scaleFactor);
-    text('Press C: Continue / Press M: Return to Menu', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight / 1.5);
+    text("How to Play", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 2/ 12);
+    
+    textSize(16 * this.scaleFactor);
+    image(this.arrowImg, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
+    text("< > to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
+    text(" Up to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
+    image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
+    text("Release ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
+    image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
+    text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
+
+    textSize(18 * this.scaleFactor);
+    text("Power-Ups", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 5/ 12);
+    textAlign(LEFT, CENTER);
+    image(paddleShrink, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 5.8/ 12, 40,40);
+    text("Shrink paddle", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 6.1/ 12);
+    image(timeDecrease, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 5.8/ 12, 40,40);
+    text(" Decrease time left", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 6.1/ 12);
+    image(timeIncrease, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 5.8/ 12, 40,40);
+    text(" Decrease time left", this.menuX + this.menuWidth *5.9/ 8, this.menuY + this.menuHeight * 6.1/ 12);
+
+    image(ballGrow, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 7/ 12, 40,40);
+    text("Increase ball size", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 7.3/ 12);
+    image(ballShrink, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 7/ 12, 40,40);
+    text("Decrease ball size", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 7.3/ 12);
+    image(ballSpeedUp, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 7/ 12, 40,40);
+    text(" Increase ball speed", this.menuX + this.menuWidth *5.9/ 8, this.menuY + this.menuHeight * 7.3/ 12);
+
+    image(bomb, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
+    text("Destroy row", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 8.6/ 12);
+    image(gravityUp, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
+    text("Gravity mode on", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 8.6/ 12);
+    image(infiniteBall, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
+    text("Infinite Balls", this.menuX + this.menuWidth *6/ 8, this.menuY + this.menuHeight * 8.6/ 12);
+
+    image(paddleGrow, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 9.6/ 12, 40,40);
+    text("Widen paddle", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 9.9/ 12);
+    image(paddleMax, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 9.6/ 12, 40,40);
+    text("Max paddle length", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 9.9/ 12);
+    image(paddleReverse, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 9.6/ 12, 40,40);
+    text("Reverse control", this.menuX + this.menuWidth *6/ 8, this.menuY + this.menuHeight * 9.9/ 12);
+   
+    textAlign(CENTER, CENTER);
+    text('Press C: Continue / Press M: Return to Menu', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 11/ 12);
+  }
+
+  loadImages (){
+    this.arrowImg = loadImage('assets/images/info-window/arrows.png');
+    this.spaceBarImg = loadImage('assets/images/info-window/spaceBar.png');
+    this.pKeyImg = loadImage('assets/images/info-window/letter-p.png');
+    ballGrow = loadImage('assets/images/info-window/ballGrow.png');
+    ballShrink = loadImage('assets/images/info-window/ballShrink.png');
+    ballSpeedUp = loadImage('assets/images/info-window/ballSpeedUp.png');
+    bomb = loadImage('assets/images/info-window/bomb.png');
+    gravityUp = loadImage('assets/images/info-window/gravityUp.png');
+    infiniteBall = loadImage('assets/images/info-window/infiniteBall.png');
+    paddleGrow = loadImage('assets/images/info-window/paddleGrow.png');
+    paddleMax = loadImage('assets/images/info-window/paddleMax.png');
+    paddleReverse = loadImage('assets/images/info-window/paddleReverse.png');
+    paddleShrink = loadImage('assets/images/info-window/paddleShrink.png');
+    timeDecrease = loadImage('assets/images/info-window/timeDecrease.png');
+    timeIncrease = loadImage('assets/images/info-window/timeIncrease.png');
   }
 
   handleKeyPress(key) {
@@ -213,11 +273,17 @@ class StageController {
 
     if (key === 'P' || key === 'p') {
       this.paused = !this.paused;
+      if (this.paused) {
+        this.effectController.pauseEffects();
+      } else {
+        this.effectController.resumeEffects();
+      }
     }
 
     if (this.paused) {
       if (key === 'C' || key === 'c') {
         this.paused = false;
+        this.effectController.resumeEffects();
       }
 
       if (key === 'M' || key === 'm') {
@@ -245,6 +311,7 @@ class StageController {
 
   showWinDialog() {
     this.showingDialog = true;
+    this.gameOver = true;
     this.dialogText = 'You Win! Next stage? (Y/N)';
     this.onYes = () => {
       this.goToNextStage();
@@ -256,6 +323,7 @@ class StageController {
 
   showLoseDialog() {
     this.showingDialog = true;
+    this.gameOver = true;
     this.dialogText = 'Game Over. Retry? (Y/N)';
 
     this.onYes = () => {
@@ -285,6 +353,17 @@ class StageController {
     this.effectController.applyToolEffect(tool);
   }
 
+  updateSidebarItems() {
+    if (this.gameOver) return;
+    const activeEffects = this.effectController.getActiveEffects();
+    let items = {};
+
+    activeEffects.forEach(effect => {
+      items[effect.toolType] = effect.remainingTime;
+    });
+    this.sidebar.updateItems(items);
+  }
+
   startTimer(){
     this.timerInterval = setInterval(() => {
       if(this.showingDialog || this.paused) return;
@@ -302,14 +381,12 @@ class StageController {
   }
 
   resizeWindow(){
-    console.log("=== StageController ===");
     this.view.resizeWindow();
     this.sidebar.resizeWindow();
     this.updateScale();
   }
 
   updateScale() {
-    console.log("StageController updateScale");
     let availableHeight = windowHeight * 0.9; //  5% padding
     this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
     this.scaledWidth = 1000 * this.scaleFactor;

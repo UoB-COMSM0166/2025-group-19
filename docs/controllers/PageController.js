@@ -8,6 +8,7 @@ class PageController {
       const state = new StageState(stageName, bgImage);
       const sidebarCanvas = createGraphics(200, 600);
       const gameCanvas = createGraphics(800, 600);
+      const infoCanvas = createGraphics(500, 500);
       const gameview = new GameView(state, gameCanvas);
       const sidebar = new SidebarView(stageName, sidebarCanvas);
 
@@ -40,7 +41,6 @@ class PageController {
           this.currentPage = new Stage12Controller(state, gameview, sidebar, this);
           break;
         default:
-          console.error('Unknown: ' + stageName);
           alert("under construction ...");
           this.switchToWelcome();
       }

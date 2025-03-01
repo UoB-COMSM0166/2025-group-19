@@ -1,7 +1,11 @@
 class Effect {
-  constructor(duration = 10000) { // default 10 s
+  constructor(duration = 10000, toolType = '') {
     this.duration = duration;
     this.timer = null;
+    this.interval = null;
+    this.remainingTime = duration / 1000;
+    this.isPaused = false;
+    this.toolType = toolType;
   }
 
   applyEffect(stageController) {
@@ -12,23 +16,56 @@ class Effect {
     throw new Error("removeEffect() should be implemented by subclass!");
   }
 
-  activate(stageController, effectController) {
+  activate(stageController) {
     this.applyEffect(stageController);
+    this.startCountdown(stageController);
+  }
 
-    if (this.timer) {
-      clearTimeout(this.timer);
-    }
+  startCountdown(stageController) {
+    if (this.timer) clearTimeout(this.timer);
+    if (this.interval) clearInterval(this.interval);
+
+    this.interval = setInterval(() => {
+      if (!this.isPaused && this.remainingTime > 0) {
+        this.remainingTime -= 1;
+        stageController.updateSidebarItems();
+      }
+    }, 1000);
 
     this.timer = setTimeout(() => {
       this.removeEffect(stageController);
-      stageController.effectController.removeActiveEffect(this); // Make sure effect has been remove.
-    }, this.duration);
+      stageController.effectController.removeActiveEffect(this);
+      clearInterval(this.interval);
+      stageController.updateSidebarItems();
+    }, this.remainingTime * 1000);
+  }
+
+  pause() {
+    if (!this.isPaused) {
+      this.isPaused = true;
+      clearTimeout(this.timer);
+      clearInterval(this.interval);
+    }
+  }
+
+  resume(stageController) {
+    if (this.isPaused) {
+      this.isPaused = false;
+      this.startCountdown(stageController);
+    }
   }
 
   clearTimer() {
-    if (this.timer) {
-      clearTimeout(this.timer);
-      this.timer = null;
-    }
+    clearTimeout(this.timer);
+    clearInterval(this.interval);
+    this.timer = null;
+  }
+
+  getEffectType() {
+    return this.toolType;
+  }
+
+  getRemainingTime() {
+    return this.remainingTime;
   }
 }
