@@ -13,12 +13,19 @@
         padding-bottom: 16px;  
     }
 
-    .game-version{
+    .game-instruction{
         font-size: clamp(16px, 2vw, 24px);
         font-weight: bolder;
         color: white;
         padding-bottom: 16px;  
     }
+
+    .game-version{
+        font-size: clamp(12px, 1.5vw, 20px);
+        font-weight: bolder;
+        color: white;
+        /* padding-bottom: 8px;   */
+    }      
 
     .menu-option {
         font-size: clamp(20px, 3vw, 32px);
@@ -28,16 +35,7 @@
     }
 
     .selected {
-        color: #DD4C03; /* 選中的選項變紅色 */
+        color: #DD4C03;
         font-weight: bold;
     }
 }
-
-
-/* screen < 1024px  */
-/* @media (max-width: 1024px) {
-    .welcome-page-container {
-        font-size: 60px;
-    }
-}
-*/

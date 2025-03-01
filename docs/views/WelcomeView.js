@@ -35,14 +35,18 @@ class WelcomeView {
     this.welcomePageContainer = createElement('div');
     this.welcomePageContainer.class('welcome-page-container'); 
     // title
-    this.testTitle = createDiv('ZODIAC CATCH'); 
-    this.testTitle.class('title'); 
+    this.title = createDiv('ZODIAC CATCH'); 
+    this.title.class('title'); 
+    // game instruction
+    this.gameInstruction = createDiv('Use the arrow keys and Enter to control the game');
+    this.gameInstruction.class('game-instruction');
     // version
-    this.testGameVersion = createDiv('Version 0.5');
-    this.testGameVersion.class('game-version');
+    this.gameVersion = createDiv('Version 1.0');
+    this.gameVersion.class('game-version');
     // title and version add to container
-    this.welcomePageContainer.child(this.testTitle);
-    this.welcomePageContainer.child(this.testGameVersion);
+    this.welcomePageContainer.child(this.title);
+    this.welcomePageContainer.child(this.gameInstruction);
+    this.welcomePageContainer.child(this.gameVersion);
     // menu option
     this.options = ["START", "SETTING", "INFORMATION"];
     this.menuOptions = []; 
