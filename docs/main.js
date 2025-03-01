@@ -24,6 +24,19 @@ function preload() {
   zodiacCatchImg = loadImage('assets/images//welcome-page/zodiacCatch.png');
   boutiqueBitmaFont = loadFont('assets/font/BoutiqueBitmap9x9_Bold_1.5.ttf');
   teamImg = loadImage('assets/images/welcome-page/teamIMG.png');
+  // tool images
+  ballGrow = loadImage('assets/images/tools/ballGrow.png');
+  ballShrink = loadImage('assets/images/tools/ballShrink.png');
+  ballSpeedUp = loadImage('assets/images/tools/ballSpeedUp.png');
+  bomb = loadImage('assets/images/tools/bomb.png');
+  gravityUp = loadImage('assets/images/tools/gravityUp.png');
+  infiniteBall = loadImage('assets/images/tools/infiniteBall.png');
+  paddleGrow = loadImage('assets/images/tools/paddleGrow.png');
+  paddleMax = loadImage('assets/images/tools/paddleMax.png');
+  paddleReverse = loadImage('assets/images/tools/paddleReverse.png');
+  paddleShrink = loadImage('assets/images/tools/paddleShrink.png');
+  timeDecrease = loadImage('assets/images/tools/timeDecrease.png');
+  timeIncrease = loadImage('assets/images/tools/timeIncrease.png');
 }
 
 function setup() {

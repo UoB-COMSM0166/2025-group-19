@@ -6,15 +6,13 @@ class KeyboardController {
         moveLeft: 'ArrowLeft',
         moveRight: 'ArrowRight',
         shootBall: ' ',
-        togglePaddle: 'q'
+        togglePaddle: 'ArrowUp'
       };
     }
 
     setKeyBinding(action, key) {
         if (this.keyBindings[action] !== undefined) {
         this.keyBindings[action] = key;
-        } else {
-        console.warn(`Action "${action}" does not exist`);
         }
     }
 
