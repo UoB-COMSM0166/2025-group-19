@@ -12,6 +12,7 @@ class Stage11Controller extends StageController {
       };
     }
   
+    // refer to stage 12
     getStageJsonPath() {
       return "./models/components/StagePattern/Stage11.json";
     }
