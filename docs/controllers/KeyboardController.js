@@ -41,5 +41,13 @@ class KeyboardController {
             this.paddle.moveRight(false);
         }
     }
+
+    handleSettingDifficulty(key) {
+        if (key === LEFT_ARROW || key === 'A') {
+            this.isHardMode = false; // Switch to EASY mode
+        } else if (key === RIGHT_ARROW || key === 'D') {
+            this.isHardMode = true; // Switch to HARD mode
+        }
+    }
 }
   

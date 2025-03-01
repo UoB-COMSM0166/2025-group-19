@@ -23,6 +23,7 @@ function preload() {
   cloudImg2 = loadImage('assets/images/welcome-page/cloud-2.png');
   zodiacCatchImg = loadImage('assets/images//welcome-page/zodiacCatch.png');
   boutiqueBitmaFont = loadFont('assets/font/BoutiqueBitmap9x9_Bold_1.5.ttf');
+  teamImg = loadImage('assets/images/welcome-page/teamIMG.png');
 }
 
 function setup() {
