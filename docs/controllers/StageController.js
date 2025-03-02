@@ -36,7 +36,7 @@ class StageController {
       this.startTimer(); // Start the timer.
       this.updateScale();
       this.gameOver = false;
-      this.instructMenuOn= false;
+      this.instructMenuOn= true;
   }
 
   initBricks() {
@@ -180,16 +180,22 @@ class StageController {
     background('black'); // TODO: redesign
     this.view.display();
     this.sidebar.display();
-    this.paused = true;this.instructMenuOn = true;
-    this.displayInstructions();
+    //this.paused = true;
+    // this.instructMenuOn = true;
+    if (this.instructMenuOn ){
+      this.displayInstructions();
+    }
+  
     if (this.showingDialog) {
       this.displayDialog();
     } else if (this.paused) {
-      if (!this.displayInstructions){
+
+      if (!this.instructMenuOn){
         this.displayPauseMenu();
       }
-      // this.displayPauseMenu();
-    }
+
+    } 
+
   }
 
   displayInstructions() {
@@ -203,53 +209,53 @@ class StageController {
     rect(this.menuX, this.menuY, this.menuWidth, this.menuHeight, 20 * this.scaleFactor); 
     fill(255);
     textAlign(CENTER, CENTER);
-    textSize(24 * this.scaleFactor);
-    // text('Paused', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight / 12);
-    // textSize(18 * this.scaleFactor);
-    text("How to Play", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 2/ 12);
+    textSize(26 * this.scaleFactor);
+    text("How to Play", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 1/ 12);
     
-    textSize(16 * this.scaleFactor);
-    image(this.arrowImg, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
-    text("< > to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
-    text(" Up to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
-    image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
-    text("Release ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
-    image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
-    text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
-
     textSize(18 * this.scaleFactor);
-    text("Power-Ups", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 5/ 12);
+    image(this.arrowImg, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 1.9/ 12, 80,80);
+    text("< > to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 2.3/ 12);
+    text(" Up to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 2.9/ 12);
+    image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 1.9/ 12, 80,80);
+    text("Release ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 2.6/ 12);
+    image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 2.1/ 12, 60,60);
+    text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 2.6/ 12);
+
+    textSize(24 * this.scaleFactor);
+    text("Power-Ups", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 4.3/ 12);
     textAlign(LEFT, CENTER);
-    image(paddleShrink, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 5.8/ 12, 40,40);
-    text("Shrink paddle", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 6.1/ 12);
-    image(timeDecrease, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 5.8/ 12, 40,40);
-    text(" Decrease time left", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 6.1/ 12);
-    image(timeIncrease, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 5.8/ 12, 40,40);
-    text(" Decrease time left", this.menuX + this.menuWidth *5.9/ 8, this.menuY + this.menuHeight * 6.1/ 12);
+    textSize(18 * this.scaleFactor);
+    image(paddleShrink, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 5.3/ 12, 40,40);
+    text("Shrink paddle", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 5.6/ 12);
+    image(timeDecrease, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 5.3/ 12, 40,40);
+    text(" Decrease time left", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 5.6/ 12);
+    image(timeIncrease, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 5.3/ 12, 40,40);
+    text(" Decrease time left", this.menuX + this.menuWidth *5.9/ 8, this.menuY + this.menuHeight * 5.6/ 12);
 
-    image(ballGrow, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 7/ 12, 40,40);
-    text("Increase ball size", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 7.3/ 12);
-    image(ballShrink, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 7/ 12, 40,40);
-    text("Decrease ball size", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 7.3/ 12);
-    image(ballSpeedUp, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 7/ 12, 40,40);
-    text(" Increase ball speed", this.menuX + this.menuWidth *5.9/ 8, this.menuY + this.menuHeight * 7.3/ 12);
+    image(ballGrow, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 6.5/ 12, 40,40);
+    text("Increase ball size", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 6.8/ 12);
+    image(ballShrink, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 6.5/ 12, 40,40);
+    text("Decrease ball size", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 6.8/ 12);
+    image(ballSpeedUp, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 6.5/ 12, 40,40);
+    text(" Increase ball speed", this.menuX + this.menuWidth *5.9/ 8, this.menuY + this.menuHeight * 6.8/ 12);
 
-    image(bomb, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
-    text("Destroy row", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 8.6/ 12);
-    image(gravityUp, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
-    text("Gravity mode on", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 8.6/ 12);
-    image(infiniteBall, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
-    text("Infinite Balls", this.menuX + this.menuWidth *6/ 8, this.menuY + this.menuHeight * 8.6/ 12);
+    image(bomb, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 7.8/ 12, 40,40);
+    text("Destroy row", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 8.1/ 12);
+    image(gravityUp, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 7.8/ 12, 40,40);
+    text("Gravity mode on", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 8.1/ 12);
+    image(infiniteBall, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 7.8/ 12, 40,40);
+    text("Infinite Balls", this.menuX + this.menuWidth *6/ 8, this.menuY + this.menuHeight * 8.1/ 12);
 
-    image(paddleGrow, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 9.6/ 12, 40,40);
-    text("Widen paddle", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 9.9/ 12);
-    image(paddleMax, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 9.6/ 12, 40,40);
-    text("Max paddle length", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 9.9/ 12);
-    image(paddleReverse, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 9.6/ 12, 40,40);
-    text("Reverse control", this.menuX + this.menuWidth *6/ 8, this.menuY + this.menuHeight * 9.9/ 12);
+    image(paddleGrow, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 9.1/ 12, 40,40);
+    text("Widen paddle", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 9.4/ 12);
+    image(paddleMax, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 9.1/ 12, 40,40);
+    text("Max paddle length", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 9.4/ 12);
+    image(paddleReverse, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 9.1/ 12, 40,40);
+    text("Reverse control", this.menuX + this.menuWidth *6/ 8, this.menuY + this.menuHeight * 9.4/ 12);
    
     textAlign(CENTER, CENTER);
-    text('Press C to START', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 11/ 12);
+    textSize(24 * this.scaleFactor);
+    text('Press C to START', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 10.8/ 12);
   }
 
   displayPauseMenu() {
@@ -349,6 +355,7 @@ class StageController {
     if (this.paused || this.instructMenuOn) {
       if (key === 'C' || key === 'c') {
         this.paused = false;
+        this.instructMenuOn = false;
         this.effectController.resumeEffects();
       }
 
