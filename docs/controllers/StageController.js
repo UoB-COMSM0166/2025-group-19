@@ -183,6 +183,7 @@ class StageController {
     //this.paused = true;
     // this.instructMenuOn = true;
     if (this.instructMenuOn ){
+      this.paused = true;
       this.displayInstructions();
     }
   
