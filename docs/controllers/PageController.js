@@ -22,11 +22,17 @@ class PageController {
         case 'Tiger':
           this.currentPage = new Stage03Controller(state, gameview, sidebar, this);
           break;
+        case 'Rabbit':
+          this.currentPage = new Stage04Controller(state, gameview, sidebar, this);
+          break;
         case 'Dragon':
           this.currentPage = new Stage05Controller(state, gameview, sidebar, this);
           break;
         case 'Snake':
           this.currentPage = new Stage06Controller(state, gameview, sidebar, this);
+          break;
+        case 'Horse':
+          this.currentPage = new Stage07Controller(state, gameview, sidebar, this);
           break;
         case 'Goat':
           this.currentPage = new Stage08Controller(state, gameview, sidebar, this);
