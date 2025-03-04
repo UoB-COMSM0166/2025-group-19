@@ -83,7 +83,7 @@ class StageController {
   }
 
   shootBall() {
-    
+    if (this.paused) return;
     if (this.ballRemain > 0){
       const ball = new Ball(
         this.state.paddle.x + this.state.paddle.width / 2,
