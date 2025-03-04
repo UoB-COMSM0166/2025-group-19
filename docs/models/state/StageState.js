@@ -27,4 +27,35 @@ class StageState {
     if (this.balls.length === 0) this.isFailed = true;
     if (this.bricks.length === 0) this.isCleared = true;
   }
+
+  setDifficultyMode() {
+    console.log("mode:", this.mode);
+    if (this.mode === 'easy') {
+      this.toolDropRate = 0.5;
+      this.toolProbabilities = {
+        ballGrow: 0.6,
+        ballShrink: 0.4,
+        infiniteBall: 0.7,
+        paddleMax: 0.6,
+        paddleGrow: 1,
+      };
+    } else if (this.mode === 'hard') {
+      this.toolDropRate = 0.4;
+      this.toolProbabilities = {
+        ballGrow: 0.6,
+        ballShrink: 0.4,
+        infiniteBall: 0.5,
+        paddleMax: 0.6,
+        paddleGrow: 1,
+        ballShrink: 0.6,
+        ballSpeedUp: 0.4,
+        gravityUp: 0.3,
+        timeIncrease: 0.6,
+        timeDecrease: 0.6,
+        paddleReverse: 1.5,
+      };
+    } else {
+      throw new Error('Unknown mode');
+    }
+  }
 }

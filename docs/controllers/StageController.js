@@ -37,6 +37,7 @@ class StageController {
       this.updateScale();
       this.gameOver = false;
       this.instructMenuOn= true;
+      this.initMode();
   }
 
   initBricks() {
@@ -66,6 +67,12 @@ class StageController {
 
   initBorder() {
     this.createGameBorder();
+  }
+
+  initMode() {
+    this.state.setDifficultyMode();
+    this.toolDropRate = this.state.toolDropRate;
+    this.toolProbabilities = this.state.toolProbabilities;
   }
 
   createGameBorder(){
