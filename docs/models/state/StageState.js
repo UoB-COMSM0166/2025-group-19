@@ -1,5 +1,5 @@
 class StageState {
-  constructor(stageName, bgImage) {
+  constructor(stageName, bgImage, mode) {
     this.gameWidth = 800;
     this.gameHeight = 600;
     this.borderSize = 10;
@@ -16,6 +16,7 @@ class StageState {
     this.cols = 8;
     this.brickWidth = 800 / this.cols;
     this.brickHeight = 20;
+    this.mode = mode;
   }
 
   update() {
