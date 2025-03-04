@@ -1,8 +1,9 @@
 # 2025-group-19
 2025 COMSM0166 group 19
 
+# Our Game - ZODIAC CATCH
+
 <p align="center">
-    <h2 style="text-align: center;"> ZODIAC CATCH </h2>
     <img src="./assets/welcomeView.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
