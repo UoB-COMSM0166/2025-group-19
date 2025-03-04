@@ -1,63 +1,88 @@
 class WelcomeView {
   constructor(controller) {
+    textFont(boutiqueBitmaFont);
     this.controller = controller;
     this.selectedIndex = 0;
+    this.updateScale();
     this.roadAnimation = new RoadAnimation();
     this.animalAnimation = new AnimalAnimation();
     this.cloudAnimation1 = new CloudAnimation(1, 30);
-    this.createText(); 
-    //this.cloudAnimation2 = new CloudAnimation(2, 110, 130, 0.5);
+    this.settingDialog = new SettingDialog();
   }
 
   update() {
     this.roadAnimation.update();
     this.animalAnimation.update();
     this.cloudAnimation1.update();
-    //this.cloudAnimation2.update();
   }
   
   display() {
-    //createCanvas(windowWidth, windowHeight); // full size screen
     background('#6EB6FF'); // blue
     this.roadAnimation.display();
     this.animalAnimation.display();
     this.cloudAnimation1.display();
-    //this.cloudAnimation2.display();
+    this.displayText();
+    this.settingDialog.display();  // must after displayText
   }
 
   resizeWindow(){
+    this.updateScale();
     this.roadAnimation.resizeWindow();
     this.animalAnimation.resizeWindow();
+    this.displayText();
+    this.settingDialog.resizeWindow(); // must after displayText
   }
 
-  createText() {
-    // create container
-    this.welcomePageContainer = createElement('div');
-    this.welcomePageContainer.class('welcome-page-container'); 
-    // title
-    this.title = createDiv('ZODIAC CATCH'); 
-    this.title.class('title'); 
-    // game instruction
-    this.gameInstruction = createDiv('Use the arrow keys and Enter to control the game');
-    this.gameInstruction.class('game-instruction');
-    // version
-    this.gameVersion = createDiv('Version 1.0');
-    this.gameVersion.class('game-version');
-    // title and version add to container
-    this.welcomePageContainer.child(this.title);
-    this.welcomePageContainer.child(this.gameInstruction);
-    this.welcomePageContainer.child(this.gameVersion);
-    // menu option
+  displayText(){
+    this.displayTitle();
+    this.displayInstruction();
+    this.displayVersion();
+    this.displayOption();
+  }
+
+  displayTitle(){
+    this.titleX = windowWidth / 2;
+    this.titleY = windowHeight / 4;
+    this.titleHeight = 0;
+    fill('#f7e428'); // yellow
+    stroke('#f7e428');
+    strokeWeight(6 * this.scaleFactor); 
+    textSize(100 * this.scaleFactor); 
+    textAlign(CENTER, CENTER);
+    text("ZODIAC CATCH", this.titleX, this.titleY);
+  }
+
+  displayInstruction(){
+    fill(255);
+    noStroke();
+    textSize(20 * this.scaleFactor);
+    textAlign(CENTER, TOP);
+    this.optionY = this.instructionY + this.instructionY;
+    text("Use the arrow keys and Enter to control the game", this.titleX,  this.titleY + 90 * this.scaleFactor);
+  }
+
+  displayVersion(){
+    fill(255);
+    noStroke();
+    textSize(16 * this.scaleFactor);
+    textAlign(CENTER, TOP);
+    this.optionY = this.instructionY + this.instructionY;
+    text("Version 1.0", this.titleX,  this.titleY + 124 * this.scaleFactor);
+  }
+
+  displayOption(){
     this.options = ["START", "SETTING", "INFORMATION"];
-    this.menuOptions = []; 
+    textSize(28 * this.scaleFactor);
     for (let i = 0; i < this.options.length; i++) {
-        let option = createDiv(this.options[i]);
-        option.class('menu-option');
-        if (i === this.selectedIndex) {
-            option.addClass('selected');
-        }
-        this.welcomePageContainer.child(option);
-        this.menuOptions.push(option);
+      if (i === this.selectedIndex) {
+        fill('#DD4C03'); //red
+        noStroke();
+      } else {
+        fill(255);
+        noStroke();
+      }
+      textAlign(CENTER, TOP);
+      text(this.options[i], this.titleX, (this.titleY + 160 * this.scaleFactor) + i * 50 * this.scaleFactor);
     }
   }
 
@@ -69,22 +94,28 @@ class WelcomeView {
     } else if (key === 'Enter') {
       const selectedOption = this.options[this.selectedIndex];
       if (selectedOption === "START") {
-        this.welcomePageContainer.remove();
         this.controller.switchToStageMap();
       } else if (selectedOption === "SETTING") {
-        alert("under construction ...");
+        this.settingDialog.openDialog();
+
       } else if (selectedOption === "INFORMATION") {
         alert("under construction ...");
       }
     }
-    // update option style
-    for (let i = 0; i < this.menuOptions.length; i++) {
-      if (i === this.selectedIndex) {
-          this.menuOptions[i].addClass('selected');
-      } else {
-          this.menuOptions[i].removeClass('selected');
-      }
+
+    // close settingDialog
+    if(key === 'C' || key === 'c'){
+      this.settingDialog.closeDialog();
     }
+  }
+
+  updateScale() {
+    let availableHeight = windowHeight * 0.9; //  5% padding
+    this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
+    this.scaledWidth = 1000 * this.scaleFactor;
+    this.scaledHeight = 600 * this.scaleFactor;
+    this.canvasX = (windowWidth - this.scaledWidth) / 2;
+    this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
   }
 }
   
