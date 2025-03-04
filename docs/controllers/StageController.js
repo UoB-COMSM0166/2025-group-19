@@ -207,8 +207,6 @@ class StageController {
   }
 
   displayInstructions() {
-    
-    // this.effectController.pauseEffects();
     this.menuWidth = 800 * this.scaleFactor;
     this.menuHeight = 500 * this.scaleFactor;
     this.menuX = this.canvasX + (this.scaledWidth - this.menuWidth) / 2;

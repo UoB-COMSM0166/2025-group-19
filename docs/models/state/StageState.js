@@ -29,7 +29,6 @@ class StageState {
   }
 
   setDifficultyMode() {
-    console.log("mode:", this.mode);
     if (this.mode === 'easy') {
       this.toolDropRate = 0.5;
       this.toolProbabilities = {
