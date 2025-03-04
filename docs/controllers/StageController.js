@@ -37,6 +37,7 @@ class StageController {
       this.updateScale();
       this.gameOver = false;
       this.instructMenuOn= true;
+      this.initMode();
   }
 
   initBricks() {
@@ -68,6 +69,12 @@ class StageController {
     this.createGameBorder();
   }
 
+  initMode() {
+    this.state.setDifficultyMode();
+    this.toolDropRate = this.state.toolDropRate;
+    this.toolProbabilities = this.state.toolProbabilities;
+  }
+
   createGameBorder(){
     this.state.border = [];
     const borderColor = [169, 169, 169]; // grey
@@ -83,7 +90,7 @@ class StageController {
   }
 
   shootBall() {
-    
+    if (this.paused) return;
     if (this.ballRemain > 0){
       const ball = new Ball(
         this.state.paddle.x + this.state.paddle.width / 2,
@@ -200,8 +207,6 @@ class StageController {
   }
 
   displayInstructions() {
-    
-    // this.effectController.pauseEffects();
     this.menuWidth = 800 * this.scaleFactor;
     this.menuHeight = 500 * this.scaleFactor;
     this.menuX = this.canvasX + (this.scaledWidth - this.menuWidth) / 2;
