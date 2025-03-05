@@ -157,30 +157,6 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
     </td>
   </tr>
   <tr>
-    <td rowspan="2">Let our kids play a game without violence</td>
-    <td>Parents</td>
-    <td>
-      As a parent, I want to make sure that my kids are playing appropriate
-      games, so that they don’t neglect their studies or get addicted to video
-      games.
-    </td>
-    <td>
-      Given the kid mode is on, when kids play the game, then the game will kick
-      them out if they play longer than the time limit.
-    </td>
-  </tr>
-  <tr>
-    <td>Parents & Physics Teachers</td>
-    <td>
-      As parents and physics teachers, I want my kids or students to play the
-      game without violence.
-    </td>
-    <td>
-      Given I want to let my kids know that it would be entertaining with
-      physical game experience.
-    </td>
-  </tr>
-  <tr>
     <td rowspan="2">Try to learn from failure and frustrations</td>
     <td>Parents</td>
     <td>
@@ -201,8 +177,7 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
     </td>
     <td>
       Given there is a completion ladder, when a certain level is
-      completed/threshold is met, then rewards such as a new background theme or
-      user icon will be granted.
+      completed/threshold is met, then rewards will be granted.
     </td>
   </tr>
   <tr>
@@ -237,7 +212,7 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
     </td>
     <td>
       Given I want to show the concept of momentum to kids, when the kids are in
-      the game, then there can be playback so that the motion can be observed in
+      the game, then there can be pause so that the motion can be observed in
       more detail (maximized with angles, velocity, etc shown).
     </td>
   </tr>
