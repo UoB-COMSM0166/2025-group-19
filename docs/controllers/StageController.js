@@ -390,7 +390,7 @@ class StageController {
     this.dialogText = 'Game Over. Retry? (Y/N)';
 
     this.onYes = () => {
-      this.pageController.setStageName(this.state.stageName)
+      this.pageController.setStageName(this.state.stageName);
       this.pageController.switchToStage();
     };
     this.onNo = () => {
