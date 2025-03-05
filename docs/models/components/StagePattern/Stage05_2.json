@@ -9,7 +9,6 @@
 			"orange": [250, 156, 28],
 			"purple": [128, 0, 128],
 			"black": [0, 0, 0]
-
 	},
 
 	"bricks": [
@@ -22,21 +21,21 @@
 
 		{ "x": 280, "y": 110, "colour": "blood_red" },
 		{ "x": 300, "y": 110, "colour": "blood_red" },
-		{ "x": 320, "y": 110, "colour": "orange" },
+		{ "x": 320, "y": 110, "blackhole": true, "colour": "orange" },
 		{ "x": 340, "y": 110, "colour": "blood_red" },
 		{ "x": 380, "y": 110, "colour": "blood_red" },
-		{ "x": 400, "y": 110, "colour": "orange" },
+		{ "x": 400, "y": 110, "blackhole": true, "colour": "orange" },
 		{ "x": 420, "y": 110, "colour": "blood_red" },
 		{ "x": 440, "y": 110, "colour": "blood_red" },
 
 		{ "x": 280, "y": 130, "colour": "blood_red" },
-		{ "x": 300, "y": 130, "colour": "orange" },
-		{ "x": 320, "y": 130, "colour": "orange" },
+		{ "x": 300, "y": 130, "blackhole": true, "colour": "orange" },
+		{ "x": 320, "y": 130, "blackhole": true, "colour": "orange" },
 		{ "x": 340, "y": 130, "colour": "blood_red" },
 		{ "x": 360, "y": 130, "colour": "blood_red" },
 		{ "x": 380, "y": 130, "colour": "blood_red" },
-		{ "x": 400, "y": 130, "colour": "orange" },
-		{ "x": 420, "y": 130, "colour": "orange" },
+		{ "x": 400, "y": 130, "blackhole": true, "colour": "orange" },
+		{ "x": 420, "y": 130, "blackhole": true, "colour": "orange" },
 		{ "x": 440, "y": 130, "colour": "blood_red" },
 
 		{ "x": 280, "y": 150, "colour": "blood_red" },
@@ -125,7 +124,7 @@
 		{ "x": 480, "y": 270, "colour": "blood_red" },
 		{ "x": 500, "y": 270, "colour": "yellow" },
 		{ "x": 520, "y": 270, "colour": "blood_red" },
-		{ "x": 540, "y": 270, "colour": "purple" },
+		{ "x": 540, "y": 270, "blackhole": true, "colour": "purple" },
 
 		{ "x": 320, "y": 290, "colour": "blood_red" },
 		{ "x": 340, "y": 290, "colour": "bright_red" },
@@ -355,6 +354,5 @@
 		{ "x": 660, "y": 450, "colour": "light_yellow" },
 		{ "x": 680, "y": 450, "colour": "light_yellow" },
 		{ "x": 700, "y": 450, "colour": "bright_red" }
-
 	]
 }
