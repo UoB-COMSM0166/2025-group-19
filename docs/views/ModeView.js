@@ -41,6 +41,7 @@ class ModeView {
   
     selectMode() {
       let mode = this.modes[this.selectedIndex].toLowerCase();
-      this.pageController.switchToStage(mode);
+      this.pageController.setMode(mode)
+      this.pageController.switchToStage();
     }
 }

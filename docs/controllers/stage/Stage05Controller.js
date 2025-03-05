@@ -13,6 +13,7 @@ class Stage05Controller extends StageController {
   }
 
   goToNextStage() {
-    this.pageController.switchToStage('Snake');
+    this.pageController.setStageName("Snake");
+    this.pageController.switchToStage();
   }
 }
