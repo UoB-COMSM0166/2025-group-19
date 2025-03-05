@@ -8,6 +8,7 @@ class Stage08Controller extends StageController {
   }
 
   goToNextStage() {
-    this.pageController.switchToStage('Monkey');
+    this.pageController.setStageName("Monkey");
+    this.pageController.switchToStage();
   }
 }
