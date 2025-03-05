@@ -169,6 +169,7 @@ class StageController {
       if (this.regenerate) {
         // if animal has 2nd form, generates new set of bricks
         this.regenerate = false;
+        this.showNextFormDialog();
         this.initBricks();
       } else {
         // removes all black hole bricks before ending level
@@ -371,23 +372,6 @@ class StageController {
     }
   }
 
-  goToNextStage() {
-    switch (this.state.stageName) {
-      case 'Stage 01':
-        this.pageController.switchToStage('Stage 02');
-        break;
-      case 'Stage 02':
-        this.pageController.switchToStage('Stage 03');
-        break;
-      case 'Stage 03':
-        this.pageController.switchToWelcome();
-        break;
-      default:
-        this.pageController.switchToWelcome();
-        break;
-    }
-  }
-
   showWinDialog() {
     this.showingDialog = true;
     this.gameOver = true;
@@ -406,12 +390,27 @@ class StageController {
     this.dialogText = 'Game Over. Retry? (Y/N)';
 
     this.onYes = () => {
-      this.pageController.switchToStage(this.state.stageName);
+      this.pageController.setStageName(this.state.stageName)
+      this.pageController.switchToStage();
     };
     this.onNo = () => {
       this.pageController.switchToWelcome();
     };
   }
+
+  showNextFormDialog() {
+    this.effectController.pauseEffects();
+    this.showingDialog = true;
+    this.dialogText = 'Wow! Now our ' + this.state.stageName + ' is angry...? Try more?';
+    this.onYes = () => {
+      this.effectController.resumeEffects();
+      this.showingDialog = false;
+    };
+    this.onNo = () => {
+      this.pageController.switchToWelcome();
+    };
+  }
+
 
   displayDialog() {
     this.dialogWidth = 600 * this.scaleFactor;

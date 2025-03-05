@@ -2,11 +2,12 @@ class PageController {
   constructor() {
       this.currentPage = new WelcomeView(this);
       this.stageName = "";
+      this.mode = "";
   }
 
-  switchToStage(mode) {
+  switchToStage() {
       const bgImage = skyBackground;
-      const state = new StageState(this.stageName, bgImage, mode);
+      const state = new StageState(this.stageName, bgImage, this.mode);
       const sidebarCanvas = createGraphics(200, 600);
       const gameCanvas = createGraphics(800, 600);
       const infoCanvas = createGraphics(500, 500);
@@ -70,6 +71,10 @@ class PageController {
 
   setStageName(stageName) {
     this.stageName = stageName;
+  }
+
+  setMode(mode) {
+    this.mode = mode;
   }
 
   update() {
