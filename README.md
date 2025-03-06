@@ -1,6 +1,12 @@
 # 2025-group-19
 2025 COMSM0166 group 19
 
+# Our Game - ZODIAC CATCH
+
+<p align="center">
+    <img src="./assets/welcomeView.png" width="1000" alt="Block" style="border: 5px solid black;">
+</p>
+
 ## Link
 
 [PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/) <br>
