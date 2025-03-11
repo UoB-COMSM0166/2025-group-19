@@ -3,7 +3,7 @@ class SidebarView {
     this.stageName = stageName;
     this.score = 0;
     this.ballCount = 10;
-    this.timer = 60;
+    this.timer = 300;
     this.items = {};
     this.canvas = sidebarCanvas;
     this.updateScale();
@@ -38,41 +38,33 @@ class SidebarView {
     this.canvas.text("ZODIAC CATCH", 100, 10);
     this.canvas.textAlign(LEFT);
 
-    // Storage for picture
-    this.canvas.fill(100);
-    this.canvas.rect(25, 50, 150, 80, 10); // Picture
-    this.canvas.fill(255);
-    this.canvas.textAlign(CENTER);
-    this.canvas.text("LOGO / IMAGE", 100, 80);
-    this.canvas.textAlign(LEFT);
-
     // Stage Name
     this.canvas.textSize(18);
     this.canvas.textAlign(LEFT, CENTER);
-    this.canvas.text("STAGE: ", 50, 150);
-    this.canvas.text(this.stageName, 130, 150);
+    this.canvas.text("STAGE: ", 10, 50);
+    this.canvas.text(this.stageName, 100, 50);
 
     // Point
     this.canvas.textSize(18);
     this.canvas.textAlign(LEFT, CENTER);
-    this.canvas.text("Point: ", 10, 190);
-    this.canvas.text(`${this.score}`, 100, 190);
+    this.canvas.text("Point: ", 10, 90);
+    this.canvas.text(`${this.score}`, 100, 90);
 
     // Time left
-    this.canvas.text("Time: ", 10, 230);
+    this.canvas.text("Time: ", 10, 130);
       if (this.timer <= 100) {
         this.canvas.fill(255, 0, 0);
     } else {
         this.canvas.fill(255);
     }
-    this.canvas.text(`${this.timer} s`, 100, 230);
+    this.canvas.text(`${this.timer} s`, 100, 130);
     this.canvas.fill(255);
 
     // Remain ball
     this.canvas.textSize(18);
-    this.canvas.text("Balls: ", 10, 270);
+    this.canvas.text("Balls: ", 10, 170);
     let ballX = 10;
-    let ballY = 300;
+    let ballY = 200;
     this.canvas.textSize(24);
 
     if ('infiniteBall' in this.items) {
@@ -109,10 +101,10 @@ class SidebarView {
     }
     // Items
     this.canvas.textSize(18);
-    this.canvas.text("Items:", 10, 370);
+    this.canvas.text("Items:", 10, 270);
 
     let maxPerRow = 4;
-    let itemY = 395;
+    let itemY = 295;
     let itemX = 10;
     let itemCount = 0;
 
@@ -140,11 +132,23 @@ class SidebarView {
 
         if (itemCount === maxPerRow) {
             itemX = 110;
-            itemY = 395;
+            itemY = 295;
         } else {
             itemY += 40;
         }
     }
+
+    this.canvas.textAlign(CENTER);
+    this.canvas.text("Move paddle: ← →", 100, 480);
+
+    this.canvas.textAlign(CENTER);
+    this.canvas.text("Toggle paddle: ↑", 100, 510);
+
+    this.canvas.textAlign(CENTER);
+    this.canvas.text("Shoot ball: space", 100, 540);
+    
+    this.canvas.textAlign(CENTER);
+    this.canvas.text("Pause <p>", 100, 570);
 
     image(this.canvas, this.canvasX + 800 * this.scaleFactor, this.canvasY, 200 * this.scaleFactor, 600 * this.scaleFactor);
   }
