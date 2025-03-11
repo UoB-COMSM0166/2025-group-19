@@ -44,7 +44,7 @@
     </tr>
     <tr>
     <td align="center">Week 09</td>
-    <td align="left"># Software Quality & Testing</td>
+    <td align="left">Software Quality & Testing</td>
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week09/Readme.md">Homework</a></td>
   </tr>
 </table>
