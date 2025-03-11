@@ -35,7 +35,6 @@
 </table>
 
 ## Testing a UK Tax Allowance Calculator
-## Testing a UK Tax Allowance Calculator
 <table align="center">
   <tr>
     <th align="center">Category</th>
@@ -83,3 +82,50 @@
     <td align="left">Additional £3,070 on top of Personal Allowance if legally blind</td>
   </tr>
 </table>
+
+## Test Cases
+<table align="center">
+  <tr>
+    <th align="center">Test Case</th>
+    <th align="center">Income</th>
+    <th align="center">Expected Tax Calculation</th>
+    <th align="center">Expected Tax Payable</th>
+  </tr>
+  <tr>
+    <td align="center">TC1</td>
+    <td align="left">£12,000</td>
+    <td align="left">Income below Personal Allowance (£12,570)</td>
+    <td align="left">£0</td>
+  </tr>
+  <tr>
+    <td align="center">TC2</td>
+    <td align="left">£20,000</td>
+    <td align="left">Taxable: £20,000 - £12,570 = £7,430<br>£7,430 × 20%</td>
+    <td align="left">£1,486</td>
+  </tr>
+  <tr>
+    <td align="center">TC3</td>
+    <td align="left">£60,000</td>
+    <td align="left">£37,700 × 20% + (£60,000 - £50,270) × 40%</td>
+    <td align="left">£11,432</td>
+  </tr>
+  <tr>
+    <td align="center">TC4</td>
+    <td align="left">£130,000</td>
+    <td align="left">£37,700 × 20% + £50,270 × 40% + (£130,000 - £125,140) × 45%</td>
+    <td align="left">£29,835</td>
+  </tr>
+  <tr>
+    <td align="center">TC5</td>
+    <td align="left">Spouse A: £10,000<br>Spouse B: £30,000</td>
+    <td align="left">Spouse A can transfer £1,260 to Spouse B<br>Spouse B new allowance = £13,830<br>Taxable: (£30,000 - £13,830) × 20%</td>
+    <td align="left">£3,234</td>
+  </tr>
+  <tr>
+    <td align="center">TC6</td>
+    <td align="left">£15,000</td>
+    <td align="left">Blind Allowance: £3,070<br>New Personal Allowance = £12,570 + £3,070 = £15,640<br>£15,000 ≤ £15,640, No tax payable</td>
+    <td align="left">£0</td>
+  </tr>
+</table>
+
