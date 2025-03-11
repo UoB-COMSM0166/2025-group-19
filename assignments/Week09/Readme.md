@@ -34,8 +34,6 @@
   </tr>
 </table>
 
-
-## Testing a UK Tax Allowance Calculator
 ## Testing a UK Tax Allowance Calculator
 <table align="center">
   <tr>
@@ -72,6 +70,16 @@
     <td align="center">F</td>
     <td align="left">Personal Allowance Reduction (Gradual loss of allowance)</td>
     <td align="left">100,000 ≤ pay ≤ 125,140 (Allowance reduces £1 for every £2 over £100,000)</td>
+  </tr>
+  <tr>
+    <td align="center">G</td>
+    <td align="left">Marriage Allowance (Transfer unused allowance to spouse)</td>
+    <td align="left">If income ≤ 12,570 and spouse earns 12,571 - 50,270, up to £1,260 can be transferred</td>
+  </tr>
+  <tr>
+    <td align="center">H</td>
+    <td align="left">Blind Person’s Allowance (Additional tax-free amount)</td>
+    <td align="left">Additional £3,070 on top of Personal Allowance if legally blind</td>
   </tr>
 </table>
 
