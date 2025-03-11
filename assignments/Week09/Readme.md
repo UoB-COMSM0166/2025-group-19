@@ -35,6 +35,7 @@
 </table>
 
 ## Testing a UK Tax Allowance Calculator
+## Testing a UK Tax Allowance Calculator
 <table align="center">
   <tr>
     <th align="center">Category</th>
@@ -73,8 +74,8 @@
   </tr>
   <tr>
     <td align="center">G</td>
-    <td align="left">Marriage Allowance (Transfer unused allowance to spouse)</td>
-    <td align="left">If income ≤ 12,570 and spouse earns 12,571 - 50,270, up to £1,260 can be transferred</td>
+    <td align="left">Marriage Allowance (Transfer of £1,260 personal allowance)</td>
+    <td align="left">If income ≤ 12,570 and spouse earns 12,571 - 50,270, up to £1,260 can be transferred, reducing their tax by up to £252</td>
   </tr>
   <tr>
     <td align="center">H</td>
@@ -82,4 +83,3 @@
     <td align="left">Additional £3,070 on top of Personal Allowance if legally blind</td>
   </tr>
 </table>
-
