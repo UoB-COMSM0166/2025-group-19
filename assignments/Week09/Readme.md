@@ -33,3 +33,45 @@
     <td align="left">a ≠ b ≠ c, with triangle inequality satisfied</td>
   </tr>
 </table>
+
+
+## Testing a UK Tax Allowance Calculator
+## Testing a UK Tax Allowance Calculator
+<table align="center">
+  <tr>
+    <th align="center">Category</th>
+    <th align="center">Description</th>
+    <th align="center">Values</th>
+  </tr>
+  <tr>
+    <td align="center">A</td>
+    <td align="left">In Personal Allowance (No tax payable)</td>
+    <td align="left">pay ≤ 12,570</td>
+  </tr>
+  <tr>
+    <td align="center">B</td>
+    <td align="left">Negative income (Invalid case)</td>
+    <td align="left">pay < 0</td>
+  </tr>
+  <tr>
+    <td align="center">C</td>
+    <td align="left">Basic Rate Tax (20%)</td>
+    <td align="left">12,571 ≤ pay ≤ 50,270</td>
+  </tr>
+  <tr>
+    <td align="center">D</td>
+    <td align="left">Higher Rate Tax (40%)</td>
+    <td align="left">50,271 ≤ pay ≤ 125,140</td>
+  </tr>
+  <tr>
+    <td align="center">E</td>
+    <td align="left">Additional Rate Tax (45%)</td>
+    <td align="left">pay > 125,140</td>
+  </tr>
+  <tr>
+    <td align="center">F</td>
+    <td align="left">Personal Allowance Reduction (Gradual loss of allowance)</td>
+    <td align="left">100,000 ≤ pay ≤ 125,140 (Allowance reduces £1 for every £2 over £100,000)</td>
+  </tr>
+</table>
+
