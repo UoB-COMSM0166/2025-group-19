@@ -29,7 +29,7 @@
       { "x": 320, "y": 130, "colour": "black" },
       { "x": 340, "y": 130, "colour": "caramel"},
       { "x": 360, "y": 130, "colour": "caramel"},
-      { "x": 380, "y": 130, "colour": "black" },
+      { "x": 380, "y": 130, "bomb": true, "colour": "black" },
       { "x": 400, "y": 130, "colour": "caramel"},
       { "x": 420, "y": 130, "colour": "brown"},
       { "x": 440, "y": 130, "colour": "black" },
@@ -144,7 +144,7 @@
       { "x": 360, "y": 330, "colour": "black" },
       { "x": 380, "y": 330, "colour": "caramel" },
       { "x": 400, "y": 330, "colour": "black" },
-      { "x": 440, "y": 330, "colour": "black" },
+      { "x": 440, "y": 330, "bomb": true, "colour": "black" },
       { "x": 460, "y": 330, "colour": "caramel" },
       { "x": 480, "y": 330, "colour": "black" },
 
