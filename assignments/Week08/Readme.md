@@ -322,7 +322,9 @@
     <th align="center">71.2</th>
   </tr>
 </table>
-## NASA TLX W test static = 17
+<p align="center">
+  <b>NASA TLX W test static = 17</b><br>
+</p>
 
 ## System Usability Scale
 <table align="center">
@@ -763,7 +765,10 @@
   </tr>
 
 </table>
-## SUS W test static = 10
+<p align="center">
+  <b>SUS W test static = 10</b><br>
+</p>
+
 
 
 
