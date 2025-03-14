@@ -16,6 +16,7 @@ class StageController {
       this.dialogText = '';
       this.toolDropRate = 0; // tool dropping rate
       this.toolProbabilities = {}; // drop
+      this.difficultyMode = state.mode;
       // ping tool array
       this.ballRadius = 10; // shoting ball size
       this.speedMultiplier = 1;
@@ -198,11 +199,14 @@ class StageController {
     if (this.showingDialog) {
       this.displayDialog();
     } else if (this.paused) {
-
       if (!this.instructMenuOn){
-        this.displayPauseMenu();
+        if (this.difficultyMode==='hard'){
+          this.displayPauseMenuHard();
+        }else{
+          this.displayPauseMenuEasy();
+        }
+        
       }
-
     } 
 
   }
@@ -265,7 +269,7 @@ class StageController {
     text('Press C to START', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 10.8/ 12);
   }
 
-  displayPauseMenu() {
+  displayPauseMenuHard() {
     this.menuWidth = 800 * this.scaleFactor;
     this.menuHeight = 500 * this.scaleFactor;
     this.menuX = this.canvasX + (this.scaledWidth - this.menuWidth) / 2;
@@ -321,6 +325,53 @@ class StageController {
    
     textAlign(CENTER, CENTER);
     text('Press C: Continue / Press M: Return to Menu', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 11/ 12);
+  }
+
+  displayPauseMenuEasy() {
+    this.menuWidth = 800 * this.scaleFactor;
+    this.menuHeight = 500 * this.scaleFactor;
+    this.menuX = this.canvasX + (this.scaledWidth - this.menuWidth) / 2;
+    this.menuY = this.canvasY + (this.scaledHeight - this.menuHeight) / 2;
+    fill(0, 0, 0, 200);
+    rect(this.menuX, this.menuY, this.menuWidth, this.menuHeight, 20 * this.scaleFactor); 
+    fill(255);
+    textAlign(CENTER, CENTER);
+    textSize(24 * this.scaleFactor);
+    text('Paused', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight / 12);
+    textSize(22 * this.scaleFactor);
+    text("How to Play", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 2/ 12);
+    
+    textSize(18 * this.scaleFactor);
+    image(this.arrowImg, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
+    text("< > to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
+    text(" Up to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
+    image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
+    text("Release ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
+    image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
+    text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
+
+    textSize(22 * this.scaleFactor);
+    text("Power-Ups", this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 5.5/ 12);
+    textAlign(LEFT, CENTER);
+
+    textSize(18 * this.scaleFactor);
+    image(ballGrow, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 6.8/ 12, 40,40);
+    text("Increase ball size", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 7.1/ 12);
+    image(ballShrink, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 6.8/ 12, 40,40);
+    text("Decrease ball size", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 7.1/ 12);
+    image(infiniteBall, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 6.8/ 12, 40,40);
+    text("Infinite Balls", this.menuX + this.menuWidth *6/ 8, this.menuY + this.menuHeight * 7.1/ 12);
+
+    image(bomb, this.menuX + this.menuWidth* 0.3 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
+    text("Destroy row", this.menuX + this.menuWidth *0.8/ 8, this.menuY + this.menuHeight * 8.6/ 12);
+    image(paddleMax, this.menuX + this.menuWidth* 2.8 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
+    text("Max paddle length", this.menuX + this.menuWidth *3.3/ 8, this.menuY + this.menuHeight * 8.6/ 12);
+    image(paddleGrow, this.menuX + this.menuWidth* 5.5 / 8, this.menuY + this.menuHeight * 8.3/ 12, 40,40);
+    text("Widen paddle", this.menuX + this.menuWidth *6/ 8, this.menuY + this.menuHeight * 8.6/ 12);
+   
+    textSize(22 * this.scaleFactor);
+    textAlign(CENTER, CENTER);
+    text('Press C: Continue / Press M: Return to Menu', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 10.5/ 12);
   }
 
   loadImages (){
