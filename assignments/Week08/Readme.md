@@ -770,13 +770,13 @@
 # FINDING
 Based on the Wilcoxon Signed-Rank Test:
 
--  Result  We obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA-TLX from a survey collected from 14 users.
+-  Result:  We obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA-TLX from a survey collected from 14 users.
 
--  Comparing  By comparing these results setting alpha value of 0.05, the NASA-TLX score is statistically significant, indicating that there may be a significant difference in the mental workload or user perception of workload between the easy and hard levels. \n On the other hand, the SUS score is not statistically significant, suggesting that there is no significant difference in usability between the easy and hard levels. This implies that the system’s usability is perceived similarly across different difficulty levels.
+-  Comparing:  By comparing these results setting alpha value of 0.05, the NASA-TLX score is statistically significant, indicating that there may be a significant difference in the mental workload or user perception of workload between the easy and hard levels. \n On the other hand, the SUS score is not statistically significant, suggesting that there is no significant difference in usability between the easy and hard levels. This implies that the system’s usability is perceived similarly across different difficulty levels.
 
--  Conclusion  Since the SUS score is lower than the NASA-TLX score, this might indicate that users find the system's usability less demanding in terms of mental or physical effort, but this could also be interpreted as users feeling that the system might be easy to use, but mentally demand more effort in playing thi game.
+-  Conclusion:  Since the SUS score is lower than the NASA-TLX score, this might indicate that users find the system's usability less demanding in terms of mental or physical effort, but this could also be interpreted as users feeling that the system might be easy to use, but mentally demand more effort in playing thi game.
 
--  Improvement  Simplifying processes or enhancing feedback mechanisms.
+-  Improvement:  Simplifying processes or enhancing feedback mechanisms.
 
 
 
