@@ -71,7 +71,7 @@
       { "x": 380, "y": 210, "colour": "gray" },
       { "x": 400, "y": 210, "colour": "black" },
       { "x": 420, "y": 210, "colour": "gray" },
-      { "x": 440, "y": 210, "colour": "black" },
+      { "x": 440, "y": 210, "bomb": true, "colour": "black" },
   
       { "x": 300, "y": 230, "colour": "black" },
       { "x": 320, "y": 230, "colour": "gray" },

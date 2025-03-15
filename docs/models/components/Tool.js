@@ -27,10 +27,10 @@ class Tool {
 
   hits(paddle) {
     return (
-      this.x > paddle.x &&
+      this.x + this.imgWidth > paddle.x &&
       this.x < paddle.x + paddle.width &&
       this.y + this.imgHeight > paddle.y &&
-      this.y - this.imgHeight < paddle.y + paddle.height
+      this.y < paddle.y + paddle.height
     );
   }
 

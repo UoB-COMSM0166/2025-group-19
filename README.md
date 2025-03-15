@@ -300,7 +300,7 @@ This structured approach helped us maintain a clear separation of concerns and f
 ---
 # Evaluation
 ## Qualitative Evaluation
-After developing the core mechanics of the game, we conducted Think Aloud user evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
+After developing the core mechanics of the game, we conducted Think Aloud user evaluations and Heuristic evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
 
 ### Key Areas of Improvement: 
 **Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.  
@@ -319,8 +319,7 @@ After developing the core mechanics of the game, we conducted Think Aloud user e
 **Art Design**: Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.  
 **Difficulty Balance**: Players noted that the speed and number of balls provided the right level of challenge, making the game engaging without being too easy or too difficult.  
 **Power-Ups**: The variety and design of the power-ups were enjoyable, adding fun and excitement to the gameplay.  
-
-## Quantitative Evaluation
+### Heuristic Evaluation: 
 <table align="center">
   <tr>
     <th align="center">Interface Issue</th>
@@ -378,6 +377,9 @@ there</td>
     <td align="center">2</td>
   </tr>
 </table>
+
+## Quantitative Evaluation
+
 
 ---
 # Process
