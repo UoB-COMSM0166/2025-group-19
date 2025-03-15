@@ -266,7 +266,7 @@ class StageController {
    
     textAlign(CENTER, CENTER);
     textSize(24 * this.scaleFactor);
-    text('Press C to START', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 10.8/ 12);
+    text('Press ENTER to START', this.menuX + this.menuWidth / 2, this.menuY + this.menuHeight * 10.8/ 12);
   }
 
   displayPauseMenuHard() {
@@ -412,6 +412,11 @@ class StageController {
 
     if (this.paused || this.instructMenuOn) {
       if (key === 'C' || key === 'c') {
+        this.paused = false;
+        this.instructMenuOn = false;
+        this.effectController.resumeEffects();
+      }
+      if (key === 'Enter') {
         this.paused = false;
         this.instructMenuOn = false;
         this.effectController.resumeEffects();
