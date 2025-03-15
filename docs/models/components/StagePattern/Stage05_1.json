@@ -37,7 +37,7 @@
 		{ "x": 440, "y": 130, "colour": "black" },
 
 		{ "x": 280, "y": 150, "colour": "black" },
-		{ "x": 300, "y": 150, "colour": "black" },
+		{ "x": 300, "y": 150, "bomb": true, "colour": "black" },
 		{ "x": 320, "y": 150, "colour": "green" },
 		{ "x": 340, "y": 150, "colour": "green" },
 		{ "x": 360, "y": 150, "colour": "green" },
@@ -120,7 +120,7 @@
 		{ "x": 480, "y": 270, "colour": "black" },
 		{ "x": 500, "y": 270, "colour": "yellow" },
 		{ "x": 520, "y": 270, "colour": "black" },
-		{ "x": 540, "y": 270, "colour": "purple" },
+		{ "x": 540, "y": 270, "bomb": true, "colour": "purple" },
 
 		{ "x": 320, "y": 290, "colour": "black" },
 		{ "x": 340, "y": 290, "colour": "light_green" },
@@ -153,7 +153,7 @@
 		{ "x": 340, "y": 330, "colour": "light_green" },
 		{ "x": 360, "y": 330, "colour": "light_green" },
 		{ "x": 380, "y": 330, "colour": "black" },
-		{ "x": 400, "y": 330, "colour": "black" },
+		{ "x": 400, "y": 330, "bomb": true, "colour": "black" },
 		{ "x": 420, "y": 330, "colour": "green" },
 		{ "x": 440, "y": 330, "colour": "black" },
 		{ "x": 460, "y": 330, "colour": "light_green" },
