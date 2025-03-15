@@ -132,57 +132,121 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 
 ## User Stories & Epics
 <table>
-    <tr>
-        <th>Epic</th>
-        <th>Stakeholder</th>
-        <th>User Story</th>
-        <th>Requirement</th>
-    </tr>
-    <tr>
-        <td rowspan="2">Creating an intriguing and various game experience</td>
-        <td>User</td>
-        <td>As a user, I want certain bricks to drop power-ups, such as double points or paddle expansion, to add variety to the game.</td>
-        <td>Given certain bricks contain a specific power-up, when the players break one of these bricks, then the corresponding power-up, such as double points or paddle expansion, will drop for the player to collect.</td>
-    </tr>
-    <tr>
-        <td>Speedrun Competitor</td>
-        <td>As a speedrun competitor, I want to have different records to pass the game.</td>
-        <td>Given the game has time trials, when I play the game, then I can try to beat my previous records and climb the leaderboard.</td>
-    </tr>
-    <tr>
-        <td rowspan="2">Let our kids play a game without violence</td>
-        <td>Parents</td>
-        <td>As a parent, I want to make sure that my kids are playing appropriate games, so that they don’t neglect their studies or get addicted to video games.</td>
-        <td>Given the kid mode is on, when kids play the game, then the game will kick them out if they play longer than the time limit.</td>
-    </tr>
-    <tr>
-        <td>Parents & Physics Teachers</td>
-        <td>As parents and physics teachers, I want my kids or students to play the game without violence.</td>
-        <td>Given I want to let my kids know that it would be entertaining with physical game experience.</td>
-    </tr>
-    <tr>
-        <td rowspan="2">Try to learn from failure and frustrations</td>
-        <td>Parents</td>
-        <td>As parents, I want my children to train their focus and reaction speed.</td>
-        <td>Given the increasing difficulty of levels, when the speed of the board increases, then the child needs to focus more and react fast to complete the level.</td>
-    </tr>
-    <tr>
-        <td>Positive Reinforcer</td>
-        <td>As a person who does better with positive encouragement, I want there to be a reward system, so that I’m more motivated to keep playing and complete harder levels.</td>
-        <td>Given there is a completion ladder, when a certain level is completed/threshold is met, then rewards such as a new background theme or user icon will be granted.</td>
-    </tr>
-    <tr>
-        <td>Accessible to visually impaired</td>
-        <td>Visually Impaired User</td>
-        <td>As a visually impaired or colour blind user, I want accessible features such as larger texts or easily recognisable blocks, so that I can play the game with minimal trouble.</td>
-        <td>Given I am in colour blind mode, when I play, then blocks with special effects will be designated by shapes instead of colours.</td>
-    </tr>
-    <tr>
-        <td>Educational</td>
-        <td>Physics Teacher</td>
-        <td>As a physics teacher/professor, I want to make use of the game mechanics and physics in an educational setting, so that my students have a more visual and interesting way to learn about physics.</td>
-        <td>Given I want to show the concept of momentum to kids, when the kids are in the game, then there can be playback so that the motion can be observed in more detail (maximized with angles, velocity, etc shown).</td>
-    </tr>
+  <tr>
+    <th>Epic</th>
+    <th>Stakeholder</th>
+    <th>User Story</th>
+    <th>Requirement</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Creating an intriguing and various game experience</td>
+    <td>User</td>
+    <td>
+      As a user, I want certain bricks to drop power-ups, such as double points
+      or paddle expansion, to add variety to the game.
+    </td>
+    <td>
+      Given certain bricks contain a specific power-up, when the players break
+      one of these bricks, then the corresponding power-up, such as double
+      points or paddle expansion, will drop for the player to collect.
+    </td>
+  </tr>
+  <tr>
+    <td>Speedrun Competitor</td>
+    <td>
+      As a speedrun competitor, I want to have different records to pass the
+      game.
+    </td>
+    <td>
+      Given the game has time trials, when I play the game, then I can try to
+      beat my previous records and climb the leaderboard.
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="2">Try to learn from failure and frustrations</td>
+    <td>Parents</td>
+    <td>
+      As parents, I want my children to train their focus and reaction speed.
+    </td>
+    <td>
+      Given the increasing difficulty of levels, when the speed of the board
+      increases, then the child needs to focus more and react fast to complete
+      the level.
+    </td>
+  </tr>
+  <tr>
+    <td>Positive Reinforcer</td>
+    <td>
+      As a person who does better with positive encouragement, I want there to
+      be a reward system, so that I’m more motivated to keep playing and
+      complete harder levels.
+    </td>
+    <td>
+      Given there is a completion ladder, when a certain level is
+      completed/threshold is met, then rewards will be granted.
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="2">Training Response Time</td>
+    <td>User</td>
+    <td>
+      As a user, I want to improve my response time so that in the future, when
+      something happens, especially in dangerous situations, I can react quickly
+      and increase my chances of survival.
+    </td>
+    <td rowspan="2">
+      Given that I want to train my response time, when the ball falls, I must
+      catch it within a limited time in order to pass the stage.
+    </td>
+  </tr>
+  <tr>
+    <td>Gamer</td>
+    <td>
+      As a gamer, I want to train my response time so that in the future, when I
+      participate in gaming competitions, I can react quickly to increase my
+      chances of winning.
+    </td>
+  </tr>
+
+  <tr>
+    <td rowspan="3">Educational</td>
+    <td>Physics Teacher</td>
+    <td>
+      As a physics teacher/professor, I want to make use of the game mechanics
+      and physics in an educational setting, so that my students have a more
+      visual and interesting way to learn about physics.
+    </td>
+    <td>
+      Given I want to show the concept of momentum to kids, when the kids are in
+      the game, then there can be pause so that the motion can be observed in
+      more detail (maximized with angles, velocity, etc shown).
+    </td>
+  </tr>
+  <tr>
+    <td>Parents</td>
+    <td>
+      As parents and teachers, I want my kids or students to learn Chinese
+      culture through this game, so that they can explore different culture and
+      immerse their experience.
+    </td>
+    <td>
+      Given I want to teach kids the concept about Chinese zodiac, when kids
+      enter the main page of the game, then they can know the number and the
+      animal of Chinese zodiac.
+    </td>
+  </tr>
+  <tr>
+    <td>User</td>
+    <td>
+      As a user, I want to know my Chinese zodiac, so that in the future, I can
+      know more about myself and go to fortune teller. When I go to Asian
+      countries, I have more topic to have a conversation.
+    </td>
+    <td>
+      Given I want to know my Chinese zodiac, when I enter the game select page
+      and enter my birthday, then I can know about my Chinese zodiac.
+    </td>
+  </tr>
 </table>
 
 ## Paper Prototype
@@ -236,7 +300,7 @@ This structured approach helped us maintain a clear separation of concerns and f
 ---
 # Evaluation
 ## Qualitative Evaluation
-After developing the core mechanics of the game, we conducted Think Aloud user evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
+After developing the core mechanics of the game, we conducted Think Aloud user evaluations and Heuristic evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
 
 ### Key Areas of Improvement: 
 **Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.  
@@ -255,8 +319,7 @@ After developing the core mechanics of the game, we conducted Think Aloud user e
 **Art Design**: Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.  
 **Difficulty Balance**: Players noted that the speed and number of balls provided the right level of challenge, making the game engaging without being too easy or too difficult.  
 **Power-Ups**: The variety and design of the power-ups were enjoyable, adding fun and excitement to the gameplay.  
-
-## Quantitative Evaluation
+### Heuristic Evaluation: 
 <table align="center">
   <tr>
     <th align="center">Interface Issue</th>
@@ -314,6 +377,9 @@ there</td>
     <td align="center">2</td>
   </tr>
 </table>
+
+## Quantitative Evaluation
+
 
 ---
 # Process
