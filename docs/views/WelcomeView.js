@@ -105,11 +105,54 @@ class WelcomeView {
     }
   }
 
+<<<<<<< feature/docs
   // will delete this function
   displayTitleImg(){
     // use the tiltle image
     this.titleImg = zodiacCatchImg;
     image(this.titleImg, width / 2 - this.titleImg.width / 2, windowHeight / 4 - this.titleImg.height / 2, this.titleImg.width, this.titleImg.height);
+=======
+  handleKeyPress(key) {
+    if (this.dialogOn) {
+      if (this.dialogOption === 0){
+        this.settingDialog.handleSettingKeyPress(key);
+      }
+      else if (this.dialogOption === 1){
+        this.settingDialog.handleInfoKeyPress(key);
+      }
+    }
+    else if (!this.dialogOn){
+      if (key === 'ArrowUp') {
+        this.selectedIndex = (this.selectedIndex - 1 + this.options.length) % this.options.length;
+      } else if (key === 'ArrowDown') {
+        this.selectedIndex = (this.selectedIndex + 1) % this.options.length;
+      } else if (key === 'Enter') {
+        const selectedOption = this.options[this.selectedIndex];
+        if (selectedOption === "START") {
+          this.controller.switchToStageMap();
+        } else if (selectedOption === "YOUR ZODIAC") {
+          this.controller.switchToStageMap();
+        } else if (selectedOption === "SETTING") {
+          this.dialogOption = 0;
+          this.settingDialog.openDialog(this.dialogOption);
+          this.dialogOn = true;
+        } else if (selectedOption === "INFORMATION") {
+          this.dialogOption = 1;
+          this.settingDialog.openDialog(this.dialogOption);
+          this.dialogOn = true;
+        }
+      }
+    }
+  }
+
+  updateScale() {
+    let availableHeight = windowHeight * 0.9; //  5% padding
+    this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
+    this.scaledWidth = 1000 * this.scaleFactor;
+    this.scaledHeight = 600 * this.scaleFactor;
+    this.canvasX = (windowWidth - this.scaledWidth) / 2;
+    this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
+>>>>>>> local
   }
 }
   
