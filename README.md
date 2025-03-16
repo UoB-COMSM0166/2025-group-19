@@ -4,7 +4,7 @@
 # Our Game - ZODIAC CATCH
 
 <p align="center">
-    <img src="./assets/welcomeView.png" width="1000" alt="Block" style="border: 5px solid black;">
+    <img src="./assets/zodiac-catch.gif" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Link
@@ -44,7 +44,7 @@
 ---
 # Introduction
 
-Our game is inspired by the classic brick breaker from the nostalgic era of 1999-2000 (Figure 1). However, we are not merely recreating the old classic—we are giving it a fresh, creative twist. The game incorporates six animals from the Chinese Zodiac (Figure 2), each representing a unique level. Players progress through these levels, collecting each animal as a reward, gaining a sense of achievement with every success.
+Our game is inspired by the classic brick breaker from the nostalgic era of 1999-2000 (Figure 1). However, we are not merely recreating the old classic—we are giving it a fresh, creative twist. The game incorporates six animals from the Chinese Zodiac, each representing a unique level. Players progress through these levels, collecting each animal as a reward, gaining a sense of achievement with every success.
 
 Each level introduces a distinct visual theme and brick mechanism tailored to the animal it represents, offering new challenges and keeping the gameplay engaging. As players advance, the difficulty increases, putting their skills to the test through ball reflections, speed control, and precision. Additionally, we’ve integrated features such as multi-ball management and power-ups to further enhance the experience.
 
@@ -53,13 +53,7 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 <p align="center">
   <b>Figure 1</b><br>
   <i>Block</i><br>
-  <img src="./assets/block-through.gif" width="500" alt="Block" style="border: 5px solid black;">
-</p>
-
-<p align="center">
-  <b>Figure 2</b><br>
-  <i>Zodiac Catch</i><br>
-  <img src="./assets/zodiac-catch.gif" width="500" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/block-through.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 ---
@@ -253,13 +247,13 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
 <p align="center">
   <b>Figure 3</b><br>
   <i>Paper Prototype - Block</i><br>
-  <img src="./assets/paper-prototype-block.gif" width="500" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 <p align="center">
   <b>Figure 4</b><br>
   <i>Prototype - Zodiac Catch</i><br>
-  <img src="./assets/prototype-zodiac-catch.gif" width="500" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 
@@ -272,7 +266,7 @@ In our initial meeting, we identified the game's essential components, such as t
 <p align="center">
   <b>Figure 5</b><br>
   <i>Initial Class Diagram</i><br>
-  <img src="./assets/Initial-Class-Diagram.png" width="500" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
 During our first stage of coding, we decided to adopt the **Model-View-Controller (MVC)** design pattern, as it could accommodate our complex features and multiple game views. This led to a more detailed class diagram, which included:
@@ -284,14 +278,14 @@ This structured approach helped us maintain a clear separation of concerns and f
 <p align="center">
   <b>Figure 6</b><br>
   <i>Updated Class Diagram</i><br>
-  <img src="./assets/classDiagram.png" width="500" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/classDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Sequence Diagram
 <p align="center">
   <b>Figure 6</b><br>
   <i>Sequence Diagram</i><br>
-  <img src="./assets/sequence.jpeg" width="500" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/sequence.jpeg" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
 ---
@@ -1178,7 +1172,7 @@ Additionally, ZenHub’s deep integration ensures that creating or updating issu
 <p align="center">
   <b>Figure</b><br>
   <i>Zenhub integrate Github</i><br>
-  <img src="./assets/zenhub.png" width="500" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/zenhub.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 
@@ -1189,7 +1183,7 @@ We use Whimsical to store and organize our `brainstorming drafts`, `level wirefr
 <p align="center">
   <b>Figure</b><br>
   <i>Whimsical</i><br>
-  <img src="./assets/whimsical.gif" width="500" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/whimsical.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 ---
