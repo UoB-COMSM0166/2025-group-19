@@ -18,9 +18,15 @@ class NewStageMapView {
         this.roadAnimation.update();
         this.cloudAnimation1.update();
         this.displayText();
-        for (let animal of this.animals) {
-            animal.y = animal.baseY;
-        }
+        // sway in place"
+        this.animals.forEach((animal, index) => {
+            if(index == this.selectedAnimalIndex){
+                let newY = animal.baseY + sin(frameCount * animal.speed) * animal.amplitude;
+                animal.y = min(newY, animal.baseY);
+            }else{
+                animal.y = animal.baseY;
+            }
+        });
     }
     
     display() {
@@ -62,7 +68,7 @@ class NewStageMapView {
 
     displayTitle(){
         this.titleX = (windowWidth / 2) ;
-        this.titleY = windowHeight / 4;
+        this.titleY = (windowHeight / 4) + (36 * this.scaleFactor);
         this.titleHeight = 0;
         fill('#f7e428'); // yellow
         stroke('#f7e428');
@@ -90,18 +96,18 @@ class NewStageMapView {
 
     animalSetting(){
         this.animals = [
-            { img: mouseImg, y: this.baseY + (7 * this.scaleFactor)},
-            { img: cowImg, y: this.baseY + (4 * this.scaleFactor) },
-            { img: tigerImg, y: this.baseY + (0 * this.scaleFactor) },
-            { img: rabbitImg, y: this.baseY + (7 * this.scaleFactor) },
-            { img: dragonImg, y: this.baseY + (7 * this.scaleFactor) },
-            { img: snakeImg, y: this.baseY + (8 * this.scaleFactor) },
-            { img: horseImg, y: this.baseY + (6 * this.scaleFactor) },
-            { img: goatImg, y: this.baseY + (5 * this.scaleFactor) },
-            { img: monkeyImg, y: this.baseY + (6 * this.scaleFactor) },
-            { img: roosterImg, y: this.baseY + (8 * this.scaleFactor) },
-            { img: dogImg, y: this.baseY + (7 * this.scaleFactor) },
-            { img: pigImg, y: this.baseY + (6 * this.scaleFactor) }
+            { img: mouseImg, y: this.baseY + (7 * this.scaleFactor), amplitude: 5, speed: 0.23},
+            { img: cowImg, y: this.baseY + (4 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: tigerImg, y: this.baseY + (0 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: rabbitImg, y: this.baseY + (6 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: dragonImg, y: this.baseY + (7 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: snakeImg, y: this.baseY + (8 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: horseImg, y: this.baseY + (6 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: goatImg, y: this.baseY + (5 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: monkeyImg, y: this.baseY + (6 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: roosterImg, y: this.baseY + (8 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: dogImg, y: this.baseY + (7 * this.scaleFactor), amplitude: 5, speed: 0.23 },
+            { img: pigImg, y: this.baseY + (6 * this.scaleFactor), amplitude: 5, speed: 0.23 }
         ];   
     }
 
@@ -138,8 +144,8 @@ class NewStageMapView {
         }else{
             pointerX = (selectedAnimal.x - (6 *  this.scaleFactor))+ selectedAnimal.width / 2; 
         }
-       
-        let pointerY = selectedAnimal.y - (20 * this.scaleFactor ); 
+        
+        let pointerY = this.baseY - (24 * this.scaleFactor ); 
         let pointerSize = 8 * this.scaleFactor; 
 
         fill(255);
