@@ -1,7 +1,6 @@
 let mainController;
 let skyBackground;
 let bgMusic;
-let roadImg;
 
 function preload() {
   skyBackground = loadImage('assets/images/skyBackground.webp');
@@ -24,13 +23,25 @@ function preload() {
   cloudImg2 = loadImage('assets/images/welcome-page/cloud-2.png');
   zodiacCatchImg = loadImage('assets/images//welcome-page/zodiacCatch.png');
   boutiqueBitmaFont = loadFont('assets/font/BoutiqueBitmap9x9_Bold_1.5.ttf');
+  // tool images
+  ballGrow = loadImage('assets/images/tools/ballGrow.png');
+  ballShrink = loadImage('assets/images/tools/ballShrink.png');
+  ballSpeedUp = loadImage('assets/images/tools/ballSpeedUp.png');
+  bomb = loadImage('assets/images/tools/bomb.png');
+  gravityUp = loadImage('assets/images/tools/gravityUp.png');
+  infiniteBall = loadImage('assets/images/tools/infiniteBall.png');
+  paddleGrow = loadImage('assets/images/tools/paddleGrow.png');
+  paddleMax = loadImage('assets/images/tools/paddleMax.png');
+  paddleReverse = loadImage('assets/images/tools/paddleReverse.png');
+  paddleShrink = loadImage('assets/images/tools/paddleShrink.png');
+  timeDecrease = loadImage('assets/images/tools/timeDecrease.png');
+  timeIncrease = loadImage('assets/images/tools/timeIncrease.png');
 }
 
 function setup() {
-  createCanvas(1000, 600);
+  createCanvas(windowWidth, windowHeight); // (1000, 600);
   textFont(boutiqueBitmaFont);
   pageController = new PageController();
-  mouseController = new MouseController(pageController, bgMusic);
 }
 
 function draw() {
@@ -46,11 +57,14 @@ function keyPressed() {
 }
 
 function keyReleased() {
-  if (pageController.currentPage instanceof StageController) {
+  if (pageController.currentPage instanceof StageMapView) {
+    pageController.handleKeyReleased(key);
+  } else if (pageController.currentPage instanceof StageController) {
     pageController.currentPage.keyboardController.handleKeyReleased(key);
   }
 }
 
-function mousePressed() {
-  mouseController.handleMousePressed(mouseX, mouseY);
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  pageController.resizeWindow();
 }

@@ -5,14 +5,15 @@ const BrickDamageLevel = Object.freeze({
 });
 
 class Brick {
-  constructor(x, y, width, height, isBomb = false, isUnbreakable = false, R = 0, G = 0, B = 0) {
+  constructor(x, y, width, height, isBomb = false, isBlackHole = false, isBorder = false, R = 0, G = 0, B = 0) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
     this.isDestroyed = false;
     this.isBomb = isBomb;
-    this.isUnbreakable = isUnbreakable;
+    this.isBlackHole = isBlackHole;
+    this.isBorder = isBorder;
     this.red = R;
     this.green = G;
     this.blue = B;
@@ -22,11 +23,13 @@ class Brick {
   display(canvas = window) {
     if (!this.isDestroyed) {
       if (this.isBomb) {
-        canvas.fill(0, 0, 255, 255);
+        canvas.fill(0, 0, 0, 255);
+        canvas.rect(this.x, this.y, this.width, this.height);
+        canvas.image(bomb, this.x, this.y, 20, 20);
       } else {
         canvas.fill(this.red, this.green, this.blue, 255);
+        canvas.rect(this.x, this.y, this.width, this.height);
       }
-      canvas.rect(this.x, this.y, this.width, this.height);
       if (this.damageLevel === BrickDamageLevel.CRACKED) {
         canvas.stroke(50);
         let seventhW = this.width / 7;
