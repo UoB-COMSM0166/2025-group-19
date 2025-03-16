@@ -65,6 +65,10 @@ class PageController {
       this.currentPage = new StageMapView(this);
   }
 
+  switchToNewStageMap() {
+    this.currentPage = new NewStageMapView(this);
+}
+
   switchToMode() {
       this.currentPage = new ModeView(this);
   }
