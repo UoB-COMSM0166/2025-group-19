@@ -775,13 +775,15 @@
 # FINDING
 Based on the Wilcoxon Signed-Rank Test:
 
--  Result:  We obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA-TLX from a survey collected from 14 users.
+-  By using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
 
--  Comparing:  By comparing these results setting alpha value of 0.05, the NASA-TLX score is statistically significant, indicating that there may be a significant difference in the mental workload or user perception of workload between the easy and hard levels. \n On the other hand, the SUS score is not statistically significant, suggesting that there is no significant difference in usability between the easy and hard levels. This implies that the system’s usability is perceived similarly across different difficulty levels.
+-  The NASA-TLX score is statistically significant, indicating that there may be a significant difference in the perception of workload between the easy and hard levels. From the user data, it can be observed that temporal demand and physical demand are usually high when users are playing the hard level. High temporal demand suggests that users may feel pressed for time while using the system, possibly indicating that tasks are too fast-paced. High physical demand indicates that users need to pay significant effort to interact with the system, which may be due to complex controls, excessive manual input, or inefficient workflows.
+  
+-  The SUS score is not statistically significant, suggesting that there is no significant difference in usability between the easy and hard levels. This implies that the system’s usability is perceived similarly across different difficulty levels. The average SUS score is 74.46 among the 14 surveys, which is above the average of 68. A score of 74.46 can be seen as a good indicator that users did not struggle significantly with using the system. While 74.46 is above average, excellent usability scores are above 80 so this suggests there is still room for improvement in certain areas to make the system even more intuitive and user-friendly.
 
--  Conclusion:  Since the SUS score is lower than the NASA-TLX score, this might indicate that users find the system's usability less demanding in terms of mental or physical effort, but this could also be interpreted as users feeling that the system might be easy to use, but mentally demand more effort in playing thi game.
-
--  Improvement:  Simplifying processes or enhancing feedback mechanisms.
+-  Improvements based on NASA TLX: Simplify processes or enhance feedback mechanisms.
+   
+-  Improvements based on SUS:  Reduce temporal demand by allowing more flexible pacing or simplifying steps. Reduce physical demand by optimizing input methods and minimizing unnecessary actions.
 
 
 
