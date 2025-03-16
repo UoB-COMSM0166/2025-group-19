@@ -11,7 +11,7 @@ class SettingDialog {
         this.infoVisible = false; //info
         this.settingOption = 0;
         this.infoOption = 0;
-        this.leftOptions =  ["Sound\nEffects", "Keyboards", "Modes"];
+        this.leftOptions =  ["Sound\nEffects", "Keyboards"];
         this.leftOptions_info = ["Team\n Members", "Game\n Intro"];
         this.slider_bgMusic = createSlider(0, 255, 128);
         this.slider_soundEffect = createSlider(0, 255, 128);
@@ -20,7 +20,6 @@ class SettingDialog {
         this.selectedSliderIndex = 0;
         this.selectedBtnIndex = 0;
         this.isInRightContent = false;
-        this.isHardMode = false;
         this.keyboard_btns = {
             shortBall: createButton("SHORT\nBALL"),
             moveLeft: createButton("MOVE\nLEFT"),
@@ -70,15 +69,13 @@ class SettingDialog {
         this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
     }
 
-    
-
     handleSettingKeyPress(key) {
         if(this.dialogOn) {
             if (!this.isInRightContent) {// check in leftBar or rightContent
                 if (key === 'ArrowUp') {
-                    this.settingOption = (this.settingOption - 1 + 3) % 3;
+                    this.settingOption = (this.settingOption - 1 + 2) % 2;
                 } else if (key === 'ArrowDown') {
-                    this.settingOption = (this.settingOption + 1) % 3;
+                    this.settingOption = (this.settingOption + 1) % 2;
                 } else if (key === 'q') {
                     this.popupVisible = false;
                     this.slider_bgMusic.hide();
@@ -89,9 +86,7 @@ class SettingDialog {
                     this.isInRightContent = true;
                 }
             } else{
-                if (this.settingOption === 2) {
-                    this.handleSettingDifficulty(key);
-                } else if (this.settingOption === 1) {
+                if (this.settingOption === 1) {
                     this.handleSettingKeyboard(key);
                 } else if (this.settingOption === 0) {
                     this.handleSettingSoundKeyPress(key);
@@ -101,16 +96,6 @@ class SettingDialog {
             }
         } else {
             this.display();
-        }
-    }
-
-    handleSettingDifficulty(key) {
-        if (key === 'ArrowLeft') {
-            this.isHardMode = false;// to EASY mode
-        } else if (key === 'ArrowRight') {
-            this.isHardMode = true; // to HARD mode
-        } else if (key === 'q') {
-            this.isInRightContent = false;
         }
     }
 
@@ -246,7 +231,7 @@ class SettingDialog {
         noStroke();
         fill(255);
         for(let i = 0; i < this.leftOptions.length; i++) {
-            const optionsY = y + i * height / 3;
+            const optionsY = y + i * height / 2;
             if(this.settingOption === i) {
                 textStyle(NORMAL);
                 stroke("pink");
@@ -266,9 +251,6 @@ class SettingDialog {
                 break;
             case 1: 
                 this.showSettingKeyboard(x + width / 12 * 5, y, width / 12 * 7, height);
-                break;
-            case 2: 
-                this.showSettingModes(x + width / 12 * 5, y, width / 12 * 7, height);
                 break;
             default: 
                 this.showSettingSound(x + width / 12 * 5, y, width / 12 * 7, height);
@@ -331,26 +313,6 @@ class SettingDialog {
             btn.position(btnX, actionY);
             btn.show();
             text(actions[i], actionX, actionY);
-        }
-    }
-
-    showSettingModes(x, y , width, height) {
-        let contentX = x + width / 5;
-        let contentY = y + height / 3;
-        fill(255);
-        textSize(30 * this.scaleFactor);
-        noStroke();
-        text("Difficulty: ", contentX, contentY);
-        if (this.isHardMode) {
-            fill(255, 0, 0); // Red for selected hard
-            text("HARD", contentX + width / 3, contentY + 50);
-            fill(255);
-            text("EASY", contentX, contentY + 50);
-        } else { // green for easy
-            fill(0, 255, 0);
-            text("EASY", contentX, contentY + 50);
-            fill(255);
-            text("HARD", contentX + width / 3, contentY + 50);
         }
     }
 
