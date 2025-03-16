@@ -8,6 +8,7 @@ class ModeView {
     update() {}
   
     display() {
+      document.body.style.cursor = "none";
       background(0);
       textAlign(CENTER, CENTER);
 
