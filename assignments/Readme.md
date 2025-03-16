@@ -42,11 +42,6 @@
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week07/Readme.md">Homework</a></td>
   </tr>
   <tr>
-    <td align="center">Week 07</td>
-    <td align="left">HCI Evulation</td>
-    <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week07/Readme.md">Homework</a></td>
-  </tr>
-  <tr>
     <td align="center">Week 08</td>
     <td align="left">Quantitative Evulation</td>
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week08/Readme.md">Homework</a></td>
