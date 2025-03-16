@@ -26,6 +26,9 @@ class WelcomeView {
     this.animalAnimation.display();
     this.cloudAnimation1.display();
     document.body.style.cursor = "none";
+    document.addEventListener("mouseenter", () => {
+      document.body.style.cursor = "none";
+    });
     this.displayText();
     this.settingDialog.display();  // must after displayText
   }
