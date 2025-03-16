@@ -1,18 +1,20 @@
 class PageController {
   constructor() {
       this.currentPage = new WelcomeView(this);
+      this.stageName = "";
+      this.mode = "";
   }
 
-  switchToStage(stageName) {
+  switchToStage() {
       const bgImage = skyBackground;
-      const state = new StageState(stageName, bgImage);
+      const state = new StageState(this.stageName, bgImage, this.mode);
       const sidebarCanvas = createGraphics(200, 600);
       const gameCanvas = createGraphics(800, 600);
       const infoCanvas = createGraphics(500, 500);
       const gameview = new GameView(state, gameCanvas);
-      const sidebar = new SidebarView(stageName, sidebarCanvas);
+      const sidebar = new SidebarView(this.stageName, sidebarCanvas);
 
-      switch (stageName) {
+      switch (this.stageName) {
         case 'Rat':
           this.currentPage = new Stage01Controller(state, gameview, sidebar, this);
           break;
@@ -21,6 +23,9 @@ class PageController {
           break;
         case 'Tiger':
           this.currentPage = new Stage03Controller(state, gameview, sidebar, this);
+          break;
+        case 'Rabbit':
+          this.currentPage = new Stage04Controller(state, gameview, sidebar, this);
           break;
         case 'Dragon':
           this.currentPage = new Stage05Controller(state, gameview, sidebar, this);
@@ -58,6 +63,22 @@ class PageController {
 
   switchToStageMap() {
       this.currentPage = new StageMapView(this);
+  }
+
+  switchToNewStageMap() {
+    this.currentPage = new NewStageMapView(this);
+}
+
+  switchToMode() {
+      this.currentPage = new ModeView(this);
+  }
+
+  setStageName(stageName) {
+    this.stageName = stageName;
+  }
+
+  setMode(mode) {
+    this.mode = mode;
   }
 
   update() {

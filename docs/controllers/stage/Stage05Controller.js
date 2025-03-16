@@ -1,14 +1,6 @@
 class Stage05Controller extends StageController {
   constructor(state, view, sidebar, pageController) {
     super(state, view, sidebar, pageController);
-    this.toolDropRate = 0.4;
-    this.toolProbabilities = {
-      ballGrow: 0.3,
-      ballShrink: 0.2,
-			timeIncrease: 0.2,
-			infiniteBall: 0.5,
-			timeDecrease: 0.3,
-    };
   }
 
 	getStageJsonPath() {
@@ -21,6 +13,7 @@ class Stage05Controller extends StageController {
   }
 
   goToNextStage() {
-    this.pageController.switchToStage('Snake');
+    this.pageController.setStageName("Snake");
+    this.pageController.switchToStage();
   }
 }

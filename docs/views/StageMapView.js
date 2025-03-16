@@ -231,7 +231,8 @@ class StageMapView {
         this.currentFocus = "zodiac";
       } else if (this.currentFocus === "zodiac") {
         const selectedStage = this.zodiacSigns[this.selectedIndex];
-        this.pageController.switchToStage(selectedStage);
+        this.pageController.setStageName(selectedStage);
+        this.pageController.switchToMode();
       } else if (this.currentFocus === "back") {
         this.pageController.switchToWelcome();
       }

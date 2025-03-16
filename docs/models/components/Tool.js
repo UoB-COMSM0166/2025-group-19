@@ -7,17 +7,10 @@ class Tool {
     this.imgWidth = 0;
     this.imgHeight = 0;
 
-    if (this.type === 'ballGrow') this.img = ballGrow;
-    if (this.type === 'ballShrink') this.img = ballShrink;
-    if (this.type === 'paddleGrow') this.img = paddleGrow;
-    if (this.type === 'paddleMax') this.img = paddleMax;
-    if (this.type === 'paddleShrink') this.img = paddleShrink;
-    if (this.type === 'ballSpeedUp') this.img = ballSpeedUp;
-    if (this.type === 'gravityUp') this.img = gravityUp;
-    if (this.type === 'timeIncrease') this.img = timeIncrease;
-    if (this.type === 'timeDecrease') this.img = timeDecrease;
-    if (this.type === 'paddleReverse') this.img = paddleReverse;
-    if (this.type === 'infiniteBall') this.img = infiniteBall;
+    this.img = this.getImage();
+    if (!this.img) {
+      throw new Error(`Error: Unknown tool type "${this.type}"`)
+    }
 
     // Calculate the size for the image
     this.imgHeight = windowHeight * 0.035; // if use height, its setting will come from main.js's createCanvas(1000, 600);. 
@@ -34,10 +27,10 @@ class Tool {
 
   hits(paddle) {
     return (
-      this.x > paddle.x &&
+      this.x + this.imgWidth > paddle.x &&
       this.x < paddle.x + paddle.width &&
       this.y + this.imgHeight > paddle.y &&
-      this.y - this.imgHeight < paddle.y + paddle.height
+      this.y < paddle.y + paddle.height
     );
   }
 
