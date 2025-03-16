@@ -105,7 +105,7 @@ class WelcomeView {
       } else if (key === 'Enter') {
         const selectedOption = this.options[this.selectedIndex];
         if (selectedOption === "START") {
-          this.controller.switchToStageMap();
+          this.controller.switchToNewStageMap();
         } else if (selectedOption === "YOUR ZODIAC") {
           this.controller.switchToStageMap();
         } else if (selectedOption === "SETTING") {
@@ -129,5 +129,6 @@ class WelcomeView {
     this.canvasX = (windowWidth - this.scaledWidth) / 2;
     this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
   }
+
 }
   
