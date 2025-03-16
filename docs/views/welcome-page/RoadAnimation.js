@@ -1,11 +1,13 @@
 class RoadAnimation {
-  constructor(speed = 0.3, numImages = 20) {
+  constructor(speed = 0.3, numImages = 20, animationOn = true) {
+    // console.log("animationOn === ", animationOn);
     this.img = roadImg;
     this.speed = speed;
     this.numImages = numImages;
     this.x = [];
     this.imgWidth = 0;
     this.imgHeight = 0;
+    this.animationOn = animationOn;
 
     // Calculate the size for the image
     this.imgHeight = windowHeight * 0.1; // if use height, its setting will come from main.js's createCanvas(1000, 600);. 
@@ -38,8 +40,14 @@ class RoadAnimation {
 
   display() {
     // Draw the background images
-    for (let i = 0; i < this.numImages; i++) {
-      image(this.img, this.x[i], height - this.imgHeight, this.imgWidth, this.imgHeight);
+    if (this.animationOn){
+      for (let i = 0; i < this.numImages; i++) {
+        image(this.img, this.x[i], height - this.imgHeight, this.imgWidth, this.imgHeight);
+      }
+    } else{
+      for (let i = 0; i < this.numImages; i++) {
+        image(this.img, 0, height - this.imgHeight, this.imgWidth, this.imgHeight);
+      }
     }
   }
 

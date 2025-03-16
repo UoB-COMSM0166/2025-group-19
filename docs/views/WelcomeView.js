@@ -57,7 +57,6 @@ class WelcomeView {
     noStroke();
     textSize(20 * this.scaleFactor);
     textAlign(CENTER, TOP);
-    this.optionY = this.instructionY + this.instructionY;
     text("Use the arrow keys and Enter to control the game", this.titleX,  this.titleY + 90 * this.scaleFactor);
   }
 
@@ -66,12 +65,11 @@ class WelcomeView {
     noStroke();
     textSize(16 * this.scaleFactor);
     textAlign(CENTER, TOP);
-    this.optionY = this.instructionY + this.instructionY;
     text("Version 1.0", this.titleX,  this.titleY + 124 * this.scaleFactor);
   }
 
   displayOption(){
-    this.options = ["START", "SETTING", "INFORMATION"];
+    this.options = ["START", "YOUR ZODIAC", "SETTING", "INFORMATION"];
     textSize(28 * this.scaleFactor);
     for (let i = 0; i < this.options.length; i++) {
       if (i === this.selectedIndex) {
@@ -94,13 +92,14 @@ class WelcomeView {
     } else if (key === 'Enter') {
       const selectedOption = this.options[this.selectedIndex];
       if (selectedOption === "START") {
+        this.controller.switchToNewStageMap();
+      } else if (selectedOption === "YOUR ZODIAC") {
         this.controller.switchToStageMap();
-      } else if (selectedOption === "SETTING") {
+      }else if (selectedOption === "SETTING") {
         this.settingDialog.openDialog();
-
       } else if (selectedOption === "INFORMATION") {
         alert("under construction ...");
-      }
+      } 
     }
 
     // close settingDialog
