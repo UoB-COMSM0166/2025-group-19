@@ -64,6 +64,7 @@ class NewStageMapView {
     displayText(){
         this.displayTitle();
         this.displayInstruction();
+        this.displayBackToMenu();
     }
 
     displayTitle(){
@@ -86,6 +87,15 @@ class NewStageMapView {
         text("Use the left and right arrow keys to select a stage,", this.titleX,  this.titleY + 90 * this.scaleFactor);
         text("then press Enter to enter the chosen stage.", this.titleX,  this.titleY + 130 * this.scaleFactor);
     }
+
+    displayBackToMenu(){
+        fill(255);
+        noStroke();
+        textSize(26 * this.scaleFactor);
+        textAlign(CENTER, TOP);
+        text("Press M to return to the menu.", this.titleX,  this.titleY + 170
+             * this.scaleFactor);
+      }
 
     positionSetting(){
         this.initialY = windowHeight* 0.1;
@@ -170,6 +180,11 @@ class NewStageMapView {
             const selectedStage = this.zodiacSigns[this.selectedAnimalIndex];
             this.pageController.setStageName(selectedStage);
             this.pageController.switchToMode();
+        }
+
+        if (key === 'M' || key === 'm') {
+            const selectedStage = this.zodiacSigns[this.selectedAnimalIndex];
+            this.pageController.switchToWelcome();
         }
     }
 
