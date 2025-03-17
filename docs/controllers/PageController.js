@@ -58,16 +58,20 @@ class PageController {
   }
 
   switchToWelcome() {
-      this.currentPage = new WelcomeView(this);
+    this.currentPage = new WelcomeView(this);
   }
 
   switchToStageMap() {
-      this.currentPage = new StageMapView(this);
+    this.currentPage = new StageMapView(this);
   }
 
   switchToNewStageMap() {
     this.currentPage = new NewStageMapView(this);
-}
+  }
+
+  switchToGod(){
+    this.currentPage = new GodView(this);
+  }
 
   switchToMode() {
       this.currentPage = new ModeView(this);

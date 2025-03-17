@@ -17,6 +17,7 @@ function preload() {
   roosterImg = loadImage('assets/images/characters/Rooster.png');
   dogImg = loadImage('assets/images/characters/Dog.png');
   pigImg = loadImage('assets/images/characters/Pig.png');
+  godImg = loadImage('assets/images/characters/God.png');
   // welcome-page
   roadImg = loadImage('assets/images/welcome-page/road.png');
   cloudImg1 = loadImage('assets/images/welcome-page/cloud-1.png');
@@ -36,6 +37,8 @@ function preload() {
   paddleShrink = loadImage('assets/images/tools/paddleShrink.png');
   timeDecrease = loadImage('assets/images/tools/timeDecrease.png');
   timeIncrease = loadImage('assets/images/tools/timeIncrease.png');
+  // others
+  dialogImg = loadImage('assets/images/dialog-picture.png');
 }
 
 function setup() {
