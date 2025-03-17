@@ -39,6 +39,7 @@ function preload() {
   timeIncrease = loadImage('assets/images/tools/timeIncrease.png');
   // others
   dialogImg = loadImage('assets/images/dialog-picture.png');
+  dialogData = loadJSON('./models/components/story.json');
 }
 
 function setup() {
