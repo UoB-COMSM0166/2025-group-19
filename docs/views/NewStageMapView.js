@@ -171,9 +171,9 @@ class NewStageMapView {
 
     handleKeyPress(key) {
         if (key === 'ArrowLeft') {
-            this.selectedAnimalIndex = max(0, this.selectedAnimalIndex - 1); 
+            this.selectedAnimalIndex = (this.selectedAnimalIndex === 0) ? this.animals.length - 1 : this.selectedAnimalIndex - 1;
         } else if (key === 'ArrowRight') {
-            this.selectedAnimalIndex = min(this.animals.length - 1, this.selectedAnimalIndex + 1); 
+            this.selectedAnimalIndex = (this.selectedAnimalIndex === this.animals.length - 1) ? 0 : this.selectedAnimalIndex + 1;
         }
 
         if (key === 'Enter') {
