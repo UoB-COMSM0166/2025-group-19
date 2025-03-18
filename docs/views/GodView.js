@@ -1,6 +1,7 @@
 class GodView {
     constructor(pageController) {
         this.pageController = pageController;
+        this.updateScale();
         this.scaleFactor = 1;
         this.animationProgress = 0;
         this.animationSpeed = 0.008;
@@ -14,20 +15,21 @@ class GodView {
         this.typedText = "";
         this.charIndex = 0;
         this.scrollY = 0;
-
         this.positionSetting();
         this.godSetting();
         this.dialogPicSetting();
-
         this.dialogContainer = createDiv('');
+        this.dialogContainerSetting();
+        this.continueCount = 0;
+    }
+
+    dialogContainerSetting(){
         this.dialogContainer.style('width', this.dialogPic.width + 'px');
         this.dialogContainer.style('height', this.dialogPic.height + 'px');
         this.dialogContainer.style('overflow-y', 'auto');
         this.dialogContainer.style('position', 'absolute');
         this.dialogContainer.style('top', this.dialogPic.y + 'px');
         this.dialogContainer.style('left', this.dialogPic.x + 'px');
-
-        this.continueCount = 0;
     }
 
     update() {
@@ -53,18 +55,13 @@ class GodView {
         pop();
         if (this.dialogVisible) {
             image(this.dialogPic.img, this.dialogPic.x, this.dialogPic.y, this.dialogPic.width, this.dialogPic.height);
-            fill(0);
-            textSize(32);
-            textAlign(LEFT, TOP);
-            let textX = this.dialogPic.x + 36;
-            let textY = this.dialogPic.y + 30 + this.scrollY;
-            // show dialog text
-            text(this.typedText, textX, textY, this.dialogPic.width - 40, this.dialogPic.height - 40);
-            this.displayInstruction();
+            this.displayText();
         }
     }
 
     resizeWindow() {
+        this.updateScale();
+        this.dialogContainerSetting();
         this.positionSetting();
         this.godSetting();
         this.dialogPicSetting();
@@ -79,7 +76,7 @@ class GodView {
         } else {
             this.dialogVisible = true;
         }
-    }
+    }  
 
     positionSetting() {
         this.initialY = windowHeight * 0.1;
@@ -99,25 +96,42 @@ class GodView {
         };
         this.god.width = (this.god.img.width / this.god.img.height) * this.god.height;
         this.god.x = (windowWidth - this.god.width) / 2;
-        this.god.y = (windowHeight - this.god.height - 400) / 2;
+        this.god.y = (windowHeight - this.god.height - 400* this.scaleFactor) / 2;
     }
 
     dialogPicSetting() {
+        let newWidth = windowWidth * 0.9;
+        let newHeight = 320  * this.scaleFactor 
         this.dialogPic = {
             img: dialogImg,
-            height: 320
-        };
-        this.dialogPic.width = 1540;
-        this.dialogPic.x = (windowWidth - this.dialogPic.width) / 2;
-        this.dialogPic.y = (windowHeight - this.dialogPic.height - 100);
+            width: newWidth,
+            height: newHeight,
+            x: (windowWidth - newWidth) / 2, 
+            y: windowHeight - newHeight - 100 * this.scaleFactor 
+        };    
+    }
+
+    displayText(){
+        this.displayStory()
+        this.displayInstruction()
+    }
+
+    displayStory(){
+        fill(0);
+        textSize(28 * this.scaleFactor); 
+        textAlign(LEFT, TOP);
+        let textX = this.dialogPic.x + 36;
+        let textY = this.dialogPic.y + 30 + this.scrollY;
+        // show dialog text
+        text(this.typedText, textX, textY, this.dialogPic.width - 40, this.dialogPic.height - 40);
     }
 
     displayInstruction(){
         fill(255);
         noStroke();
-        textSize(36 * this.scaleFactor);
+        textSize(26 * this.scaleFactor);
         textAlign(CENTER, TOP);
-        text("Press Space to continue, or press Enter to start the game.", windowWidth  / 2,  windowHeight -  80);
+        text("Press Space to continue, or press Enter to start the game.", windowWidth  / 2,  windowHeight -  80* this.scaleFactor);
     }
 
     handleKeyPress() {
@@ -127,11 +141,22 @@ class GodView {
             this.typedText = "";  
             this.continueCount++;
         }else if (key === 'Enter') {
+            this.dialogContainer.remove(); 
             this.pageController.switchToNewStageMap();
         }
 
         if(this.continueCount == 2){
+            this.dialogContainer.remove();
             this.pageController.switchToNewStageMap();
         }
+    }
+
+    updateScale() {
+        let availableHeight = windowHeight * 0.9; //  5% padding
+        this.scaleFactor = min(windowWidth / 1000, availableHeight / 600); 
+        this.scaledWidth = 1000 * this.scaleFactor;
+        this.scaledHeight = 600 * this.scaleFactor;
+        this.canvasX = (windowWidth - this.scaledWidth) / 2;
+        this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
     }
 }
