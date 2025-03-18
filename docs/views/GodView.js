@@ -26,6 +26,8 @@ class GodView {
         this.dialogContainer.style('position', 'absolute');
         this.dialogContainer.style('top', this.dialogPic.y + 'px');
         this.dialogContainer.style('left', this.dialogPic.x + 'px');
+
+        this.continueCount = 0;
     }
 
     update() {
@@ -123,7 +125,12 @@ class GodView {
             this.dialogText = this.secondText;
             this.charIndex = 0;  
             this.typedText = "";  
+            this.continueCount++;
         }else if (key === 'Enter') {
+            this.pageController.switchToNewStageMap();
+        }
+
+        if(this.continueCount == 2){
             this.pageController.switchToNewStageMap();
         }
     }
