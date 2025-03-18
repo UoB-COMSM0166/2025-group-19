@@ -7,7 +7,11 @@ class WelcomeView {
     this.roadAnimation = new RoadAnimation();
     this.animalAnimation = new AnimalAnimation();
     this.cloudAnimation1 = new CloudAnimation(1, 30);
-    this.settingDialog = new SettingDialog();
+    this.dialogOn = false;
+    this.settingDialog = new SettingDialog(this);
+    this.isInRightContent = false;
+    this.dialogOption = 0;
+    
   }
 
   update() {
@@ -100,11 +104,35 @@ class WelcomeView {
       } else if (selectedOption === "INFORMATION") {
         alert("under construction ...");
       } 
-    }
-
-    // close settingDialog
-    if(key === 'C' || key === 'c'){
-      this.settingDialog.closeDialog();
+      if (this.dialogOn) {
+        if (this.dialogOption === 0){
+          this.settingDialog.handleSettingKeyPress(key);
+        }
+        else if (this.dialogOption === 1){
+          this.settingDialog.handleInfoKeyPress(key);
+        }
+      }
+    }else if (!this.dialogOn){
+      if (key === 'ArrowUp') {
+        this.selectedIndex = (this.selectedIndex - 1 + this.options.length) % this.options.length;
+      } else if (key === 'ArrowDown') {
+        this.selectedIndex = (this.selectedIndex + 1) % this.options.length;
+      } else if (key === 'Enter') {
+        const selectedOption = this.options[this.selectedIndex];
+        if (selectedOption === "START") {
+          this.controller.switchToNewStageMap();
+        } else if (selectedOption === "YOUR ZODIAC") {
+          this.controller.switchToStageMap();
+        } else if (selectedOption === "SETTING") {
+          this.dialogOption = 0;
+          this.settingDialog.openDialog(this.dialogOption);
+          this.dialogOn = true;
+        } else if (selectedOption === "INFORMATION") {
+          this.dialogOption = 1;
+          this.settingDialog.openDialog(this.dialogOption);
+          this.dialogOn = true;
+        }
+      }
     }
   }
 
@@ -116,5 +144,6 @@ class WelcomeView {
     this.canvasX = (windowWidth - this.scaledWidth) / 2;
     this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
   }
+
 }
   

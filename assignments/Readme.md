@@ -36,13 +36,17 @@
     <td align="left">Object Orientated Design</td>
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week05/Readme.md">Homework</a></td>
   </tr>
-    <tr>
+  <tr>
     <td align="center">Week 07</td>
     <td align="left">HCI Evulation</td>
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week07/Readme.md">Homework</a></td>
   </tr>
-    </tr>
-    <tr>
+  <tr>
+    <td align="center">Week 08</td>
+    <td align="left">Quantitative Evulation</td>
+    <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week08/Readme.md">Homework</a></td>
+  </tr>
+  <tr>
     <td align="center">Week 09</td>
     <td align="left">Software Quality & Testing</td>
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week09/Readme.md">Homework</a></td>
