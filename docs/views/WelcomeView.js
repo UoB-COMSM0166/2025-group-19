@@ -89,30 +89,15 @@ class WelcomeView {
   }
 
   handleKeyPress(key) {
-    if (key === 'ArrowUp') {
-      this.selectedIndex = (this.selectedIndex - 1 + this.options.length) % this.options.length;
-    } else if (key === 'ArrowDown') {
-      this.selectedIndex = (this.selectedIndex + 1) % this.options.length;
-    } else if (key === 'Enter') {
-      const selectedOption = this.options[this.selectedIndex];
-      if (selectedOption === "START") {
-        this.controller.switchToGod();
-      } else if (selectedOption === "YOUR ZODIAC") {
-        this.controller.switchToStageMap();
-      } else if (selectedOption === "SETTING") {
-        this.settingDialog.openDialog();
-      } else if (selectedOption === "INFORMATION") {
-        alert("under construction ...");
-      } 
-      if (this.dialogOn) {
-        if (this.dialogOption === 0){
-          this.settingDialog.handleSettingKeyPress(key);
-        }
-        else if (this.dialogOption === 1){
-          this.settingDialog.handleInfoKeyPress(key);
-        }
+    if (this.dialogOn) {
+      if (this.dialogOption === 0){
+        this.settingDialog.handleSettingKeyPress(key);
       }
-    }else if (!this.dialogOn){
+      else if (this.dialogOption === 1){
+        this.settingDialog.handleInfoKeyPress(key);
+      }
+    }
+    else if (!this.dialogOn){
       if (key === 'ArrowUp') {
         this.selectedIndex = (this.selectedIndex - 1 + this.options.length) % this.options.length;
       } else if (key === 'ArrowDown') {
@@ -120,7 +105,7 @@ class WelcomeView {
       } else if (key === 'Enter') {
         const selectedOption = this.options[this.selectedIndex];
         if (selectedOption === "START") {
-          this.controller.switchToNewStageMap();
+          this.controller.switchToGod();
         } else if (selectedOption === "YOUR ZODIAC") {
           this.controller.switchToStageMap();
         } else if (selectedOption === "SETTING") {
