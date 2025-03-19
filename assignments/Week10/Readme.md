@@ -277,7 +277,7 @@
         </td>
     </tr>
     <tr>
-        <td>As a player, I want to learn about the Chinese zodiac while playing, so that I can gain cultural knowledge.</td>
+        <td>As a player, I want to learn about different cultural traditions while playing, so that I can gain cultural knowledge.</td>
         <td>
             a. Display information about each zodiac sign in an engaging way.<br>
             b. Integrate the zodiac theme into game elements (e.g., backgrounds, power-ups).<br>
