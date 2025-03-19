@@ -252,10 +252,10 @@
     </tr>
 </table>
 
-## 3. Initiatives / Epics / User Stories
+## 3. Epics / User Stories / Acceptance Criteria
 <table border="1">
     <tr>
-        <th>Initiative / Epic</th>
+        <th>Epic</th>
         <th>User Story</th>
         <th>Acceptance Criteria</th>
     </tr>
