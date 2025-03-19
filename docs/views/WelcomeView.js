@@ -109,7 +109,7 @@ class WelcomeView {
       } else if (key === 'Enter') {
         const selectedOption = this.options[this.selectedIndex];
         if (selectedOption === "START") {
-          this.controller.switchToNewStageMap();
+          this.controller.switchToGod();
         } else if (selectedOption === "YOUR ZODIAC") {
           this.controller.switchToStageMap();
         } else if (selectedOption === "SETTING") {
