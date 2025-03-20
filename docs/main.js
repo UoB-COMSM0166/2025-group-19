@@ -48,6 +48,19 @@ function preload() {
   // others
   dialogImg = loadImage('assets/images/dialog-picture.png');
   dialogData = loadJSON('./models/components/story.json');
+  // zodiac silhouette
+  ratSilhouette = loadImage('assets/images/silhouette/rat.webp');
+  oxSilhouette = loadImage('assets/images/silhouette/ox.webp');
+  tigerSilhouette = loadImage('assets/images/silhouette/tiger.webp');
+  rabbitSilhouette = loadImage('assets/images/silhouette/rabbit.webp');
+  dragonSilhouette = loadImage('assets/images/silhouette/dragon.webp');
+  snakeSilhouette = loadImage('assets/images/silhouette/snake.webp');
+  horseSilhouette = loadImage('assets/images/silhouette/horse.webp');
+  goatSilhouette = loadImage('assets/images/silhouette/goat.webp');
+  monkeySilhouette = loadImage('assets/images/silhouette/monkey.webp');
+  roosterSilhouette = loadImage('assets/images/silhouette/rooster.webp');
+  dogSilhouette = loadImage('assets/images/silhouette/dog.webp');
+  pigSilhouette = loadImage('assets/images/silhouette/pig.webp');
 }
 
 function setup() {

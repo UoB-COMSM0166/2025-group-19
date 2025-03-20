@@ -73,8 +73,12 @@ class PageController {
     this.currentPage = new GodView(this);
   }
 
+  switchToYourZodiac(){
+    this.currentPage = new YourZodiacView(this);
+  }
+
   switchToMode() {
-      this.currentPage = new ModeView(this);
+    this.currentPage = new ModeView(this);
   }
 
   setStageName(stageName) {
