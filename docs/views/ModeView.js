@@ -8,6 +8,11 @@ class ModeView {
     update() {}
   
     display() {
+      document.body.style.cursor = "none";
+      document.addEventListener("mouseenter", () => {
+        document.body.style.cursor = "none";
+      });
+      
       background(0);
       textAlign(CENTER, CENTER);
 

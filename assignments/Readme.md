@@ -51,4 +51,9 @@
     <td align="left">Software Quality & Testing</td>
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week09/Readme.md">Homework</a></td>
   </tr>
+    <tr>
+    <td align="center">Week 10</td>
+    <td align="left">Software Engineering for Sustainability</td>
+    <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week10/Readme.md">Homework</a></td>
+  </tr>
 </table>
