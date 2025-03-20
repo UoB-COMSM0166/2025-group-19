@@ -5,24 +5,23 @@ let bgMusic;
 function preload() {
   skyBackground = loadImage('assets/images/skyBackground.webp');
   bgMusic = loadSound('assets/sounds/bgMusic.mp3'); 
-  mouseImg = loadImage('assets/images/characters/Rat.png');
-  cowImg = loadImage('assets/images/characters/Ox.png');
-  tigerImg = loadImage('assets/images/characters/Tiger.png');
-  rabbitImg = loadImage('assets/images/characters/Rabbit.png');
-  dragonImg = loadImage('assets/images/characters/Dragon.png');
-  snakeImg = loadImage('assets/images/characters/Snake.png');
-  horseImg = loadImage('assets/images/characters/Horse.png');
-  goatImg = loadImage('assets/images/characters/Goat.png');
-  monkeyImg = loadImage('assets/images/characters/Monkey.png');
-  roosterImg = loadImage('assets/images/characters/Rooster.png');
-  dogImg = loadImage('assets/images/characters/Dog.png');
-  pigImg = loadImage('assets/images/characters/Pig.png');
-  godImg = loadImage('assets/images/characters/God.png');
+  mouseImg = loadImage('assets/images/characters/Rat.webp');
+  cowImg = loadImage('assets/images/characters/Ox.webp');
+  tigerImg = loadImage('assets/images/characters/Tiger.webp');
+  rabbitImg = loadImage('assets/images/characters/Rabbit.webp');
+  dragonImg = loadImage('assets/images/characters/Dragon.webp');
+  snakeImg = loadImage('assets/images/characters/Snake.webp');
+  horseImg = loadImage('assets/images/characters/Horse.webp');
+  goatImg = loadImage('assets/images/characters/Goat.webp');
+  monkeyImg = loadImage('assets/images/characters/Monkey.webp');
+  roosterImg = loadImage('assets/images/characters/Rooster.webp');
+  dogImg = loadImage('assets/images/characters/Dog.webp');
+  pigImg = loadImage('assets/images/characters/Pig.webp');
+  godImg = loadImage('assets/images/characters/God.webp');
   // welcome-page
-  roadImg = loadImage('assets/images/welcome-page/road.png');
-  cloudImg1 = loadImage('assets/images/welcome-page/cloud-1.png');
-  cloudImg2 = loadImage('assets/images/welcome-page/cloud-2.png');
-  zodiacCatchImg = loadImage('assets/images//welcome-page/zodiacCatch.png');
+  roadImg = loadImage('assets/images/welcome-page/road.webp');
+  cloudImg1 = loadImage('assets/images/welcome-page/cloud-1.webp');
+  cloudImg2 = loadImage('assets/images/welcome-page/cloud-2.webp');
   boutiqueBitmaFont = loadFont('assets/font/BoutiqueBitmap9x9_Bold_1.5.ttf');
   this.teamImg = [
     loadImage('assets/images/welcome-page/team_areta.png'),
@@ -46,7 +45,7 @@ function preload() {
   timeDecrease = loadImage('assets/images/tools/timeDecrease.png');
   timeIncrease = loadImage('assets/images/tools/timeIncrease.png');
   // others
-  dialogImg = loadImage('assets/images/dialog-picture.png');
+  dialogImg = loadImage('assets/images/dialog-picture.webp');
   dialogData = loadJSON('./models/components/story.json');
   // zodiac silhouette
   ratSilhouette = loadImage('assets/images/silhouette/rat.webp');
