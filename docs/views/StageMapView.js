@@ -117,7 +117,7 @@ class StageMapView {
 
   loadImages() {
     for (let i = 0; i < this.zodiacSigns.length; i++) {
-      this.images[this.zodiacSigns[i]] = loadImage(`assets/images/characters/${this.zodiacSigns[i]}.png`);
+      this.images[this.zodiacSigns[i]] = loadImage(`assets/images/characters/${this.zodiacSigns[i]}.webp`);
     }
   }
 
