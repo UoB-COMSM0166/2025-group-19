@@ -28,7 +28,7 @@ class SettingDialog {
         };
         Object.values(this.keyboard_btns).forEach(btn => btn.hide());
         this.teamImg = teamImg;
-        this.teamNames = ["Areta", "Mikas", "Elle", "Daisy", "Erik", "Lukas"];
+        this.teamNames = ["Areta", "Daisy", "Elle", "Erik",  "Lucas", "Mikas"];
         
     }
 
@@ -207,20 +207,14 @@ class SettingDialog {
             let imgY = y + paddingY + row * (imgSize + paddingY);
             let img = this.teamImg[i];
             if(this.teamImg[i]){
+                let circleMask = createGraphics(imgSize, imgSize);
+                circleMask.ellipse(imgSize / 2, imgSize / 2, imgSize - 10, imgSize);
+                img.mask(circleMask);
                 image(img, imgX, imgY, imgSize, imgSize);
-                text(this.teamNames[i], imgX + imgSize / 2, imgY + imgSize + 20)
+                text(this.teamNames[i], imgX + imgSize / 2, imgY + imgSize + 20);
             }
             
         }
-        /**  for circle img
-        let img = this.teamImg1;
-        let circle = createGraphics(imgSize, imgSize);
-        //circle.ellipse(imgX + imgSize / 2, imgY + imgSize / 2, imgSize, imgSize);
-        circle.ellipse(imgSize, imgSize, imgX + imgSize / 2, imgY + imgSize / 2);
-        img.mask(circle);
-        image(img, imgX, imgY, imgSize, imgSize);
-        */
-
     }
 
     showSettingPopup(x, y, width, height) {
