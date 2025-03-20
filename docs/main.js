@@ -46,7 +46,7 @@ function preload() {
   timeIncrease = loadImage('assets/images/tools/timeIncrease.png');
   // others
   dialogImg = loadImage('assets/images/dialog-picture.webp');
-  dialogData = loadJSON('./models/components/story.json');
+  dialogData = loadJSON('./data/story.json');
   // zodiac silhouette
   ratSilhouette = loadImage('assets/images/silhouette/rat.webp');
   oxSilhouette = loadImage('assets/images/silhouette/ox.webp');
