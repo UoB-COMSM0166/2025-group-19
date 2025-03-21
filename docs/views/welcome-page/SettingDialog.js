@@ -18,7 +18,7 @@ class SettingDialog {
         this.slider_bgMusic.hide();
         this.slider_soundEffect.hide();
         this.selectedSliderIndex = 0;
-        this.selectedBtnIndex = 0;
+        this.selectedBtnIndex = -1;
         this.isInRightContent = false;
         this.keyboard_btns = {
             shortBall: createButton("SHORT\nBALL"),
@@ -29,6 +29,7 @@ class SettingDialog {
         Object.values(this.keyboard_btns).forEach(btn => btn.hide());
         this.teamImg = teamImg;
         this.teamNames = ["Areta", "Daisy", "Elle", "Erik",  "Lucas", "Mikas"];
+        this.scrollOffset = 0;
         
     }
 
@@ -71,18 +72,18 @@ class SettingDialog {
 
     handleSettingKeyPress(key) {
         if(this.dialogOn) {
-            if (!this.isInRightContent) {// check in leftBar or rightContent
+            if (!this.isInRightContent) {
                 if (key === 'ArrowUp') {
                     this.settingOption = (this.settingOption - 1 + 2) % 2;
                 } else if (key === 'ArrowDown') {
                     this.settingOption = (this.settingOption + 1) % 2;
-                } else if (key === 'q') {
+                } else if (key === 'Escape') {
                     this.popupVisible = false;
                     this.slider_bgMusic.hide();
                     this.slider_soundEffect.hide();
                     Object.values(this.keyboard_btns).forEach(btn => btn.hide());
                     this.closeDialog();
-                } else if (key === 'Enter') {
+                } else if (key === 'ArrowRight') {
                     this.isInRightContent = true;
                 }
             } else{
@@ -90,7 +91,7 @@ class SettingDialog {
                     this.handleSettingKeyboard(key);
                 } else if (this.settingOption === 0) {
                     this.handleSettingSoundKeyPress(key);
-                } else if (key === 'q') {
+                } else if (key === 'Escape') {
                     this.isInRightContent = false;
                 }
             }
@@ -104,8 +105,7 @@ class SettingDialog {
             this.selectedBtnIndex = (this.selectedBtnIndex - 1 + 4) % 4;
         } else if (key === 'ArrowDown') {
             this.selectedBtnIndex = (this.selectedBtnIndex + 1) % 4;
-
-        } else if (key === 'q') {
+        } else if (key === 'Escape') {
             this.isInRightContent = false;
         }
     }
@@ -125,7 +125,7 @@ class SettingDialog {
             } else {
                 this.slider_soundEffect.value(this.slider_soundEffect.value() + 10);
             }
-        } else if (key === 'q') {
+        } else if (key === 'Escape') {
             this.isInRightContent = false;
         }
     
@@ -141,7 +141,7 @@ class SettingDialog {
         fill(0);
         textAlign(CENTER, CENTER);
         textSize(25 * this.scaleFactor);
-        text('Press q to close dialog and Enter to control', this.dialogX + this.dialogWidth / 2, this.dialogY - 25); 
+        text('Press Esc to close dialog', this.dialogX + this.dialogWidth / 2, this.dialogY - 25); 
         if (this.displayOption === 0 ) {
             this.showSettingPopup(this.dialogX, this.dialogY, this.dialogWidth, this.dialogHeight);
         }
@@ -159,17 +159,17 @@ class SettingDialog {
         noStroke();
         fill(255);
         for(let i = 0; i < this.leftOptions_info.length; i++) {
-            const optionsY = y + i * height / 2;
-            if(this.infoOption === i) {
+            const optionsY = y + i * height / this.leftOptions_info.length + height / 5;
+            if (this.infoOption === i) {
                 textStyle(NORMAL);
                 stroke("pink");
                 textSize(35 * this.scaleFactor);
-                text(this.leftOptions_info[i], x + width / 6, optionsY + 60);
+                text(this.leftOptions_info[i], x + width / 6, optionsY);
             } else {
                 textStyle(NORMAL);
                 noStroke();
                 textSize(30 * this.scaleFactor);
-                text(this.leftOptions_info[i], x + width / 6, optionsY + 70);
+                text(this.leftOptions_info[i], x + width / 6, optionsY);
             }
           }
           if (this.infoOption === 0) {
@@ -181,14 +181,56 @@ class SettingDialog {
     }
 
     showInfoIntro(x, y, width, height) {
-        let introText = `Greetings young explorer!\n\nWelcome to Zodiac Land, where according to legend, the twelve fabled creatures of the Chinese zodiac calendar reside. Many have come to these sacred lands in search of these mythological beings, but few have succeeded, and fewer have been able to complete the ultimate quest of taming them all.\n\nI must warn you that the path you are about to take is treacherous. Each animal is able to harness immense power, and will do anything to deter your efforts. While some effects do you harm, others may be used to your benefit, and use them wisely. After all, time is of the essence! Please also beware of the all-mighty black holes, where one wrong slip could prove disastrous for your efforts.\n\nChoose the beast with the greatest affinity (in accordance with your birth year), or start wherever your wish - the choice is up to you.\n\nBest of luck, young one.`;
+        let introText = `
+        Greetings young explorer!\n
+        Welcome to Zodiac Land, where according to legend, the twelve fabled creatures of the Chinese zodiac calendar reside. 
+        Many have come to these sacred lands in search of these mythological beings, but few have succeeded, and fewer have been able to complete the ultimate quest of taming them all.\n
+        I must warn you that the path you are about to take is treacherous. \n
+        Each animal is able to harness immense power, and will do anything to deter your efforts. \n
+        While some effects do you harm, others may be used to your benefit, and use them wisely. \n
+        After all, time is of the essence! \n
+        Please also beware of the all-mighty black holes, where one wrong slip could prove disastrous for your efforts.\n
+        Choose the beast with the greatest affinity (in accordance with your birth year), or start wherever your wish - the choice is up to you.\n
+        Best of luck, young one.`;
+        height -= height / 10;
+        y += height / 10;
+        width -= width / 10;
         fill(255);
         textAlign(LEFT, TOP);
         strokeWeight(0.5);
         textSize(18 * this.scaleFactor);
-        text(introText, x, y + height / 10, width * 0.8, height * 0.8);
-        this.scrollY += this.scrollSpeed;
-        this.scrollY = constrain(scrollY, 0, height / 5 * 4);
+        push();
+        const lines = introText.split('\n').map(line => line.trim());;
+        const wrappedLines = [];
+        for (let line of lines) {
+            let words = line.split(' ');
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                let word = words[i];
+                if (textWidth(currentLine + ' ' + word) <= width) {
+                    currentLine += ' ' + word; 
+                } else {
+                    wrappedLines.push(currentLine);
+                    currentLine = word;
+                }
+            }
+            wrappedLines.push(currentLine);
+        }
+        const lineHeight = 24 * this.scaleFactor;
+        const textHeight = wrappedLines.length * lineHeight;
+        const maxScrollOffset = textHeight + height;
+        this.scrollOffset = constrain(this.scrollOffset, 0, maxScrollOffset);
+        const startLine = floor(this.scrollOffset / lineHeight);
+        const verticalOffset = this.scrollOffset % lineHeight;
+        for (let i = startLine; i < wrappedLines.length; i++) {
+            const lineY = y + (i - startLine) * lineHeight - verticalOffset;
+            if (lineY + lineHeight < y || lineY > y + height - 20) {
+                continue;
+            }
+            fill(255);
+            text(wrappedLines[i], x, lineY);
+        }
+        pop();      
     }
 
     showInfoTeamImg(x, y, width, height) {
@@ -221,22 +263,22 @@ class SettingDialog {
         stroke('white'); // draw a line to seperate the leftbar and content
         strokeWeight(5);
         line(x + width / 3, y + 30, x + width / 3, y + height- 30); //leftbar-menu outline
-        textAlign(CENTER, CENTER); //
+        textAlign(CENTER, CENTER); 
         noStroke();
         fill(255);
         for(let i = 0; i < this.leftOptions.length; i++) {
-            const optionsY = y + i * height / 2;
+            const optionsY = y + i * height / this.leftOptions.length + height / 5;
             if(this.settingOption === i) {
                 textStyle(NORMAL);
                 stroke("pink");
                 textSize(35 * this.scaleFactor);
-                text(this.leftOptions[i], x + width / 6, optionsY + 60);
+                text(this.leftOptions[i], x + width / 6, optionsY);
             }
             else {
                 textStyle(NORMAL);
                 noStroke();
                 textSize(25 * this.scaleFactor);
-                text(this.leftOptions[i], x + width / 6, optionsY + 70);
+                text(this.leftOptions[i], x + width / 6, optionsY);
             }
         }
         switch (this.settingOption) {
@@ -300,8 +342,10 @@ class SettingDialog {
             let actionY = y + height / actions.length * i + height / 10;
             let btn = this.keyboard_btns[action_cons[i]];
             if(this.selectedBtnIndex === i) {
+                noStroke();
                 fill("yellow");
             } else {
+                noStroke();
                 fill(255);
             }
             btn.position(btnX, actionY);
@@ -311,14 +355,27 @@ class SettingDialog {
     }
 
     handleInfoKeyPress(key) {
-        if (key === 'ArrowUp') {
-            this.infoOption = (this.infoOption - 1 + 2) % 2;
-        } else if (key === 'ArrowDown') {
-            this.infoOption = (this.infoOption + 1) % 2;
-        } else if (key === 'q') {
-            this.dialogOn = false;
-            this.infoVisible = false;
-            this.closeDialog();
+        if(!this.isInRightContent) {
+            if (key === 'ArrowUp') {
+                this.infoOption = (this.infoOption - 1 + 2) % 2;
+            } else if (key === 'ArrowDown') {
+                this.infoOption = (this.infoOption + 1) % 2;
+            } else if (key === 'Escape') {
+                this.dialogOn = false;
+                this.infoVisible = false;
+                this.scrollOffset = 0;
+                this.closeDialog();
+            } else if (key === 'ArrowRight' && this.infoOption == 1) {
+                this.isInRightContent = true;
+            }
+        } else {
+            if (key === 'ArrowUp') {
+                this.scrollOffset -= 20;
+            } else if (key === 'ArrowDown') {
+                this.scrollOffset += 20;
+            } else if (key === 'Escape') {
+                this.isInRightContent = false;
+            }
         }
     }
 }
