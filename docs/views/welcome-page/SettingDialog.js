@@ -85,6 +85,9 @@ class SettingDialog {
                     this.closeDialog();
                 } else if (key === 'ArrowRight') {
                     this.isInRightContent = true;
+                    if (this.settingOption === 1) {
+                        this.selectedBtnIndex = 0; // Select the first button
+                    }
                 }
             } else{
                 if (this.settingOption === 1) {
@@ -106,6 +109,7 @@ class SettingDialog {
         } else if (key === 'ArrowDown') {
             this.selectedBtnIndex = (this.selectedBtnIndex + 1) % 4;
         } else if (key === 'Escape') {
+            this.selectedBtnIndex = -1;
             this.isInRightContent = false;
         }
     }
@@ -126,6 +130,7 @@ class SettingDialog {
                 this.slider_soundEffect.value(this.slider_soundEffect.value() + 10);
             }
         } else if (key === 'Escape') {
+            this.selectedSliderIndex = 0;
             this.isInRightContent = false;
         }
     
@@ -140,8 +145,8 @@ class SettingDialog {
         rect(this.dialogX, this.dialogY, this.dialogWidth, this.dialogHeight, 20 * this.scaleFactor); 
         fill(0);
         textAlign(CENTER, CENTER);
-        textSize(25 * this.scaleFactor);
-        text('Press Esc to close dialog', this.dialogX + this.dialogWidth / 2, this.dialogY - 25); 
+        textSize(23 * this.scaleFactor);
+        text('Press esc to close dialog & return to left menu.\n Press arrow keys to control.', this.dialogX + this.dialogWidth / 2, this.dialogY - 50); 
         if (this.displayOption === 0 ) {
             this.showSettingPopup(this.dialogX, this.dialogY, this.dialogWidth, this.dialogHeight);
         }
@@ -218,7 +223,8 @@ class SettingDialog {
         }
         const lineHeight = 24 * this.scaleFactor;
         const textHeight = wrappedLines.length * lineHeight;
-        const maxScrollOffset = textHeight + height;
+        //const maxScrollOffset = textHeight + height;
+        const maxScrollOffset = max(textHeight - height, 0);
         this.scrollOffset = constrain(this.scrollOffset, 0, maxScrollOffset);
         const startLine = floor(this.scrollOffset / lineHeight);
         const verticalOffset = this.scrollOffset % lineHeight;
@@ -310,16 +316,16 @@ class SettingDialog {
             } else {
                 fill(255);
             }
-            text("Background\n Music", x + 30, y + height / 4);
+            text("Background\n Music", x + width / 6, y + height / 4);
             if (this.selectedSliderIndex === 1) {
                 fill("yellow");
             } else {
                 fill(255);
             }
-            text("Sound\n Effects", x + 30, y + height / 4 * 3);
+            text("Sound\n Effects", x + width / 6, y + height / 4 * 3);
         } else {
-            text("Background\n Music", x + 30, y + height / 4);
-            text("Sound\n Effects", x + 30, y + height / 4 * 3);
+            text("Background\n Music", x + width / 6, y + height / 4);
+            text("Sound\n Effects", x + width / 6, y + height / 4 * 3);
 
         }
         this.slider_bgMusic.size(width / 4);
@@ -337,8 +343,8 @@ class SettingDialog {
         textAlign(CENTER, CENTER);
         textSize(25 * this.scaleFactor);
         for (let i = 0; i < actions.length; i++) {
-            let actionX = x + 30;
-            let btnX = x + width / 3;
+            let actionX = x + width / 6;
+            let btnX = x + width / 2;
             let actionY = y + height / actions.length * i + height / 10;
             let btn = this.keyboard_btns[action_cons[i]];
             if(this.selectedBtnIndex === i) {
