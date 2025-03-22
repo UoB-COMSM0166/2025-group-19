@@ -290,6 +290,20 @@ This structured approach helped us maintain a clear separation of concerns and f
 
 ---
 # Implementation
+## Anticipated Challenges
+Before the development stage, we anticipated several challenges:
+* Ball Physics: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult and require advanced physics knowledge.
+* Difficulty Balancing: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.
+However, as we progressed, these concerns proved manageable. Since the ball moves without gravity, its position could be updated simply by adding or deducting to its x and y values. For difficulty balancing, we refined the parameters through iterative testing between our group members, and got positive feedback from the user evaluations. 
+
+## Unexpected Challenges
+While the above anticipated difficulties were easier to resolve, we faced unexpected challenges during development:
+* Ball Speed in Gravity Mode
+    One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.
+    Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.
+    However, implementing this became complex due to interactions with other power-ups that also influenced ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.
+* Displaying Active Power-Ups and Timers
+    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active, required additional debugging and adjustments.
 
 ---
 # Evaluation
