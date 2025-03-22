@@ -298,11 +298,11 @@ However, as we progressed, these concerns proved manageable. Since the ball move
 
 ## Unexpected Challenges
 While the above anticipated difficulties were easier to resolve, we faced unexpected challenges during development:
-* Ball Speed in Gravity Mode
-    One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.
-    Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.
+* Ball Speed in Gravity Mode  
+    One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.  
+    Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.  
     However, implementing this became complex due to interactions with other power-ups that also influenced ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.
-* Displaying Active Power-Ups and Timers
+* Displaying Active Power-Ups and Timers  
     Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active, required additional debugging and adjustments.
 
 ---
