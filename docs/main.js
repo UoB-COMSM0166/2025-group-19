@@ -25,12 +25,12 @@ function preload() {
   zodiacCatchImg = loadImage('assets/images//welcome-page/zodiacCatch.png');
   boutiqueBitmaFont = loadFont('assets/font/BoutiqueBitmap9x9_Bold_1.5.ttf');
   this.teamImg = [
-    loadImage('assets/images/welcome-page/team_areta.png'),
-    loadImage('assets/images/welcome-page/team_daisy.png'),
-    loadImage('assets/images/welcome-page/team_elle.png'),
-    loadImage('assets/images/welcome-page/team_erik.png'),
-    loadImage('assets/images/welcome-page/team_lukas.png'),
-    loadImage('assets/images/welcome-page/team_mikas.png')
+    loadImage('assets/images/welcome-page/team_areta.webp'),
+    loadImage('assets/images/welcome-page/team_daisy.webp'),
+    loadImage('assets/images/welcome-page/team_elle.webp'),
+    loadImage('assets/images/welcome-page/team_erik.webp'),
+    loadImage('assets/images/welcome-page/team_lucas.webp'),
+    loadImage('assets/images/welcome-page/team_mikas.webp')
   ];
   // tool images
   ballGrow = loadImage('assets/images/tools/ballGrow.png');
