@@ -303,7 +303,12 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.  
     However, implementing this became complex due to interactions with other power-ups that also influenced ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.
 * Displaying Active Power-Ups and Timers  
-    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active, required additional debugging and adjustments.
+    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active, required additional debugging and adjustments.  
+    We achieved this by:  
+    1. Making an instance of a timer after a player collects a power-up which keeps track of its duration 
+    2. The power-up type and remaining time are sent to the sidebar for display to the player.
+    3. In the case that the player collects the same type of power-up whilst the effect is still active, the EffectController will first reset the existing timer and then update the duration on the sidebar to reflect the newly collected power-up’s remaining time
+    4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active
 
 ---
 # Evaluation
