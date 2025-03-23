@@ -190,8 +190,8 @@
 
 		{ "x": 430, "y": 250, "colour": "black" },
 		{ "x": 450, "y": 250, "colour": "brown" },
-		{ "x": 470, "y": 250, "colour": "gold" },
-		{ "x": 490, "y": 250, "colour": "gold" },
+		{ "x": 470, "y": 250, "blackhole": true, "colour": "gold" },
+		{ "x": 490, "y": 250, "blackhole": true, "colour": "gold" },
 		{ "x": 510, "y": 250, "colour": "brown" },
 		{ "x": 530, "y": 250, "colour": "brown" },
 		{ "x": 550, "y": 250, "colour": "brown" },
