@@ -307,7 +307,7 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     We achieved this by:  
     1. Making an instance of a timer after a player collects a power-up which keeps track of its duration 
     2. The power-up type and remaining time are sent to the sidebar for display to the player.
-    3. In the case that the player collects the same type of power-up whilst the effect is still active, the EffectController will first reset the existing timer and then update the duration on the sidebar to reflect the newly collected power-up’s remaining time
+    3. In the case that the player collects the same type of power-up whilst the effect is still active, the `EffectController` will first reset the existing timer and then update the duration on the sidebar to reflect the newly collected power-up’s remaining time
     4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active
 
 ---
