@@ -1159,6 +1159,57 @@ Based on the Wilcoxon Signed-Rank Test:
 
 ---
 # Process
+## Collaboration
+Our team followed an Agile development process, incorporating Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
+### Agile Workflow
+#### Iterative Development with Scrum
+We held Scrum meetings twice a week (Tuesdays and Thursdays) to continuously adapt and improve our workflow:
+- Tuesdays: A comprehensive Kanban board review, where we created new tasks, reviewed outstanding ones, and planned weekly improvements.
+- Thursdays: A stand-up meeting focused on addressing development challenges and ensuring smooth progress.
+
+To foster leadership and shared responsibility, Erik later suggested that all team members take turns hosting Scrum meetings. In the following weeks, we rotated the Scrum hosting role weekly, with the host also serving as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned code reviewer. Previously, only a few members handled reviews, which led to an uneven workload. By rotating these roles, everyone gained experience in leading discussions, reviewing code, and understanding different coding styles, strengthening both individual and team development skills.
+
+#### Task Management & Sustainable Pace
+To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
+
+At the start, none of us had a clear idea of the best development workflow. However, through continuous adjustments and refinements, we gradually developed a process that worked best for our team. The Scrum rotation and structured review system were key improvements that not only enhanced collaboration but also ensured long-term project sustainability.
+
+### Version Control & Code Reviews
+We adopted a structured Git branching model:
+
+- Main branches: `main` (stable version) and `develop` (staging environment).
+
+- Feature branches: Named using `feature/new_feature`, ensuring clarity and consistency.
+
+- Code reviews: Before merging into develop, at least one team member had to approve changes, enforcing quality control and knowledge sharing.
+
+By implementing Collective Ownership, we ensured that all team members had access to the entire codebase, allowing any developer to modify any part of the code when necessary. This reduced bottlenecks and increased overall code quality.
+
+### Extreme Programming (XP) Practices
+#### Simple Design
+We adopted the Model-View-Controller (MVC) architecture to ensure a clear separation of concerns, making the system more modular and easier to maintain. Each component was organized based on its functionality, allowing for better code reusability and reducing complexity. This structured approach not only streamlined development but also facilitated collaboration among team members.
+
+[Reference: MVC Architecture](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/docs)
+
+#### Sustainable Pace
+To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts"` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
+
+#### Coding Standards
+A unified coding style was enforced across the project, improving readability, maintainability, and collaboration among team members.
+
+#### Collective Ownership
+All team members had ownership of the entire codebase, meaning any developer could modify any part of the code when necessary. This practice reduced bottlenecks and increased overall code quality.
+
+#### Whole Team Approach
+Everyone actively participated in all stages of the project, from planning to implementation, fostering cross-functional collaboration and improving overall development efficiency.
+
+During `Reading Week`, we strategically utilized the extra time for focused development, enabling us to establish a strong foundation for the project. By making substantial early progress, we were able to distribute our workload more evenly in the following weeks, reducing stress from other coursework and deadlines.
+
+As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimizing last-minute pressure.
+
+#### Results: Efficient & High-Quality Development
+By embracing Agile and XP principles, we established a structured yet flexible development workflow. Through Scrum rotation, structured reviews, and early intensive development, we ensured long-term efficiency, steady progress, and high-quality code while avoiding last-minute stress.
+
 ## Zenhub Kanban
 
 In our project, we use ZenHub as our project management tool due to its key advantages:
