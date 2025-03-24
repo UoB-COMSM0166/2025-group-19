@@ -81,10 +81,10 @@
       { "x": 400, "y": 190, "colour": "orange" },
       { "x": 420, "y": 190, "colour": "orange" },
       { "x": 440, "y": 190, "colour": "brown" },
-      { "x": 460, "y": 190, "colour": "orange" },
-      { "x": 480, "y": 190, "bomb": true, "colour": "black" },
+      { "x": 460, "y": 190, "blackhole": true, "colour": "orange" },
+      { "x": 480, "y": 190, "colour": "black" },
 
-      { "x": 260, "y": 210, "bomb": true, "colour": "black" },
+      { "x": 260, "y": 210, "colour": "black" },
       { "x": 280, "y": 210, "colour": "black" },
       { "x": 300, "y": 210, "colour": "orange" },
       { "x": 320, "y": 210, "colour": "black" },
@@ -94,10 +94,10 @@
       { "x": 400, "y": 210, "colour": "orange" },
       { "x": 420, "y": 210, "colour": "orange" },
       { "x": 440, "y": 210, "colour": "brown" },
-      { "x": 460, "y": 210, "colour": "orange" },
+      { "x": 460, "y": 210, "blackhole": true, "colour": "orange" },
       { "x": 480, "y": 210, "colour": "black" },
   
-      { "x": 280, "y": 230, "colour": "black" },
+      { "x": 280, "y": 230, "bomb": true, "colour": "black" },
       { "x": 300, "y": 230, "colour": "pink" },
       { "x": 320, "y": 230, "colour": "orange" },
       { "x": 340, "y": 230, "colour": "black" },
@@ -153,7 +153,7 @@
       { "x": 340, "y": 350, "colour": "black" },
       { "x": 380, "y": 350, "colour": "black" },
       { "x": 400, "y": 350, "colour": "black" },
-      { "x": 420, "y": 350, "colour": "black" },
+      { "x": 420, "y": 350, "bomb": true, "colour": "black" },
 
 
       { "x": 120, "y": 220, "colour": "black" },
@@ -162,7 +162,7 @@
 
       { "x": 100, "y": 240, "colour": "black" },
       { "x": 120, "y": 240, "colour": "black" },
-      { "x": 140, "y": 240, "colour": "brown" },
+      { "x": 140, "y": 240, "blackhole": true, "colour": "brown" },
       { "x": 160, "y": 240, "colour": "black" },
 
       { "x": 80, "y": 260, "colour": "black" },
@@ -240,7 +240,7 @@
       { "x": 260, "y": 420, "colour": "black" },
       { "x": 280, "y": 420, "colour": "black" },
 
-      { "x": 80, "y": 440, "colour": "black" },
+      { "x": 80, "y": 440, "bomb": true, "colour": "black" },
       { "x": 100, "y": 440, "colour": "dull_yellow" },
       { "x": 120, "y": 440, "colour": "dull_yellow" },
       { "x": 140, "y": 440, "colour": "dull_yellow" },
