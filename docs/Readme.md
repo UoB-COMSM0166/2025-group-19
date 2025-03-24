@@ -22,6 +22,9 @@ code/
 │       ├── Stage02Controller.js
 │       └── ...
 │
+├── data/                            # Defines game text
+│   └── *.json
+|
 ├── models/                          # Defines game objects and behaviors
 │   ├── components/                  # Defines core game objects
 │   │   ├── Ball.js                  # Ball properties and behavior
