@@ -1195,10 +1195,12 @@ We adopted the Model-View-Controller (MVC) architecture to ensure a clear separa
 To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
 
 #### Coding Standards
-A unified coding style was enforced across the project, improving readability, maintainability, and collaboration among team members.
+We adhered to a consistent development standard, encompassing maintainability, readability, the MVC architecture, and object-oriented principles. After completing the implementation of a feature, we submitted a pull request for peer review by other team members.
 
 #### Collective Ownership
-All team members had ownership of the entire codebase, meaning any developer could modify any part of the code when necessary. This practice reduced bottlenecks and increased overall code quality.
+All team members had ownership of the entire codebase, allowing any developer to modify any part of the code when necessary. This practice reduced bottlenecks and improved overall code quality. When a team member encountered challenges with a specific feature, they could seek assistance from others for troubleshooting or further research.
+
+For example, we collaborated on issues such as the black hole effect for bricks, the physics behavior of the ball, and display problems with sidebar power-ups. Through collective problem-solving, we refined our solutions and enhanced the overall implementation.
 
 #### Whole Team Approach
 Everyone actively participated in all stages of the project, from planning to implementation, fostering cross-functional collaboration and improving overall development efficiency.
