@@ -1207,10 +1207,19 @@ During `Reading Week`, we strategically utilized the extra time for focused deve
 
 As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimizing last-minute pressure.
 
+<p align="center">
+  <b>Figure</b><br>
+  <i>Productive Period</i><br>
+  <img src="./assets/reading-week-commit.png" width="400" alt="Block" style="border: 5px solid black;">
+</p>
+
 #### Results: Efficient & High-Quality Development
 By embracing Agile and XP principles, we established a structured yet flexible development workflow. Through Scrum rotation, structured reviews, and early intensive development, we ensured long-term efficiency, steady progress, and high-quality code while avoiding last-minute stress.
 
-## Zenhub Kanban
+## Development & Project Management Tools
+Throughout the development process, we utilized ZenHub Kanban and Whimsical Wireframe to enhance project management and collaboration efficiency. These tools helped us track development progress, plan system architecture, and ensure seamless communication among team members.
+
+### Zenhub Kanban
 
 In our project, we use ZenHub as our project management tool due to its key advantages:
 
@@ -1227,7 +1236,7 @@ Additionally, ZenHub’s deep integration ensures that creating or updating issu
 </p>
 
 
-## Whimsical Wireframe
+### Whimsical Wireframe
 
 We use Whimsical to store and organize our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It provides real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for efficient planning and coordination.
 
