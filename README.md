@@ -135,7 +135,17 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
   <i>(need a pic here)</i>
 </p>
 
+## Early Stage Design
+After brainstorming and discussing, we decided to use a brick breaker game as the project for this development. Initially, Eric developed the first prototype of the brick breaker game.
 
+<p align="center">
+ <b>Figure 4</b><br>
+ <i>Game prototype</i><br>
+ <img src="./assets/game-prototype.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and further brainstormed from there. Ultimately, we chose the Chinese Zodiac as the core theme for the game, combining it with the brick-breaking gameplay, resulting in the creation of Zodiac Catch.
+In fact, initially, due to time constraints during development, we planned to feature only the first six zodiac animals and even considered naming the game Zodiac Catch (Half). However, as development progressed and the team put in more effort, we eventually decided to include all twelve zodiac animals, making the game more complete and enjoyable
 
 
 ## Paper Prototype
