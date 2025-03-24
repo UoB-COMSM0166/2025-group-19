@@ -1192,7 +1192,7 @@ We adopted the Model-View-Controller (MVC) architecture to ensure a clear separa
 [Reference: MVC Architecture](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/docs)
 
 #### Sustainable Pace
-To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts"` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
+To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
 
 #### Coding Standards
 A unified coding style was enforced across the project, improving readability, maintainability, and collaboration among team members.
