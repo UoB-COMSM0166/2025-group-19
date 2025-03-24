@@ -12,54 +12,54 @@
 ```
 code/
 │
-├── controllers/               # Handles game logic and user interactions
-│   ├── EffectController.js    # Controls power-up effects
-│   ├── KeyboardController.js  # Manages keyboard input for paddle movement
-│   ├── PageController.js      # Controls page navigation
-│   ├── StageController.js     # Manages overall stage logic
-│   └── stage/                 # Specific controllers for each stage
+├── controllers/                     # Handles game logic and user interactions
+│   ├── EffectController.js          # Controls power-up effects
+│   ├── KeyboardController.js        # Manages keyboard input for paddle movement
+│   ├── PageController.js            # Controls page navigation
+│   ├── StageController.js           # Manages overall stage logic
+│   └── stage/                       # Specific controllers for each stage
 │       ├── Stage01Controller.js
 │       ├── Stage02Controller.js
 │       └── ...
 │
-├── models/                    # Defines game objects and behaviors
-│   ├── components/            # Defines core game objects
-│   │   ├── Ball.js            # Ball properties and behavior
-│   │   ├── Brick.js           # Brick properties and collision logic
-│   │   ├── Paddle.js          # Paddle movement and interaction
-│   │   ├── Tool.js            # Power-up item behavior
-│   │   └── StagePattern/      # Defines the pixel-based layout of bricks for each stage
+├── models/                          # Defines game objects and behaviors
+│   ├── components/                  # Defines core game objects
+│   │   ├── Ball.js                  # Ball properties and behavior
+│   │   ├── Brick.js                 # Brick properties and collision logic
+│   │   ├── Paddle.js                # Paddle movement and interaction
+│   │   ├── Tool.js                  # Power-up item behavior
+│   │   └── StagePattern/            # Defines the pixel-based layout of bricks for each stage
 │   │       └── *.json
-│   ├── effect/                # Defines different power-up effects
-│   │   ├── Effect.js          # Base class for all effects
-│   │   ├── BallInfiniteEffect.js  # Grants infinite balls
-│   │   ├── BallSizeEffect.js  # Changes ball size
-│   │   ├── BallSpeedEffect.js # Alters ball speed
-│   │   ├── GravityEffect.js   # Modifies gravity influence
+│   ├── effect/                      # Defines different power-up effects
+│   │   ├── Effect.js                # Base class for all effects
+│   │   ├── BallInfiniteEffect.js    # Grants infinite balls
+│   │   ├── BallSizeEffect.js        # Changes ball size
+│   │   ├── BallSpeedEffect.js       # Alters ball speed
+│   │   ├── GravityEffect.js         # Modifies gravity influence
 │   │   ├── PaddleDirectionEffect.js # Reverses paddle controls
-│   │   ├── PaddleSizeEffect.js # Adjusts paddle size
-│   │   └── TimeEffect.js      # Affects game time
-│   ├── special/               # Defines brick-specific effects
-│   │   └── BlackHoleEffect.js # Creates a black hole effect on bricks
-│   └── state/                 # Manages stage states
-│       └── StageState.js      # Tracks stage progression and status
+│   │   ├── PaddleSizeEffect.js      # Adjusts paddle size
+│   │   └── TimeEffect.js            # Affects game time
+│   ├── special/                     # Defines brick-specific effects
+│   │   └── BlackHoleEffect.js       # Creates a black hole effect on bricks
+│   └── state/                       # Manages stage states
+│       └── StageState.js            # Tracks stage progression and status
 │
-├── views/                     # Handles visual rendering
-│   ├── GameView.js            # Renders the game screen
-│   ├── GodView.js             # Developer mode for debugging
-│   ├── ModeView.js            # Displays different game modes
-│   ├── NewStageMapView.js     # Handles new stage creation view
-│   ├── SidebarView.js         # Displays game sidebar and stats
-│   ├── StageMapView.js        # Renders the stage map
-│   ├── WelcomeView.js         # Welcome screen UI
-│   └── YourZodiacView.js      # Zodiac-themed game view
+├── views/                           # Handles visual rendering
+│   ├── GameView.js                  # Renders the game screen
+│   ├── GodView.js                   # Developer mode for debugging
+│   ├── ModeView.js                  # Displays different game modes
+│   ├── NewStageMapView.js           # Handles new stage creation view
+│   ├── SidebarView.js               # Displays game sidebar and stats
+│   ├── StageMapView.js              # Renders the stage map
+│   ├── WelcomeView.js               # Welcome screen UI
+│   └── YourZodiacView.js            # Zodiac-themed game view
 │
-├── styles/                    # CSS styles for the game
+├── styles/                          # CSS styles for the game
 │   └── style.css
 │
-├── main.js                    # Initializes the game
-├── index.html                 # Main entry point
-└── README.md                  # Game documentation
+├── main.js                          # Initializes the game
+├── index.html                       # Main entry point
+└── README.md                        # Game documentation
 ```
 
 ## Technologies Used
