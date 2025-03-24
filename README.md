@@ -260,6 +260,19 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
   <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
+## Identifying Stakeholders
+<p align="center">
+  <b>Figure 5</b><br>
+  <i>Stakeholders</i><br>
+  <img src="./assets/stakeholders.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+The stakeholders of Zodiac Catch are divided into four key groups:
+At the core level, the product itself—Zodiac Catch—delivers a fun and challenging brick-breaker experience with Chinese zodiac elements.
+The development team, consisting of developers, designers, and a Scrum Master, is responsible for building, testing, and refining the game to ensure its quality and playability.
+In the containing system, professors and experts provide guidance, technical insights, and evaluation to support the game’s development.
+Finally, in the wider environment, casual and competitive gamers engage with the game, offering valuable feedback that helps enhance its quality and overall experience.
+
 
 # Design
 ## Class Diagrams
