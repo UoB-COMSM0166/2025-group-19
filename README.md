@@ -1169,10 +1169,10 @@ We held Scrum meetings twice a week (Tuesdays and Thursdays) to continuously ada
 
 To foster leadership and shared responsibility, Erik later suggested that all team members take turns hosting Scrum meetings. In the following weeks, we rotated the Scrum hosting role weekly, with the host also serving as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned code reviewer. Previously, only a few members handled reviews, which led to an uneven workload. By rotating these roles, everyone gained experience in leading discussions, reviewing code, and understanding different coding styles, strengthening both individual and team development skills.
 
-#### Task Management & Sustainable Pace
-To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
-
+#### Task Management & Workflow Refinement
 At the start, none of us had a clear idea of the best development workflow. However, through continuous adjustments and refinements, we gradually developed a process that worked best for our team. The Scrum rotation and structured review system were key improvements that not only enhanced collaboration but also ensured long-term project sustainability.
+
+To maintain a steady workflow and prevent last-minute rushes, we assigned a one-week deadline to each task. This aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to manage workloads effectively without relying on last-minute efforts. By structuring our development process early on, we ensured that each sprint was well-paced and balanced.
 
 ### Version Control & Code Reviews
 We adopted a structured Git branching model:
