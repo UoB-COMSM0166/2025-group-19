@@ -63,7 +63,8 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
 ---
 
 # Requirements
-## Early Stages design & Ideation process
+In the early stages of the game project, we conducted a brainstorming session where team members came up with ideas based on their personal interests and the feasibility of the game. During the first meeting, we presented our proposals and voted on them. Ultimately, we chose brick-breaking as the game project for this development, as it balanced both feasibility and fun. To facilitate creative brainstorming, we used Online Word as our discussion tool, enabling real-time sharing and collaboration.
+
 <table>
     <tr>
         <th>Game Type</th>
@@ -130,9 +131,8 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
 
 <p align="center">
   <b>Figure 3</b><br>
-  <i>Brainstormed Game Ideas on online Word</i><br>
-  <!-- <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;"> -->
-  <i>(need a pic here)</i>
+  <i>Brainstormed Game Ideas on Online Word</i><br>
+  <img src="./assets/word-game-ideas.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Early Stage Design
