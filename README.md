@@ -26,7 +26,7 @@
 ---
 # Team Members
 
-![groupPhoto](https://github.com/user-attachments/assets/ed444ef8-22ce-410e-9d05-1c2d5bb0d39b)
+![teamImg](https://github.com/user-attachments/assets/36006e1a-b266-4227-af69-b0e1b9065816)
 
 <div align="center">
 
