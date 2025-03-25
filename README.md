@@ -63,7 +63,8 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
 ---
 
 # Requirements
-## Early Stages design & Ideation process
+In the early stages of the game project, we conducted a brainstorming session where team members came up with ideas based on their personal interests and the feasibility of the game. During the first meeting, we presented our proposals and voted on them. To facilitate creative brainstorming, we used Online Word as our discussion tool, enabling real-time sharing and collaboration.
+
 <table>
     <tr>
         <th>Game Type</th>
@@ -128,6 +129,56 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
     </tr>
 </table>
 
+<p align="center">
+  <b>Figure 2</b><br>
+  <i>Brainstormed Game Ideas on Online Word</i><br>
+  <img src="./assets/word-game-ideas.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+## Early Stage Design
+After brainstorming and discussions, we decided to use the brick breaker game as the project for this development. Next, we used a paper prototype to streamline the game flow, helping everyone gain a clearer blueprint and understanding of the game.
+
+<p align="center">
+  <b>Figure 3</b><br>
+  <i>Paper Prototype</i><br>
+  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+Following this, Eric began the initial development of the brick breaker game, which became the first prototype of our game.
+
+<p align="center">
+ <b>Figure 4</b><br>
+ <i>Game prototype</i><br>
+ <img src="./assets/game-prototype.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and incorporated this concept into our digital prototype, further brainstorming and refining the game design from there. Ultimately, we chose the Chinese Zodiac as the core theme for the game, combining it with the brick-breaking gameplay, resulting in the creation of Zodiac Catch.
+
+<p align="center">
+  <b>Figure 5</b><br>
+  <i>Digital prototype</i><br>
+  <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+## Identifying Stakeholders
+<p align="center">
+  <b>Figure 6</b><br>
+  <i>Stakeholders</i><br>
+  <img src="./assets/stakeholders.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+The stakeholders of Zodiac Catch are divided into four key groups:
+At the core level, the product itself—Zodiac Catch—delivers a fun and challenging brick-breaker experience with Chinese zodiac elements.
+The development team, consisting of developers, designers, and a Scrum Master, is responsible for building, testing, and refining the game to ensure its quality and playability.
+In the containing system, professors and experts provide guidance, technical insights, and evaluation to support the game’s development.
+Finally, in the wider environment, casual and competitive gamers engage with the game, offering valuable feedback that helps enhance its quality and overall experience.
+
+<!-- ## User Case Diagram
+(Add later) -->
+
+<!-- ## Feasibility Studies
+(Add later) -->
+
 ## User Stories & Epics
 <table>
   <tr>
@@ -140,8 +191,7 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
     <td rowspan="2">Creating an intriguing and various game experience</td>
     <td>User</td>
     <td>
-      As a user, I want certain bricks to drop power-ups, such as double points
-      or paddle expansion, to add variety to the game.
+      As a user, I want certain bricks to drop power-ups, such as paddle expansion, to add variety to the game.
     </td>
     <td>
       Given certain bricks contain a specific power-up, when the players break
@@ -207,20 +257,7 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
   </tr>
 
   <tr>
-    <td rowspan="3">Educational</td>
-    <td>Physics Teacher</td>
-    <td>
-      As a physics teacher/professor, I want to make use of the game mechanics
-      and physics in an educational setting, so that my students have a more
-      visual and interesting way to learn about physics.
-    </td>
-    <td>
-      Given I want to show the concept of momentum to kids, when the kids are in
-      the game, then there can be pause so that the motion can be observed in
-      more detail (maximized with angles, velocity, etc shown).
-    </td>
-  </tr>
-  <tr>
+    <td rowspan="2">Educational</td>
     <td>Parents</td>
     <td>
       As parents and teachers, I want my kids or students to learn Chinese
@@ -246,20 +283,6 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
     </td>
   </tr>
 </table>
-
-## Paper Prototype
-<p align="center">
-  <b>Figure 3</b><br>
-  <i>Paper Prototype - Block</i><br>
-  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
-</p>
-
-<p align="center">
-  <b>Figure 4</b><br>
-  <i>Prototype - Zodiac Catch</i><br>
-  <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
-</p>
-
 
 # Design
 ## Class Diagrams
