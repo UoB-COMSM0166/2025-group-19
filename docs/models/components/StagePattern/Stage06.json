@@ -179,7 +179,7 @@
     { "x": 660, "y": 290, "colour": "green" },
     { "x": 680, "y": 290, "colour": "black" },
 
-    { "x": 140, "y": 310, "colour": "black" },
+    { "x": 140, "y": 310, "bomb": true,  "colour": "black" },
     { "x": 160, "y": 310, "colour": "green" },
     { "x": 180, "y": 310, "colour": "green" },
     { "x": 200, "y": 310, "colour": "black" },
