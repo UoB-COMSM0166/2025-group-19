@@ -1163,11 +1163,14 @@ Based on the Wilcoxon Signed-Rank Test:
 Our team followed an Agile development process, incorporating Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
 ### Agile Workflow
 #### Iterative Development with Scrum
-We held Scrum meetings twice a week (Tuesdays and Thursdays) to continuously adapt and improve our workflow:
+Initially, Scrum meetings were hosted by a single member to establish a structured workflow. After eight weeks, we introduced a rotation system where all team members took turns hosting, fostering leadership and shared responsibility. This change allowed everyone to gain experience in facilitating discussions, reviewing code, and adapting to different coding styles, ultimately strengthening both individual and team skills.
+
+We conducted Scrum meetings twice a week:
+
 - Tuesdays: A comprehensive Kanban board review, where we created new tasks, reviewed outstanding ones, and planned weekly improvements.
 - Thursdays: A stand-up meeting focused on addressing development challenges and ensuring smooth progress.
 
-To foster leadership and shared responsibility, Erik later suggested that all team members take turns hosting Scrum meetings. In the following weeks, we rotated the Scrum hosting role weekly, with the host also serving as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned code reviewer. Previously, only a few members handled reviews, which led to an uneven workload. By rotating these roles, everyone gained experience in leading discussions, reviewing code, and understanding different coding styles, strengthening both individual and team development skills.
+Under the new system, the weekly host also served as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned reviewer. Previously, only a few members handled code reviews, leading to an uneven workload. By distributing these responsibilities, we improved collaboration, knowledge sharing, and overall development efficiency.
 
 #### Task Management & Workflow Refinement
 At the start, none of us had a clear idea of the best development workflow. However, through continuous adjustments and refinements, we gradually developed a process that worked best for our team. The Scrum rotation and structured review system were key improvements that not only enhanced collaboration but also ensured long-term project sustainability.
