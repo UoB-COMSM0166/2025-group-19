@@ -44,11 +44,7 @@
 ---
 # Introduction
 
-Our game is inspired by the classic brick breaker from the nostalgic era of 1999-2000 (Figure 1). However, we are not merely recreating the old classic—we are giving it a fresh, creative twist. The game incorporates six animals from the Chinese Zodiac, each representing a unique level. Players progress through these levels, collecting each animal as a reward, gaining a sense of achievement with every success.
-
-Each level introduces a distinct visual theme and brick mechanism tailored to the animal it represents, offering new challenges and keeping the gameplay engaging. As players advance, the difficulty increases, putting their skills to the test through ball reflections, speed control, and precision. Additionally, we’ve integrated features such as multi-ball management and power-ups to further enhance the experience.
-
-Are you ready to take on the challenge? Break the bricks, collect the Zodiac animals, and create your own brick-breaking legend!
+A fresh take on the beloved brick breaker, our game was inspired by and pays homage to the genre’s rich history that spans titles such as the original Breakout by Atari and Block.
 
 <p align="center">
   <b>Figure 1</b><br>
@@ -56,10 +52,19 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
   <img src="./assets/block-through.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
+Like its predecessors, you use a paddle to control a limited amount of balls in order to destroy all playable blocks in a given level. Broken blocks have a chance of dropping power-ups that either aid or hinder your progress depending on the difficulty level. Bombs scattered throughout the levels also provide a means of removing rows more efficiently. 
+
+As a unique twist, all levels in Zodiac Catch contain an unexpected element - blackholes. Unlike normal bricks, these are not only unbreakable, but cause any balls that hit them to be lost forever. The locations of these special bricks remain unknown until you encounter one. Thus, it is up to the player to tactically avoid them during their gameplay run.
+
+To further put a spin on the typically non-narrative genre, our game is themed after the Chinese zodiac. Each stage corresponds to an animal from the twelve-year cycle: rat, ox, tiger, rabbit, dragon, snake, horse, goat, monkey, rooster, dog and pig. A bonus feature found on the main page, you can also enter your birth year to find the zodiac animal that represents you. 
+
+With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test, and learn about Chinese mythology along the way.
+
 ---
 
 # Requirements
-## Early Stages design & Ideation process
+In the early stages of the game project, we conducted a brainstorming session where team members came up with ideas based on their personal interests and the feasibility of the game. During the first meeting, we presented our proposals and voted on them. To facilitate creative brainstorming, we used Online Word as our discussion tool, enabling real-time sharing and collaboration.
+
 <table>
     <tr>
         <th>Game Type</th>
@@ -124,6 +129,56 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
     </tr>
 </table>
 
+<p align="center">
+  <b>Figure 2</b><br>
+  <i>Brainstormed Game Ideas on Online Word</i><br>
+  <img src="./assets/word-game-ideas.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+## Early Stage Design
+After brainstorming and discussions, we decided to use the brick breaker game as the project for this development. Next, we used a paper prototype to streamline the game flow, helping everyone gain a clearer blueprint and understanding of the game.
+
+<p align="center">
+  <b>Figure 3</b><br>
+  <i>Paper Prototype</i><br>
+  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+Following this, Eric began the initial development of the brick breaker game, which became the first prototype of our game.
+
+<p align="center">
+ <b>Figure 4</b><br>
+ <i>Game prototype</i><br>
+ <img src="./assets/game-prototype.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and incorporated this concept into our digital prototype, further brainstorming and refining the game design from there. Ultimately, we chose the Chinese Zodiac as the core theme for the game, combining it with the brick-breaking gameplay, resulting in the creation of Zodiac Catch.
+
+<p align="center">
+  <b>Figure 5</b><br>
+  <i>Digital prototype</i><br>
+  <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+## Identifying Stakeholders
+<p align="center">
+  <b>Figure 6</b><br>
+  <i>Stakeholders</i><br>
+  <img src="./assets/stakeholders.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+The stakeholders of Zodiac Catch are divided into four key groups:
+At the core level, the product itself—Zodiac Catch—delivers a fun and challenging brick-breaker experience with Chinese zodiac elements.
+The development team, consisting of developers, designers, and a Scrum Master, is responsible for building, testing, and refining the game to ensure its quality and playability.
+In the containing system, professors and experts provide guidance, technical insights, and evaluation to support the game’s development.
+Finally, in the wider environment, casual and competitive gamers engage with the game, offering valuable feedback that helps enhance its quality and overall experience.
+
+<!-- ## User Case Diagram
+(Add later) -->
+
+<!-- ## Feasibility Studies
+(Add later) -->
+
 ## User Stories & Epics
 <table>
   <tr>
@@ -136,8 +191,7 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
     <td rowspan="2">Creating an intriguing and various game experience</td>
     <td>User</td>
     <td>
-      As a user, I want certain bricks to drop power-ups, such as double points
-      or paddle expansion, to add variety to the game.
+      As a user, I want certain bricks to drop power-ups, such as paddle expansion, to add variety to the game.
     </td>
     <td>
       Given certain bricks contain a specific power-up, when the players break
@@ -203,20 +257,7 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
   </tr>
 
   <tr>
-    <td rowspan="3">Educational</td>
-    <td>Physics Teacher</td>
-    <td>
-      As a physics teacher/professor, I want to make use of the game mechanics
-      and physics in an educational setting, so that my students have a more
-      visual and interesting way to learn about physics.
-    </td>
-    <td>
-      Given I want to show the concept of momentum to kids, when the kids are in
-      the game, then there can be pause so that the motion can be observed in
-      more detail (maximized with angles, velocity, etc shown).
-    </td>
-  </tr>
-  <tr>
+    <td rowspan="2">Educational</td>
     <td>Parents</td>
     <td>
       As parents and teachers, I want my kids or students to learn Chinese
@@ -242,20 +283,6 @@ Are you ready to take on the challenge? Break the bricks, collect the Zodiac ani
     </td>
   </tr>
 </table>
-
-## Paper Prototype
-<p align="center">
-  <b>Figure 3</b><br>
-  <i>Paper Prototype - Block</i><br>
-  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
-</p>
-
-<p align="center">
-  <b>Figure 4</b><br>
-  <i>Prototype - Zodiac Catch</i><br>
-  <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
-</p>
-
 
 # Design
 ## Class Diagrams
@@ -290,6 +317,25 @@ This structured approach helped us maintain a clear separation of concerns and f
 
 ---
 # Implementation
+## Anticipated Challenges
+Before the development stage, we anticipated several challenges:
+* **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult and require advanced physics knowledge.
+* **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.
+However, as we progressed, these concerns proved manageable. Since the ball moves without gravity, its position could be updated simply by adding or deducting to its x and y values. For difficulty balancing, we refined the parameters through iterative testing between our group members, and got positive feedback from the user evaluations. 
+
+## Unexpected Challenges
+While the above anticipated difficulties were easier to resolve, we faced unexpected challenges during development:
+* **Ball Speed in Gravity Mode**  
+    One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.  
+    Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.  
+    However, implementing this became complex due to interactions with other power-ups that also influenced ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.
+* **Displaying Active Power-Ups and Timers**  
+    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active, required additional debugging and adjustments.  
+    We achieved this by:  
+    1. Making an instance of a timer after a player collects a power-up which keeps track of its duration 
+    2. The power-up type and remaining time are sent to the sidebar for display to the player.
+    3. In the case that the player collects the same type of power-up whilst the effect is still active, the `EffectController` will first reset the existing timer and then update the duration on the sidebar to reflect the newly collected power-up’s remaining time
+    4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active
 
 ---
 # Evaluation
