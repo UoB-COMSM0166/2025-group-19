@@ -152,7 +152,7 @@ Following this, Eric began the initial development of the brick breaker game, wh
  <img src="./assets/game-prototype.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and incorporated this concept into our digital prototype, further brainstorming and refining the game design from there.
+When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and incorporated this concept into our digital prototype, further brainstorming and refining the game design from there. Ultimately, we chose the Chinese Zodiac as the core theme for the game, combining it with the brick-breaking gameplay, resulting in the creation of Zodiac Catch.
 
 <p align="center">
   <b>Figure 5</b><br>
@@ -173,6 +173,12 @@ The development team, consisting of developers, designers, and a Scrum Master, i
 In the containing system, professors and experts provide guidance, technical insights, and evaluation to support the game’s development.
 Finally, in the wider environment, casual and competitive gamers engage with the game, offering valuable feedback that helps enhance its quality and overall experience.
 
+<!-- ## User Case Diagram
+(Add later) -->
+
+<!-- ## Feasibility Studies
+(Add later) -->
+
 ## User Stories & Epics
 <table>
   <tr>
@@ -185,8 +191,7 @@ Finally, in the wider environment, casual and competitive gamers engage with the
     <td rowspan="2">Creating an intriguing and various game experience</td>
     <td>User</td>
     <td>
-      As a user, I want certain bricks to drop power-ups, such as double points
-      or paddle expansion, to add variety to the game.
+      As a user, I want certain bricks to drop power-ups, such as paddle expansion, to add variety to the game.
     </td>
     <td>
       Given certain bricks contain a specific power-up, when the players break
@@ -252,20 +257,7 @@ Finally, in the wider environment, casual and competitive gamers engage with the
   </tr>
 
   <tr>
-    <td rowspan="3">Educational</td>
-    <td>Physics Teacher</td>
-    <td>
-      As a physics teacher/professor, I want to make use of the game mechanics
-      and physics in an educational setting, so that my students have a more
-      visual and interesting way to learn about physics.
-    </td>
-    <td>
-      Given I want to show the concept of momentum to kids, when the kids are in
-      the game, then there can be pause so that the motion can be observed in
-      more detail (maximized with angles, velocity, etc shown).
-    </td>
-  </tr>
-  <tr>
+    <td rowspan="2">Educational</td>
     <td>Parents</td>
     <td>
       As parents and teachers, I want my kids or students to learn Chinese
