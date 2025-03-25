@@ -63,7 +63,7 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
 ---
 
 # Requirements
-In the early stages of the game project, we conducted a brainstorming session where team members came up with ideas based on their personal interests and the feasibility of the game. During the first meeting, we presented our proposals and voted on them. Ultimately, we chose brick-breaking as the game project for this development, as it balanced both feasibility and fun. To facilitate creative brainstorming, we used Online Word as our discussion tool, enabling real-time sharing and collaboration.
+In the early stages of the game project, we conducted a brainstorming session where team members came up with ideas based on their personal interests and the feasibility of the game. During the first meeting, we presented our proposals and voted on them. To facilitate creative brainstorming, we used Online Word as our discussion tool, enabling real-time sharing and collaboration.
 
 <table>
     <tr>
@@ -130,13 +130,21 @@ In the early stages of the game project, we conducted a brainstorming session wh
 </table>
 
 <p align="center">
-  <b>Figure 3</b><br>
+  <b>Figure 2</b><br>
   <i>Brainstormed Game Ideas on Online Word</i><br>
   <img src="./assets/word-game-ideas.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Early Stage Design
-After brainstorming and discussing, we decided to use a brick breaker game as the project for this development. Initially, Eric developed the first prototype of the brick breaker game.
+After brainstorming and discussions, we decided to use the brick breaker game as the project for this development. Next, we used a paper prototype to streamline the game flow, helping everyone gain a clearer blueprint and understanding of the game.
+
+<p align="center">
+  <b>Figure 3</b><br>
+  <i>Paper Prototype</i><br>
+  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+Following this, Eric began the initial development of the brick breaker game, which became the first prototype of our game.
 
 <p align="center">
  <b>Figure 4</b><br>
@@ -144,20 +152,11 @@ After brainstorming and discussing, we decided to use a brick breaker game as th
  <img src="./assets/game-prototype.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and further brainstormed from there. Ultimately, we chose the Chinese Zodiac as the core theme for the game, combining it with the brick-breaking gameplay, resulting in the creation of Zodiac Catch.
-In fact, initially, due to time constraints during development, we planned to feature only the first six zodiac animals and even considered naming the game Zodiac Catch (Half). However, as development progressed and the team put in more effort, we eventually decided to include all twelve zodiac animals, making the game more complete and enjoyable
-
-
-## Paper Prototype
-<p align="center">
-  <b>Figure 4</b><br>
-  <i>Paper Prototype - Block</i><br>
-  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
-</p>
+When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and incorporated this concept into our digital prototype, further brainstorming and refining the game design from there.
 
 <p align="center">
   <b>Figure 5</b><br>
-  <i>Prototype - Zodiac Catch</i><br>
+  <i>Digital prototype</i><br>
   <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
