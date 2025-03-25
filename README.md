@@ -44,17 +44,21 @@
 ---
 # Introduction
 
-Our game is inspired by the classic brick breaker from the nostalgic era of 1999-2000 (Figure 1). However, we are not merely recreating the old classic—we are giving it a fresh, creative twist. The game incorporates six animals from the Chinese Zodiac, each representing a unique level. Players progress through these levels, collecting each animal as a reward, gaining a sense of achievement with every success.
-
-Each level introduces a distinct visual theme and brick mechanism tailored to the animal it represents, offering new challenges and keeping the gameplay engaging. As players advance, the difficulty increases, putting their skills to the test through ball reflections, speed control, and precision. Additionally, we’ve integrated features such as multi-ball management and power-ups to further enhance the experience.
-
-Are you ready to take on the challenge? Break the bricks, collect the Zodiac animals, and create your own brick-breaking legend!
+A fresh take on the beloved brick breaker, our game was inspired by and pays homage to the genre’s rich history that spans titles such as the original Breakout by Atari and Block.
 
 <p align="center">
   <b>Figure 1</b><br>
   <i>Block</i><br>
   <img src="./assets/block-through.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
+
+Like its predecessors, you use a paddle to control a limited amount of balls in order to destroy all playable blocks in a given level. Broken blocks have a chance of dropping power-ups that either aid or hinder your progress depending on the difficulty level. Bombs scattered throughout the levels also provide a means of removing rows more efficiently. 
+
+As a unique twist, all levels in Zodiac Catch contain an unexpected element - blackholes. Unlike normal bricks, these are not only unbreakable, but cause any balls that hit them to be lost forever. The locations of these special bricks remain unknown until you encounter one. Thus, it is up to the player to tactically avoid them during their gameplay run.
+
+To further put a spin on the typically non-narrative genre, our game is themed after the Chinese zodiac. Each stage corresponds to an animal from the twelve-year cycle: rat, ox, tiger, rabbit, dragon, snake, horse, goat, monkey, rooster, dog and pig. A bonus feature found on the main page, you can also enter your birth year to find the zodiac animal that represents you. 
+
+With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test, and learn about Chinese mythology along the way.
 
 ---
 
@@ -290,6 +294,25 @@ This structured approach helped us maintain a clear separation of concerns and f
 
 ---
 # Implementation
+## Anticipated Challenges
+Before the development stage, we anticipated several challenges:
+* **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult and require advanced physics knowledge.
+* **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.
+However, as we progressed, these concerns proved manageable. Since the ball moves without gravity, its position could be updated simply by adding or deducting to its x and y values. For difficulty balancing, we refined the parameters through iterative testing between our group members, and got positive feedback from the user evaluations. 
+
+## Unexpected Challenges
+While the above anticipated difficulties were easier to resolve, we faced unexpected challenges during development:
+* **Ball Speed in Gravity Mode**  
+    One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.  
+    Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.  
+    However, implementing this became complex due to interactions with other power-ups that also influenced ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.
+* **Displaying Active Power-Ups and Timers**  
+    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active, required additional debugging and adjustments.  
+    We achieved this by:  
+    1. Making an instance of a timer after a player collects a power-up which keeps track of its duration 
+    2. The power-up type and remaining time are sent to the sidebar for display to the player.
+    3. In the case that the player collects the same type of power-up whilst the effect is still active, the `EffectController` will first reset the existing timer and then update the duration on the sidebar to reflect the newly collected power-up’s remaining time
+    4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active
 
 ---
 # Evaluation
