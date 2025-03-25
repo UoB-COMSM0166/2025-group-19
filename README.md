@@ -416,9 +416,17 @@ there</td>
   </tr>
 </table>
 
+The result of Heuristic Evaluation shows that nearly most of the sever problem are related to “Visibility of system status”, 
+
+1. Players didn’t understand the relationship between the Chinese Zodiac and their birthday, which caused confusion about why they were asked to enter their birthdate. Based on this feedback, we plan to add an **explanation page** to clarify the reason behind this feature.
+2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background. Additionally, some players reported that the icons for effects were hard to recognize due to the lack of contrast.
+
 ## Quantitative Evaluation
+In this part, we use NASA TLX and System Usability Scale to analyse how player feels about both easy mode and hard mode.
 ### USER FEEDBACK
 #### NASA TLX
+We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
+
 <table align="center">
   <tr>
     <th align="center">User</th>
