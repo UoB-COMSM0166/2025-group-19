@@ -146,7 +146,7 @@ class SettingDialog {
         fill(0);
         textAlign(CENTER, CENTER);
         textSize(23 * this.scaleFactor);
-        text('Press esc to close dialog & return to left menu.\n Press arrow keys to control.', this.dialogX + this.dialogWidth / 2, this.dialogY - 50); 
+        text('Press ESC to return to left menu and/or close dialog\n Press arrow keys to control', this.dialogX + this.dialogWidth / 2, this.dialogY - 50); 
         if (this.displayOption === 0 ) {
             this.showSettingPopup(this.dialogX, this.dialogY, this.dialogWidth, this.dialogHeight);
         }
@@ -254,14 +254,18 @@ class SettingDialog {
             let imgX = x + paddingX + col * (imgSize);
             let imgY = y + paddingY + row * (imgSize + paddingY);
             let img = this.teamImg[i];
+            let aspectRatio = img.width / img.height;
             if(this.teamImg[i]){
                 let circleMask = createGraphics(imgSize, imgSize);
-                circleMask.ellipse(imgSize / 2, imgSize / 2, imgSize - 10, imgSize);
+                circleMask.ellipse(imgSize / 2, imgSize / 2, imgSize, imgSize);
                 img.mask(circleMask);
-                image(img, imgX, imgY, imgSize, imgSize);
+                if (aspectRatio > 1) {
+                    image(img, imgX, imgY, imgSize, imgSize / aspectRatio);
+                } else {
+                    image(img, imgX, imgY, imgSize * aspectRatio, imgSize);
+                }
                 text(this.teamNames[i], imgX + imgSize / 2, imgY + imgSize + 20);
             }
-            
         }
     }
 
