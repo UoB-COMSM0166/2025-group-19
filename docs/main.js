@@ -54,6 +54,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight); // (1000, 600);
   textFont(boutiqueBitmaFont);
   pageController = new PageController();
+  userStartAudio().then(() => {
+    bgMusic.loop();
+    bgMusic.setVolume(0.5);
+  });
 }
 
 function draw() {
