@@ -2,8 +2,11 @@ class SettingDialog {
     /**
      * @param {*} 
      */
-    constructor(welcomeView) {
+    constructor(welcomeView, keyboardController) {
         this.welcomeView = welcomeView;
+        this.keyboardController = keyboardController;
+        this.awaitingKeyPress = false; // Track if we're waiting for a new key
+        this.currentRebindAction = null; // Track which action we're rebinding
         this.updateScale();
         this.dialogOn = false;
         this.displayOption = 0;
@@ -21,11 +24,26 @@ class SettingDialog {
         this.selectedSliderIndex = 0;
         this.selectedBtnIndex = -1;
         this.isInRightContent = false;
+        this.keyBindings = {
+            moveLeft: 'ArrowLeft',
+            moveRight: 'ArrowRight',
+            shootBall: ' ',
+            togglePaddle: 'ArrowUp'
+        };
+        if (keyboardController) {
+            const controllerBindings = keyboardController.getKeyBindings();
+            this.keyBindings = {
+                shootBall: controllerBindings.shootBall || ' ',
+                moveLeft: controllerBindings.moveLeft || 'ArrowLeft',
+                moveRight: controllerBindings.moveRight || 'ArrowRight',
+                togglePaddle: controllerBindings.togglePaddle || 'ArrowUp'
+            };
+        }
         this.keyboard_btns = {
-            shortBall: createButton("SHORT\nBALL"),
+            shootBall: createButton("SHOOT\nBALL"),
             moveLeft: createButton("MOVE\nLEFT"),
             moveRight: createButton("MOVE\nRIGHT"),
-            bounce: createButton("BOUNCE"),
+            togglePaddle: createButton("TOGGLE\nPADDLE"),
         };
         Object.values(this.keyboard_btns).forEach(btn => btn.hide());
         this.teamImg = teamImg;
@@ -104,6 +122,12 @@ class SettingDialog {
     }
 
     handleSettingKeyboard(key) {
+        if (this.awaitingKeyPress) {
+            globalKeyBindings[this.currentRebindAction] = key;
+            this.awaitingKeyPress = false;
+            this.currentRebindAction = null;
+            //console.log("key Updated", globalKeyBindings);
+        }
         if (key === 'ArrowUp') {
             this.selectedBtnIndex = (this.selectedBtnIndex - 1 + 4) % 4;
         } else if (key === 'ArrowDown') {
@@ -111,6 +135,11 @@ class SettingDialog {
         } else if (key === 'Escape') {
             this.selectedBtnIndex = -1;
             this.isInRightContent = false;
+            //console.log("Keyboard Buttons:", this.keyboard_btns);
+        } else if (key === 'Enter' && this.selectedBtnIndex >= 0) {
+            this.awaitingKeyPress = true;
+            const actions = ['shootBall', 'moveLeft', 'moveRight', 'togglePaddle'];
+            this.currentRebindAction = actions[this.selectedBtnIndex];
         }
     }
 
@@ -345,8 +374,8 @@ class SettingDialog {
     }
 
     showSettingKeyboard(x, y , width, height) {
-        let actions = ["SHORT\nBALL", "MOVE\nLEFT", "MOVE\nRIGHT", "BOUNCE"];
-        let action_cons = ["shortBall", "moveLeft", "moveRight", "bounce"];
+        let actions = ["SHOOT\nBALL", "MOVE\nLEFT", "MOVE\nRIGHT", "TOGGLE\nPADDLE"];
+        let action_cons = ["shootBall", "moveLeft", "moveRight", "togglePaddle"];
         textAlign(CENTER, CENTER);
         textSize(25 * this.scaleFactor);
         for (let i = 0; i < actions.length; i++) {
