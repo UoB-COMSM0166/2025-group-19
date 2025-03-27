@@ -1006,11 +1006,7 @@ We conducted a System Usability Scale (SUS) evaluation across both Easy and Hard
   </tr>
 </table>
 
-
-
 The SUS evaluation shows that the game is generally perceived as usable and user-friendly, with particularly strong ratings for ease of use, learning speed, and system integration. The consistency of responses between Easy and Hard modes suggests that the core interface is well-designed and scales effectively with difficulty. Some improvements may be explored to further reduce perceived complexity or technical support needs in the harder levels, but overall usability remains strong.
-
-
 
 ### FINDING
 Based on the Wilcoxon Signed-Rank Test:
@@ -1025,6 +1021,13 @@ Based on the Wilcoxon Signed-Rank Test:
    
 -  Improvements based on SUS:  Reduce temporal demand by allowing more flexible pacing or simplifying steps. Reduce physical demand by optimizing input methods and minimizing unnecessary actions.
 
+## Final Evaluation
+
+### Improvement
+
+### New SUS
+
+### Compare
 
 ---
 # Process
