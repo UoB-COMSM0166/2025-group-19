@@ -423,7 +423,7 @@ The result of Heuristic Evaluation shows that nearly most of the sever problem a
 
 ## Quantitative Evaluation
 In this part, we use NASA TLX and System Usability Scale to analyse how player feels about both easy mode and hard mode.
-### USER FEEDBACK
+
 #### NASA TLX
 We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
 
@@ -598,6 +598,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User1</th>
+    <td align="center">45</td>
     <td align="center">50</td>
     <td align="center">50</td>
     <td align="center">70</td>
@@ -607,6 +608,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User2</th>
+    <td align="center">20</td>
     <td align="center">30</td>
     <td align="center">60</td>
     <td align="center">85</td>
@@ -617,6 +619,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User3</th>
     <td align="center">5</td>
+    <td align="center">5</td>
     <td align="center">45</td>
     <td align="center">70</td>
     <td align="center">85</td>
@@ -625,6 +628,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User4</th>
+    <td align="center">55</td>
     <td align="center">70</td>
     <td align="center">70</td>
     <td align="center">75</td>
@@ -634,6 +638,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User5</th>
+    <td align="center">30</td>
     <td align="center">15</td>
     <td align="center">10</td>
     <td align="center">65</td>
@@ -643,6 +648,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User6</th>
+    <td align="center">50</td>
     <td align="center">55</td>
     <td align="center">55</td>
     <td align="center">70</td>
@@ -652,6 +658,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User7</th>
+    <td align="center">60</td>
     <td align="center">75</td>
     <td align="center">70</td>
     <td align="center">45</td>
@@ -661,6 +668,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User8</th>
+    <td align="center">75</td>
     <td align="center">30</td>
     <td align="center">65</td>
     <td align="center">70</td>
@@ -670,6 +678,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User9</th>
+    <td align="center">30</td>
     <td align="center">10</td>
     <td align="center">30</td>
     <td align="center">60</td>
@@ -680,6 +689,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User10</th>
     <td align="center">70</td>
+    <td align="center">70</td>
     <td align="center">75</td>
     <td align="center">50</td>
     <td align="center">70</td>
@@ -688,6 +698,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User11</th>
+    <td align="center">5</td>
     <td align="center">15</td>
     <td align="center">55</td>
     <td align="center">65</td>
@@ -699,6 +710,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
     <th align="center">User12</th>
     <td align="center">50</td>
     <td align="center">50</td>
+    <td align="center">50</td>
     <td align="center">55</td>
     <td align="center">50</td>
     <td align="center">60</td>
@@ -706,6 +718,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User13</th>
+    <td align="center">15</td>
     <td align="center">15</td>
     <td align="center">50</td>
     <td align="center">70</td>
@@ -715,6 +728,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User14</th>
+    <td align="center">70</td>
     <td align="center">80</td>
     <td align="center">80</td>
     <td align="center">50</td>
@@ -723,6 +737,278 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
     <td align="center">71.2</td>
   </tr>
 </table>
+
+### Compare between easy and hard mode
+
+<table align="center">
+  <tr>
+    <th align="center">Evaluation Aspect</th>
+    <th align="center">Easy Avg. Score</th>
+    <th align="center">Hard Avg. Score</th>
+    <th align="center">Observation</th>
+  </tr>
+  <tr>
+    <td align="center">Mental Demand</td>
+    <td align="center">33.2</td>
+    <td align="center">44.3</td>
+    <td align="center">↑ Increased cognitive effort</td>
+  </tr>
+  <tr>
+    <td align="center">Physical Demand</td>
+    <td align="center">32.9</td>
+    <td align="center">45.7</td>
+    <td align="center">↑ Increased physical/operational strain</td>
+  </tr>
+  <tr>
+    <td align="center">Temporal Demand</td>
+    <td align="center">42.1</td>
+    <td align="center">55.0</td>
+    <td align="center">↑ Increased time pressure</td>
+  </tr>
+  <tr>
+    <td align="center">Performance<br>(higher = worse)</td>
+    <td align="center">63.9</td>
+    <td align="center">63.9</td>
+    <td align="center">≈ Similar perceived performance</td>
+  </tr>
+  <tr>
+    <td align="center">Effort</td>
+    <td align="center">42.5</td>
+    <td align="center">54.3</td>
+    <td align="center">↑ More effort required</td>
+  </tr>
+  <tr>
+    <td align="center">Frustration</td>
+    <td align="center">27.9</td>
+    <td align="center">39.6</td>
+    <td align="center">↑ Higher frustration level</td>
+  </tr>
+</table>
+
+Our analysis indicates that the Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in increasing challenge, but also highlight the need for balancing difficulty with player satisfaction.
+
+
+#### System Usability Scale
+
+We conducted a System Usability Scale (SUS) evaluation across both Easy and Hard game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system on 10 standardised SUS questions, leading to an aggregate score out of 100.
+
+
+<table align="center">
+  <tr>
+    <th align="center">Participant</th>
+    <th align="center">Like to Use Frequently</th>
+    <th align="center">Unnecessarily Complex</th>
+    <th align="center">Easy to Use</th>
+    <th align="center">Need Technical Support</th>
+    <th align="center">Functions Well Integrated</th>
+    <th align="center">Too Much Inconsistency</th>
+    <th align="center">Learn to Use Quickly</th>
+    <th align="center">Cumbersome to Use</th>
+    <th align="center">Confident to Use</th>
+    <th align="center">Need to Learn a Lot</th>
+    <th align="center">Total</th>
+  </tr>
+  <tr>
+    <th align="center">1</th>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">29</td>
+  </tr>
+  <tr>
+    <th align="center">2</th>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">27</td>
+  </tr>
+  <tr>
+    <th align="center">3</th>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">29</td>
+  </tr>
+  <tr>
+    <th align="center">4</th>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">29</td>
+  </tr>
+  <tr>
+    <th align="center">5</th>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">34</td>
+  </tr>
+  <tr>
+    <th align="center">6</th>
+    <td align="center">5</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">31</td>
+  </tr>
+  <tr>
+    <th align="center">7</th>
+    <td align="center">2</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">27</td>
+  </tr>
+  <tr>
+    <th align="center">8</th>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">33</td>
+  </tr>
+  <tr>
+    <th align="center">9</th>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">34</td>
+  </tr>
+  <tr>
+    <th align="center">10</th>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">35</td>
+  </tr>
+  <tr>
+    <th align="center">11</th>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">30</td>
+  </tr>
+  <tr>
+    <th align="center">12</th>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">31</td>
+  </tr>
+  <tr>
+    <th align="center">13</th>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">36</td>
+  </tr>
+  <tr>
+    <th align="center">14</th>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">3</td>
+    <td align="center">31</td>
+  </tr>
+</table>
+
+
+
+The SUS evaluation shows that the game is generally perceived as usable and user-friendly, with particularly strong ratings for ease of use, learning speed, and system integration. The consistency of responses between Easy and Hard modes suggests that the core interface is well-designed and scales effectively with difficulty. Some improvements may be explored to further reduce perceived complexity or technical support needs in the harder levels, but overall usability remains strong.
 
 
 
