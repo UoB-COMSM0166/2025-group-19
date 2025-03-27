@@ -13,7 +13,8 @@ class SettingDialog {
         this.infoOption = 0;
         this.leftOptions =  ["Sound\nEffects", "Keyboards"];
         this.leftOptions_info = ["Team\n Members", "Game\n Intro"];
-        this.slider_bgMusic = createSlider(0, 255, 128);
+        this.bgMusic = bgMusic;
+        this.slider_bgMusic = createSlider(0, 100, 50);
         this.slider_soundEffect = createSlider(0, 255, 128);
         this.slider_bgMusic.hide();
         this.slider_soundEffect.hide();
@@ -30,7 +31,6 @@ class SettingDialog {
         this.teamImg = teamImg;
         this.teamNames = ["Areta", "Daisy", "Elle", "Erik",  "Lucas", "Mikas"];
         this.scrollOffset = 0;
-        
     }
 
     display(){
@@ -119,13 +119,17 @@ class SettingDialog {
             this.selectedSliderIndex = 1 - this.selectedSliderIndex; 
         } else if (key === 'ArrowLeft') {
             if (this.selectedSliderIndex === 0) {
-                this.slider_bgMusic.value(this.slider_bgMusic.value() - 10);
+                let newValue = constrain(this.slider_bgMusic.value() - 10, 0, 100);
+                this.slider_bgMusic.value(newValue);
+                this.bgMusic.setVolume(newValue / 100);
             } else {
                 this.slider_soundEffect.value(this.slider_soundEffect.value() - 10);
             }
         } else if (key === 'ArrowRight') {
             if (this.selectedSliderIndex === 0) {
-                this.slider_bgMusic.value(this.slider_bgMusic.value() + 10);
+                let newValue = constrain(this.slider_bgMusic.value() + 10, 0, 100);
+                this.slider_bgMusic.value(newValue);
+                this.bgMusic.setVolume(newValue / 100);
             } else {
                 this.slider_soundEffect.value(this.slider_soundEffect.value() + 10);
             }
@@ -133,7 +137,6 @@ class SettingDialog {
             this.selectedSliderIndex = 0;
             this.isInRightContent = false;
         }
-    
     }
 
     displayDialog() {
