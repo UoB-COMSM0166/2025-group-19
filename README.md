@@ -442,6 +442,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User1</th>
+    <td align="center">20</td>
     <td align="center">30</td>
     <td align="center">65</td>
     <td align="center">85</td>
@@ -451,6 +452,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User2</th>
+    <td align="center">20</td>
     <td align="center">15</td>
     <td align="center">35</td>
     <td align="center">45</td>
@@ -461,6 +463,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User3</th>
     <td align="center">5</td>
+    <td align="center">5</td>
     <td align="center">45</td>
     <td align="center">65</td>
     <td align="center">75</td>
@@ -469,6 +472,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User4</th>
+    <td align="center">55</td>
     <td align="center">75</td>
     <td align="center">75</td>
     <td align="center">45</td>
@@ -479,6 +483,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User5</th>
     <td align="center">20</td>
+    <td align="center">20</td>
     <td align="center">10</td>
     <td align="center">80</td>
     <td align="center">10</td>
@@ -488,6 +493,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User6</th>
     <td align="center">45</td>
+    <td align="center">45</td>
     <td align="center">30</td>
     <td align="center">80</td>
     <td align="center">25</td>
@@ -496,6 +502,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User7</th>
+    <td align="center">45</td>
     <td align="center">65</td>
     <td align="center">65</td>
     <td align="center">50</td>
@@ -506,6 +513,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User8</th>
     <td align="center">20</td>
+    <td align="center">20</td>
     <td align="center">50</td>
     <td align="center">75</td>
     <td align="center">20</td>
@@ -514,6 +522,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User9</th>
+    <td align="center">25</td>
     <td align="center">10</td>
     <td align="center">30</td>
     <td align="center">60</td>
@@ -524,6 +533,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User10</th>
     <td align="center">60</td>
+    <td align="center">60</td>
     <td align="center">70</td>
     <td align="center">60</td>
     <td align="center">65</td>
@@ -532,6 +542,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User11</th>
+    <td align="center">5</td>
     <td align="center">30</td>
     <td align="center">5</td>
     <td align="center">85</td>
@@ -542,6 +553,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User12</th>
     <td align="center">60</td>
+    <td align="center">60</td>
     <td align="center">65</td>
     <td align="center">70</td>
     <td align="center">75</td>
@@ -551,6 +563,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   <tr>
     <th align="center">User13</th>
     <td align="center">20</td>
+    <td align="center">20</td>
     <td align="center">60</td>
     <td align="center">70</td>
     <td align="center">10</td>
@@ -559,6 +572,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User14</th>
+    <td align="center">65</td>
     <td align="center">80</td>
     <td align="center">65</td>
     <td align="center">70</td>
@@ -567,6 +581,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
     <td align="center">75.0</td>
   </tr>
 </table>
+
 
 
 #### Hard Mode
