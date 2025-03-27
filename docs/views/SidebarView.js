@@ -1,5 +1,6 @@
 class SidebarView {
   constructor(stageName, sidebarCanvas) {
+    this.keyboardController = new KeyboardController(null, null);
     this.stageName = stageName;
     this.score = 0;
     this.ballCount = 10;
@@ -27,6 +28,15 @@ class SidebarView {
   }
 
   display() {
+    if (this.keyboardController) {
+      const controllerBindings = this.keyboardController.getKeyBindings();
+      this.keyBindings = {
+        shootBall: controllerBindings.shootBall || ' ',
+        moveLeft: controllerBindings.moveLeft || 'ArrowLeft',
+        moveRight: controllerBindings.moveRight || 'ArrowRight',
+        togglePaddle: controllerBindings.togglePaddle || 'ArrowUp'
+      };
+    }
     this.canvas.background(50);
     this.canvas.fill(255);
     this.canvas.textSize(20);
@@ -139,13 +149,13 @@ class SidebarView {
     }
 
     this.canvas.textAlign(CENTER);
-    this.canvas.text("Move paddle: ← →", 100, 480);
+    this.canvas.text("Move paddle: " + this.keyBindings.moveLeft + " " + this.keyBindings.moveRight, 100, 480);
 
     this.canvas.textAlign(CENTER);
-    this.canvas.text("Toggle paddle: ↑", 100, 510);
+    this.canvas.text("Toggle paddle: " + this.keyBindings.togglePaddle, 100, 510);
 
     this.canvas.textAlign(CENTER);
-    this.canvas.text("Shoot ball: space", 100, 540);
+    this.canvas.text("Shoot ball: " + this.keyBindings.shootBall, 100, 540);
     
     this.canvas.textAlign(CENTER);
     this.canvas.text("Pause <p>", 100, 570);
