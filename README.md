@@ -339,26 +339,47 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
 
 ---
 # Evaluation
-## Qualitative Evaluation
-After developing the core mechanics of the game, we conducted Think Aloud user evaluations and Heuristic evaluations to gather feedback on gameplay, difficulty, and overall user experience. This helped us identify areas for improvement and assess how well the game met players' expectations.
+It is very important to understand user’s reaction and their feedback. Since the project started, we have been carried out several evaluations to understand how well the game met players' expectations. At the same times, these feedback also help us to identify areas for improvement and assess.
 
-### Key Areas of Improvement: 
-**Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.  
-**Paddle Visibility**: The low contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.  
-**Infinity Ball Indicator**: Players struggled to recognize when the Infinity Ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.  
-**Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. It was suggested that using distinct colors or shapes could improve clarity.  
-**Ball-Paddle Collision Mechanics**: One user recommended that the ball should reflect at different angles depending on where it hits the paddle. This would provide players with greater control and add more variety to the gameplay.  
-**Zodiac Year Explanation**: Users wanted more context on the Chinese Zodiac years and how they relate to birthdays. Adding a brief explanation in the stage selection view would help players understand why they should enter their birthdate.  
+The two major evaluation was held in the middle of the game, and the end of the project. These evaluation also segmented into two components: qualitative and quantitative.
+## Qualitative Evaluation
+Just after we finished the basic game prototype, we carried out first major evaluations, in the qualitative evaluation part, we asked each player to play our games several minutes and give us some feedback used Heuristic Evaluation to understand how players felt about the game.
+
+### Player’s Feedback: 
+In the later stages of development, our discussions and revisions were consistently guided by player feedback.
+
+By understanding what players cared about during gameplay and collecting questionnaire responses, we summarised the following strengths and areas for improvement.
+
+### What Players Enjoyed:
+
+* **Art Design:** Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.
+
+* **Difficulty Balance:** Players noticed that in easy mode, they could become familiar with the gameplay mechanics and gain a sense of achievement after clearing a stage, while in hard mode, they could challenge themselves and become immersed in the variety of tools that added fun to the gameplay.
+
+* **Variety of tools:** The variety and design of the tool were enjoyable, adding fun and excitement to the gameplay.
+
+### What Players think it can be improved:
+
+* **Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.
+
+* **Paddle Visibility**: The low contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.
+
+* **Infinity Ball Indicator**: Players struggled to recognise when the Infinity Ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.
+
+* **Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. It was suggested that using distinct colours or shapes could improve clarity.
+
+* **Ball-Paddle Collision Mechanics**: One user recommended that the ball should reflect at different angles depending on where it hits the paddle. This would provide players with greater control and add more variety to the gameplay.
+
+* **Zodiac Year Explanation**: Users wanted more context on the Chinese Zodiac years and how they relate to birthdays. Adding a brief explanation in the stage selection view would help players understand why they should enter their birthdate.
+
+
+
 <p align="center">
   <b>Figure 2</b><br>
   <i>Zodiac Catch</i><br>
   <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
-### Aspects Players Enjoyed:  
-**Art Design**: Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.  
-**Difficulty Balance**: Players noted that the speed and number of balls provided the right level of challenge, making the game engaging without being too easy or too difficult.  
-**Power-Ups**: The variety and design of the power-ups were enjoyable, adding fun and excitement to the gameplay.  
 ### Heuristic Evaluation: 
 <table align="center">
   <tr>
@@ -418,13 +439,22 @@ there</td>
   </tr>
 </table>
 
+The result of Heuristic Evaluation shows that nearly most of the sever problem are related to “Visibility of system status”, 
+
+1. Players didn’t understand the relationship between the Chinese Zodiac and their birthday, which caused confusion about why they were asked to enter their birthdate. Based on this feedback, we plan to add an **explanation page** to clarify the reason behind this feature.
+2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background. Additionally, some players reported that the icons for effects were hard to recognize due to the lack of contrast.
+
 ## Quantitative Evaluation
-### USER FEEDBACK
+In this part, we use NASA TLX and System Usability Scale to analyse how player feels about both easy mode and hard mode.
+
 #### NASA TLX
+We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
+
+
+#### Easy　Mode
 <table align="center">
   <tr>
     <th align="center">User</th>
-    <th align="center">Difficulty</th>
     <th align="center">Mental Demand</th>
     <th align="center">Physical Demand</th>
     <th align="center">Temporal Demand</th>
@@ -435,761 +465,573 @@ there</td>
   </tr>
   <tr>
     <th align="center">User1</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">7</th>
-    <th align="center">16</th>
-    <th align="center">21</th>
-    <th align="center">18</th>
-    <th align="center">2</th>
-    <th align="center">52.5</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">11</th>
-    <th align="center">12</th>
-    <th align="center">12</th>
-    <th align="center">18</th>
-    <th align="center">13</th>
-    <th align="center">7</th>
-    <th align="center">55.8</th>
+    <td align="center">20</td>
+    <td align="center">30</td>
+    <td align="center">65</td>
+    <td align="center">85</td>
+    <td align="center">70</td>
+    <td align="center">10</td>
+    <td align="center">52.5</td>
   </tr>
   <tr>
     <th align="center">User2</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">4</th>
-    <th align="center">9</th>
-    <th align="center">11</th>
-    <th align="center">11</th>
-    <th align="center">6</th>
-    <th align="center">33</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">5</th>
-    <th align="center">8</th>
-    <th align="center">15</th>
-    <th align="center">21</th>
-    <th align="center">17</th>
-    <th align="center">6</th>
-    <th align="center">55</th>
+    <td align="center">20</td>
+    <td align="center">15</td>
+    <td align="center">35</td>
+    <td align="center">45</td>
+    <td align="center">45</td>
+    <td align="center">25</td>
+    <td align="center">33.0</td>
   </tr>
   <tr>
     <th align="center">User3</th>
-    <th align="center">Easy</th>
-    <th align="center">1</th>
-    <th align="center">1</th>
-    <th align="center">11</th>
-    <th align="center">16</th>
-    <th align="center">19</th>
-    <th align="center">5</th>
-    <th align="center">39.1</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">1</th>
-    <th align="center">1</th>
-    <th align="center">11</th>
-    <th align="center">17</th>
-    <th align="center">21</th>
-    <th align="center">15</th>
-    <th align="center">50</th>
+    <td align="center">5</td>
+    <td align="center">5</td>
+    <td align="center">45</td>
+    <td align="center">65</td>
+    <td align="center">75</td>
+    <td align="center">20</td>
+    <td align="center">39.1</td>
   </tr>
   <tr>
     <th align="center">User4</th>
-    <th align="center">Easy</th>
-    <th align="center">14</th>
-    <th align="center">19</th>
-    <th align="center">19</th>
-    <th align="center">11</th>
-    <th align="center">15</th>
-    <th align="center">12</th>
-    <th align="center">70</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">14</th>
-    <th align="center">18</th>
-    <th align="center">18</th>
-    <th align="center">19</th>
-    <th align="center">16</th>
-    <th align="center">12</th>
-    <th align="center">75.8</th>
+    <td align="center">55</td>
+    <td align="center">75</td>
+    <td align="center">75</td>
+    <td align="center">45</td>
+    <td align="center">60</td>
+    <td align="center">50</td>
+    <td align="center">70.0</td>
   </tr>
   <tr>
     <th align="center">User5</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">20</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">25.8</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">8</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">16</th>
-    <th align="center">11</th>
-    <th align="center">4</th>
-    <th align="center">33.3</th>
+    <td align="center">20</td>
+    <td align="center">20</td>
+    <td align="center">10</td>
+    <td align="center">80</td>
+    <td align="center">10</td>
+    <td align="center">10</td>
+    <td align="center">25.8</td>
   </tr>
   <tr>
     <th align="center">User6</th>
-    <th align="center">Easy</th>
-    <th align="center">11</th>
-    <th align="center">11</th>
-    <th align="center">7</th>
-    <th align="center">20</th>
-    <th align="center">6</th>
-    <th align="center">3</th>
-    <th align="center">43.4</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">12</th>
-    <th align="center">14</th>
-    <th align="center">14</th>
-    <th align="center">17</th>
-    <th align="center">11</th>
-    <th align="center">6</th>
-    <th align="center">56.7</th>
+    <td align="center">45</td>
+    <td align="center">45</td>
+    <td align="center">30</td>
+    <td align="center">80</td>
+    <td align="center">25</td>
+    <td align="center">10</td>
+    <td align="center">43.4</td>
   </tr>
   <tr>
     <th align="center">User7</th>
-    <th align="center">Easy</th>
-    <th align="center">11</th>
-    <th align="center">16</th>
-    <th align="center">16</th>
-    <th align="center">13</th>
-    <th align="center">13</th>
-    <th align="center">15</th>
-    <th align="center">65</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">15</th>
-    <th align="center">19</th>
-    <th align="center">17</th>
-    <th align="center">11</th>
-    <th align="center">13</th>
-    <th align="center">17</th>
-    <th align="center">71.7</th>
+    <td align="center">45</td>
+    <td align="center">65</td>
+    <td align="center">65</td>
+    <td align="center">50</td>
+    <td align="center">50</td>
+    <td align="center">60</td>
+    <td align="center">65.0</td>
   </tr>
   <tr>
     <th align="center">User8</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">5</th>
-    <th align="center">13</th>
-    <th align="center">19</th>
-    <th align="center">5</th>
-    <th align="center">12</th>
-    <th align="center">44.2</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">19</th>
-    <th align="center">8</th>
-    <th align="center">16</th>
-    <th align="center">17</th>
-    <th align="center">14</th>
-    <th align="center">11</th>
-    <th align="center">65.8</th>
+    <td align="center">20</td>
+    <td align="center">20</td>
+    <td align="center">50</td>
+    <td align="center">75</td>
+    <td align="center">20</td>
+    <td align="center">50</td>
+    <td align="center">44.2</td>
   </tr>
   <tr>
     <th align="center">User9</th>
-    <th align="center">Easy</th>
-    <th align="center">6</th>
-    <th align="center">3</th>
-    <th align="center">7</th>
-    <th align="center">15</th>
-    <th align="center">6</th>
-    <th align="center">7</th>
-    <th align="center">31.7</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">7</th>
-    <th align="center">3</th>
-    <th align="center">8</th>
-    <th align="center">15</th>
-    <th align="center">7</th>
-    <th align="center">7</th>
-    <th align="center">34.3</th>
+    <td align="center">25</td>
+    <td align="center">10</td>
+    <td align="center">30</td>
+    <td align="center">60</td>
+    <td align="center">25</td>
+    <td align="center">30</td>
+    <td align="center">31.7</td>
   </tr>
   <tr>
     <th align="center">User10</th>
-    <th align="center">Easy</th>
-    <th align="center">15</th>
-    <th align="center">15</th>
-    <th align="center">17</th>
-    <th align="center">15</th>
-    <th align="center">16</th>
-    <th align="center">13</th>
-    <th align="center">70.8</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">18</th>
-    <th align="center">18</th>
-    <th align="center">19</th>
-    <th align="center">13</th>
-    <th align="center">17</th>
-    <th align="center">17</th>
-    <th align="center">80</th>
+    <td align="center">60</td>
+    <td align="center">60</td>
+    <td align="center">70</td>
+    <td align="center">60</td>
+    <td align="center">65</td>
+    <td align="center">50</td>
+    <td align="center">70.8</td>
   </tr>
   <tr>
     <th align="center">User11</th>
-    <th align="center">Easy</th>
-    <th align="center">1</th>
-    <th align="center">7</th>
-    <th align="center">1</th>
-    <th align="center">21</th>
-    <th align="center">3</th>
-    <th align="center">1</th>
-    <th align="center">23.3</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">14</th>
-    <th align="center">16</th>
-    <th align="center">12</th>
-    <th align="center">7</th>
-    <th align="center">37.5</th>
+    <td align="center">5</td>
+    <td align="center">30</td>
+    <td align="center">5</td>
+    <td align="center">85</td>
+    <td align="center">10</td>
+    <td align="center">5</td>
+    <td align="center">23.3</td>
   </tr>
   <tr>
     <th align="center">User12</th>
-    <th align="center">Easy</th>
-    <th align="center">15</th>
-    <th align="center">15</th>
-    <th align="center">16</th>
-    <th align="center">17</th>
-    <th align="center">19</th>
-    <th align="center">11</th>
-    <th align="center">72.5</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">13</th>
-    <th align="center">12</th>
-    <th align="center">12</th>
-    <th align="center">14</th>
-    <th align="center">12</th>
-    <th align="center">15</th>
-    <th align="center">60</th>
+    <td align="center">60</td>
+    <td align="center">60</td>
+    <td align="center">65</td>
+    <td align="center">70</td>
+    <td align="center">75</td>
+    <td align="center">45</td>
+    <td align="center">72.5</td>
   </tr>
   <tr>
     <th align="center">User13</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">5</th>
-    <th align="center">15</th>
-    <th align="center">18</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">36.7</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">13</th>
-    <th align="center">17</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">33.3</th>
+    <td align="center">20</td>
+    <td align="center">20</td>
+    <td align="center">60</td>
+    <td align="center">70</td>
+    <td align="center">10</td>
+    <td align="center">15</td>
+    <td align="center">36.7</td>
   </tr>
   <tr>
     <th align="center">User14</th>
-    <th align="center">Easy</th>
-    <th align="center">16</th>
-    <th align="center">20</th>
-    <th align="center">16</th>
-    <th align="center">18</th>
-    <th align="center">18</th>
-    <th align="center">8</th>
-    <th align="center">75</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">18</th>
-    <th align="center">20</th>
-    <th align="center">20</th>
-    <th align="center">13</th>
-    <th align="center">19</th>
-    <th align="center">8</th>
-    <th align="center">71.2</th>
+    <td align="center">65</td>
+    <td align="center">80</td>
+    <td align="center">65</td>
+    <td align="center">70</td>
+    <td align="center">70</td>
+    <td align="center">30</td>
+    <td align="center">75.0</td>
   </tr>
 </table>
-<p align="center">
-  <b>NASA TLX W test statistic = 17</b><br>
-</p>
 
-#### System Usability Scale
+
+
+#### Hard Mode
 <table align="center">
   <tr>
     <th align="center">User</th>
-    <th align="center">Difficulty</th>
-    <th align="center">1</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">5</th>
-    <th align="center">6</th>
-    <th align="center">7</th>
-    <th align="center">8</th>
-    <th align="center">9</th>
-    <th align="center">10</th>
+    <th align="center">Mental Demand</th>
+    <th align="center">Physical Demand</th>
+    <th align="center">Temporal Demand</th>
+    <th align="center">Performance</th>
+    <th align="center">Effort</th>
+    <th align="center">Frustration</th>
     <th align="center">Score</th>
   </tr>
   <tr>
     <th align="center">User1</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">100</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">3</th>
-    <th align="center">1</th>
-    <th align="center">95</th>
+    <td align="center">45</td>
+    <td align="center">50</td>
+    <td align="center">50</td>
+    <td align="center">70</td>
+    <td align="center">50</td>
+    <td align="center">30</td>
+    <td align="center">55.8</td>
   </tr>
   <tr>
     <th align="center">User2</th>
-    <th align="center">Easy</th>
-    <th align="center">1</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">75</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">3</th>
-    <th align="center">1</th>
-    <th align="center">75</th>
+    <td align="center">20</td>
+    <td align="center">30</td>
+    <td align="center">60</td>
+    <td align="center">85</td>
+    <td align="center">70</td>
+    <td align="center">25</td>
+    <td align="center">55.0</td>
   </tr>
   <tr>
     <th align="center">User3</th>
-    <th align="center">Easy</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">82.5</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">82.5</th>
+    <td align="center">5</td>
+    <td align="center">5</td>
+    <td align="center">45</td>
+    <td align="center">70</td>
+    <td align="center">85</td>
+    <td align="center">60</td>
+    <td align="center">50.0</td>
   </tr>
   <tr>
     <th align="center">User4</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">3</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">82.5</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">3</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">82.5</th>
+    <td align="center">55</td>
+    <td align="center">70</td>
+    <td align="center">70</td>
+    <td align="center">75</td>
+    <td align="center">65</td>
+    <td align="center">50</td>
+    <td align="center">75.8</td>
   </tr>
   <tr>
     <th align="center">User5</th>
-    <th align="center">Easy</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">50</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">45</th>
+    <td align="center">30</td>
+    <td align="center">15</td>
+    <td align="center">10</td>
+    <td align="center">65</td>
+    <td align="center">45</td>
+    <td align="center">15</td>
+    <td align="center">33.3</td>
   </tr>
   <tr>
     <th align="center">User6</th>
-    <th align="center">Easy</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">82.5</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">75</th>
+    <td align="center">50</td>
+    <td align="center">55</td>
+    <td align="center">55</td>
+    <td align="center">70</td>
+    <td align="center">45</td>
+    <td align="center">25</td>
+    <td align="center">56.7</td>
   </tr>
   <tr>
     <th align="center">User7</th>
-    <th align="center">Easy</th>
-    <th align="center">2</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">92.5</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">2</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">92.5</th>
+    <td align="center">60</td>
+    <td align="center">75</td>
+    <td align="center">70</td>
+    <td align="center">45</td>
+    <td align="center">50</td>
+    <td align="center">70</td>
+    <td align="center">71.7</td>
   </tr>
   <tr>
     <th align="center">User8</th>
-    <th align="center">Easy</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">45</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">42.5</th>
+    <td align="center">75</td>
+    <td align="center">30</td>
+    <td align="center">65</td>
+    <td align="center">70</td>
+    <td align="center">55</td>
+    <td align="center">45</td>
+    <td align="center">65.8</td>
   </tr>
   <tr>
     <th align="center">User9</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">87.5</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">5</th>
-    <th align="center">3</th>
-    <th align="center">5</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">80</th>
+    <td align="center">30</td>
+    <td align="center">10</td>
+    <td align="center">30</td>
+    <td align="center">60</td>
+    <td align="center">30</td>
+    <td align="center">30</td>
+    <td align="center">34.3</td>
   </tr>
   <tr>
     <th align="center">User10</th>
-    <th align="center">Easy</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">5</th>
-    <th align="center">3</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">65</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">5</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">65</th>
+    <td align="center">70</td>
+    <td align="center">70</td>
+    <td align="center">75</td>
+    <td align="center">50</td>
+    <td align="center">70</td>
+    <td align="center">70</td>
+    <td align="center">80.0</td>
   </tr>
   <tr>
     <th align="center">User11</th>
-    <th align="center">Easy</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">70</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">82.5</th>
+    <td align="center">5</td>
+    <td align="center">15</td>
+    <td align="center">55</td>
+    <td align="center">65</td>
+    <td align="center">50</td>
+    <td align="center">30</td>
+    <td align="center">37.5</td>
   </tr>
   <tr>
     <th align="center">User12</th>
-    <th align="center">Easy</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">57.5</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
-    <th align="center">55</th>
+    <td align="center">50</td>
+    <td align="center">50</td>
+    <td align="center">50</td>
+    <td align="center">55</td>
+    <td align="center">50</td>
+    <td align="center">60</td>
+    <td align="center">60.0</td>
   </tr>
   <tr>
     <th align="center">User13</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">4</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">80</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">4</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">77.5</th>
+    <td align="center">15</td>
+    <td align="center">15</td>
+    <td align="center">50</td>
+    <td align="center">70</td>
+    <td align="center">15</td>
+    <td align="center">15</td>
+    <td align="center">33.3</td>
   </tr>
   <tr>
     <th align="center">User14</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">2</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
-    <th align="center">85</th>
+    <td align="center">70</td>
+    <td align="center">80</td>
+    <td align="center">80</td>
+    <td align="center">50</td>
+    <td align="center">75</td>
+    <td align="center">30</td>
+    <td align="center">71.2</td>
+  </tr>
+</table>
+
+### Compare between easy and hard mode
+
+<table align="center">
+  <tr>
+    <th align="center">Evaluation Aspect</th>
+    <th align="center">Easy Avg. Score</th>
+    <th align="center">Hard Avg. Score</th>
+    <th align="center">Observation</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">5</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">82.5</th>
+    <td align="center">Mental Demand</td>
+    <td align="center">33.2</td>
+    <td align="center">44.3</td>
+    <td align="center">↑ Increased cognitive effort</td>
   </tr>
-
+  <tr>
+    <td align="center">Physical Demand</td>
+    <td align="center">32.9</td>
+    <td align="center">45.7</td>
+    <td align="center">↑ Increased physical/operational strain</td>
+  </tr>
+  <tr>
+    <td align="center">Temporal Demand</td>
+    <td align="center">42.1</td>
+    <td align="center">55.0</td>
+    <td align="center">↑ Increased time pressure</td>
+  </tr>
+  <tr>
+    <td align="center">Performance<br>(higher = worse)</td>
+    <td align="center">63.9</td>
+    <td align="center">63.9</td>
+    <td align="center">≈ Similar perceived performance</td>
+  </tr>
+  <tr>
+    <td align="center">Effort</td>
+    <td align="center">42.5</td>
+    <td align="center">54.3</td>
+    <td align="center">↑ More effort required</td>
+  </tr>
+  <tr>
+    <td align="center">Frustration</td>
+    <td align="center">27.9</td>
+    <td align="center">39.6</td>
+    <td align="center">↑ Higher frustration level</td>
+  </tr>
 </table>
-<p align="center">
-  <b>SUS W test statistic = 10</b><br>
-</p>
 
-### FINDING
+Our analysis indicates that the Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in increasing challenge, but also highlight the need for balancing difficulty with player satisfaction.
+
+
+#### System Usability Scale
+
+We conducted a System Usability Scale (SUS) evaluation across both Easy and Hard game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system on 10 standardised SUS questions, leading to an aggregate score out of 100.
+
+
+<table align="center">
+  <tr>
+    <th align="center">Participant</th>
+    <th align="center">Like to Use Frequently</th>
+    <th align="center">Unnecessarily Complex</th>
+    <th align="center">Easy to Use</th>
+    <th align="center">Need Technical Support</th>
+    <th align="center">Functions Well Integrated</th>
+    <th align="center">Too Much Inconsistency</th>
+    <th align="center">Learn to Use Quickly</th>
+    <th align="center">Cumbersome to Use</th>
+    <th align="center">Confident to Use</th>
+    <th align="center">Need to Learn a Lot</th>
+    <th align="center">Total</th>
+  </tr>
+  <tr>
+    <th align="center">1</th>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">29</td>
+  </tr>
+  <tr>
+    <th align="center">2</th>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">27</td>
+  </tr>
+  <tr>
+    <th align="center">3</th>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">29</td>
+  </tr>
+  <tr>
+    <th align="center">4</th>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">3</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">29</td>
+  </tr>
+  <tr>
+    <th align="center">5</th>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">34</td>
+  </tr>
+  <tr>
+    <th align="center">6</th>
+    <td align="center">5</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">31</td>
+  </tr>
+  <tr>
+    <th align="center">7</th>
+    <td align="center">2</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">27</td>
+  </tr>
+  <tr>
+    <th align="center">8</th>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">33</td>
+  </tr>
+  <tr>
+    <th align="center">9</th>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">34</td>
+  </tr>
+  <tr>
+    <th align="center">10</th>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">35</td>
+  </tr>
+  <tr>
+    <th align="center">11</th>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">30</td>
+  </tr>
+  <tr>
+    <th align="center">12</th>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">4</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">2</td>
+    <td align="center">3</td>
+    <td align="center">4</td>
+    <td align="center">31</td>
+  </tr>
+  <tr>
+    <th align="center">13</th>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">5</td>
+    <td align="center">4</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">2</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">36</td>
+  </tr>
+  <tr>
+    <th align="center">14</th>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">3</td>
+    <td align="center">5</td>
+    <td align="center">1</td>
+    <td align="center">4</td>
+    <td align="center">1</td>
+    <td align="center">5</td>
+    <td align="center">3</td>
+    <td align="center">31</td>
+  </tr>
+</table>
+
+The SUS evaluation shows that the game is generally perceived as usable and user-friendly, with particularly strong ratings for ease of use, learning speed, and system integration. The consistency of responses between Easy and Hard modes suggests that the core interface is well-designed and scales effectively with difficulty. Some improvements may be explored to further reduce perceived complexity or technical support needs in the harder levels, but overall usability remains strong.
+
+### Finding
 Based on the Wilcoxon Signed-Rank Test:
 
 -  By using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
@@ -1202,6 +1044,13 @@ Based on the Wilcoxon Signed-Rank Test:
    
 -  Improvements based on SUS:  Reduce temporal demand by allowing more flexible pacing or simplifying steps. Reduce physical demand by optimizing input methods and minimizing unnecessary actions.
 
+## Final Evaluation
+
+### Improvement
+
+### New SUS
+
+### Compare
 
 ---
 # Process
