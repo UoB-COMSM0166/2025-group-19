@@ -1055,33 +1055,28 @@ Based on the Wilcoxon Signed-Rank Test:
 ---
 # Process
 ## Collaboration
-Our team followed an Agile development process, incorporating Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
-### Agile Workflow
-#### Iterative Development with Scrum
+Our team adopted an Agile development process, incorporating Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
+
+### Agile Development
+#### Scrum & Iterative Development
 In the first eight weeks, Erik hosted our Scrum meetings, ensuring a structured workflow. Later, he proposed rotating the hosting role among all team members to foster leadership and shared responsibility. This allowed everyone to gain experience in facilitating discussions, reviewing code, and adapting to different coding styles, ultimately strengthening both individual and team skills.
 
 We conducted Scrum meetings twice a week:
-
 - Tuesdays: A comprehensive Kanban board review, where we created new tasks, reviewed outstanding ones, and planned weekly improvements.
 - Thursdays: A stand-up meeting focused on addressing development challenges and ensuring smooth progress.
 
 With the new rotation system, the weekly host also served as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned reviewer. Previously, only a few members handled code reviews, leading to an uneven workload. By distributing these responsibilities, we improved collaboration, knowledge sharing, and overall development efficiency.
 
 #### Task Management & Workflow Refinement
-At the start, none of us had a clear idea of the best development workflow. However, through continuous adjustments and refinements, we gradually developed a process that worked best for our team. The Scrum rotation and structured review system were key improvements that not only enhanced collaboration but also ensured long-term project sustainability.
-
-To maintain a steady workflow and prevent last-minute rushes, we assigned a one-week deadline to each task. This aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to manage workloads effectively without relying on last-minute efforts. By structuring our development process early on, we ensured that each sprint was well-paced and balanced.
+Initially, we lacked a clear workflow, but through continuous adjustments, we developed an effective process. The Scrum rotation and structured code reviews improved collaboration and ensured long-term sustainability. To maintain steady progress and avoid last-minute rushes, we set one-week deadlines for each task, aligning with the XP Sustainable Pace principle. This structured approach kept each sprint well-paced and balanced.
 
 ### Version Control & Code Reviews
 We adopted a structured Git branching model:
 
 - Main branches: `main` (stable version) and `develop` (staging environment).
-
 - Feature branches: Named using `feature/new_feature`, ensuring clarity and consistency.
 
-- Code reviews: Before merging into develop, at least one team member had to approve changes, enforcing quality control and knowledge sharing.
-
-By implementing Collective Ownership, we ensured that all team members had access to the entire codebase, allowing any developer to modify any part of the code when necessary. This reduced bottlenecks and increased overall code quality.
+Code reviews were mandatory before merging into the develop branch, promoting quality control and knowledge sharing. This process ensured collective ownership, where all team members were responsible for the entire codebase.
 
 ### Extreme Programming (XP) Practices
 #### Simple Design
@@ -1096,14 +1091,10 @@ To prevent last-minute rushes, we assigned a one-week deadline to each task, ens
 We adhered to a consistent development standard, encompassing maintainability, readability, the MVC architecture, and object-oriented principles. After completing the implementation of a feature, we submitted a pull request for peer review by other team members.
 
 #### Collective Ownership
-All team members had ownership of the entire codebase, allowing any developer to modify any part of the code when necessary. This practice reduced bottlenecks and improved overall code quality. When a team member encountered challenges with a specific feature, they could seek assistance from others for troubleshooting or further research.
-
-For example, we collaborated on issues such as the black hole effect for bricks, the physics behavior of the ball, and display problems with sidebar power-ups. Through collective problem-solving, we refined our solutions and enhanced the overall implementation.
+All team members had ownership of the entire codebase, enabling anyone to modify any part when needed. This reduced bottlenecks and improved code quality. When challenges arose, such as issues with the black hole effect, ball physics, or sidebar power-ups, we collaborated to troubleshoot and refine solutions, enhancing the overall implementation.
 
 #### Whole Team Approach
-Everyone actively participated in all stages of the project, from planning to implementation, fostering cross-functional collaboration and improving overall development efficiency.
-
-During `Reading Week`, we strategically utilized the extra time for focused development, enabling us to establish a strong foundation for the project. By making substantial early progress, we were able to distribute our workload more evenly in the following weeks, reducing stress from other coursework and deadlines.
+Everyone actively participated in all stages of the project, from planning to implementation, fostering cross-functional collaboration and improving overall development efficiency. During `Reading Week`, we focused on making significant progress, reducing stress from other deadlines. This effort led to our most productive week, delivering 112 commits, demonstrating our commitment to high-quality development.
 
 As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimizing last-minute pressure.
 
@@ -1113,21 +1104,11 @@ As shown in the chart below, our team delivered 112 commits in the week of Febru
   <img src="./assets/reading-week-commit.png" width="400" alt="Block" style="border: 5px solid black;">
 </p>
 
-#### Results: Efficient & High-Quality Development
-By embracing Agile and XP principles, we established a structured yet flexible development workflow. Through Scrum rotation, structured reviews, and early intensive development, we ensured long-term efficiency, steady progress, and high-quality code while avoiding last-minute stress.
-
-## Development & Project Management Tools
+## Project Management Tools
 Throughout the development process, we utilized ZenHub Kanban and Whimsical Wireframe to enhance project management and collaboration efficiency. These tools helped us track development progress, plan system architecture, and ensure seamless communication among team members.
 
 ### Zenhub Kanban
-
-In our project, we use ZenHub as our project management tool due to its key advantages:
-
-1. **Seamless GitHub Integration**: ZenHub is embedded directly within GitHub, enabling developers to manage tasks without switching between platforms, improving efficiency.
-2. **Browser Extension Support**: ZenHub offers a browser extension that integrates seamlessly into the GitHub repository interface, allowing project management directly within the repo view.
-3. **Epics Support**: ZenHub provides Epics to group related issues and manage larger tasks, a feature that GitHub Projects lacks.
-
-Additionally, ZenHub’s deep integration ensures that creating or updating issues in ZenHub is synchronized with GitHub in real-time, maintaining data consistency. Overall, ZenHub’s capabilities and tight GitHub integration make it an ideal choice for our project management.
+ZenHub’s seamless GitHub integration allowed us to manage tasks without switching platforms. It also supported Epics for organizing related issues, making it ideal for tracking larger tasks. The real-time sync between ZenHub and GitHub ensured data consistency, enhancing team efficiency.
 
 <p align="center">
   <b>Figure</b><br>
