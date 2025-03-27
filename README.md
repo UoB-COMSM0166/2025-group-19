@@ -430,7 +430,6 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
 <table align="center">
   <tr>
     <th align="center">User</th>
-    <th align="center">Difficulty</th>
     <th align="center">Mental Demand</th>
     <th align="center">Physical Demand</th>
     <th align="center">Temporal Demand</th>
@@ -441,312 +440,147 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <th align="center">User1</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">7</th>
-    <th align="center">16</th>
-    <th align="center">21</th>
-    <th align="center">18</th>
-    <th align="center">2</th>
+    <th align="center">20</th>
+    <th align="center">30</th>
+    <th align="center">65</th>
+    <th align="center">85</th>
+    <th align="center">70</th>
+    <th align="center">10</th>
     <th align="center">52.5</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">11</th>
-    <th align="center">12</th>
-    <th align="center">12</th>
-    <th align="center">18</th>
-    <th align="center">13</th>
-    <th align="center">7</th>
-    <th align="center">55.8</th>
-  </tr>
-  <tr>
     <th align="center">User2</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">4</th>
-    <th align="center">9</th>
-    <th align="center">11</th>
-    <th align="center">11</th>
-    <th align="center">6</th>
-    <th align="center">33</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">5</th>
-    <th align="center">8</th>
+    <th align="center">20</th>
     <th align="center">15</th>
-    <th align="center">21</th>
-    <th align="center">17</th>
-    <th align="center">6</th>
-    <th align="center">55</th>
+    <th align="center">35</th>
+    <th align="center">45</th>
+    <th align="center">45</th>
+    <th align="center">25</th>
+    <th align="center">33.0</th>
   </tr>
   <tr>
     <th align="center">User3</th>
-    <th align="center">Easy</th>
-    <th align="center">1</th>
-    <th align="center">1</th>
-    <th align="center">11</th>
-    <th align="center">16</th>
-    <th align="center">19</th>
     <th align="center">5</th>
+    <th align="center">5</th>
+    <th align="center">45</th>
+    <th align="center">65</th>
+    <th align="center">75</th>
+    <th align="center">20</th>
     <th align="center">39.1</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">1</th>
-    <th align="center">1</th>
-    <th align="center">11</th>
-    <th align="center">17</th>
-    <th align="center">21</th>
-    <th align="center">15</th>
-    <th align="center">50</th>
-  </tr>
-  <tr>
     <th align="center">User4</th>
-    <th align="center">Easy</th>
-    <th align="center">14</th>
-    <th align="center">19</th>
-    <th align="center">19</th>
-    <th align="center">11</th>
-    <th align="center">15</th>
-    <th align="center">12</th>
-    <th align="center">70</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">14</th>
-    <th align="center">18</th>
-    <th align="center">18</th>
-    <th align="center">19</th>
-    <th align="center">16</th>
-    <th align="center">12</th>
-    <th align="center">75.8</th>
+    <th align="center">55</th>
+    <th align="center">75</th>
+    <th align="center">75</th>
+    <th align="center">45</th>
+    <th align="center">60</th>
+    <th align="center">50</th>
+    <th align="center">70.0</th>
   </tr>
   <tr>
     <th align="center">User5</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">5</th>
-    <th align="center">2</th>
     <th align="center">20</th>
-    <th align="center">3</th>
-    <th align="center">2</th>
+    <th align="center">20</th>
+    <th align="center">10</th>
+    <th align="center">80</th>
+    <th align="center">10</th>
+    <th align="center">10</th>
     <th align="center">25.8</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">8</th>
-    <th align="center">4</th>
-    <th align="center">3</th>
-    <th align="center">16</th>
-    <th align="center">11</th>
-    <th align="center">4</th>
-    <th align="center">33.3</th>
-  </tr>
-  <tr>
     <th align="center">User6</th>
-    <th align="center">Easy</th>
-    <th align="center">11</th>
-    <th align="center">11</th>
-    <th align="center">7</th>
-    <th align="center">20</th>
-    <th align="center">6</th>
-    <th align="center">3</th>
+    <th align="center">45</th>
+    <th align="center">45</th>
+    <th align="center">30</th>
+    <th align="center">80</th>
+    <th align="center">25</th>
+    <th align="center">10</th>
     <th align="center">43.4</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">12</th>
-    <th align="center">14</th>
-    <th align="center">14</th>
-    <th align="center">17</th>
-    <th align="center">11</th>
-    <th align="center">6</th>
-    <th align="center">56.7</th>
-  </tr>
-  <tr>
     <th align="center">User7</th>
-    <th align="center">Easy</th>
-    <th align="center">11</th>
-    <th align="center">16</th>
-    <th align="center">16</th>
-    <th align="center">13</th>
-    <th align="center">13</th>
-    <th align="center">15</th>
+    <th align="center">45</th>
     <th align="center">65</th>
-  </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">15</th>
-    <th align="center">19</th>
-    <th align="center">17</th>
-    <th align="center">11</th>
-    <th align="center">13</th>
-    <th align="center">17</th>
-    <th align="center">71.7</th>
+    <th align="center">65</th>
+    <th align="center">50</th>
+    <th align="center">50</th>
+    <th align="center">60</th>
+    <th align="center">65.0</th>
   </tr>
   <tr>
     <th align="center">User8</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">5</th>
-    <th align="center">13</th>
-    <th align="center">19</th>
-    <th align="center">5</th>
-    <th align="center">12</th>
+    <th align="center">20</th>
+    <th align="center">20</th>
+    <th align="center">50</th>
+    <th align="center">75</th>
+    <th align="center">20</th>
+    <th align="center">50</th>
     <th align="center">44.2</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">19</th>
-    <th align="center">8</th>
-    <th align="center">16</th>
-    <th align="center">17</th>
-    <th align="center">14</th>
-    <th align="center">11</th>
-    <th align="center">65.8</th>
-  </tr>
-  <tr>
     <th align="center">User9</th>
-    <th align="center">Easy</th>
-    <th align="center">6</th>
-    <th align="center">3</th>
-    <th align="center">7</th>
-    <th align="center">15</th>
-    <th align="center">6</th>
-    <th align="center">7</th>
+    <th align="center">25</th>
+    <th align="center">10</th>
+    <th align="center">30</th>
+    <th align="center">60</th>
+    <th align="center">25</th>
+    <th align="center">30</th>
     <th align="center">31.7</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">7</th>
-    <th align="center">3</th>
-    <th align="center">8</th>
-    <th align="center">15</th>
-    <th align="center">7</th>
-    <th align="center">7</th>
-    <th align="center">34.3</th>
-  </tr>
-  <tr>
     <th align="center">User10</th>
-    <th align="center">Easy</th>
-    <th align="center">15</th>
-    <th align="center">15</th>
-    <th align="center">17</th>
-    <th align="center">15</th>
-    <th align="center">16</th>
-    <th align="center">13</th>
+    <th align="center">60</th>
+    <th align="center">60</th>
+    <th align="center">70</th>
+    <th align="center">60</th>
+    <th align="center">65</th>
+    <th align="center">50</th>
     <th align="center">70.8</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">18</th>
-    <th align="center">18</th>
-    <th align="center">19</th>
-    <th align="center">13</th>
-    <th align="center">17</th>
-    <th align="center">17</th>
-    <th align="center">80</th>
-  </tr>
-  <tr>
     <th align="center">User11</th>
-    <th align="center">Easy</th>
-    <th align="center">1</th>
-    <th align="center">7</th>
-    <th align="center">1</th>
-    <th align="center">21</th>
-    <th align="center">3</th>
-    <th align="center">1</th>
+    <th align="center">5</th>
+    <th align="center">30</th>
+    <th align="center">5</th>
+    <th align="center">85</th>
+    <th align="center">10</th>
+    <th align="center">5</th>
     <th align="center">23.3</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">1</th>
-    <th align="center">4</th>
-    <th align="center">14</th>
-    <th align="center">16</th>
-    <th align="center">12</th>
-    <th align="center">7</th>
-    <th align="center">37.5</th>
-  </tr>
-  <tr>
     <th align="center">User12</th>
-    <th align="center">Easy</th>
-    <th align="center">15</th>
-    <th align="center">15</th>
-    <th align="center">16</th>
-    <th align="center">17</th>
-    <th align="center">19</th>
-    <th align="center">11</th>
+    <th align="center">60</th>
+    <th align="center">60</th>
+    <th align="center">65</th>
+    <th align="center">70</th>
+    <th align="center">75</th>
+    <th align="center">45</th>
     <th align="center">72.5</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">13</th>
-    <th align="center">12</th>
-    <th align="center">12</th>
-    <th align="center">14</th>
-    <th align="center">12</th>
-    <th align="center">15</th>
-    <th align="center">60</th>
-  </tr>
-  <tr>
     <th align="center">User13</th>
-    <th align="center">Easy</th>
-    <th align="center">5</th>
-    <th align="center">5</th>
+    <th align="center">20</th>
+    <th align="center">20</th>
+    <th align="center">60</th>
+    <th align="center">70</th>
+    <th align="center">10</th>
     <th align="center">15</th>
-    <th align="center">18</th>
-    <th align="center">3</th>
-    <th align="center">4</th>
     <th align="center">36.7</th>
   </tr>
   <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">13</th>
-    <th align="center">17</th>
-    <th align="center">4</th>
-    <th align="center">4</th>
-    <th align="center">33.3</th>
-  </tr>
-  <tr>
     <th align="center">User14</th>
-    <th align="center">Easy</th>
-    <th align="center">16</th>
-    <th align="center">20</th>
-    <th align="center">16</th>
-    <th align="center">18</th>
-    <th align="center">18</th>
-    <th align="center">8</th>
-    <th align="center">75</th>
+    <th align="center">65</th>
+    <th align="center">80</th>
+    <th align="center">65</th>
+    <th align="center">70</th>
+    <th align="center">70</th>
+    <th align="center">30</th>
+    <th align="center">75.0</th>
   </tr>
-  <tr>
-    <th align="center"></th>
-    <th align="center">Hard</th>
-    <th align="center">18</th>
-    <th align="center">20</th>
-    <th align="center">20</th>
-    <th align="center">13</th>
-    <th align="center">19</th>
-    <th align="center">8</th>
-    <th align="center">71.2</th>
-  </tr>
+</table>
+
+
 </table>
 <p align="center">
   <b>NASA TLX W test statistic = 17</b><br>
