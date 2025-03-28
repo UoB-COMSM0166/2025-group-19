@@ -68,7 +68,13 @@ class GodView {
     }
 
     growAnimation() {
-        if (this.animationProgress < 1) {
+        if (this.forceAnimationComplete) {
+            this.animationProgress = 1;
+            this.animationScale = 1;  
+            this.waveOffset += this.waveSpeed;  
+            this.dialogVisible = true;  
+            this.forceAnimationComplete = false;
+        } else if (this.animationProgress < 1) {
             this.animationProgress += this.animationSpeed;
             this.animationProgress = constrain(this.animationProgress, 0, 1);
             this.animationScale = lerp(0.2, 1, this.animationProgress);
@@ -131,23 +137,23 @@ class GodView {
         noStroke();
         textSize(26 * this.scaleFactor);
         textAlign(CENTER, TOP);
-        text("Press Space to continue, or press Enter to start the game.", windowWidth  / 2,  windowHeight -  80* this.scaleFactor);
+        text("Press Enter to proceed, or begin the game.", windowWidth  / 2,  windowHeight -  80* this.scaleFactor);
     }
 
     handleKeyPress() {
-        if (key === ' ') {
-            this.dialogText = this.secondText;
-            this.charIndex = 0;  
-            this.typedText = "";  
-            this.continueCount++;
-        }else if (key === 'Enter') {
-            this.dialogContainer.remove(); 
-            this.pageController.switchToNewStageMap();
-        }
-
-        if(this.continueCount == 2){
-            this.dialogContainer.remove();
-            this.pageController.switchToNewStageMap();
+        if (key === 'Enter') {
+            if (this.continueCount === 0) {
+                this.forceAnimationComplete = true;
+                this.continueCount++;
+            } else if (this.continueCount === 1) {
+                this.dialogText = dialogData.warning;
+                this.charIndex = 0;
+                this.typedText = "";
+                this.continueCount++;
+            } else if (this.continueCount === 2) {
+                this.dialogContainer.remove();
+                this.pageController.switchToNewStageMap();
+            }
         }
     }
 
