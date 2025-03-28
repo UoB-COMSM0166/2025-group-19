@@ -149,13 +149,13 @@ class SidebarView {
     }
 
     this.canvas.textAlign(CENTER);
-    this.canvas.text("Move paddle: " + this.keyBindings.moveLeft + " " + this.keyBindings.moveRight, 100, 480);
+    this.canvas.text("Move paddle: " + this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight), 100, 480);
 
     this.canvas.textAlign(CENTER);
-    this.canvas.text("Toggle paddle: " + this.keyBindings.togglePaddle, 100, 510);
+    this.canvas.text("Toggle paddle: " + this.formatKey(this.keyBindings.togglePaddle), 100, 510);
 
     this.canvas.textAlign(CENTER);
-    this.canvas.text("Shoot ball: " + this.keyBindings.shootBall, 100, 540);
+    this.canvas.text("Shoot ball: " + this.formatKey(this.keyBindings.shootBall), 100, 540);
     
     this.canvas.textAlign(CENTER);
     this.canvas.text("Pause <p>", 100, 570);
@@ -176,4 +176,18 @@ class SidebarView {
     this.canvasX = (windowWidth - this.scaledWidth) / 2;
     this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
   }
+
+  formatKey(key) {
+    const keyDisplayMap = {
+      'ArrowUp': '↑',
+      'ArrowDown': '↓',
+      'ArrowLeft': '←',
+      'ArrowRight': '→',
+      ' ': 'SPACE',
+      'Space': 'SPACE'
+    };
+    return keyDisplayMap[key] || key.toUpperCase();
+  }
 }
+
+

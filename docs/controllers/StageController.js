@@ -216,6 +216,18 @@ class StageController {
 
   }
 
+  formatKey(key) {
+    const keyDisplayMap = {
+      'ArrowUp': '↑',
+      'ArrowDown': '↓',
+      'ArrowLeft': '←',
+      'ArrowRight': '→',
+      ' ': 'SPACE',
+      'Space': 'SPACE'
+    };
+    return keyDisplayMap[key] || key.toUpperCase();
+  }
+
   displayInstructionsHard() {
     this.menuWidth = 800 * this.scaleFactor;
     this.menuHeight = 500 * this.scaleFactor;
@@ -239,14 +251,10 @@ class StageController {
         togglePaddle: controllerBindings.togglePaddle || 'ArrowUp'
       };
     }
-    text(this.keyBindings.moveLeft + " " + this.keyBindings.moveRight + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 2.3/ 12);
-    text(this.keyBindings.togglePaddle + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 2.9/ 12);
+    text(this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight) + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 2.3/ 12);
+    text(" " + this.formatKey(this.keyBindings.togglePaddle) + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 2.9/ 12);
     image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 1.9/ 12, 80,80);
-    if (this.keyBindings.shootBall === ' ') {
-      text("Shoot ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 2.6/ 12);
-    } else {
-      text(this.keyBindings.shootBall + " to shoot ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 2.6/ 12);
-    }
+    text(" " + this.formatKey(this.keyBindings.shootBall) + " to shoot ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 2.6/ 12);
     image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 2.1/ 12, 60,60);
     text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 2.6/ 12);
 
@@ -310,14 +318,10 @@ class StageController {
         togglePaddle: controllerBindings.togglePaddle || 'ArrowUp'
       };
     }
-    text(this.keyBindings.moveLeft + " " + this.keyBindings.moveRight + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
-    text(this.keyBindings.togglePaddle + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
+    text(this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight) + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
+    text(" " + this.formatKey(this.keyBindings.togglePaddle) + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
     image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
-    if (this.keyBindings.shootBall === ' ') {
-      text("Shoot ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
-    } else {
-      text(this.keyBindings.shootBall + " to shoot ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
-    }
+    text(" " + this.formatKey(this.keyBindings.shootBall) + " to shoot ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
     image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
     text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
 
@@ -370,14 +374,10 @@ class StageController {
         togglePaddle: controllerBindings.togglePaddle || 'ArrowUp'
       };
     }
-    text(this.keyBindings.moveLeft + " " + this.keyBindings.moveRight + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
-    text(this.keyBindings.togglePaddle + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
+    text(this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight) + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
+    text(" " + this.formatKey(this.keyBindings.togglePaddle) + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
     image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
-    if (this.keyBindings.shootBall === ' ') {
-      text("Shoot ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
-    } else {
-      text(this.keyBindings.shootBall + " to shoot ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
-    }
+    text(" " + this.formatKey(this.keyBindings.shootBall) + " to shoot ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
     image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
     text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
 
@@ -441,14 +441,10 @@ class StageController {
         togglePaddle: controllerBindings.togglePaddle || 'ArrowUp'
       };
     }
-    text(this.keyBindings.moveLeft + " " + this.keyBindings.moveRight + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
-    text(this.keyBindings.togglePaddle + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
+    text(this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight) + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
+    text(" " + this.formatKey(this.keyBindings.togglePaddle) + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
     image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
-    if (this.keyBindings.shootBall === ' ') {
-      text("Shoot ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
-    } else {
-      text(this.keyBindings.shootBall + " to shoot ball", this.menuX + this.menuWidth *4.7/ 8, this.menuY + this.menuHeight * 3.5/ 12);
-    }
+    text(" " + this.formatKey(this.keyBindings.shootBall) + " to shoot ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
     image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
     text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
 
