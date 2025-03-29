@@ -1130,4 +1130,17 @@ We use Whimsical to store and organize our `brainstorming drafts`, `level wirefr
 ---
 # Conclusion
 
+Working on Zodiac Catch strengthened our capabilities as software engineers, and allowed us to put previously-taught theories and principles into practice. Fusing proven software development methodologies with tight-knit collaboration, we transformed ideas and concepts into a streamlined game experience featuring custom graphics, complex physics, and an innovative black-hole twist which separates it from its predecessors.
+
+In anticipation of an increasingly complex codebase, object-oriented design became crucial towards maintaining a clean, concise structure. This equally meant that our system architecture retained modular flexibility, especially important given the large number of stages and interfaces in our game. With tasks distributed evenly amongst all group members, features could be developed in tandem for both timely progress and code clarity.  Considerations in regards to sustainability and green software also encouraged us to be mindful of the potential impacts that our game could bring about. In turn, it dictated how we adjusted our coding standards and technical requirements for a more sustainable approach.
+
+On top of catering to the needs of prospective users, evaluative feedback was a key instrument in obtaining up-to-date opinions concerning game flow and playability. Although we tested features thoroughly before deployment, input from real players further highlighted what elements worked well, along with pointing out the most important issues that needed to be improved upon. As a result, we were able to implement adjustments regarding level design and power-ups, ultimately attaining a suitable level of difficulty without sacrificing enjoyment. 
+
+Apart from obstacles pertaining to game mechanics and difficulty which were anticipated in advance, we ran into unexpected challenges at different stages of development, for instance ball speed effects or displaying advanced information in the sidebar. However, this was mitigated by the adoption of Agile techniques. Conducting twice-a-week meetings alongside setting goals and deadlines ensured consistent communication that promoted teamwork as well as reducing the impact of problem areas on the overall workflow. Additionally, balancing Scrum-related workload via a rotation system allowed each of us to fully experience the entire development cycle whilst leveraging our own strengths to lead individual sprints.
+
+Though we have achieved most of what we envisioned for Zodiac Catch within this limited time frame, there is still much potential for growth and development looking forward. Given a longer development period or extended manpower, visual effects could be improved on through the inclusion of game-specific animations with the aim of adding to the overall player experience. Furthermore, we would like to implement an online leaderboard system. By ranking players based on cumulative scoring, it provides a concrete indicator of their performance while introducing a competitive aspect into our game.
+
+This project has provided us with an invaluable, hands-on opportunity to contribute towards a group software project. In the process, we have been able to improve our coding abilities, learn how to better collaborate with fellow engineers, and understand the skills necessary to craft effective solutions from scratch. All of these takeaways will certainly inform and be applied to larger scale projects in our future careers.
+
+---
 # References
