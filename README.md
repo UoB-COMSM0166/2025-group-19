@@ -1132,6 +1132,10 @@ We use Whimsical to store and organize our `brainstorming drafts`, `level wirefr
 
 Working on Zodiac Catch not only strengthened our capabilities as software engineers, but also allowed us to put previously-taught theories and principles into practice. Fusing proven software development techniques with tight-knit collaboration, we transformed a prospective concept into a streamlined game experience featuring custom graphics, complex physics, and an innovative black-hole twist that separates it from its predecessors.
 
+In anticipation of an increasingly complex codebase, object-oriented design became crucial towards maintaining a clean, concise working environment. This also meant that our system architecture retained modular flexibility, especially important given the large number of stages and interfaces in our game. With workload distributed evenly amongst all group members, it meant that features could be developed in tandem, ensuring both a timely progress and structural clarity.
+
+Asides from catering to the needs of prospective users, evaluative feedback was a key instrument in obtaining up-to-date opinions concerning game flow and playability. Although we tested features thoroughly before deployment, input from real players highlighted which elements worked well, whilst simultaneously pointing out the most important issues that needed to be improved upon. As a result, we were able to implement adjustments regarding level design and power-ups, ultimately reaching  a suitability level of difficulty without sacrificing enjoyment.
+
 
 Though we have achieved most of what we envisioned for Zodiac Catch within this limited time frame, there is still much potential for growth and development looking forward. Given a longer development period or extended manpower, visual effects could be further improved on through the inclusion of game=specific animations that adds to the overall player experience. We would also like to implement an online leaderboard system that ranks players based on cumulative scoring, not only providing a concrete indicator of their performance, but also introducing a competitive aspect into our game.
 
