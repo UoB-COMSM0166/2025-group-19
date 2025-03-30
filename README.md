@@ -20,6 +20,7 @@
 - [Implementation](#implementation)
 - [Evaluation](#evaluation)
 - [Process](#process)
+- [Sustainability, Ethics, and Accessibility](#sustainability-ethics-and-accessibility)
 - [Conclusion](#conclusion)
 - [References](#references)
 
@@ -1132,6 +1133,112 @@ We use Whimsical to store and organize our `brainstorming drafts`, `level wirefr
   <i>Whimsical</i><br>
   <img src="./assets/whimsical.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
+
+---
+# Sustainability, ethics and accessibility
+## Environmental Impact
+To minimize the environmental impact of our game, we have implemented sustainable software practices based on the **Green Software Foundation Implementation Patterns**. These efforts help reduce energy consumption and improve efficiency.
+
+### Avoid an Excessive DOM Size
+- Our game dynamically renders elements using JavaScript instead of relying on a large, pre-defined DOM structure.
+- This approach optimizes memory usage, reduces rendering time, and lowers CPU workload, contributing to energy efficiency.
+
+### Avoid Tracking Unnecessary Data
+- We ensure that no player data is stored or tracked.
+- By eliminating the need for data collection and storage, we reduce resource consumption related to data processing and database management, decreasing overall energy demand.
+
+### Remove Unused CSS Definitions
+- We maintain a lightweight and optimized stylesheet, including only essential CSS.
+- This reduces unnecessary computations in the rendering process, leading to better efficiency and lower power consumption.
+
+## Applying the Sustainability Awareness Framework: Environmental & Economic Aspects
+<table border="1">
+    <tr>
+        <th>Category</th>
+        <th>Subcategory</th>
+        <th>Considerations</th>
+    </tr>
+    <tr>
+        <td rowspan="5">Environmental</td>
+        <td>Material & Resources</td>
+        <td>
+            a. Development relies on human resources (developers) and hardware (laptops).
+        </td>
+    </tr>
+    <tr>
+        <td>Waste & Pollution</td>
+        <td>
+            a. Hardware production consumes natural resources (e.g., metals, minerals) and may contribute to environmental pollution.<br>
+            b. Using cloud-based collaboration tools generates a digital carbon footprint.
+        </td>
+    </tr>
+    <tr>
+        <td>Biodiversity</td>
+        <td>
+            a. Optimizing energy efficiency in development can help reduce power consumption and carbon emissions.<br>
+            b. Lower demand for electricity can indirectly reduce pollution and deforestation, benefiting ecosystems and biodiversity.
+        </td>
+    </tr>
+    <tr>
+        <td>Energy</td>
+        <td>
+            a. Raises awareness about Earth’s diverse wildlife and encourages players to appreciate and protect nature.
+        </td>
+    </tr>
+    <tr>
+        <td>Logistics</td>
+        <td>
+            a. Highlights the importance of wildlife conservation and sustainability.<br>
+            b. Reduces the need for excessive hardware manufacturing by optimizing development practices.
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="5">Economic</td>
+        <td>Innovation</td>
+        <td>
+            a. Future expansions may include VR/AR versions.<br>
+            b. Combines the classic brick-breaker game with zodiac themes, creating a unique concept.
+        </td>
+    </tr>
+    <tr>
+        <td>Customer Relationship Management</td>
+        <td>
+            a. Plans to launch live events to engage players.<br>
+            b. Potential merchandise (e.g., plush toys, picture books) featuring zodiac-themed characters.
+        </td>
+    </tr>
+    <tr>
+        <td>Supply Chain</td>
+        <td>
+            a. May utilize cloud services (e.g., AWS) if a multiplayer version is developed.
+        </td>
+    </tr>
+    <tr>
+        <td>Governance</td>
+        <td>
+            a. Game development follows a structured process, including weekly team meetings for innovation and progress tracking.
+        </td>
+    </tr>
+    <tr>
+        <td>Value</td>
+        <td>
+            a. Free-to-play model, with potential for in-app purchases in the future.<br>
+            b. Serves as a medium to promote Chinese culture through interactive gameplay.
+        </td>
+    </tr>
+    <tr>
+</table>
+
+## Ethics
+### 1. Potential Influence on Player Behavior
+The game provides an interactive platform for players to explore the principles of ball reflection in physics, offering educational value, particularly in physics learning. Additionally, the incorporation of the Chinese zodiac fosters cultural awareness and exchange by allowing players to input their birthday to discover their zodiac sign. The game promotes a positive and family-friendly environment, free from violence or inappropriate content. Its simple yet engaging design encourages meaningful interactions, making it suitable for all age groups, including parents and children.
+
+### 2. Data Privacy Considerations
+The game does not pose any data privacy risks. Although players have the option to input their birthday to determine their zodiac sign, this information is neither stored nor tracked. The absence of a database ensures that no personal data is collected or retained, eliminating concerns regarding privacy breaches. Furthermore, as birthdays are not classified as highly sensitive information, this feature does not compromise player security.
+
+### 3. Impact on Player Emotions
+The game is designed to provide a stress-free and enjoyable experience. To prevent frustration, it includes both easy and hard difficulty modes, with the easy mode specifically adjusted for beginners and children. There are no limitations on the number of attempts, allowing players to retry levels freely without pressure. Additionally, players have full control over level selection, choosing any zodiac sign as their starting point. The game avoids punishing mechanics that could lead to negative emotions. Instead, it incorporates hidden surprises within each level, enhancing player engagement and fostering a sense of accomplishment and joy. The flexible gameplay ensures that players remain motivated and can share positive experiences with friends and family.
+
 
 ---
 # Conclusion
