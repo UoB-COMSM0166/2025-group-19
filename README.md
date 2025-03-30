@@ -291,35 +291,38 @@ Finally, in the wider environment, casual and competitive gamers engage with the
 </table>
 
 # Design
-## Class Diagrams
-
-After creating the paper prototype and sketching our ideas in wireframes, we moved on to designing our game's system architecture through in-person meetings. This process ensured a shared understanding of Object-Oriented Design and served as a reference for our source code.
-
+Zodiac Catch is a brick-breaking game where players select their zodiac animal and difficulty level to play through 12 unique stages, each representing a different zodiac animal. To create an engaging and personalized gaming experience, we carefully designed our game’s core mechanics, system architecture, and visual effects while maintaining usability.
+## Initial Prototyping and Planning
 In our initial meeting, we identified the game's essential components, such as the ball, paddle, and blocks. We then outlined the functions of each component, the unique features of different game stages, and how these elements interact. From this, we developed a basic class diagram.
+Our design journey began with paper prototypes and wireframe sketches, which helped us conceptualize the core game mechanics and user interactions. Through these early prototypes, we refined ideas about paddle control, brick patterns, special effects, and stage progression. This process allowed us to brainstorm innovative solutions before diving into development.
+After finalizing the wireframes, we moved on to designing the system architecture through every week meetings. These discussions ensured that all team members had a shared understanding of system structure and served as a solid reference for implementing the code. 
+To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates concerns between game data, rendering, and user interaction logic. This approach improves scalability, facilitates debugging, and enhances the modularity of the codebase.
+-	Controllers to handle keyboard input, manage game state across different stages, and activate special features.
+-	Views to define the game's aesthetics and user interface.
+-	Models to store all game components, including the brick patterns for various stages. This structured approach helped us maintain a clear separation of concerns and facilitated scalable development.
+## Core gameplay and Flow
+The core game flow is player choose their own zodiac and difficulty level. There are 12 stages in total and each stage represents a different zodiac animal. After entering one stage, player controls a addle to hit the ball. When the ball collides with blocks, the blocks disappear, and the player earns points. Different effects are applied as player hit specific bricks. In different modes, we designed different effects to increase or decrease difficulty. 
+Based on above game flow, we created sequence diagram, which indicates the order of game flow and make us improve game flow to be smoother.
+<p align="center">
+  <b>Figure 8</b><br>
+  <i>Initial Class Diagram</i><br>
+  <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
+</p>
+We developed a system architecture that begins with welcome menu. Here players can choose to start game, getting their own zodiac animal based on birthday or customize key setting and background music.
+Following the sequence diagram, we developed and iterated on class diagram. Class diagram provides an overall view of our system and indicates the structure of our game and structural relationships between game objects. 
 <p align="center">
   <b>Figure 8</b><br>
   <i>Initial Class Diagram</i><br>
   <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
-
-During our first stage of coding, we decided to adopt the **Model-View-Controller (MVC)** design pattern, as it could accommodate our complex features and multiple game views. This led to a more detailed class diagram, which included:
-- **Controllers** to handle keyboard input, manage game state across different stages, and activate special features.
-- **Views** to define the game's aesthetics and user interface.
-- **Models** to store all game components, including the brick patterns for various stages.
-This structured approach helped us maintain a clear separation of concerns and facilitated scalable development.
-
 <p align="center">
-  <b>Figure 9</b><br>
-  <i>Updated Class Diagram</i><br>
-  <img src="./assets/classDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
+  <b>Figure 8</b><br>
+  <i>Initial Class Diagram</i><br>
+  <img src="./assets/finalClassDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
-
-## Sequence Diagram
-<p align="center">
-  <b>Figure 10</b><br>
-  <i>Sequence Diagram</i><br>
-  <img src="./assets/sequence.jpeg" width="1000" alt="Block" style="border: 5px solid black;">
-</p>
+The above 2 class diagram shows the how our Class Diagram changed as our development of game and how our game’s complexity grew while developing new features.
+Additionally, this game is developed using agile methodology to manage the software development lifecycle, ensuring continuous delivery, rapid iteration, and team collaboration. We used Zenhub to track work, organize sprints, and monitor progress through detailed issue tracking.
+By following the MVC design pattern, using Agile methodology, and leveraging ZenHub for project management, we successfully developed a scalable, maintainable, and engaging game. Our initial focus on well-structured system architecture, coupled with iterative improvements based on sequence and class diagrams, ensures our code was organized and maintainable from the very beginning, making it easier to develop new features and improve the game logic throughout development. This proactive approach allowed us to create a game that offers an immersive and personalized experience for players.
 
 ---
 # Implementation
