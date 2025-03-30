@@ -304,21 +304,21 @@ To ensure a well-structured and maintainable codebase, we decide to follow the M
 The core game flow is player choose their own zodiac and difficulty level. There are 12 stages in total and each stage represents a different zodiac animal. After entering one stage, player controls a addle to hit the ball. When the ball collides with blocks, the blocks disappear, and the player earns points. Different effects are applied as player hit specific bricks. In different modes, we designed different effects to increase or decrease difficulty. 
 Based on above game flow, we created sequence diagram, which indicates the order of game flow and make us improve game flow to be smoother.
 <p align="center">
-  <b>Figure 8</b><br>
-  <i>Initial Class Diagram</i><br>
   <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
+  <b>Figure </b><br>
+  <i>Sequence Diagram</i><br>
 </p>
 We developed a system architecture that begins with welcome menu. Here players can choose to start game, getting their own zodiac animal based on birthday or customize key setting and background music.
 Following the sequence diagram, we developed and iterated on class diagram. Class diagram provides an overall view of our system and indicates the structure of our game and structural relationships between game objects. 
 <p align="center">
+  <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
   <b>Figure 8</b><br>
   <i>Initial Class Diagram</i><br>
-  <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 <p align="center">
-  <b>Figure 8</b><br>
-  <i>Initial Class Diagram</i><br>
   <img src="./assets/finalClassDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
+  <b>Figure 8</b><br>
+  <i>Class Diagram</i><br>
 </p>
 The above 2 class diagram shows the how our Class Diagram changed as our development of game and how our game’s complexity grew while developing new features.
 Additionally, this game is developed using agile methodology to manage the software development lifecycle, ensuring continuous delivery, rapid iteration, and team collaboration. We used Zenhub to track work, organize sprints, and monitor progress through detailed issue tracking.
