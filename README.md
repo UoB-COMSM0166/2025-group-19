@@ -58,6 +58,12 @@ As a unique twist, all levels in Zodiac Catch contain an unexpected element - bl
 
 To further put a spin on the typically non-narrative genre, our game is themed after the Chinese zodiac. Each stage corresponds to an animal from the twelve-year cycle: rat, ox, tiger, rabbit, dragon, snake, horse, goat, monkey, rooster, dog and pig. A bonus feature found on the main page, you can also enter your birth year to find the zodiac animal that represents you. 
 
+<p align="center">
+  <b>Figure 2</b><br>
+  <i>12 zodiac animals</i><br>
+  <img src="./assets/animals.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
 With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test, and learn about Chinese mythology along the way.
 
 ---
@@ -130,7 +136,7 @@ In the early stages of the game project, we conducted a brainstorming session wh
 </table>
 
 <p align="center">
-  <b>Figure 2</b><br>
+  <b>Figure 3</b><br>
   <i>Brainstormed Game Ideas on Online Word</i><br>
   <img src="./assets/word-game-ideas.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -139,7 +145,7 @@ In the early stages of the game project, we conducted a brainstorming session wh
 After brainstorming and discussions, we decided to use the brick breaker game as the project for this development. Next, we used a paper prototype to streamline the game flow, helping everyone gain a clearer blueprint and understanding of the game.
 
 <p align="center">
-  <b>Figure 3</b><br>
+  <b>Figure 4</b><br>
   <i>Paper Prototype</i><br>
   <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -147,7 +153,7 @@ After brainstorming and discussions, we decided to use the brick breaker game as
 Following this, Eric began the initial development of the brick breaker game, which became the first prototype of our game.
 
 <p align="center">
- <b>Figure 4</b><br>
+ <b>Figure 5</b><br>
  <i>Game prototype</i><br>
  <img src="./assets/game-prototype.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -155,14 +161,14 @@ Following this, Eric began the initial development of the brick breaker game, wh
 When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and incorporated this concept into our digital prototype, further brainstorming and refining the game design from there. Ultimately, we chose the Chinese Zodiac as the core theme for the game, combining it with the brick-breaking gameplay, resulting in the creation of Zodiac Catch.
 
 <p align="center">
-  <b>Figure 5</b><br>
+  <b>Figure 6</b><br>
   <i>Digital prototype</i><br>
   <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Identifying Stakeholders
 <p align="center">
-  <b>Figure 6</b><br>
+  <b>Figure 7</b><br>
   <i>Stakeholders</i><br>
   <img src="./assets/stakeholders.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -291,7 +297,7 @@ After creating the paper prototype and sketching our ideas in wireframes, we mov
 
 In our initial meeting, we identified the game's essential components, such as the ball, paddle, and blocks. We then outlined the functions of each component, the unique features of different game stages, and how these elements interact. From this, we developed a basic class diagram.
 <p align="center">
-  <b>Figure 5</b><br>
+  <b>Figure 8</b><br>
   <i>Initial Class Diagram</i><br>
   <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
@@ -303,14 +309,14 @@ During our first stage of coding, we decided to adopt the **Model-View-Controlle
 This structured approach helped us maintain a clear separation of concerns and facilitated scalable development.
 
 <p align="center">
-  <b>Figure 6</b><br>
+  <b>Figure 9</b><br>
   <i>Updated Class Diagram</i><br>
   <img src="./assets/classDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Sequence Diagram
 <p align="center">
-  <b>Figure 6</b><br>
+  <b>Figure 10</b><br>
   <i>Sequence Diagram</i><br>
   <img src="./assets/sequence.jpeg" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
@@ -375,7 +381,7 @@ By understanding what players cared about during gameplay and collecting questio
 
 
 <p align="center">
-  <b>Figure 2</b><br>
+  <b>Figure 11</b><br>
   <i>Zodiac Catch</i><br>
   <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
@@ -1099,7 +1105,7 @@ Everyone actively participated in all stages of the project, from planning to im
 As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimizing last-minute pressure.
 
 <p align="center">
-  <b>Figure</b><br>
+  <b>Figure 12</b><br>
   <i>Productive Period</i><br>
   <img src="./assets/reading-week-commit.png" width="400" alt="Block" style="border: 5px solid black;">
 </p>
@@ -1111,7 +1117,7 @@ Throughout the development process, we utilized ZenHub Kanban and Whimsical Wire
 ZenHub’s seamless GitHub integration allowed us to manage tasks without switching platforms. It also supported Epics for organizing related issues, making it ideal for tracking larger tasks. The real-time sync between ZenHub and GitHub ensured data consistency, enhancing team efficiency.
 
 <p align="center">
-  <b>Figure</b><br>
+  <b>Figure 13</b><br>
   <i>Zenhub integrate Github</i><br>
   <img src="./assets/zenhub.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -1122,7 +1128,7 @@ ZenHub’s seamless GitHub integration allowed us to manage tasks without switch
 We use Whimsical to store and organize our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It provides real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for efficient planning and coordination.
 
 <p align="center">
-  <b>Figure</b><br>
+  <b>Figure 14</b><br>
   <i>Whimsical</i><br>
   <img src="./assets/whimsical.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
