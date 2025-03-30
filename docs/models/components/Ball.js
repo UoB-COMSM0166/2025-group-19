@@ -13,7 +13,7 @@ class Ball {
     this.gameWidth = gameWidth - this.borderSize;
     this.gameHeight = gameHeight;
     this.gravityOn = gravityOn;
-    this.gravity = 0.1;
+    this.gravity = 0.2;
     this.increaseSpeed = false;
     this.incSpeedVal = 1.5;
     this.incSpeedTime = 1200;
@@ -36,7 +36,6 @@ class Ball {
 
     const minSpeed = 1;
     if (Math.abs(this.speedX) < minSpeed) this.speedX = Math.sign(this.speedX) !== 0 ? Math.sign(this.speedX) * minSpeed : minSpeed;
-    if (Math.abs(this.speedY) < minSpeed) this.speedY = Math.sign(this.speedY) !== 0 ? Math.sign(this.speedY) * minSpeed : minSpeed;
 
     this.x += this.speedX;
     this.y += this.speedY;
