@@ -1239,6 +1239,21 @@ The game does not pose any data privacy risks. Although players have the option 
 ### 3. Impact on Player Emotions
 The game is designed to provide a stress-free and enjoyable experience. To prevent frustration, it includes both easy and hard difficulty modes, with the easy mode specifically adjusted for beginners and children. There are no limitations on the number of attempts, allowing players to retry levels freely without pressure. Additionally, players have full control over level selection, choosing any zodiac sign as their starting point. The game avoids punishing mechanics that could lead to negative emotions. Instead, it incorporates hidden surprises within each level, enhancing player engagement and fostering a sense of accomplishment and joy. The flexible gameplay ensures that players remain motivated and can share positive experiences with friends and family.
 
+## Accessibility
+### 1. Input and Control Customization
+The game is fully controlled via the keyboard, with clear on-screen instructions provided at appropriate moments. Additionally, players can customize key bindings through the settings menu, allowing them to tailor the controls to their preferred play style. Future updates may introduce additional input options, such as mouse support, to enhance accessibility.
+
+### 2. Compatibility with Low-End Hardware
+The game operates entirely within a web browser and does not require installation or specific operating system compatibility. As a lightweight application, it can run efficiently on devices with limited hardware capabilities, ensuring accessibility for a broader range of users.
+
+### 3. Multilingual Support
+At present, the game is only available in English. However, future iterations aim to incorporate additional language options to make the game accessible to a more diverse audience.
+
+### 4. Responsive Design
+The game employs a responsive web design (RWD) approach, ensuring optimal performance and a consistent user experience across various screen sizes and device resolutions. Players can seamlessly interact with the game on different platforms without compromising functionality or usability.
+
+### 5. Audio Assistance
+The game features background music with adjustable volume settings accessible through the settings menu. Future updates will introduce additional auditory cues, such as collision sounds when the ball bounces, to improve both gameplay feedback and accessibility for players who rely on audio cues for enhanced interaction.
 
 ---
 # Conclusion
