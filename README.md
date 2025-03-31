@@ -1159,6 +1159,46 @@ To minimize the environmental impact of our game, we have implemented sustainabl
         <th>Considerations</th>
     </tr>
     <tr>
+        <td rowspan="6">Individual</td>
+        <td>Mental Health</td>
+        <td>
+            a. Helps players develop patience and emotional resilience.<br>
+            b. Provides a sense of achievement when clearing stages.
+        </td>
+    </tr>
+    <tr>
+        <td>Physical</td>
+        <td>
+            a. Enhances reflexes through interactive gameplay.
+        </td>
+    </tr>
+    <tr>
+        <td>Lifelong Learning</td>
+        <td>
+            a. Educates players about the Chinese zodiac and its cultural significance.
+        </td>
+    </tr>
+    <tr>
+        <td>Privacy</td>
+        <td>
+            a. As a single-player game, there are no privacy concerns.<br>
+            b. No user data is stored (players may enter their birthdate voluntarily, but it is not saved).<br>
+            c. Game progress resets upon reloading (no IP tracking or data retention).
+        </td>
+    </tr>
+    <tr>
+        <td>Agency</td>
+        <td>
+            a. Players can freely choose levels, exit at any time, and control their gameplay experience.
+        </td>
+    </tr>
+    <tr>
+        <td>Safety</td>
+        <td>
+            a. Features family-friendly visuals and gameplay, ensuring a safe environment for all players.
+        </td>
+    </tr>
+    <tr>
         <td rowspan="5">Environmental</td>
         <td>Material & Resources</td>
         <td>
