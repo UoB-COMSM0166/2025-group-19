@@ -24,7 +24,7 @@ class SettingDialog {
         this.selectedSliderIndex = 0;
         this.selectedBtnIndex = -1;
         this.isInRightContent = false;
-        this.warntext = "P, C, M, Enter, Tab \n can't be control keys \n No duplicate keys allowed";
+        this.warntext = "P, C, M, Enter, Tab, Shift \n can't be control keys \n No duplicate keys allowed";
         /*
         this.keyBindings = {
             shootBall: 'SPACE',
@@ -136,7 +136,7 @@ class SettingDialog {
 
     handleSettingKeyboard(key) {
         if (this.awaitingKeyPress) {
-            if (key.toUpperCase() === 'P' || key.toUpperCase() === 'C' || key.toUpperCase() === 'M' || key.toUpperCase() === 'ENTER' || key.toUpperCase() === 'TAB') {
+            if (key.toUpperCase() === 'P' || key.toUpperCase() === 'C' || key.toUpperCase() === 'M' || key.toUpperCase() === 'ENTER' || key.toUpperCase() === 'TAB' || key.toUpperCase() === 'SHIFT') {
                 this.awaitingKeyPress = false;
                 this.currentRebindAction = null;
                 return;
