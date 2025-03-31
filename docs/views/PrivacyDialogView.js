@@ -41,42 +41,6 @@ class PrivacyDialogView {
         this.canvasY = (windowHeight - this.scaledHeight) / 2; // center
     }
 
-    handleSettingKeyboard(key) {
-        if (key === 'ArrowUp') {
-            this.selectedBtnIndex = (this.selectedBtnIndex - 1 + 4) % 4;
-        } else if (key === 'ArrowDown') {
-            this.selectedBtnIndex = (this.selectedBtnIndex + 1) % 4;
-        } else if (key === 'Escape') {
-            this.selectedBtnIndex = -1;
-            this.isInRightContent = false;
-        }
-    }
-
-    handleSettingSoundKeyPress(key) {
-        if (key === 'ArrowUp' || key === 'ArrowDown') {
-            this.selectedSliderIndex = 1 - this.selectedSliderIndex; 
-        } else if (key === 'ArrowLeft') {
-            if (this.selectedSliderIndex === 0) {
-                let newValue = constrain(this.slider_bgMusic.value() - 10, 0, 100);
-                this.slider_bgMusic.value(newValue);
-                this.bgMusic.setVolume(newValue / 100);
-            } else {
-                this.slider_soundEffect.value(this.slider_soundEffect.value() - 10);
-            }
-        } else if (key === 'ArrowRight') {
-            if (this.selectedSliderIndex === 0) {
-                let newValue = constrain(this.slider_bgMusic.value() + 10, 0, 100);
-                this.slider_bgMusic.value(newValue);
-                this.bgMusic.setVolume(newValue / 100);
-            } else {
-                this.slider_soundEffect.value(this.slider_soundEffect.value() + 10);
-            }
-        } else if (key === 'Escape') {
-            this.selectedSliderIndex = 0;
-            this.isInRightContent = false;
-        }
-    }
-
     displayDialog() {
         this.dialogWidth = 800 * this.scaleFactor;
         this.dialogHeight = 500 * this.scaleFactor;
@@ -114,7 +78,6 @@ class PrivacyDialogView {
     }
 
     handleKeyPress(key) {
-        console.log("666666");
         if (this.dialogOn) {
             if (key === 'ArrowUp') {
                 this.selectedIndex = (this.selectedIndex - 1 + this.options.length) % this.options.length;
