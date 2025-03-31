@@ -14,6 +14,7 @@ class StageMapView {
     this.images = {};
     this.loadImages();
     this.keyPressInterval = null;
+    this.privacyDialog = new PrivacyDialogView(this, this.pageController);
     this.lunarNewYearDates = {
       1950: { month: 2, day: 17 },
       1951: { month: 2, day: 6 },
@@ -182,67 +183,72 @@ class StageMapView {
     fill(255);
     textSize(30);
     text("Back", width / 2, height * 0.88 + 20);
+    this.privacyDialog.display();
   }
 
   handleKeyPress(key) {
     if (this.keyPressInterval) return;
+    if (this.privacyDialog.dialogOn) {
+      this.privacyDialog.handleKeyPress(key);
+    }else{
 
-    const getMaxDays = (year, month) => {
-      const daysInMonth = {
-        1: 31, 2: isLeapYear(year) ? 29 : 28, 3: 31, 4: 30, 5: 31, 6: 30,
-        7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31
+      const getMaxDays = (year, month) => {
+        const daysInMonth = {
+          1: 31, 2: isLeapYear(year) ? 29 : 28, 3: 31, 4: 30, 5: 31, 6: 30,
+          7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31
+        };
+        return daysInMonth[month];
       };
-      return daysInMonth[month];
-    };
-
-    // is Leap Year?
-    const isLeapYear = (year) => {
-      return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
-    };
-
-    const adjustValue = (change) => {
-      if (this.currentFocus === "year") {
-        this.yearInput = Math.min(2045, Math.max(1950, this.yearInput + change));
-        this.dayInput = Math.min(getMaxDays(this.yearInput, this.monthInput), this.dayInput);
-      } else if (this.currentFocus === "month") {
-        this.monthInput = Math.min(12, Math.max(1, this.monthInput + change));
-        this.dayInput = Math.min(getMaxDays(this.yearInput, this.monthInput), this.dayInput);
-      } else if (this.currentFocus === "day") {
-        let maxDays = getMaxDays(this.yearInput, this.monthInput);
-        this.dayInput = Math.min(maxDays, Math.max(1, this.dayInput + change));
-      } else if (this.currentFocus === "zodiac") {
-        this.selectedIndex = (this.selectedIndex + change + this.zodiacSigns.length) % this.zodiacSigns.length;
-      }
-    };
-
-    if (key === 'ArrowLeft' || key === 'ArrowRight') {
-      let change = key === 'ArrowLeft' ? -1 : 1;
-      adjustValue(change);
-      this.keyPressInterval = setInterval(() => {
+  
+      // is Leap Year?
+      const isLeapYear = (year) => {
+        return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+      };
+  
+      const adjustValue = (change) => {
+        if (this.currentFocus === "year") {
+          this.yearInput = Math.min(2045, Math.max(1950, this.yearInput + change));
+          this.dayInput = Math.min(getMaxDays(this.yearInput, this.monthInput), this.dayInput);
+        } else if (this.currentFocus === "month") {
+          this.monthInput = Math.min(12, Math.max(1, this.monthInput + change));
+          this.dayInput = Math.min(getMaxDays(this.yearInput, this.monthInput), this.dayInput);
+        } else if (this.currentFocus === "day") {
+          let maxDays = getMaxDays(this.yearInput, this.monthInput);
+          this.dayInput = Math.min(maxDays, Math.max(1, this.dayInput + change));
+        } else if (this.currentFocus === "zodiac") {
+          this.selectedIndex = (this.selectedIndex + change + this.zodiacSigns.length) % this.zodiacSigns.length;
+        }
+      };
+  
+      if (key === 'ArrowLeft' || key === 'ArrowRight') {
+        let change = key === 'ArrowLeft' ? -1 : 1;
         adjustValue(change);
-      }, 100);
-    } else if (key === 'Enter') {
-      if (this.currentFocus === "year") {
-        this.currentFocus = "month";
-      } else if (this.currentFocus === "month") {
-        this.currentFocus = "day";
-      } else if (this.currentFocus === "day") {
-        this.calculateZodiac();
-        this.currentFocus = "zodiac";
-      } else if (this.currentFocus === "zodiac") {
-        const selectedStage = this.zodiacSigns[this.selectedIndex];
-        this.pageController.setStageName(selectedStage);
-        this.pageController.switchToMode();
-      } else if (this.currentFocus === "back") {
-        this.pageController.switchToWelcome();
+        this.keyPressInterval = setInterval(() => {
+          adjustValue(change);
+        }, 100);
+      } else if (key === 'Enter') {
+        if (this.currentFocus === "year") {
+          this.currentFocus = "month";
+        } else if (this.currentFocus === "month") {
+          this.currentFocus = "day";
+        } else if (this.currentFocus === "day") {
+          this.calculateZodiac();
+          this.currentFocus = "zodiac";
+        } else if (this.currentFocus === "zodiac") {
+          const selectedStage = this.zodiacSigns[this.selectedIndex];
+          this.pageController.setStageName(selectedStage);
+          this.pageController.switchToMode();
+        } else if (this.currentFocus === "back") {
+          this.pageController.switchToWelcome();
+        }
+      } else if (key === 'ArrowUp') {
+        if (this.currentFocus === "back") this.currentFocus = "zodiac";
+        else if (this.currentFocus === "zodiac") this.currentFocus = "day";
+        else if (this.currentFocus === "day") this.currentFocus = "month";
+        else if (this.currentFocus === "month") this.currentFocus = "year";
+      } else if (key === 'ArrowDown') {
+        if (this.currentFocus === "zodiac") this.currentFocus = "back";
       }
-    } else if (key === 'ArrowUp') {
-      if (this.currentFocus === "back") this.currentFocus = "zodiac";
-      else if (this.currentFocus === "zodiac") this.currentFocus = "day";
-      else if (this.currentFocus === "day") this.currentFocus = "month";
-      else if (this.currentFocus === "month") this.currentFocus = "year";
-    } else if (key === 'ArrowDown') {
-      if (this.currentFocus === "zodiac") this.currentFocus = "back";
     }
   }
 
