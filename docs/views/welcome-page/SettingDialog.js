@@ -24,6 +24,7 @@ class SettingDialog {
         this.selectedSliderIndex = 0;
         this.selectedBtnIndex = -1;
         this.isInRightContent = false;
+        this.warntext = "P, C, M, Enter, Tab \n can't be control keys \n No duplicate keys allowed";
         /*
         this.keyBindings = {
             shootBall: 'SPACE',
@@ -135,7 +136,15 @@ class SettingDialog {
 
     handleSettingKeyboard(key) {
         if (this.awaitingKeyPress) {
-            if (key.toUpperCase() === 'P') {
+            if (key.toUpperCase() === 'P' || key.toUpperCase() === 'C' || key.toUpperCase() === 'M' || key.toUpperCase() === 'ENTER' || key.toUpperCase() === 'TAB') {
+                this.awaitingKeyPress = false;
+                this.currentRebindAction = null;
+                return;
+            }
+            const alreadyBoundAction = Object.keys(this.keyBindings).find(action => 
+                this.keyBindings[action].toUpperCase() === key.toUpperCase()
+            );
+            if (alreadyBoundAction) {
                 this.awaitingKeyPress = false;
                 this.currentRebindAction = null;
                 return;
@@ -203,7 +212,7 @@ class SettingDialog {
         textAlign(CENTER, CENTER);
         if (this.displayOption === 0 ) {
             textSize(20 * this.scaleFactor);
-            text('Press ESC to return to left menu and/or close dialog\n Press ENTER to change key bindings (P cannot be set as a new key)\n Press arrow keys to control', this.dialogX + this.dialogWidth / 2, this.dialogY - 50); 
+            text('Press ESC to return to left menu or close dialog\n Press ENTER to change key bindings and Arrow Keys to control', this.dialogX + this.dialogWidth / 2, this.dialogY - 50); 
             this.showSettingPopup(this.dialogX, this.dialogY, this.dialogWidth, this.dialogHeight);
         }
         else if (this.displayOption === 1) {
@@ -404,11 +413,15 @@ class SettingDialog {
             let actionX = x + width / 6;
             let btnX = x + width / 5 * 3;
             let actionY = y + height / actions.length * i + height / 10;
+            let warnX = x + width / 5 * 3;
+            let warnY = actionY + 25 * this.scaleFactor;
             noStroke();
             if(this.selectedBtnIndex === i) {
                 fill("yellow");
                 if(this.awaitingKeyPress) {
                     text(" ", btnX, actionY);
+                    textSize(18 * this.scaleFactor);
+                    text(this.warntext, btnX, actionY);
                 } else {
                     text(this.keyDisplay[action_cons[i]], btnX, actionY);
                 }
@@ -416,6 +429,7 @@ class SettingDialog {
                 fill(255);
                 text(this.keyDisplay[action_cons[i]], btnX, actionY);
             }
+            textSize(25 * this.scaleFactor);
             text(actions[i], actionX, actionY);
         }
     }
