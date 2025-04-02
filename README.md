@@ -26,7 +26,7 @@
 ---
 # Team Members
 
-![groupPhoto](https://github.com/user-attachments/assets/ed444ef8-22ce-410e-9d05-1c2d5bb0d39b)
+![teamImg](https://github.com/user-attachments/assets/36006e1a-b266-4227-af69-b0e1b9065816)
 
 <div align="center">
 
@@ -58,12 +58,19 @@ As a unique twist, all levels in Zodiac Catch contain an unexpected element - bl
 
 To further put a spin on the typically non-narrative genre, our game is themed after the Chinese zodiac. Each stage corresponds to an animal from the twelve-year cycle: rat, ox, tiger, rabbit, dragon, snake, horse, goat, monkey, rooster, dog and pig. A bonus feature found on the main page, you can also enter your birth year to find the zodiac animal that represents you. 
 
+<p align="center">
+  <b>Figure 2</b><br>
+  <i>12 zodiac animals</i><br>
+  <img src="./assets/animals.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
 With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test, and learn about Chinese mythology along the way.
 
 ---
 
 # Requirements
-## Early Stages design & Ideation process
+In the early stages of the game project, we conducted a brainstorming session where team members came up with ideas based on their personal interests and the feasibility of the game. During the first meeting, we presented our proposals and voted on them. To facilitate creative brainstorming, we used Online Word as our discussion tool, enabling real-time sharing and collaboration.
+
 <table>
     <tr>
         <th>Game Type</th>
@@ -128,6 +135,56 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
     </tr>
 </table>
 
+<p align="center">
+  <b>Figure 3</b><br>
+  <i>Brainstormed Game Ideas on Online Word</i><br>
+  <img src="./assets/word-game-ideas.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+## Early Stage Design
+After brainstorming and discussions, we decided to use the brick breaker game as the project for this development. Next, we used a paper prototype to streamline the game flow, helping everyone gain a clearer blueprint and understanding of the game.
+
+<p align="center">
+  <b>Figure 4</b><br>
+  <i>Paper Prototype</i><br>
+  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+Following this, Eric began the initial development of the brick breaker game, which became the first prototype of our game.
+
+<p align="center">
+ <b>Figure 5</b><br>
+ <i>Game prototype</i><br>
+ <img src="./assets/game-prototype.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and incorporated this concept into our digital prototype, further brainstorming and refining the game design from there. Ultimately, we chose the Chinese Zodiac as the core theme for the game, combining it with the brick-breaking gameplay, resulting in the creation of Zodiac Catch.
+
+<p align="center">
+  <b>Figure 6</b><br>
+  <i>Digital prototype</i><br>
+  <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+## Identifying Stakeholders
+<p align="center">
+  <b>Figure 7</b><br>
+  <i>Stakeholders</i><br>
+  <img src="./assets/stakeholders.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+The stakeholders of Zodiac Catch are divided into four key groups:
+At the core level, the product itself—Zodiac Catch—delivers a fun and challenging brick-breaker experience with Chinese zodiac elements.
+The development team, consisting of developers, designers, and a Scrum Master, is responsible for building, testing, and refining the game to ensure its quality and playability.
+In the containing system, professors and experts provide guidance, technical insights, and evaluation to support the game’s development.
+Finally, in the wider environment, casual and competitive gamers engage with the game, offering valuable feedback that helps enhance its quality and overall experience.
+
+<!-- ## User Case Diagram
+(Add later) -->
+
+<!-- ## Feasibility Studies
+(Add later) -->
+
 ## User Stories & Epics
 <table>
   <tr>
@@ -140,8 +197,7 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
     <td rowspan="2">Creating an intriguing and various game experience</td>
     <td>User</td>
     <td>
-      As a user, I want certain bricks to drop power-ups, such as double points
-      or paddle expansion, to add variety to the game.
+      As a user, I want certain bricks to drop power-ups, such as paddle expansion, to add variety to the game.
     </td>
     <td>
       Given certain bricks contain a specific power-up, when the players break
@@ -207,20 +263,7 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
   </tr>
 
   <tr>
-    <td rowspan="3">Educational</td>
-    <td>Physics Teacher</td>
-    <td>
-      As a physics teacher/professor, I want to make use of the game mechanics
-      and physics in an educational setting, so that my students have a more
-      visual and interesting way to learn about physics.
-    </td>
-    <td>
-      Given I want to show the concept of momentum to kids, when the kids are in
-      the game, then there can be pause so that the motion can be observed in
-      more detail (maximized with angles, velocity, etc shown).
-    </td>
-  </tr>
-  <tr>
+    <td rowspan="2">Educational</td>
     <td>Parents</td>
     <td>
       As parents and teachers, I want my kids or students to learn Chinese
@@ -247,20 +290,6 @@ With fast-paced action and engaging mechanics, Zodiac Catch is a great way to pu
   </tr>
 </table>
 
-## Paper Prototype
-<p align="center">
-  <b>Figure 3</b><br>
-  <i>Paper Prototype - Block</i><br>
-  <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
-</p>
-
-<p align="center">
-  <b>Figure 4</b><br>
-  <i>Prototype - Zodiac Catch</i><br>
-  <img src="./assets/prototype-zodiac-catch.gif" width="600" alt="Block" style="border: 5px solid black;">
-</p>
-
-
 # Design
 ## Class Diagrams
 
@@ -268,7 +297,7 @@ After creating the paper prototype and sketching our ideas in wireframes, we mov
 
 In our initial meeting, we identified the game's essential components, such as the ball, paddle, and blocks. We then outlined the functions of each component, the unique features of different game stages, and how these elements interact. From this, we developed a basic class diagram.
 <p align="center">
-  <b>Figure 5</b><br>
+  <b>Figure 8</b><br>
   <i>Initial Class Diagram</i><br>
   <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
@@ -280,24 +309,27 @@ During our first stage of coding, we decided to adopt the **Model-View-Controlle
 This structured approach helped us maintain a clear separation of concerns and facilitated scalable development.
 
 <p align="center">
-  <b>Figure 6</b><br>
+  <b>Figure 9</b><br>
   <i>Updated Class Diagram</i><br>
   <img src="./assets/classDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Sequence Diagram
 <p align="center">
-  <b>Figure 6</b><br>
+  <b>Figure 10</b><br>
   <i>Sequence Diagram</i><br>
   <img src="./assets/sequence.jpeg" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
 ---
 # Implementation
+Before starting development, we first had to learn how to use the p5.js programming language and get comfortable with object-oriented programming (OOP) to structure our game effectively. As we do the design and planned the implementation, we anticipated several challenges that we thought would be major obstacles. However, once we started coding, these concerns turned out to be more manageable than expected. Instead, we encountered unexpected challenges in other areas. The following sections outline both the anticipated and unforeseen challenges we faced during development and how we addressed them.
+
 ## Anticipated Challenges
 Before the development stage, we anticipated several challenges:
 * **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult and require advanced physics knowledge.
-* **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.
+* **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.  <br/>
+
 However, as we progressed, these concerns proved manageable. Since the ball moves without gravity, its position could be updated simply by adding or deducting to its x and y values. For difficulty balancing, we refined the parameters through iterative testing between our group members, and got positive feedback from the user evaluations. 
 
 ## Unexpected Challenges
@@ -305,14 +337,31 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
 * **Ball Speed in Gravity Mode**  
     One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.  
     Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.  
-    However, implementing this became complex due to interactions with other power-ups that also influenced ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.
+    However, implementing this became complex due to interactions with other power-ups (such as speed up) and toggle ball, that also influenced the ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen. 
+    <p align="center"> 
+      <img src="./assets/ballConstructor.png" width="500" alt="Block" style="border: 5px solid black;"><br/>     
+      <b>Figure X</b> <i>Ball Class Constructor</i><br>  
+      <img src="./assets/exampleOfEffectClass.png" width="400" alt="Block" style="border: 5px solid black;"><br/>      
+      <b>Figure X</b><i> An Example of Effect Class</i><br>
+    </p>
+      
+    Through the use of clear separation of ball state and effect classes, the game logic became more manageable. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviors. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
 * **Displaying Active Power-Ups and Timers**  
-    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active, required additional debugging and adjustments.  
-    We achieved this by:  
-    1. Making an instance of a timer after a player collects a power-up which keeps track of its duration 
-    2. The power-up type and remaining time are sent to the sidebar for display to the player.
-    3. In the case that the player collects the same type of power-up whilst the effect is still active, the `EffectController` will first reset the existing timer and then update the duration on the sidebar to reflect the newly collected power-up’s remaining time
-    4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active
+    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
+    <p align="center">
+      <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;"><br/>
+      <b>Figure X </b><i>Display of Power-Ups in Sidebar</i><br>
+    </p>
+    <b>Implementation Approach:</b><br/>  
+    1. Separate Instance for Each Type:<br/>  
+       - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.  
+       - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
+    2. The sidebar dynamically updates to reflect active power-ups, ensuring players can easily see which effects are in play and for how long.<br/>  
+    3. Handling Duplicate Power-Ups:<br/>  
+       - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
+       - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
+       - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
+    4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active   
 
 ---
 # Evaluation
@@ -352,7 +401,7 @@ By understanding what players cared about during gameplay and collecting questio
 
 
 <p align="center">
-  <b>Figure 2</b><br>
+  <b>Figure 11</b><br>
   <i>Zodiac Catch</i><br>
   <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
@@ -529,29 +578,75 @@ Based on the Wilcoxon Signed-Rank Test:
 
 ---
 # Process
-## Zenhub Kanban
+## Collaboration
+Our team adopted an Agile development process, incorporating Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
 
-In our project, we use ZenHub as our project management tool due to its key advantages:
+### Agile Development
+#### Scrum & Iterative Development
+In the first eight weeks, Erik hosted our Scrum meetings, ensuring a structured workflow. Later, he proposed rotating the hosting role among all team members to foster leadership and shared responsibility. This allowed everyone to gain experience in facilitating discussions, reviewing code, and adapting to different coding styles, ultimately strengthening both individual and team skills.
 
-1. **Seamless GitHub Integration**: ZenHub is embedded directly within GitHub, enabling developers to manage tasks without switching between platforms, improving efficiency.
-2. **Browser Extension Support**: ZenHub offers a browser extension that integrates seamlessly into the GitHub repository interface, allowing project management directly within the repo view.
-3. **Epics Support**: ZenHub provides Epics to group related issues and manage larger tasks, a feature that GitHub Projects lacks.
+We conducted Scrum meetings twice a week:
+- Tuesdays: A comprehensive Kanban board review, where we created new tasks, reviewed outstanding ones, and planned weekly improvements.
+- Thursdays: A stand-up meeting focused on addressing development challenges and ensuring smooth progress.
 
-Additionally, ZenHub’s deep integration ensures that creating or updating issues in ZenHub is synchronized with GitHub in real-time, maintaining data consistency. Overall, ZenHub’s capabilities and tight GitHub integration make it an ideal choice for our project management.
+With the new rotation system, the weekly host also served as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned reviewer. Previously, only a few members handled code reviews, leading to an uneven workload. By distributing these responsibilities, we improved collaboration, knowledge sharing, and overall development efficiency.
+
+#### Task Management & Workflow Refinement
+Initially, we lacked a clear workflow, but through continuous adjustments, we developed an effective process. The Scrum rotation and structured code reviews improved collaboration and ensured long-term sustainability. To maintain steady progress and avoid last-minute rushes, we set one-week deadlines for each task, aligning with the XP Sustainable Pace principle. This structured approach kept each sprint well-paced and balanced.
+
+### Version Control & Code Reviews
+We adopted a structured Git branching model:
+
+- Main branches: `main` (stable version) and `develop` (staging environment).
+- Feature branches: Named using `feature/new_feature`, ensuring clarity and consistency.
+
+Code reviews were mandatory before merging into the develop branch, promoting quality control and knowledge sharing. This process ensured collective ownership, where all team members were responsible for the entire codebase.
+
+### Extreme Programming (XP) Practices
+#### Simple Design
+We adopted the Model-View-Controller (MVC) architecture to ensure a clear separation of concerns, making the system more modular and easier to maintain. Each component was organized based on its functionality, allowing for better code reusability and reducing complexity. This structured approach not only streamlined development but also facilitated collaboration among team members.
+
+[Reference: MVC Architecture](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/docs)
+
+#### Sustainable Pace
+To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
+
+#### Coding Standards
+We adhered to a consistent development standard, encompassing maintainability, readability, the MVC architecture, and object-oriented principles. After completing the implementation of a feature, we submitted a pull request for peer review by other team members.
+
+#### Collective Ownership
+All team members had ownership of the entire codebase, enabling anyone to modify any part when needed. This reduced bottlenecks and improved code quality. When challenges arose, such as issues with the black hole effect, ball physics, or sidebar power-ups, we collaborated to troubleshoot and refine solutions, enhancing the overall implementation.
+
+#### Whole Team Approach
+Everyone actively participated in all stages of the project, from planning to implementation, fostering cross-functional collaboration and improving overall development efficiency. During `Reading Week`, we focused on making significant progress, reducing stress from other deadlines. This effort led to our most productive week, delivering 112 commits, demonstrating our commitment to high-quality development.
+
+As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimizing last-minute pressure.
 
 <p align="center">
-  <b>Figure</b><br>
+  <b>Figure 12</b><br>
+  <i>Productive Period</i><br>
+  <img src="./assets/reading-week-commit.png" width="400" alt="Block" style="border: 5px solid black;">
+</p>
+
+## Project Management Tools
+Throughout the development process, we utilized ZenHub Kanban and Whimsical Wireframe to enhance project management and collaboration efficiency. These tools helped us track development progress, plan system architecture, and ensure seamless communication among team members.
+
+### Zenhub Kanban
+ZenHub’s seamless GitHub integration allowed us to manage tasks without switching platforms. It also supported Epics for organizing related issues, making it ideal for tracking larger tasks. The real-time sync between ZenHub and GitHub ensured data consistency, enhancing team efficiency.
+
+<p align="center">
+  <b>Figure 13</b><br>
   <i>Zenhub integrate Github</i><br>
   <img src="./assets/zenhub.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 
-## Whimsical Wireframe
+### Whimsical Wireframe
 
 We use Whimsical to store and organize our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It provides real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for efficient planning and coordination.
 
 <p align="center">
-  <b>Figure</b><br>
+  <b>Figure 14</b><br>
   <i>Whimsical</i><br>
   <img src="./assets/whimsical.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -559,4 +654,17 @@ We use Whimsical to store and organize our `brainstorming drafts`, `level wirefr
 ---
 # Conclusion
 
+Working on Zodiac Catch strengthened our capabilities as software engineers, and allowed us to put previously-taught theories and principles into practice. Fusing proven software development methodologies with tight-knit collaboration, we transformed ideas and concepts into a streamlined game experience featuring custom graphics, complex physics, and an innovative black-hole twist which separates it from its predecessors.
+
+In anticipation of an increasingly complex codebase, object-oriented design became crucial towards maintaining a clean, concise structure. This equally meant that our system architecture retained modular flexibility, especially important given the large number of stages and interfaces in our game. With tasks distributed evenly amongst all group members, features could be developed in tandem for both timely progress and code clarity.  Considerations in regards to sustainability and green software also encouraged us to be mindful of the potential impacts that our game could bring about. In turn, it dictated how we adjusted our coding standards and technical requirements for a more sustainable approach.
+
+On top of catering to the needs of prospective users, evaluative feedback was a key instrument in obtaining up-to-date opinions concerning game flow and playability. Although we tested features thoroughly before deployment, input from real players further highlighted what elements worked well, along with pointing out the most important issues that needed to be improved upon. As a result, we were able to implement adjustments regarding level design and power-ups, ultimately attaining a suitable level of difficulty without sacrificing enjoyment. 
+
+Apart from obstacles pertaining to game mechanics and difficulty which were anticipated in advance, we ran into unexpected challenges at different stages of development, for instance ball speed effects or displaying advanced information in the sidebar. However, this was mitigated by the adoption of Agile techniques. Conducting twice-a-week meetings alongside setting goals and deadlines ensured consistent communication that promoted teamwork as well as reducing the impact of problem areas on the overall workflow. Additionally, balancing Scrum-related workload via a rotation system allowed each of us to fully experience the entire development cycle whilst leveraging our own strengths to lead individual sprints.
+
+Though we have achieved most of what we envisioned for Zodiac Catch within this limited time frame, there is still much potential for growth and development looking forward. Given a longer development period or extended manpower, visual effects could be improved on through the inclusion of game-specific animations with the aim of adding to the overall player experience. Furthermore, we would like to implement an online leaderboard system. By ranking players based on cumulative scoring, it provides a concrete indicator of their performance while introducing a competitive aspect into our game.
+
+This project has provided us with an invaluable, hands-on opportunity to contribute towards a group software project. In the process, we have been able to improve our coding abilities, learn how to better collaborate with fellow engineers, and understand the skills necessary to craft effective solutions from scratch. All of these takeaways will certainly inform and be applied to larger scale projects in our future careers.
+
+---
 # References
