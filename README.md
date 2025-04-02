@@ -318,7 +318,7 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
       <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;"><br/>
       <b>Figure X </b><i>Display of Power-Ups in Sidebar</i><br>
     </p>
-    Implementation Approach:  
+    Implementation Approach:<br/>  
     1. Separate Instance for Each Type:
        * When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.
        * Each power-up type is managed independently to allow multiple active effects at once without interference.
