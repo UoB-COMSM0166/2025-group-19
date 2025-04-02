@@ -306,8 +306,8 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     However, implementing this became complex due to interactions with other power-ups (such as speed up) and toggle ball, that also influenced the ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen. 
     <p align="center"> 
       <img src="./assets/ballConstructor.png" width="500" alt="Block" style="border: 5px solid black;">
-      <b>Figure X Ball Class Constructor</b><br>
-      <img src="./assets/exampleOfEffectClass.png" width="400" alt="Block" style="border: 5px solid black;">
+      <b>Figure X Ball Class Constructor</b><br>  
+      <img src="./assets/exampleOfEffectClass.png" width="400" alt="Block" style="border: 5px solid black;">  
       <b>Figure X An Example of Effect Class</b><br>
     </p>
       
@@ -315,7 +315,7 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
 * **Displaying Active Power-Ups and Timers**  
     Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
     <p align="center">
-      <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;">
+      <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;">  
       <b>Display of Power-Ups in Sidebar</b><br>
     </p>
     Implementation Approach:  
