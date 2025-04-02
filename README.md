@@ -306,9 +306,9 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     However, implementing this became complex due to interactions with other power-ups (such as speed up) and toggle ball, that also influenced the ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen. 
     <p align="center"> 
       <img src="./assets/ballConstructor.png" width="500" alt="Block" style="border: 5px solid black;"><br/>     
-      <i>Figure X Ball Class Constructor</i><br>  
+      <b>Figure X</b> <i>Ball Class Constructor</i><br>  
       <img src="./assets/exampleOfEffectClass.png" width="400" alt="Block" style="border: 5px solid black;"><br/>      
-      <i>Figure X An Example of Effect Class</i><br>
+      <b>Figure X</b><i> An Example of Effect Class</i><br>
     </p>
       
     Through the use of clear separation of ball state and effect classes, the game logic became more manageable. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviors. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
@@ -316,7 +316,7 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
     <p align="center">
       <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;"><br/>
-      <i>Figure X Display of Power-Ups in Sidebar</i><br>
+      <b>Figure X </b><i>Display of Power-Ups in Sidebar</i><br>
     </p>
     Implementation Approach:  
     1. Separate Instance for Each Type:
