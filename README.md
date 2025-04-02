@@ -290,10 +290,12 @@ This structured approach helped us maintain a clear separation of concerns and f
 
 ---
 # Implementation
+Before starting development, we first had to learn how to use the p5.js programming language and get comfortable with object-oriented programming (OOP) to structure our game effectively. As we do the design and planned the implementation, we anticipated several challenges that we thought would be major obstacles. However, once we started coding, these concerns turned out to be more manageable than expected. Instead, we encountered unexpected challenges in other areas. The following sections outline both the anticipated and unforeseen challenges we faced during development and how we addressed them.
+
 ## Anticipated Challenges
 Before the development stage, we anticipated several challenges:
 * **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult and require advanced physics knowledge.
-* **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.
+* **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.  
 However, as we progressed, these concerns proved manageable. Since the ball moves without gravity, its position could be updated simply by adding or deducting to its x and y values. For difficulty balancing, we refined the parameters through iterative testing between our group members, and got positive feedback from the user evaluations. 
 
 ## Unexpected Challenges
@@ -301,14 +303,23 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
 * **Ball Speed in Gravity Mode**  
     One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.  
     Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.  
-    However, implementing this became complex due to interactions with other power-ups that also influenced ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.
+    However, implementing this became complex due to interactions with other power-ups (such as speed up) and toggle ball, that also influenced the ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.  
+    <img src="./assets/ballConstructor.png" width="1000" alt="Block" style="border: 5px solid black;">
+    <img src="./assets/exampleOfEffectClass.png" width="1000" alt="Block" style="border: 5px solid black;">
+    Through the use of clear separation of ball state and effect classes, the game logic became more manageable. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviors. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
 * **Displaying Active Power-Ups and Timers**  
-    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active, required additional debugging and adjustments.  
-    We achieved this by:  
-    1. Making an instance of a timer after a player collects a power-up which keeps track of its duration 
-    2. The power-up type and remaining time are sent to the sidebar for display to the player.
-    3. In the case that the player collects the same type of power-up whilst the effect is still active, the `EffectController` will first reset the existing timer and then update the duration on the sidebar to reflect the newly collected power-up’s remaining time
-    4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active
+    Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
+    <img src="./assets/activePower-UpsInSidebar.png" width="1000" alt="Block" style="border: 5px solid black;">
+    Implementation Approach:  
+    1. Separate Instance for Each Type:
+       * When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.
+       * Each power-up type is managed independently to allow multiple active effects at once without interference.
+    2. The sidebar dynamically updates to reflect active power-ups, ensuring players can easily see which effects are in play and for how long.
+    3. Handling Duplicate Power-Ups:
+       * If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.
+       * The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.
+       * This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.
+    4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active   
 
 ---
 # Evaluation
