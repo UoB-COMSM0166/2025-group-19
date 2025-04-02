@@ -304,12 +304,12 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.  
     Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.  
     However, implementing this became complex due to interactions with other power-ups (such as speed up) and toggle ball, that also influenced the ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen.  
-    <img src="./assets/ballConstructor.png" width="1000" alt="Block" style="border: 5px solid black;">
-    <img src="./assets/exampleOfEffectClass.png" width="1000" alt="Block" style="border: 5px solid black;">
+    <img src="./assets/ballConstructor.png" width="500" alt="Block" style="border: 5px solid black;">
+    <img src="./assets/exampleOfEffectClass.png" width="500" alt="Block" style="border: 5px solid black;">
     Through the use of clear separation of ball state and effect classes, the game logic became more manageable. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviors. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
 * **Displaying Active Power-Ups and Timers**  
     Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
-    <img src="./assets/activePower-UpsInSidebar.png" width="1000" alt="Block" style="border: 5px solid black;">
+    <img src="./assets/activePower-UpsInSidebar.png" width="500" alt="Block" style="border: 5px solid black;">
     Implementation Approach:  
     1. Separate Instance for Each Type:
        * When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.
