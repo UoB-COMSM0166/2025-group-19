@@ -477,317 +477,19 @@ In this part, we use NASA TLX and System Usability Scale to analyse how player f
 We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
 
 
-#### Easy　Mode
-<table align="center">
-  <tr>
-    <th align="center">User</th>
-    <th align="center">Mental Demand</th>
-    <th align="center">Physical Demand</th>
-    <th align="center">Temporal Demand</th>
-    <th align="center">Performance</th>
-    <th align="center">Effort</th>
-    <th align="center">Frustration</th>
-    <th align="center">Score</th>
-  </tr>
-  <tr>
-    <th align="center">User1</th>
-    <td align="center">20</td>
-    <td align="center">30</td>
-    <td align="center">65</td>
-    <td align="center">85</td>
-    <td align="center">70</td>
-    <td align="center">10</td>
-    <td align="center">52.5</td>
-  </tr>
-  <tr>
-    <th align="center">User2</th>
-    <td align="center">20</td>
-    <td align="center">15</td>
-    <td align="center">35</td>
-    <td align="center">45</td>
-    <td align="center">45</td>
-    <td align="center">25</td>
-    <td align="center">33.0</td>
-  </tr>
-  <tr>
-    <th align="center">User3</th>
-    <td align="center">5</td>
-    <td align="center">5</td>
-    <td align="center">45</td>
-    <td align="center">65</td>
-    <td align="center">75</td>
-    <td align="center">20</td>
-    <td align="center">39.1</td>
-  </tr>
-  <tr>
-    <th align="center">User4</th>
-    <td align="center">55</td>
-    <td align="center">75</td>
-    <td align="center">75</td>
-    <td align="center">45</td>
-    <td align="center">60</td>
-    <td align="center">50</td>
-    <td align="center">70.0</td>
-  </tr>
-  <tr>
-    <th align="center">User5</th>
-    <td align="center">20</td>
-    <td align="center">20</td>
-    <td align="center">10</td>
-    <td align="center">80</td>
-    <td align="center">10</td>
-    <td align="center">10</td>
-    <td align="center">25.8</td>
-  </tr>
-  <tr>
-    <th align="center">User6</th>
-    <td align="center">45</td>
-    <td align="center">45</td>
-    <td align="center">30</td>
-    <td align="center">80</td>
-    <td align="center">25</td>
-    <td align="center">10</td>
-    <td align="center">43.4</td>
-  </tr>
-  <tr>
-    <th align="center">User7</th>
-    <td align="center">45</td>
-    <td align="center">65</td>
-    <td align="center">65</td>
-    <td align="center">50</td>
-    <td align="center">50</td>
-    <td align="center">60</td>
-    <td align="center">65.0</td>
-  </tr>
-  <tr>
-    <th align="center">User8</th>
-    <td align="center">20</td>
-    <td align="center">20</td>
-    <td align="center">50</td>
-    <td align="center">75</td>
-    <td align="center">20</td>
-    <td align="center">50</td>
-    <td align="center">44.2</td>
-  </tr>
-  <tr>
-    <th align="center">User9</th>
-    <td align="center">25</td>
-    <td align="center">10</td>
-    <td align="center">30</td>
-    <td align="center">60</td>
-    <td align="center">25</td>
-    <td align="center">30</td>
-    <td align="center">31.7</td>
-  </tr>
-  <tr>
-    <th align="center">User10</th>
-    <td align="center">60</td>
-    <td align="center">60</td>
-    <td align="center">70</td>
-    <td align="center">60</td>
-    <td align="center">65</td>
-    <td align="center">50</td>
-    <td align="center">70.8</td>
-  </tr>
-  <tr>
-    <th align="center">User11</th>
-    <td align="center">5</td>
-    <td align="center">30</td>
-    <td align="center">5</td>
-    <td align="center">85</td>
-    <td align="center">10</td>
-    <td align="center">5</td>
-    <td align="center">23.3</td>
-  </tr>
-  <tr>
-    <th align="center">User12</th>
-    <td align="center">60</td>
-    <td align="center">60</td>
-    <td align="center">65</td>
-    <td align="center">70</td>
-    <td align="center">75</td>
-    <td align="center">45</td>
-    <td align="center">72.5</td>
-  </tr>
-  <tr>
-    <th align="center">User13</th>
-    <td align="center">20</td>
-    <td align="center">20</td>
-    <td align="center">60</td>
-    <td align="center">70</td>
-    <td align="center">10</td>
-    <td align="center">15</td>
-    <td align="center">36.7</td>
-  </tr>
-  <tr>
-    <th align="center">User14</th>
-    <td align="center">65</td>
-    <td align="center">80</td>
-    <td align="center">65</td>
-    <td align="center">70</td>
-    <td align="center">70</td>
-    <td align="center">30</td>
-    <td align="center">75.0</td>
-  </tr>
-</table>
-
-
+#### Easy Mode
+[Click here to view Easy Mode results.](./assets/easy-mode.md)
 
 #### Hard Mode
-<table align="center">
-  <tr>
-    <th align="center">User</th>
-    <th align="center">Mental Demand</th>
-    <th align="center">Physical Demand</th>
-    <th align="center">Temporal Demand</th>
-    <th align="center">Performance</th>
-    <th align="center">Effort</th>
-    <th align="center">Frustration</th>
-    <th align="center">Score</th>
-  </tr>
-  <tr>
-    <th align="center">User1</th>
-    <td align="center">45</td>
-    <td align="center">50</td>
-    <td align="center">50</td>
-    <td align="center">70</td>
-    <td align="center">50</td>
-    <td align="center">30</td>
-    <td align="center">55.8</td>
-  </tr>
-  <tr>
-    <th align="center">User2</th>
-    <td align="center">20</td>
-    <td align="center">30</td>
-    <td align="center">60</td>
-    <td align="center">85</td>
-    <td align="center">70</td>
-    <td align="center">25</td>
-    <td align="center">55.0</td>
-  </tr>
-  <tr>
-    <th align="center">User3</th>
-    <td align="center">5</td>
-    <td align="center">5</td>
-    <td align="center">45</td>
-    <td align="center">70</td>
-    <td align="center">85</td>
-    <td align="center">60</td>
-    <td align="center">50.0</td>
-  </tr>
-  <tr>
-    <th align="center">User4</th>
-    <td align="center">55</td>
-    <td align="center">70</td>
-    <td align="center">70</td>
-    <td align="center">75</td>
-    <td align="center">65</td>
-    <td align="center">50</td>
-    <td align="center">75.8</td>
-  </tr>
-  <tr>
-    <th align="center">User5</th>
-    <td align="center">30</td>
-    <td align="center">15</td>
-    <td align="center">10</td>
-    <td align="center">65</td>
-    <td align="center">45</td>
-    <td align="center">15</td>
-    <td align="center">33.3</td>
-  </tr>
-  <tr>
-    <th align="center">User6</th>
-    <td align="center">50</td>
-    <td align="center">55</td>
-    <td align="center">55</td>
-    <td align="center">70</td>
-    <td align="center">45</td>
-    <td align="center">25</td>
-    <td align="center">56.7</td>
-  </tr>
-  <tr>
-    <th align="center">User7</th>
-    <td align="center">60</td>
-    <td align="center">75</td>
-    <td align="center">70</td>
-    <td align="center">45</td>
-    <td align="center">50</td>
-    <td align="center">70</td>
-    <td align="center">71.7</td>
-  </tr>
-  <tr>
-    <th align="center">User8</th>
-    <td align="center">75</td>
-    <td align="center">30</td>
-    <td align="center">65</td>
-    <td align="center">70</td>
-    <td align="center">55</td>
-    <td align="center">45</td>
-    <td align="center">65.8</td>
-  </tr>
-  <tr>
-    <th align="center">User9</th>
-    <td align="center">30</td>
-    <td align="center">10</td>
-    <td align="center">30</td>
-    <td align="center">60</td>
-    <td align="center">30</td>
-    <td align="center">30</td>
-    <td align="center">34.3</td>
-  </tr>
-  <tr>
-    <th align="center">User10</th>
-    <td align="center">70</td>
-    <td align="center">70</td>
-    <td align="center">75</td>
-    <td align="center">50</td>
-    <td align="center">70</td>
-    <td align="center">70</td>
-    <td align="center">80.0</td>
-  </tr>
-  <tr>
-    <th align="center">User11</th>
-    <td align="center">5</td>
-    <td align="center">15</td>
-    <td align="center">55</td>
-    <td align="center">65</td>
-    <td align="center">50</td>
-    <td align="center">30</td>
-    <td align="center">37.5</td>
-  </tr>
-  <tr>
-    <th align="center">User12</th>
-    <td align="center">50</td>
-    <td align="center">50</td>
-    <td align="center">50</td>
-    <td align="center">55</td>
-    <td align="center">50</td>
-    <td align="center">60</td>
-    <td align="center">60.0</td>
-  </tr>
-  <tr>
-    <th align="center">User13</th>
-    <td align="center">15</td>
-    <td align="center">15</td>
-    <td align="center">50</td>
-    <td align="center">70</td>
-    <td align="center">15</td>
-    <td align="center">15</td>
-    <td align="center">33.3</td>
-  </tr>
-  <tr>
-    <th align="center">User14</th>
-    <td align="center">70</td>
-    <td align="center">80</td>
-    <td align="center">80</td>
-    <td align="center">50</td>
-    <td align="center">75</td>
-    <td align="center">30</td>
-    <td align="center">71.2</td>
-  </tr>
-</table>
+[Click here to view Hard Mode results.](./assets/easy-mode.md)
+
 
 ### Compare between easy and hard mode
+
+<p align="center">
+  <b>Figure 2</b><br>
+  <img src="./assets/compare_easy_hard.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
 
 <table align="center">
   <tr>
@@ -798,38 +500,38 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
   <tr>
     <td align="center">Mental Demand</td>
-    <td align="center">33.2</td>
-    <td align="center">44.3</td>
+    <td align="center">33.21</td>
+    <td align="center">41.43</td>
     <td align="center">↑ Increased cognitive effort</td>
   </tr>
   <tr>
     <td align="center">Physical Demand</td>
-    <td align="center">32.9</td>
-    <td align="center">45.7</td>
+    <td align="center">38.21</td>
+    <td align="center">40.71</td>
     <td align="center">↑ Increased physical/operational strain</td>
   </tr>
   <tr>
     <td align="center">Temporal Demand</td>
-    <td align="center">42.1</td>
-    <td align="center">55.0</td>
+    <td align="center">47.86</td>
+    <td align="center">54.64</td>
     <td align="center">↑ Increased time pressure</td>
   </tr>
   <tr>
     <td align="center">Performance<br>(higher = worse)</td>
-    <td align="center">63.9</td>
-    <td align="center">63.9</td>
-    <td align="center">≈ Similar perceived performance</td>
+    <td align="center">67.14</td>
+    <td align="center">64.29</td>
+    <td align="center">↓  Decreased perceived performance</td>
   </tr>
   <tr>
     <td align="center">Effort</td>
-    <td align="center">42.5</td>
-    <td align="center">54.3</td>
+    <td align="center">43.57</td>
+    <td align="center">53.93</td>
     <td align="center">↑ More effort required</td>
   </tr>
   <tr>
     <td align="center">Frustration</td>
-    <td align="center">27.9</td>
-    <td align="center">39.6</td>
+    <td align="center">29.29</td>
+    <td align="center">39.64</td>
     <td align="center">↑ Higher frustration level</td>
   </tr>
 </table>
@@ -841,219 +543,14 @@ Our analysis indicates that the Hard mode imposes a significantly greater worklo
 
 We conducted a System Usability Scale (SUS) evaluation across both Easy and Hard game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system on 10 standardised SUS questions, leading to an aggregate score out of 100.
 
+[Click here to view raw System Usability Scale results.](./assets/SUS-raw.md)
 
-<table align="center">
-  <tr>
-    <th align="center">Participant</th>
-    <th align="center">Like to Use Frequently</th>
-    <th align="center">Unnecessarily Complex</th>
-    <th align="center">Easy to Use</th>
-    <th align="center">Need Technical Support</th>
-    <th align="center">Functions Well Integrated</th>
-    <th align="center">Too Much Inconsistency</th>
-    <th align="center">Learn to Use Quickly</th>
-    <th align="center">Cumbersome to Use</th>
-    <th align="center">Confident to Use</th>
-    <th align="center">Need to Learn a Lot</th>
-    <th align="center">Total</th>
-  </tr>
-  <tr>
-    <th align="center">1</th>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">29</td>
-  </tr>
-  <tr>
-    <th align="center">2</th>
-    <td align="center">3</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">27</td>
-  </tr>
-  <tr>
-    <th align="center">3</th>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">29</td>
-  </tr>
-  <tr>
-    <th align="center">4</th>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">3</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">3</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">29</td>
-  </tr>
-  <tr>
-    <th align="center">5</th>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">34</td>
-  </tr>
-  <tr>
-    <th align="center">6</th>
-    <td align="center">5</td>
-    <td align="center">3</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">31</td>
-  </tr>
-  <tr>
-    <th align="center">7</th>
-    <td align="center">2</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">27</td>
-  </tr>
-  <tr>
-    <th align="center">8</th>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">33</td>
-  </tr>
-  <tr>
-    <th align="center">9</th>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">34</td>
-  </tr>
-  <tr>
-    <th align="center">10</th>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">5</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">5</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">35</td>
-  </tr>
-  <tr>
-    <th align="center">11</th>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">30</td>
-  </tr>
-  <tr>
-    <th align="center">12</th>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-    <td align="center">2</td>
-    <td align="center">3</td>
-    <td align="center">2</td>
-    <td align="center">3</td>
-    <td align="center">4</td>
-    <td align="center">31</td>
-  </tr>
-  <tr>
-    <th align="center">13</th>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">5</td>
-    <td align="center">4</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">2</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">36</td>
-  </tr>
-  <tr>
-    <th align="center">14</th>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-    <td align="center">5</td>
-    <td align="center">1</td>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-    <td align="center">3</td>
-    <td align="center">31</td>
-  </tr>
-</table>
+[Click here to view converted System Usability Scale results.](./assets/SUS-converted.md)
+
+<p align="center">
+  <b>Figure 2</b><br>
+  <img src="./assets/sus-before.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
 
 The SUS evaluation shows that the game is generally perceived as usable and user-friendly, with particularly strong ratings for ease of use, learning speed, and system integration. The consistency of responses between Easy and Hard modes suggests that the core interface is well-designed and scales effectively with difficulty. Some improvements may be explored to further reduce perceived complexity or technical support needs in the harder levels, but overall usability remains strong.
 
@@ -1062,13 +559,14 @@ Based on the Wilcoxon Signed-Rank Test:
 
 -  By using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
 
--  The NASA-TLX score is statistically significant, indicating that there may be a significant difference in the perception of workload between the easy and hard levels. From the user data, it can be observed that temporal demand and physical demand are usually high when users are playing the hard level. High temporal demand suggests that users may feel pressed for time while using the system, possibly indicating that tasks are too fast-paced. High physical demand indicates that users need to pay significant effort to interact with the system, which may be due to complex controls, excessive manual input, or inefficient workflows.
+-  The NASA-TLX score is statistically significant, indicating that there may be a notable difference in perceived workload between the Easy and Hard levels. From the user data, we observed that Temporal Demand and Physical Demand were generally higher when users played the Hard mode. High temporal demand implies users may feel time pressure or that tasks are too fast-paced. High physical demand suggests users had to put in more effort to interact with the game, possibly due to complex controls or rapid actions.
   
--  The SUS score is not statistically significant, suggesting that there is no significant difference in usability between the easy and hard levels. This implies that the system’s usability is perceived similarly across different difficulty levels. The average SUS score is 74.46 among the 14 surveys, which is above the average of 68. A score of 74.46 can be seen as a good indicator that users did not struggle significantly with using the system. While 74.46 is above average, excellent usability scores are above 80 so this suggests there is still room for improvement in certain areas to make the system even more intuitive and user-friendly.
+-  The SUS score is not statistically significant, suggesting no meaningful difference in usability between the Easy and Hard levels. This indicates that users generally perceived the interface to be equally usable across difficulty modes. However, the average SUS score is 31.1, which is significantly below the standard benchmark of 68. This suggests that users struggled with the overall usability of the system, and improvements are clearly needed to enhance intuitiveness, reduce confusion, and increase user satisfaction.
 
--  Improvements based on NASA TLX: Simplify processes or enhance feedback mechanisms.
+-  Improvements based on NASA TLX: Simplify in-game processes, reduce sensory overload, and improve real-time feedback for power-ups and gameplay progress.
    
--  Improvements based on SUS:  Reduce temporal demand by allowing more flexible pacing or simplifying steps. Reduce physical demand by optimizing input methods and minimizing unnecessary actions.
+-  Improvements based on SUS: Rework onboarding/tutorials, improve layout consistency, and streamline input methods to reduce confusion and operational strain.
+
 
 ## Final Evaluation
 
