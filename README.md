@@ -185,8 +185,8 @@ Finally, in the wider environment, casual and competitive gamers engage with the
 ## Use-Cases Breakdown
 <p align="center">
   <b>Figure 8</b><br>
-  <i>User case diagram</i><br>
-  <img src="./assets/user-case-diagram.png" width="600" alt="Block" style="border: 5px solid black;">
+  <i>Use case diagram</i><br>
+  <img src="./assets/use-case-diagram.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 Before creating the use case diagram, we thoroughly analyzed the stakeholders and user stories to capture all key interactions within the game system. This helped us design a diagram that accurately reflects both player behavior and system functionality.
