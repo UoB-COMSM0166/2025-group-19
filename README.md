@@ -20,7 +20,7 @@
 - [Implementation](#implementation)
 - [Evaluation](#evaluation)
 - [Process](#process)
-- [Sustainability, Ethics, and Accessibility](#sustainability-ethics-and-accessibility)
+- [Sustainability, ethics, and accessibility](#sustainability-ethics-and-accessibility)
 - [Conclusion](#conclusion)
 - [References](#references)
 
