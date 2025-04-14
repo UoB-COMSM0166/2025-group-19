@@ -297,13 +297,13 @@ In our initial meeting, we identified the game's essential components, such as t
 Our design journey began with paper prototypes and wireframe sketches, which helped us conceptualize the core game mechanics and user interactions. Through these early prototypes, we refined ideas about paddle control, brick patterns, special effects, and stage progression. This process allowed us to brainstorm innovative solutions before diving into development.
 After finalizing the wireframes, we moved on to designing the system architecture through every week meetings. These discussions ensured that all team members had a shared understanding of system structure and served as a solid reference for implementing the code. 
 To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates concerns between game data, rendering, and user interaction logic. 
--	Controllers handle application logic and user input, acting as intermediaries between the model and view:  
+-	**Controllers** handle application logic and user input, acting as intermediaries between the model and view:  
 •EffectController.js - Manages effects in gameplay.  
 •KeyboardController.js - Handles keyboard inputs for game actions and controlls.  
 •PageController.js - Manages navigation between different game views.  
 •StageController.js - Manages game functions and gameplay logic.  
 •Stage0NController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents number)  
--	Views manage the user interface and rendering, listening to model updates:  
+-	**Views** manage the user interface and rendering, listening to model updates:  
 •WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.  
 •GameView.js - Displays the main gameplay view.  
 •GodView.js - Plays the story introduction animation.  
@@ -314,7 +314,7 @@ To ensure a well-structured and maintainable codebase, we decide to follow the M
 •YourZodiacView.js - Implement logic for StageMapView.  
 •AnimalAnimation.js, CloudAnimation.js, RoadAnimation.js – Create animations for the welcome view.  
 •SettingDialog.js - Provides settings and info dialogs for customizing key bindings and background music.  
--	Models store core game components and special effects:  
+-	**Models** store core game components and special effects:  
 •Effect.js - Base class for managing durations, applying or removing effects, managing timer for game tools or power-ups effects.  
 •Ball.js - Tracks ball position, movement and collision.  
 •Brick.js - Defines different functions and tracks brick state.  
@@ -348,7 +348,7 @@ Following the sequence diagram, we developed and iterated on class diagram. Clas
   <b>Figure 8</b><br>
   <i>Class Diagram</i><br>
 </p>
-The above 2 class diagrams show how our design evolved as game complexity increased and new features were added.
+The above 2 class diagrams show how our design evolved as game complexity increased and new features were added.  
 We used Agile methodology to manage the development lifecycle, promoting continuous delivery, rapid iteration, and strong team collaboration. We tracked work using ZenHub, organized sprints, and monitored progress through detailed issue tracking.
 
 ---
