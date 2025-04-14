@@ -151,7 +151,7 @@ After brainstorming and discussions, we decided to use the brick breaker game as
   <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-Following this, Eric began the initial development of the brick breaker game, which became the first prototype of our game.
+Following this, Erik began the initial development of the brick breaker game, which became the first prototype of our game.
 
 <p align="center">
  <b>Figure 5</b><br>
@@ -182,6 +182,16 @@ Finally, in the wider environment, casual and competitive gamers engage with the
 
 <!-- ## User Case Diagram
 (Add later) -->
+## Use-Cases Breakdown
+<p align="center">
+  <b>Figure 8</b><br>
+  <i>Use case diagram</i><br>
+  <img src="./assets/use-case-diagram.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+Before creating the use case diagram, we thoroughly analyzed the stakeholders and user stories to capture all key interactions within the game system. This helped us design a diagram that accurately reflects both player behavior and system functionality.
+
+As Zodiac Catch targets a broad range of players, converting user stories into use case diagrams was crucial. It allowed us to better understand the relationships between players, the development team, and the game system, while also streamlining the development process and anticipating potential challenges.
 
 <!-- ## Feasibility Studies
 (Add later) -->
