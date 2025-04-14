@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td align="center">Week 03</td>
-    <td align="left">Paper prototyping</td>
+    <td align="left">Paper Prototyping</td>
     <td align="center">
       <a href="https://github.com/UoB-COMSM0166/2025-group-19/tree/main/assignments/Week03/Readme.md">Homework</a><br>
       <a href="https://github.com/UoB-COMSM0166/2025-group-19/tree/main/assignments/Week03/ideas/block">Video Link 1</a><br>
@@ -38,12 +38,12 @@
   </tr>
   <tr>
     <td align="center">Week 07</td>
-    <td align="left">HCI Evulation</td>
+    <td align="left">HCI Evaluation</td>
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week07/Readme.md">Homework</a></td>
   </tr>
   <tr>
     <td align="center">Week 08</td>
-    <td align="left">Quantitative Evulation</td>
+    <td align="left">Quantitative Evaluation</td>
     <td align="center"><a href="https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Week08/Readme.md">Homework</a></td>
   </tr>
   <tr>
