@@ -297,12 +297,12 @@ In our initial meeting, we identified the game's essential components, such as t
 Our design journey began with paper prototypes and wireframe sketches, which helped us conceptualize the core game mechanics and user interactions. Through these early prototypes, we refined ideas about paddle control, brick patterns, special effects, and stage progression. This process allowed us to brainstorm innovative solutions before diving into development.
 After finalizing the wireframes, we moved on to designing the system architecture through every week meetings. These discussions ensured that all team members had a shared understanding of system structure and served as a solid reference for implementing the code. 
 To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates concerns between game data, rendering, and user interaction logic. 
--	Controllers handle application logic and user input, acting as intermediaries between the model and view:
-•EffectController.js - Manages effects in gameplay.
-•KeyboardController.js - Handles keyboard inputs for game actions and controlls.
-•PageController.js - Manages navigation between different game views.
-•StageController.js - Manages game functions and gameplay logic.
-•Stage0NController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents number)
+-	Controllers handle application logic and user input, acting as intermediaries between the model and view: \n
+•EffectController.js - Manages effects in gameplay. \n
+•KeyboardController.js - Handles keyboard inputs for game actions and controlls. \n
+•PageController.js - Manages navigation between different game views. \n
+•StageController.js - Manages game functions and gameplay logic. \n
+•Stage0NController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents number) \n
 -	Views manage the user interface and rendering, listening to model updates:
 •WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.
 •GameView.js - Displays the main gameplay view.
