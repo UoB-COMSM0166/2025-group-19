@@ -291,17 +291,45 @@ Finally, in the wider environment, casual and competitive gamers engage with the
 </table>
 
 # Design
-Zodiac Catch is a brick-breaking game where players select their zodiac animal and difficulty level to play through 12 unique stages, each representing a different zodiac animal. To create an engaging and personalized gaming experience, we carefully designed our game’s core mechanics, system architecture, and visual effects while maintaining usability.
+To create an engaging and personalized gaming experience, we carefully designed our game’s core mechanics, system architecture, and visual effects while maintaining usability.
 ## Initial Prototyping and Planning
 In our initial meeting, we identified the game's essential components, such as the ball, paddle, and blocks. We then outlined the functions of each component, the unique features of different game stages, and how these elements interact. From this, we developed a basic class diagram.
 Our design journey began with paper prototypes and wireframe sketches, which helped us conceptualize the core game mechanics and user interactions. Through these early prototypes, we refined ideas about paddle control, brick patterns, special effects, and stage progression. This process allowed us to brainstorm innovative solutions before diving into development.
 After finalizing the wireframes, we moved on to designing the system architecture through every week meetings. These discussions ensured that all team members had a shared understanding of system structure and served as a solid reference for implementing the code. 
-To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates concerns between game data, rendering, and user interaction logic. This approach improves scalability, facilitates debugging, and enhances the modularity of the codebase.
--	Controllers to handle keyboard input, manage game state across different stages, and activate special features.
--	Views to define the game's aesthetics and user interface.
--	Models to store all game components, including the brick patterns for various stages. This structured approach helped us maintain a clear separation of concerns and facilitated scalable development.
+To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates concerns between game data, rendering, and user interaction logic. 
+-	Controllers handle application logic and user input, acting as intermediaries between the model and view:
+•EffectController.js - Manages effects in gameplay.
+•KeyboardController.js - Handles keyboard inputs for game actions and controlls.
+•PageController.js - Manages navigation between different game views.
+•StageController.js - Manages game functions and gameplay logic.
+•Stage0NController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents number)
+-	Views manage the user interface and rendering, listening to model updates:
+•WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.
+•GameView.js - Displays the main gameplay view.
+•GodView.js - Plays the story introduction animation.
+•ModeView.js - Shows before game start for user to choose game level: easy or hard.
+•NewStageMapView.js - Shows available stages for selection.
+•SidebarView.js - Displays control info, special tools, and scoring during gameplay.
+•StageMapView.js - This view enables users customize own zodiac animal.
+•YourZodiacView.js - Implement logic for StageMapView.
+•AnimalAnimation.js, CloudAnimation.js, RoadAnimation.js – Create animations for the welcome view.
+•SettingDialog.js - Provides settings and info dialogs for customizing key bindings and background music.
+-	Models store core game components and special effects:
+•Effect.js - Base class for managing durations, applying or removing effects, managing timer for game tools or power-ups effects.
+•Ball.js - Tracks ball position, movement and collision.
+•Brick.js - Defines different functions and tracks brick state.
+•Paddle.js - Defines behavior of paddle and tracks movement.
+•Tool.js - Defines tools' behavior.
+•BallInfiniteEffect.js - Defines infinite balls effect temporarily.
+•BallSizeEffect.js - Defines changing the size of ball temporarily.
+•BallSpeedEffect.js - Defines a 'speedup' effect by increasing ball speed temporarily.
+•GravityEffect.js - Adds gravity effect for balls.
+•PaddleDirectionEffect.js - Defines inversed keyboard control direction effect.
+•PaddleSizeEffect.js - Defines changing the size of paddle temporarily.
+•TimeEffect.js - Applies time adding or subtracting effect for game timer.
+•StageState.js - Manages game components, updates game state and applies game mode.
 ## Core gameplay and Flow
-The core game flow is player choose their own zodiac and difficulty level. There are 12 stages in total and each stage represents a different zodiac animal. After entering one stage, player controls a addle to hit the ball. When the ball collides with blocks, the blocks disappear, and the player earns points. Different effects are applied as player hit specific bricks. In different modes, we designed different effects to increase or decrease difficulty. 
+The core flow begins when the player selects their zodiac animal and difficulty level. The game includes 12 stages, each representing a zodiac animal. In each stage, player controls a paddle to hit the ball, break bricks and score points. Hitting specific bricks triggers effects. Different effects are applied based on the selected difficulty mode.
 Based on above game flow, we created sequence diagram, which indicates the order of game flow and make us improve game flow to be smoother.
 <p align="center">
   <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
@@ -320,9 +348,8 @@ Following the sequence diagram, we developed and iterated on class diagram. Clas
   <b>Figure 8</b><br>
   <i>Class Diagram</i><br>
 </p>
-The above 2 class diagram shows the how our Class Diagram changed as our development of game and how our game’s complexity grew while developing new features.
-Additionally, this game is developed using agile methodology to manage the software development lifecycle, ensuring continuous delivery, rapid iteration, and team collaboration. We used Zenhub to track work, organize sprints, and monitor progress through detailed issue tracking.
-By following the MVC design pattern, using Agile methodology, and leveraging ZenHub for project management, we successfully developed a scalable, maintainable, and engaging game. Our initial focus on well-structured system architecture, coupled with iterative improvements based on sequence and class diagrams, ensures our code was organized and maintainable from the very beginning, making it easier to develop new features and improve the game logic throughout development. This proactive approach allowed us to create a game that offers an immersive and personalized experience for players.
+The above 2 class diagrams show how our design evolved as game complexity increased and new features were added.
+We used Agile methodology to manage the development lifecycle, promoting continuous delivery, rapid iteration, and strong team collaboration. We tracked work using ZenHub, organized sprints, and monitored progress through detailed issue tracking.
 
 ---
 # Implementation
