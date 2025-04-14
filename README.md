@@ -692,11 +692,11 @@ We use Whimsical to store and organise our `brainstorming drafts`, `level wirefr
 ---
 # Sustainability, ethics and accessibility
 ## Environmental Impact
-To minimise the environmental impact of our game, we have implemented sustainable software practices based on the **Green Software Foundation Implementation Patterns**. These efforts help reduce energy consumption and improve efficiency.
+To minimise the environmental impact of our game, we have implemented sustainable software practices based on the **Green Software Foundation Implementation Patterns**. 
 
 ### Avoid an Excessive DOM Size
 - Our game dynamically renders elements using JavaScript instead of relying on a large, pre-defined DOM structure.
-- This approach optimises memory usage, reduces rendering time, and lowers CPU workload, contributing to energy efficiency.
+- This approach optimises memory usage, reduces rendering time, and lowers CPU workload, all of which improve energy efficiency.
 
 ### Avoid Tracking Unnecessary Data
 - We ensure that no player data is stored or tracked.
@@ -826,17 +826,17 @@ To minimise the environmental impact of our game, we have implemented sustainabl
 
 ## Ethics
 ### 1. Potential Influence on Player Behavior
-The game provides an interactive platform for players to explore the principles of ball reflection in physics, offering educational value, particularly in physics learning. Additionally, the incorporation of the Chinese zodiac fosters cultural awareness and exchange by allowing players to input their birthday to discover their zodiac sign. The game promotes a positive and family-friendly environment, free from violence or inappropriate content. Its simple yet engaging design encourages meaningful interactions, making it suitable for all age groups, including parents and children.
+The game provides an interactive platform for players to explore the principles of ball reflection in physics, offering educational value, particularly in physics learning. Additionally, the incorporation of the Chinese zodiac fosters cultural awareness and exchange by allowing players to input their birthday to discover their zodiac sign. The game promotes a positive and family-friendly environment, free from violence or inappropriate content. Its simple yet engaging design encourages meaningful interactions, making it suitable for all age groups.
 
 ### 2. Data Privacy Considerations
 The game does not pose any data privacy risks. Although players have the option to input their birthday to determine their zodiac sign, this information is neither stored nor tracked. The absence of a database ensures that no personal data is collected or retained, eliminating concerns regarding privacy breaches. Furthermore, as birthdays are not classified as highly sensitive information, this feature does not compromise player security.
 
 ### 3. Impact on Player Emotions
-The game is designed to provide a stress-free and enjoyable experience. To prevent frustration, it includes both easy and hard difficulty modes, with the easy mode specifically adjusted for beginners and children. There are no limitations on the number of attempts, allowing players to retry levels freely without pressure. Additionally, players have full control over level selection, choosing any zodiac sign as their starting point. The game avoids punishing mechanics that could lead to negative emotions. Instead, it incorporates hidden surprises within each level, enhancing player engagement and fostering a sense of accomplishment and joy. The flexible gameplay ensures that players remain motivated and can share positive experiences with friends and family.
+The game is designed to provide a stress-free and enjoyable experience. To prevent frustration, it includes both easy and hard difficulty modes, with the easy mode specifically adjusted for beginners and children. There are no limitations on the number of attempts, allowing players to retry levels freely without pressure. Additionally, players have full control over level selection, with the ability to choose any zodiac sign as their starting point. The game avoids punishing mechanics that could lead to negative emotions. Instead, it incorporates hidden surprises within each level, enhancing player engagement and fostering a sense of accomplishment and joy. The flexible gameplay ensures that players remain motivated and can share positive experiences with friends and family.
 
 ## Accessibility
 ### 1. Input and Control Customisation
-The game is fully controlled via the keyboard, with clear on-screen instructions provided at appropriate moments. Additionally, players can customise key bindings through the settings menu, allowing them to tailor the controls to their preferred play style. Future updates may introduce additional input options, such as mouse support, to enhance accessibility.
+The game is fully controlled using the keyboard, with clear on-screen instructions provided at appropriate moments. Additionally, players can customise key bindings through the settings menu, allowing them to tailor the controls to their preferred play style. Future updates may introduce additional input options, such as mouse and controller support, to enhance accessibility.
 
 ### 2. Compatibility with Low-End Hardware
 The game operates entirely within a web browser and does not require installation or specific operating system compatibility. As a lightweight application, it can run efficiently on devices with limited hardware capabilities, ensuring accessibility for a broader range of users.
