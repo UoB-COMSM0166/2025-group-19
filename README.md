@@ -617,20 +617,20 @@ Based on the Wilcoxon Signed-Rank Test:
 ---
 # Process
 ## Collaboration
-Our team adopted an Agile development process, incorporating Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
+Adopting an Agile development approach, our team incorporated Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
 
 ### Agile Development
 #### Scrum & Iterative Development
-In the first eight weeks, Erik hosted our Scrum meetings, ensuring a structured workflow. Later, he proposed rotating the hosting role among all team members to foster leadership and shared responsibility. This allowed everyone to gain experience in facilitating discussions, reviewing code, and adapting to different coding styles, ultimately strengthening both individual and team skills.
+In the first eight weeks, Erik hosted our Scrum meetings, ensuring a structured workflow. Later, he proposed rotating the hosting role among all team members to foster leadership and shared responsibility. This allowed everyone to gain experience in facilitating discussions, reviewing code, and adjusting to different coding styles, ultimately strengthening both individual and team skills.
 
 We conducted Scrum meetings twice a week:
-- Tuesdays: A comprehensive Kanban board review, where we created new tasks, reviewed outstanding ones, and planned weekly improvements.
+- Tuesdays: A comprehensive Kanban board review, where we assigned new tasks, reviewed outstanding ones, and planned weekly improvements.
 - Thursdays: A stand-up meeting focused on addressing development challenges and ensuring smooth progress.
 
-With the new rotation system, the weekly host also served as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned reviewer. Previously, only a few members handled code reviews, leading to an uneven workload. By distributing these responsibilities, we improved collaboration, knowledge sharing, and overall development efficiency.
+With the new rotation system, the weekly host also served as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned reviewer. Previously, only a few members handled code reviews, leading to an uneven workload. By distributing these responsibilities, we improved overall teamwork and development productivity.
 
 #### Task Management & Workflow Refinement
-Initially, we lacked a clear workflow, but through continuous adjustments, we developed an effective process. The Scrum rotation and structured code reviews improved collaboration and ensured long-term sustainability. To maintain steady progress and avoid last-minute rushes, we set one-week deadlines for each task, aligning with the XP Sustainable Pace principle. This structured approach kept each sprint well-paced and balanced.
+Though we initially lacked a clear workflow, we developed an effective process through continuous adjustments. The Scrum rotation and structured code reviews improved collaboration and ensured long-term sustainability. This structured approach kept each sprint well-paced and balanced.
 
 ### Version Control & Code Reviews
 We adopted a structured Git branching model:
@@ -642,12 +642,12 @@ Code reviews were mandatory before merging into the develop branch, promoting qu
 
 ### Extreme Programming (XP) Practices
 #### Simple Design
-We adopted the Model-View-Controller (MVC) architecture to ensure a clear separation of concerns, making the system more modular and easier to maintain. Each component was organised based on its functionality, allowing for better code reusability and reducing complexity. This structured approach not only streamlined development but also facilitated collaboration among team members.
+We adopted the Model-View-Controller (MVC) architecture to ensure a clear separation of concerns, making the system more modular and easier to maintain. Each component was organised based on its functionality, allowing for better code reusability while also reducing complexity. This structured approach not only streamlined development but also facilitated collaboration among team members.
 
 [Reference: MVC Architecture](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/docs)
 
 #### Sustainable Pace
-To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
+To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a manageable workload.
 
 #### Coding Standards
 We adhered to a consistent development standard, encompassing maintainability, readability, the MVC architecture, and object-oriented principles. After completing the implementation of a feature, we submitted a pull request for peer review by other team members.
@@ -656,7 +656,7 @@ We adhered to a consistent development standard, encompassing maintainability, r
 All team members had ownership of the entire codebase, enabling anyone to modify any part when needed. This reduced bottlenecks and improved code quality. When challenges arose, such as issues with the black hole effect, ball physics, or sidebar power-ups, we collaborated to troubleshoot and refine solutions, enhancing the overall implementation.
 
 #### Whole Team Approach
-Everyone actively participated in all stages of the project, from planning to implementation, fostering cross-functional collaboration and improving overall development efficiency. During `Reading Week`, we focused on making significant progress, reducing stress from other deadlines. This effort led to our most productive week, delivering 112 commits, demonstrating our commitment to high-quality development.
+From planning to implementation, all team members actively participated in all stages of the project, fostering cross-functional collaboration and improving overall development efficiency. During `Reading Week`, we focused on making significant progress, reducing stress from other deadlines.
 
 As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimising last-minute pressure.
 
@@ -674,14 +674,14 @@ ZenHub’s seamless GitHub integration allowed us to manage tasks without switch
 
 <p align="center">
   <b>Figure 19</b><br>
-  <i>Zenhub integrate Github</i><br>
+  <i>Zenhub integrated into Github</i><br>
   <img src="./assets/zenhub.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 
 ### Whimsical Wireframe
 
-We use Whimsical to store and organise our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It provides real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for efficient planning and coordination.
+We use Whimsical to store and organise our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It allows for real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for planning and coordination.
 
 <p align="center">
   <b>Figure 20</b><br>
