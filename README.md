@@ -65,7 +65,7 @@ To further put a spin on the typically non-narrative genre, our game is themed a
   <img src="./assets/animals.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test, and learn about Chinese mythology along the way.
+With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test and learn about Chinese mythology along the way.
 
 ---
 
@@ -361,11 +361,11 @@ We used Agile methodology to manage the development lifecycle, promoting continu
 
 ---
 # Implementation
-Before starting development, we first had to learn how to use the p5.js programming language and get comfortable with object-oriented programming (OOP) to structure our game effectively. As we do the design and planned the implementation, we anticipated several challenges that we thought would be major obstacles. However, once we started coding, these concerns turned out to be more manageable than expected. Instead, we encountered unexpected challenges in other areas. The following sections outline both the anticipated and unforeseen challenges we faced during development and how we addressed them.
+Before starting development, we first had to learn how to use the p5.js programming language and get comfortable with object-oriented programming (OOP) to structure our game effectively. In the process of designing and planning the implementation, we anticipated several challenges that we thought would be major obstacles. However, once we started coding, these concerns turned out to be less problematic than expected. Instead, we encountered unexpected challenges in other areas. The following sections outline both the anticipated and unforeseen challenges we faced during development and how we addressed them.
 
 ## Anticipated Challenges
-Before the development stage, we anticipated several challenges:
-* **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult and require advanced physics knowledge.
+Before the development stage, we predicted several challenges:
+* **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult or require advanced physics knowledge.
 * **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.  <br/>
 
 However, as we progressed, these concerns proved manageable. Since the ball moves without gravity, its position could be updated simply by adding or deducting to its x and y values. For difficulty balancing, we refined the parameters through iterative testing between our group members, and got positive feedback from the user evaluations. 
@@ -383,7 +383,7 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
       <b>Figure 13</b><i> An Example of Effect Class</i><br>
     </p>
       
-    Through the use of clear separation of ball state and effect classes, the game logic became more manageable. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviors. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
+    Through the use of clear separation of ball state and effect classes, the game logic became more clearly defined. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviours. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
 * **Displaying Active Power-Ups and Timers**  
     Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
     <p align="center">
