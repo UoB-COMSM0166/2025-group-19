@@ -43,7 +43,7 @@
   <tr>
     <td align="center">Hanqi Wu</td>
     <td align="center">Game View</td>
-    <td align="center">wish that there were more visual cues to notify that a power up has been eaten</td>
+    <td align="center">Wish that there were more visual cues to notify that a power up has been eaten</td>
     <td align="center">Visibility of system status</td>
     <td align="center">4</td>
     <td align="center">1</td>

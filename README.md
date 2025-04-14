@@ -315,7 +315,7 @@ To ensure a well-structured and maintainable codebase, we decide to follow the M
 •WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.  
 •GameView.js - Displays the main gameplay view.  
 •GodView.js - Plays the story introduction animation.  
-•ModeView.js - Shows before game start for user to choose game level: easy or hard.  
+•ModeView.js - Shows before game start for user to choose game level: Easy or Hard.  
 •NewStageMapView.js - Shows available stages for selection.  
 •SidebarView.js - Displays control info, special tools, and scoring during gameplay.  
 •StageMapView.js - This view enables users customise own zodiac animal.  
@@ -354,7 +354,7 @@ Following the sequence diagram, we developed and iterated on class diagram. Clas
 <p align="center">
   <img src="./assets/finalClassDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
   <b>Figure 11</b><br>
-  <i>Class Diagram</i><br>
+  <i>Final Class Diagram</i><br>
 </p>
 The above 2 class diagrams show how our design evolved as game complexity increased and new features were added.  
 We used Agile methodology to manage the development lifecycle, promoting continuous delivery, rapid iteration, and strong team collaboration. We tracked work using ZenHub, organised sprints, and monitored progress through detailed issue tracking.
@@ -378,9 +378,11 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     However, implementing this became complex due to interactions with other power-ups (such as speed up) and toggle ball, that also influenced the ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen. 
     <p align="center"> 
       <img src="./assets/ballConstructor.png" width="500" alt="Block" style="border: 5px solid black;"><br/>     
-      <b>Figure 12</b> <i>Ball Class Constructor</i><br>  
+      <b>Figure 12</b> 
+      <i>Ball Class Constructor</i><br>  
       <img src="./assets/exampleOfEffectClass.png" width="400" alt="Block" style="border: 5px solid black;"><br/>      
-      <b>Figure 13</b><i> An Example of Effect Class</i><br>
+      <b>Figure 13</b>
+      <i> An Example of Effect Class</i><br>
     </p>
       
     Through the use of clear separation of ball state and effect classes, the game logic became more clearly defined. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviours. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
@@ -388,7 +390,8 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
     <p align="center">
       <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;"><br/>
-      <b>Figure 14</b><i>Display of Power-Ups in Sidebar</i><br>
+      <b>Figure 14</b>
+      <i>Display of Power-Ups in Sidebar</i><br>
     </p>
     <b>Implementation Approach:</b><br/>  
     1. Separate Instance for Each Type:<br/>  
@@ -403,38 +406,35 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
 
 ---
 # Evaluation
-It is very important to understand user’s reaction and their feedback. Since the project started, we have been carried out several evaluations to understand how well the game met players' expectations. At the same times, these feedback also help us to identify areas for improvement and assess.
+In order to identify areas for improvement and assess the degree to which our game has met player expectations, two major evaluations were held in the middle of the development process and near the end of the project respectively. Each of these can be segmented into two components: qualitative and quantitative.
 
-The two major evaluation was held in the middle of the game, and the end of the project. These evaluation also segmented into two components: qualitative and quantitative.
 ## Qualitative Evaluation
-Just after we finished the basic game prototype, we carried out first major evaluations, in the qualitative evaluation part, we asked each player to play our games several minutes and give us some feedback used Heuristic Evaluation to understand how players felt about the game.
+After finishing the basic game prototype, we carried out our first major evaluation. Making use of Heuristic evaluation, we asked each user to play our games for several minutes and provide feedback to understand how players felt about the game.
 
 ### Player’s Feedback: 
-In the later stages of development, our discussions and revisions were consistently guided by player feedback.
-
-By understanding what players cared about during gameplay and collecting questionnaire responses, we summarised the following strengths and areas for improvement.
+Since the beginning of the project, our discussions and revisions have consistently been guided by player feedback, especially in the later stages of development. By recognising what players cared about during gameplay through collecting questionnaire responses, we summarised the following strengths and areas for improvement.
 
 ### What Players Enjoyed:
 
-* **Art Design:** Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.
+* **Art Design:** Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistency of our overall aesthetic, including the fonts and background.
 
-* **Difficulty Balance:** Players noticed that in easy mode, they could become familiar with the gameplay mechanics and gain a sense of achievement after clearing a stage, while in hard mode, they could challenge themselves and become immersed in the variety of tools that added fun to the gameplay.
+* **Difficulty Balance:** Players noticed that in Easy mode, they could familiarise themselves with the gameplay mechanics and gain a sense of achievement after clearing a stage; in Hard mode, they were able to challenge themselves and become immersed in the variety of tools that made the gameplay experience more enjoyable.
 
-* **Variety of tools:** The variety and design of the tool were enjoyable, adding fun and excitement to the gameplay.
+* **Variety of tools:** The variety and design of the tools added fun and excitement to each level.
 
 ### What Players think it can be improved:
 
-* **Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.
+* **Lack of Instructions**: Several users were unsure which keys or mouse actions were needed to progress through the game. They suggested adding clearer instructions or a tutorial.
 
-* **Paddle Visibility**: The low contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.
+* **Paddle Visibility**: The lack of contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.
 
-* **Infinity Ball Indicator**: Players struggled to recognise when the Infinity Ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.
+* **Infinite Ball Indicator**: Players struggled to recognise when the infinite ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.
 
-* **Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. It was suggested that using distinct colours or shapes could improve clarity.
+* **Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. They suggested using distinct colours or shapes to improve clarity.
 
 * **Ball-Paddle Collision Mechanics**: One user recommended that the ball should reflect at different angles depending on where it hits the paddle. This would provide players with greater control and add more variety to the gameplay.
 
-* **Zodiac Year Explanation**: Users wanted more context on the Chinese Zodiac years and how they relate to birthdays. Adding a brief explanation in the stage selection view would help players understand why they should enter their birthdate.
+* **Zodiac Year Explanation**: Users wanted more context on the Chinese zodiac and how they relate to birthdays. Adding a brief explanation in the stage selection view would help players understand why they should enter their birthdate.
 
 
 
@@ -457,7 +457,7 @@ By understanding what players cared about during gameplay and collecting questio
   </tr>
   <tr>
     <td align="center">Stage Map</td>
-    <td align="center">Confusing about how to pin in birthday and why?</td>
+    <td align="center">Confused about how to enter in birthday and why it's necessary</td>
     <td align="center">Visibility of system status, User control and freedom</td>
     <td align="center">4</td>
     <td align="center">4</td>
@@ -466,7 +466,7 @@ By understanding what players cared about during gameplay and collecting questio
   </tr>
   <tr>
     <td align="center">Game View</td>
-    <td align="center">Celing and Sidewall is invisiable</td>
+    <td align="center">Ceiling and sidewall are invisible</td>
     <td align="center">User control and freedom</td>
     <td align="center">2</td>
     <td align="center">1</td>
@@ -475,7 +475,7 @@ By understanding what players cared about during gameplay and collecting questio
   </tr>
   <tr>
     <td align="center">Game View</td>
-    <td align="center">colour of the background and paddle clash</td>
+    <td align="center">Background colour clashes with the paddle</td>
     <td align="center">Visibility of system status</td>
     <td align="center">4</td>
     <td align="center">1</td>
@@ -484,7 +484,7 @@ By understanding what players cared about during gameplay and collecting questio
   </tr>
   <tr>
     <td align="center">Game View</td>
-    <td align="center">wish that there were more visual cues to notify that a power up has been eaten</td>
+    <td align="center">Wish that there were more visual cues to notify that a power up has been eaten</td>
     <td align="center">Visibility of system status</td>
     <td align="center">4</td>
     <td align="center">1</td>
@@ -503,13 +503,13 @@ there</td>
   </tr>
 </table>
 
-The result of Heuristic Evaluation shows that nearly most of the sever problem are related to “Visibility of system status”, 
+The result of Heuristic evaluation shows that the most severe problems are related to “Visibility of system status”, 
 
 1. Players didn’t understand the relationship between the Chinese Zodiac and their birthday, which caused confusion about why they were asked to enter their birthdate. Based on this feedback, we plan to add an **explanation page** to clarify the reason behind this feature.
 2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background. Additionally, some players reported that the icons for effects were hard to recognise due to the lack of contrast.
 
 ## Quantitative Evaluation
-In this part, we use NASA TLX and System Usability Scale to analyse how player feels about both easy mode and hard mode.
+For quantitative evaluation, both NASA TLX and System Usability Scale were employed to analyse how player felt about the two different difficulty settings.
 
 #### NASA TLX
 We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
@@ -522,10 +522,11 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
 [Click here to view Hard Mode results.](./assets/easy-mode.md)
 
 
-### Compare between easy and hard mode
+### Comparison between Easy and Hard mode
 
 <p align="center">
   <b>Figure 16</b><br>
+  <i>Graph depicting NASA TLX results</i><br>
   <img src="./assets/compare_easy_hard.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
@@ -574,12 +575,12 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
 </table>
 
-Our analysis indicates that the Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in increasing challenge, but also highlight the need for balancing difficulty with player satisfaction.
+Our analysis indicates that Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in terms of increasing challenge, but also highlights the need for balancing difficulty with player satisfaction.
 
 
 #### System Usability Scale
 
-We conducted a System Usability Scale (SUS) evaluation across both Easy and Hard game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system on 10 standardised SUS questions, leading to an aggregate score out of 100.
+We conducted a System Usability Scale (SUS) evaluation across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
 
 [Click here to view raw System Usability Scale results.](./assets/SUS-raw.md)
 
@@ -587,15 +588,16 @@ We conducted a System Usability Scale (SUS) evaluation across both Easy and Hard
 
 <p align="center">
   <b>Figure 17</b><br>
+  <i>Graph depicting SUS results</i><br>
   <img src="./assets/sus-before.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
 The SUS evaluation shows that the game is generally perceived as usable and user-friendly, with particularly strong ratings for ease of use, learning speed, and system integration. The consistency of responses between Easy and Hard modes suggests that the core interface is well-designed and scales effectively with difficulty. Some improvements may be explored to further reduce perceived complexity or technical support needs in the harder levels, but overall usability remains strong.
 
-### Finding
+### Findings
 Based on the Wilcoxon Signed-Rank Test:
 
--  By using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
+-  Using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
 
 -  The NASA-TLX score is statistically significant, indicating that there may be a notable difference in perceived workload between the Easy and Hard levels. From the user data, we observed that Temporal Demand and Physical Demand were generally higher when users played the Hard mode. High temporal demand implies users may feel time pressure or that tasks are too fast-paced. High physical demand suggests users had to put in more effort to interact with the game, possibly due to complex controls or rapid actions.
   
