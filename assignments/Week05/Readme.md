@@ -1,7 +1,7 @@
 # Object Orientated Design
 
 ## UML
-This is our block game UML.
+This is the UML for our game.
 
 <img src="UML.png" alt="UML" width="700">
 

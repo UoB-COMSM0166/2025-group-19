@@ -51,7 +51,7 @@
         <td>Inclusiveness</td>
         <td>
             a. Offers multiple difficulty levels to accommodate players of all skill levels.<br>
-            b. Designed to be accessible to color-blind players by using distinct images instead of color-coded elements.
+            b. Designed to be accessible for colour-blind players by using distinct images instead of colour-coded elements.
         </td>
     </tr>
     <tr>
@@ -111,20 +111,20 @@
         <td>Innovation</td>
         <td>
             a. Future expansions may include VR/AR versions.<br>
-            b. Combines the classic brick-breaker game with zodiac themes, creating a unique concept.
+            b. Combines the classic brick-breaker game with a zodiac theme, creating a unique concept.
         </td>
     </tr>
     <tr>
         <td>Customer Relationship Management</td>
         <td>
-            a. Plans to launch live events to engage players.<br>
+            a. Future plans to launch live events to engage players.<br>
             b. Potential merchandise (e.g., plush toys, picture books) featuring zodiac-themed characters.
         </td>
     </tr>
     <tr>
         <td>Supply Chain</td>
         <td>
-            a. May utilize cloud services (e.g., AWS) if a multiplayer version is developed.
+            a. May utilise cloud services (e.g., AWS) if a multiplayer version is developed.
         </td>
     </tr>
     <tr>
@@ -248,7 +248,7 @@
     <tr>
         <td>Environmental</td>
         <td>Energy-efficient coding practices continue.</td>
-        <td>Minimizes unnecessary computation, reducing long-term energy consumption.</td>
+        <td>Minimises unnecessary computation, reducing long-term energy consumption.</td>
     </tr>
 </table>
 
@@ -269,11 +269,11 @@
         </td>
     </tr>
     <tr>
-        <td>As a player, I want the game to be accessible to color-blind users, so that I can enjoy it regardless of my vision condition.</td>
+        <td>As a player, I want the game to be accessible to colour-blind users, so that I can enjoy it regardless of my vision.</td>
         <td>
-            a. Use distinct icons and patterns instead of relying solely on colors.<br>
-            b. Provide a color-blind mode option in the settings.<br>
-            c. Ensure the game remains fully playable with the color-blind mode enabled.
+            a. Use distinct icons and patterns instead of relying solely on colours.<br>
+            b. Provide a colour-blind mode option in the settings.<br>
+            c. Ensure the game remains fully playable with the colour-blind mode enabled.
         </td>
     </tr>
     <tr>
@@ -298,7 +298,7 @@
         <td>
             a. Use secure authentication mechanisms for user score submissions.<br>
             b. Encrypt and validate all leaderboard data exchanges.<br>
-            c. Prevent unauthorized modifications to leaderboard entries.
+            c. Prevent unauthorised modifications to leaderboard entries.
         </td>
     </tr>
     <tr>
@@ -336,11 +336,11 @@ To align with sustainable software practices, we have selected the following thr
 - This approach reduces memory usage and improves rendering performance, leading to a smoother gaming experience.
 
 ### Avoid Tracking Unnecessary Data
-- We prioritize user privacy and sustainability by ensuring that no player data is stored.
+- We prioritise user privacy and sustainability by ensuring that no player data is stored.
 - Since no data is collected or tracked, our game minimizes resource consumption related to data storage and processing.
 
 ### Remove Unused CSS Definitions
-- We maintain a lightweight and optimized stylesheet, using only essential CSS.
+- We maintain a lightweight and optimised stylesheet, using only essential CSS.
 - This reduces unnecessary computations in the rendering process, improving efficiency and reducing energy consumption.
 
 By integrating these green software patterns, we enhance performance, reduce environmental impact, and create a more sustainable gaming experience.

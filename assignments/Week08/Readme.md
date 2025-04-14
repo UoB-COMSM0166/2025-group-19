@@ -1,5 +1,5 @@
 
-# USER FEEDBACK
+# User Feedback
 ## NASA TLX
 <table align="center">
   <tr>
@@ -772,7 +772,7 @@
 
 
 
-# FINDING
+# Findings
 Based on the Wilcoxon Signed-Rank Test:
 
 -  By using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
@@ -783,7 +783,7 @@ Based on the Wilcoxon Signed-Rank Test:
 
 -  Improvements based on NASA TLX: Simplify processes or enhance feedback mechanisms.
    
--  Improvements based on SUS:  Reduce temporal demand by allowing more flexible pacing or simplifying steps. Reduce physical demand by optimizing input methods and minimizing unnecessary actions.
+-  Improvements based on SUS:  Reduce temporal demand by allowing more flexible pacing or simplifying steps. Reduce physical demand by optimising input methods and minimising unnecessary actions.
 
 
 
