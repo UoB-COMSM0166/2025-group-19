@@ -396,13 +396,13 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     </p>
     <b>Implementation Approach:</b><br/>  
     1. Separate Instance for Each Type:<br/>  
-      - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.<br/>  
-      - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
+        - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.<br/>  
+        - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
     2. The sidebar dynamically updates to reflect active power-ups, ensuring players can easily see which effects are in play and for how long.<br/>  
     3. Handling Duplicate Power-Ups:<br/>  
-      - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
-      - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
-      - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
+        - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
+        - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
+        - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
     4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active   
 
 ---
