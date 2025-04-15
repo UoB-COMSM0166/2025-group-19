@@ -306,39 +306,39 @@ Prior to transforming our game idea into code, we first identified the game's es
 
 Upon finalising the core game mechanics and desired user interactions, the team moved on to designing the system architecture. By treacking the development process in the form of weekly meetings, all team members had a shared understanding of system structure, which served as a solid reference for code implementation. To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates game data, rendering, and user interaction logic into three dinstinct yet interconnected sections. 
 -	**Controllers** handle game logic and user input, acting as intermediaries between the model and view:  
-  - EffectController.js - Manages power-up effects.  
-  - KeyboardController.js - Handles keyboard inputs for game actions and controls.  
-  - PageController.js - Allows for navigation between different game views.  
-  - StageController.js - Manages game functions and gameplay logic.  
-  - StageNController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents the stage number)  
+    - EffectController.js - Manages power-up effects.  
+    - KeyboardController.js - Handles keyboard inputs for game actions and controls.  
+    - PageController.js - Allows for navigation between different game views.  
+    - StageController.js - Manages game functions and gameplay logic.  
+    - StageNController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents the stage number)  
 -	**Views** manage the user interface and rendering whilst also listening to model updates:  
-  - WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.  
-  - GameView.js - Displays the main gameplay view.  
-  - GodView.js - Plays the story introduction animation.  
-  - ModeView.js - Appears before start of game, allows user to select game level: Easy or Hard.  
-  - NewStageMapView.js - Handles new stage creation view.  
-  - SidebarView.js - Displays control info, special tools, and scoring during gameplay.  
-  - StageMapView.js - Renders the stage map.  
-  - YourZodiacView.js - Allows player to find their zodiac animal.  
-  - PrivacyDialogView.js - Relays privacy policy to player regarding the use of birthdays in "Your Zodiac".  
-  - AnimalAnimation.js, CloudAnimation.js, RoadAnimation.js – Create animations for the welcome view.  
-  - SettingDialog.js - Provides settings and info dialogs for customising key bindings and background music.  
+    - WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.  
+    - GameView.js - Displays the main gameplay view.  
+    - GodView.js - Plays the story introduction animation.  
+    - ModeView.js - Appears before start of game, allows user to select game level: Easy or Hard.  
+    - NewStageMapView.js - Handles new stage creation view.  
+    - SidebarView.js - Displays control info, special tools, and scoring during gameplay.  
+    - StageMapView.js - Renders the stage map.  
+    - YourZodiacView.js - Allows player to find their zodiac animal.  
+    - PrivacyDialogView.js - Relays privacy policy to player regarding the use of birthdays in "Your Zodiac".  
+    - AnimalAnimation.js, CloudAnimation.js, RoadAnimation.js – Create animations for the welcome view.  
+    - SettingDialog.js - Provides settings and info dialogs for customising key bindings and background music.  
 -	**Models** define core game components and special effects:
-  - StagePattern.js - Brick layout for each stage.     
-  - Ball.js - Ball properties and behaviour.  
-  - Brick.js - Brick properties and collision logic.  
-  - Paddle.js - Paddle movement and interactions.  
-  - Tool.js - Behaviour of power-ups.  
-  - Effect.js - Base class for managing effect duration and the application/removal of effects.
-    - BallInfiniteEffect.js - Temporarily grants infinite number of balls.  
-    - BallSizeEffect.js - Temporarily alters size of ball.  
-    - BallSpeedEffect.js - Temporarily increases ball speed.  
-    - GravityEffect.js - Temporarily adds gravity.  
-    - PaddleDirectionEffect.js - Temporarily reverses paddle direction.  
-    - PaddleSizeEffect.js - Temporarily adjusts paddle size.  
-    - TimeEffect.js - Adds or subtracts time from game timer.  
-  - BlackHoleEffect.js - Bricks desginated with this effect will absorb nearby balls. 
-  - StageState.js - Tracks stage progression and status.  
+    - StagePattern.js - Brick layout for each stage.     
+    - Ball.js - Ball properties and behaviour.  
+    - Brick.js - Brick properties and collision logic.  
+    - Paddle.js - Paddle movement and interactions.  
+    - Tool.js - Behaviour of power-ups.  
+    - Effect.js - Base class for managing effect duration and the application/removal of effects.
+        - BallInfiniteEffect.js - Temporarily grants infinite number of balls.  
+        - BallSizeEffect.js - Temporarily alters size of ball.  
+        - BallSpeedEffect.js - Temporarily increases ball speed.  
+        - GravityEffect.js - Temporarily adds gravity.  
+        - PaddleDirectionEffect.js - Temporarily reverses paddle direction.  
+        - PaddleSizeEffect.js - Temporarily adjusts paddle size.  
+        - TimeEffect.js - Adds or subtracts time from game timer.  
+    - BlackHoleEffect.js - Bricks desginated with this effect will absorb nearby balls. 
+    - StageState.js - Tracks stage progression and status.  
 ## Core gameplay and Flow
 Our system architecture begins with the welcome menu. Here players can either start a new game, find out their zodiac animal based on their birthday, or customise key bindings and background music. Gameplay starts after the player selects one of twelve zodiac animals and their desired difficulty level. In each stage, player controls a paddle to hit the ball, break bricks and score points. Hitting specific bricks will trigger random effects, with different effects being applied based on the selected difficulty mode. In accordance to the above, we created a sequence diagram that clearly specified how the game flow was to be ordered.  
 <p align="center">
