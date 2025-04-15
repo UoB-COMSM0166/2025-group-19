@@ -5,14 +5,14 @@
 - The ball will become invisible for 1 second.
 - In a particular level, the ball is completely invisible. When it hits the wall or block, there will be fireworks or flashes.
 - Slow motion effect during specific events.
-- The ball will disappear from one block and randomly reappear from another block.
+- The ball will disappear into one block and randomly reappear from another block.
 - Blocks can move, creating additional challenges.
 
 ## **Idea 2:** 
 - Black Hole: Balls will disappear upon entering the black hole.
 - Blocks are designed in a cartoon style.
-- Functional Block: Paddle can be controlled in reverse direction.
-- Gravity changes: Ball's gravity will make it move upwards instead of falling.
+- Functional Block: Paddle direction will be reversed.
+- Gravity changes: Ball's gravity will be inverted.
 - The blocks are replaced with enemies. Enemies will shoot fire.
 
 ## **Idea 3:** 
