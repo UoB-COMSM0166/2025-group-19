@@ -22,7 +22,6 @@
 - [Process](#process)
 - [Sustainability, ethics, and accessibility](#sustainability-ethics-and-accessibility)
 - [Conclusion](#conclusion)
-- [References](#references)
 
 ---
 # Team Members
@@ -174,7 +173,7 @@ When designing the levels, we referred to many templates, and some of the cartoo
   <img src="./assets/stakeholders.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-The stakeholders of Zodiac Catch are divided into four key groups:
+The stakeholders of Zodiac Catch can be divided into four key groups.
 At the core level, the product itself — Zodiac Catch — delivers a fun and challenging brick-breaker experience with Chinese zodiac elements.
 The development team, consisting of developers, designers, and a Scrum Master, is responsible for building, testing, and refining the game to ensure its quality and playability.
 In the containing system, professors and experts provide guidance, technical insights, and evaluation to support the game’s development.
@@ -298,6 +297,8 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
   </tr>
 </table>
 
+---
+
 # Design
 To create an engaging and personalised gaming experience, we carefully designed our game’s core mechanics, system architecture, and visual effects while maintaining usability.
 ## Initial Prototyping and Planning
@@ -395,13 +396,13 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     </p>
     <b>Implementation Approach:</b><br/>  
     1. Separate Instance for Each Type:<br/>  
-       - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.  
-       - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
+      - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.<br/>  
+      - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
     2. The sidebar dynamically updates to reflect active power-ups, ensuring players can easily see which effects are in play and for how long.<br/>  
     3. Handling Duplicate Power-Ups:<br/>  
-       - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
-       - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
-       - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
+      - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
+      - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
+      - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
     4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active   
 
 ---
@@ -511,7 +512,7 @@ The result of Heuristic evaluation shows that the most severe problems are relat
 ## Quantitative Evaluation
 For quantitative evaluation, both NASA TLX and System Usability Scale were employed to analyse how player felt about the two different difficulty settings.
 
-#### NASA TLX
+### NASA TLX
 We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
 
 
@@ -522,7 +523,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
 [Click here to view Hard Mode results.](./assets/easy-mode.md)
 
 
-### Comparison between Easy and Hard mode
+#### Comparison between Easy and Hard mode
 
 <p align="center">
   <b>Figure 16</b><br>
@@ -578,7 +579,7 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
 Our analysis indicates that Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in terms of increasing challenge, but also highlights the need for balancing difficulty with player satisfaction.
 
 
-#### System Usability Scale
+### System Usability Scale
 
 We conducted a System Usability Scale (SUS) evaluation across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
 
@@ -867,5 +868,3 @@ Though we have achieved most of what we envisioned for Zodiac Catch within this 
 
 This project has provided us with an invaluable, hands-on opportunity to contribute towards a group software project. In the process, we have been able to improve our coding abilities, learn how to better collaborate with fellow engineers, and understand the skills necessary to craft effective solutions from scratch. All of these takeaways will certainly inform and be applied to larger scale projects in our future careers.
 
----
-# References
