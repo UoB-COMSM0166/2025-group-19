@@ -86,7 +86,7 @@ In the early stages of our project, each of the team members came up with an ide
         </td>
         <td>
             - Power-Ups: Special bricks drop power-ups like paddle enlargement or extra balls. <br>
-            - Multi-Ball Chaos: Introduce multiple balls with different behaviors.
+            - Multi-Ball Chaos: Introduce multiple balls with different behaviours.
         </td>
     </tr>
     <tr>
@@ -188,7 +188,7 @@ Finally, in the wider environment, casual and competitive gamers engage with the
   <img src="./assets/use-case-diagram.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-Before creating the use case diagram, we thoroughly analyzed all stakeholders and user stories to capture key interactions within the game system. This helped us design a diagram that accurately reflects both player behavior and system functionality.
+Before creating the use case diagram, we thoroughly analyzed all stakeholders and user stories to capture key interactions within the game system. This helped us design a diagram that accurately reflects both player behaviour and system functionality.
 
 As Zodiac Catch targets a broad range of players, converting user stories into use case diagrams was a crucial part of pre-planning. Not only did it improve our understanding of the relationships between players, the development team, and the game system, but allowed us to streamline the development process while also anticipating potential challenges.
 
@@ -300,53 +300,53 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
 ---
 
 # Design
-To create an engaging and personalised gaming experience, we carefully designed our game’s core mechanics, system architecture, and visual effects while maintaining usability.
+To create an engaging and personalised gaming experience, we carefully designed our game’s core mechanics, system architecture, and visual effects with an emphasis on usability.
 ## Initial Prototyping and Planning
-In our initial meeting, we identified the game's essential components, such as the ball, paddle, and blocks. We then outlined the functions of each component, the unique features of different game stages, and how these elements interact. From this, we developed a basic class diagram.
-Our design journey began with paper prototypes and wireframe sketches, which helped us conceptualise the core game mechanics and user interactions. Through these early prototypes, we refined ideas about paddle control, brick patterns, special effects, and stage progression. This process allowed us to brainstorm innovative solutions before diving into development.
-After finalising the wireframes, we moved on to designing the system architecture through every week meetings. These discussions ensured that all team members had a shared understanding of system structure and served as a solid reference for implementing the code. 
-To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates concerns between game data, rendering, and user interaction logic. 
--	**Controllers** handle application logic and user input, acting as intermediaries between the model and view:  
-•EffectController.js - Manages effects in gameplay.  
-•KeyboardController.js - Handles keyboard inputs for game actions and controlls.  
-•PageController.js - Manages navigation between different game views.  
-•StageController.js - Manages game functions and gameplay logic.  
-•Stage0NController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents number)  
--	**Views** manage the user interface and rendering, listening to model updates:  
-•WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.  
-•GameView.js - Displays the main gameplay view.  
-•GodView.js - Plays the story introduction animation.  
-•ModeView.js - Shows before game start for user to choose game level: Easy or Hard.  
-•NewStageMapView.js - Shows available stages for selection.  
-•SidebarView.js - Displays control info, special tools, and scoring during gameplay.  
-•StageMapView.js - This view enables users customise own zodiac animal.  
-•YourZodiacView.js - Implement logic for StageMapView.  
-•AnimalAnimation.js, CloudAnimation.js, RoadAnimation.js – Create animations for the welcome view.  
-•SettingDialog.js - Provides settings and info dialogs for customising key bindings and background music.  
--	**Models** store core game components and special effects:  
-•Effect.js - Base class for managing durations, applying or removing effects, managing timer for game tools or power-ups effects.  
-•Ball.js - Tracks ball position, movement and collision.  
-•Brick.js - Defines different functions and tracks brick state.  
-•Paddle.js - Defines behavior of paddle and tracks movement.  
-•Tool.js - Defines tools' behavior.  
-•BallInfiniteEffect.js - Defines infinite balls effect temporarily.  
-•BallSizeEffect.js - Defines changing the size of ball temporarily.  
-•BallSpeedEffect.js - Defines a 'speedup' effect by increasing ball speed temporarily.  
-•GravityEffect.js - Adds gravity effect for balls.  
-•PaddleDirectionEffect.js - Defines inversed keyboard control direction effect.  
-•PaddleSizeEffect.js - Defines changing the size of paddle temporarily.  
-•TimeEffect.js - Applies time adding or subtracting effect for game timer.  
-•StageState.js - Manages game components, updates game state and applies game mode.  
+Prior to transforming our game idea into code, we first identified the game's essential components, including the ball, paddle, and blocks. We then outlined the functions of all components, unique features found in each difficulty level, as well as how these elements should interact with each other. Making use of paper prototypes and wireframe sketches, we further mapped out ways to implement paddle control, brick patterns, special effects, and stage progression. 
+
+Upon finalising the core game mechanics and desired user interactions, the team moved on to designing the system architecture. By treacking the development process in the form of weekly meetings, all team members had a shared understanding of system structure, which served as a solid reference for code implementation. To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates game data, rendering, and user interaction logic into three dinstinct yet interconnected sections. 
+-	**Controllers** handle game logic and user input, acting as intermediaries between the model and view:  
+  - EffectController.js - Manages power-up effects.  
+  - KeyboardController.js - Handles keyboard inputs for game actions and controls.  
+  - PageController.js - Allows for navigation between different game views.  
+  - StageController.js - Manages game functions and gameplay logic.  
+  - StageNController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents the stage number)  
+-	**Views** manage the user interface and rendering whilst also listening to model updates:  
+  - WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.  
+  - GameView.js - Displays the main gameplay view.  
+  - GodView.js - Plays the story introduction animation.  
+  - ModeView.js - Appears before start of game, allows user to select game level: Easy or Hard.  
+  - NewStageMapView.js - Handles new stage creation view.  
+  - SidebarView.js - Displays control info, special tools, and scoring during gameplay.  
+  - StageMapView.js - Renders the stage map.  
+  - YourZodiacView.js - Allows player to find their zodiac animal.  
+  - PrivacyDialogView.js - Relays privacy policy to player regarding the use of birthdays in "Your Zodiac".  
+  - AnimalAnimation.js, CloudAnimation.js, RoadAnimation.js – Create animations for the welcome view.  
+  - SettingDialog.js - Provides settings and info dialogs for customising key bindings and background music.  
+-	**Models** define core game components and special effects:
+  - StagePattern.js - Brick layout for each stage.     
+  - Ball.js - Ball properties and behaviour.  
+  - Brick.js - Brick properties and collision logic.  
+  - Paddle.js - Paddle movement and interactions.  
+  - Tool.js - Behaviour of power-ups.  
+  - Effect.js - Base class for managing effect duration and the application/removal of effects.
+    - BallInfiniteEffect.js - Temporarily grants infinite number of balls.  
+    - BallSizeEffect.js - Temporarily alters size of ball.  
+    - BallSpeedEffect.js - Temporarily increases ball speed.  
+    - GravityEffect.js - Temporarily adds gravity.  
+    - PaddleDirectionEffect.js - Temporarily reverses paddle direction.  
+    - PaddleSizeEffect.js - Temporarily adjusts paddle size.  
+    - TimeEffect.js - Adds or subtracts time from game timer.  
+  - BlackHoleEffect.js - Bricks desginated with this effect will absorb nearby balls. 
+  - StageState.js - Tracks stage progression and status.  
 ## Core gameplay and Flow
-The core flow begins when the player selects their zodiac animal and difficulty level. The game includes 12 stages, each representing a zodiac animal. In each stage, player controls a paddle to hit the ball, break bricks and score points. Hitting specific bricks triggers effects. Different effects are applied based on the selected difficulty mode.  
-Based on above game flow, we created sequence diagram, which indicates the order of game flow and make us improve game flow to be smoother.  
+Our system architecture begins with the welcome menu. Here players can either start a new game, find out their zodiac animal based on their birthday, or customise key bindings and background music. Gameplay starts after the player selects one of twelve zodiac animals and their desired difficulty level. In each stage, player controls a paddle to hit the ball, break bricks and score points. Hitting specific bricks will trigger random effects, with different effects being applied based on the selected difficulty mode. In accordance to the above, we created a sequence diagram that clearly specified how the game flow was to be ordered.  
 <p align="center">
   <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
   <b>Figure 9</b><br>
   <i>Sequence Diagram</i><br>
 </p>
-We developed a system architecture that begins with welcome menu. Here players can choose to start game, getting their own zodiac animal based on birthday or customise key setting and background music.  
-Following the sequence diagram, we developed and iterated on class diagram. Class diagram provides an overall view of our system and indicates the structure of our game and structural relationships between game objects.   
+Building on top of the sequence diagram, we developed and iterated on a simple class diagram based on our intial discussions. This provided an overall view of our system, along with indicating the general structure of our game and structural relationships between game objects.   
 <p align="center">
   <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
   <b>Figure 10</b><br>
@@ -357,15 +357,15 @@ Following the sequence diagram, we developed and iterated on class diagram. Clas
   <b>Figure 11</b><br>
   <i>Final Class Diagram</i><br>
 </p>
-The above 2 class diagrams show how our design evolved as game complexity increased and new features were added.  
-We used Agile methodology to manage the development lifecycle, promoting continuous delivery, rapid iteration, and strong team collaboration. We tracked work using ZenHub, organised sprints, and monitored progress through detailed issue tracking.
+Having adopted Agile methodology in managing our workflow, continuous changes were made throughout the development lifecycle in response to new ideas or user feedback. As a result, our eventual codebase differed greatly from what we initially envisioned.
+The difference between the two class diagrams above thus visualise how our design evolved in light of increasing game complexity and the addition of new features. 
 
 ---
 # Implementation
 Before starting development, we first had to learn how to use the p5.js programming language and get comfortable with object-oriented programming (OOP) to structure our game effectively. In the process of designing and planning the implementation, we anticipated several challenges that we thought would be major obstacles. However, once we started coding, these concerns turned out to be less problematic than expected. Instead, we encountered unexpected challenges in other areas. The following sections outline both the anticipated and unforeseen challenges we faced during development and how we addressed them.
 
 ## Anticipated Challenges
-Before the development stage, we predicted several challenges:
+Ahead of the development stage, we predicted several challenges:
 * **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult or require advanced physics knowledge.
 * **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.  <br/>
 
@@ -396,13 +396,13 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     </p>
     <b>Implementation Approach:</b><br/>  
     1. Separate Instance for Each Type:<br/>  
-        - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.<br/>  
-        - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
+      - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.<br/>  
+      - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
     2. The sidebar dynamically updates to reflect active power-ups, ensuring players can easily see which effects are in play and for how long.<br/>  
     3. Handling Duplicate Power-Ups:<br/>  
-        - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
-        - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
-        - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
+      - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
+      - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
+      - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
     4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active   
 
 ---
@@ -441,7 +441,7 @@ Since the beginning of the project, our discussions and revisions have consisten
 
 <p align="center">
   <b>Figure 15</b><br>
-  <i>Zodiac Catch</i><br>
+  <i>Original Zodiac Catch interface</i><br>
   <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
@@ -828,7 +828,7 @@ To minimise the environmental impact of our game, we have implemented sustainabl
 </table>
 
 ## Ethics
-### 1. Potential Influence on Player Behavior
+### 1. Potential Influence on Player behaviour
 The game provides an interactive platform for players to explore the principles of ball reflection in physics, offering educational value, particularly in physics learning. Additionally, the incorporation of the Chinese zodiac fosters cultural awareness and exchange by allowing players to input their birthday to discover their zodiac sign. The game promotes a positive and family-friendly environment, free from violence or inappropriate content. Its simple yet engaging design encourages meaningful interactions, making it suitable for all age groups.
 
 ### 2. Data Privacy Considerations

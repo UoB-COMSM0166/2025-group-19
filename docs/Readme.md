@@ -25,12 +25,12 @@ code/
 ├── data/                            # Defines game text
 │   └── *.json
 |
-├── models/                          # Defines game objects and behaviors
+├── models/                          # Defines game objects and behaviours
 │   ├── components/                  # Defines core game objects
-│   │   ├── Ball.js                  # Ball properties and behavior
+│   │   ├── Ball.js                  # Ball properties and behaviour
 │   │   ├── Brick.js                 # Brick properties and collision logic
 │   │   ├── Paddle.js                # Paddle movement and interaction
-│   │   ├── Tool.js                  # Power-up item behavior
+│   │   ├── Tool.js                  # Power-up item behaviour
 │   │   └── StagePattern/            # Defines the pixel-based layout of bricks for each stage
 │   │       └── *.json
 │   ├── effect/                      # Defines different power-up effects
