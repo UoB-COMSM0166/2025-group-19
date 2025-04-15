@@ -1,4 +1,4 @@
-# HCI Evulation
+# HCI Evaluation
 <table align="center">
   <tr>
     <th align="center">Observer</th>
@@ -13,7 +13,7 @@
   <tr>
     <td align="center">Haru</td>
     <td align="center">Stage Map</td>
-    <td align="center">Confusing about how to pin in birthday and why?</td>
+    <td align="center">Confused about how to enter in birthday and why it's necessary</td>
     <td align="center">Visibility of system status, User control and freedom</td>
     <td align="center">4</td>
     <td align="center">4</td>
@@ -23,7 +23,7 @@
   <tr>
     <td align="center">Haru</td>
     <td align="center">Game View</td>
-    <td align="center">Celing and Sidewall is invisiable</td>
+    <td align="center">Ceiling and sidewall are invisible</td>
     <td align="center">User control and freedom</td>
     <td align="center">2</td>
     <td align="center">1</td>
@@ -33,7 +33,7 @@
   <tr>
     <td align="center">Hanqi Wu</td>
     <td align="center">Game View</td>
-    <td align="center">colour of the background and paddle clash</td>
+    <td align="center">Background colour clashes with the paddle</td>
     <td align="center">Visibility of system status</td>
     <td align="center">4</td>
     <td align="center">1</td>
@@ -43,7 +43,7 @@
   <tr>
     <td align="center">Hanqi Wu</td>
     <td align="center">Game View</td>
-    <td align="center">wish that there were more visual cues to notify that a power up has been eaten</td>
+    <td align="center">Wish that there were more visual cues to notify that a power up has been eaten</td>
     <td align="center">Visibility of system status</td>
     <td align="center">4</td>
     <td align="center">1</td>

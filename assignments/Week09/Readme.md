@@ -156,9 +156,9 @@
     <td>Moves between menu options</td>
   </tr>
 
-  <!-- Brick Behavior -->
+  <!-- Brick behaviour -->
   <tr>
-    <td rowspan="2">Brick Behavior</td>
+    <td rowspan="2">Brick behaviour</td>
     <td>Brick disappears when hit</td>
     <td>Ball touches the brick</td>
     <td>Brick disappears</td>

@@ -7,7 +7,7 @@
     <img src="./assets/zodiac-catch.gif" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
-## Link
+## Links
 
 [PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/) <br>
 [Weekly Assignment 📚](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Readme.md)
@@ -22,7 +22,6 @@
 - [Process](#process)
 - [Sustainability, ethics, and accessibility](#sustainability-ethics-and-accessibility)
 - [Conclusion](#conclusion)
-- [References](#references)
 
 ---
 # Team Members
@@ -57,7 +56,7 @@ Like its predecessors, you use a paddle to control a limited amount of balls in 
 
 As a unique twist, all levels in Zodiac Catch contain an unexpected element - blackholes. Unlike normal bricks, these are not only unbreakable, but cause any balls that hit them to be lost forever. The locations of these special bricks remain unknown until you encounter one. Thus, it is up to the player to tactically avoid them during their gameplay run.
 
-To further put a spin on the typically non-narrative genre, our game is themed after the Chinese zodiac. Each stage corresponds to an animal from the twelve-year cycle: rat, ox, tiger, rabbit, dragon, snake, horse, goat, monkey, rooster, dog and pig. A bonus feature found on the main page, you can also enter your birth year to find the zodiac animal that represents you. 
+To further put a spin on the typically non-narrative genre, our game is themed after the Chinese zodiac. Each stage corresponds to an animal from the twelve-year cycle: rat, ox, tiger, rabbit, dragon, snake, horse, goat, monkey, rooster, dog and pig. A bonus "Your Zodiac" feature can also be found on the main page. There, you can enter your birth year to find the zodiac animal that represents you. 
 
 <p align="center">
   <b>Figure 2</b><br>
@@ -65,12 +64,12 @@ To further put a spin on the typically non-narrative genre, our game is themed a
   <img src="./assets/animals.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test, and learn about Chinese mythology along the way.
+With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test and learn about Chinese mythology along the way.
 
 ---
 
 # Requirements
-In the early stages of the game project, we conducted a brainstorming session where team members came up with ideas based on their personal interests and the feasibility of the game. During the first meeting, we presented our proposals and voted on them. To facilitate creative brainstorming, we used Online Word as our discussion tool, enabling real-time sharing and collaboration.
+In the early stages of our project, each of the team members came up with an idea based on existing game archetypes. We took inspiration from personal interests whilst also considering how feasible it would be to develop our ideas from scratch. To facilitate creative brainstorming, we used Google Docs to record ideas and suggestions, enabling real-time sharing and collaboration.
 
 <table>
     <tr>
@@ -87,7 +86,7 @@ In the early stages of the game project, we conducted a brainstorming session wh
         </td>
         <td>
             - Power-Ups: Special bricks drop power-ups like paddle enlargement or extra balls. <br>
-            - Multi-Ball Chaos: Introduce multiple balls with different behaviors.
+            - Multi-Ball Chaos: Introduce multiple balls with different behaviours.
         </td>
     </tr>
     <tr>
@@ -98,7 +97,7 @@ In the early stages of the game project, we conducted a brainstorming session wh
         </td>
         <td>
             - Smart AI Opponents: Enemies can strategically place bombs and evade explosions. <br>
-            - Customizable Maps: Players can modify the layout and design of the battlefield. <br>
+            - Customisable Maps: Players can modify the layout and design of the battlefield. <br>
         </td>
     </tr>
     <tr>
@@ -138,12 +137,12 @@ In the early stages of the game project, we conducted a brainstorming session wh
 
 <p align="center">
   <b>Figure 3</b><br>
-  <i>Brainstormed Game Ideas on Online Word</i><br>
+  <i>Brainstormed Game Ideas on Google Docs</i><br>
   <img src="./assets/word-game-ideas.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Early Stage Design
-After brainstorming and discussions, we decided to use the brick breaker game as the project for this development. Next, we used a paper prototype to streamline the game flow, helping everyone gain a clearer blueprint and understanding of the game.
+During the first meeting, where we presented and voted on our respective proposals, we collectively decided to use the brick breaker game as the basis of our project. We then used a paper prototype to plan out the game flow, helping everyone gain a better understanding of the game, as well as establishing a clear blueprint for development.
 
 <p align="center">
   <b>Figure 4</b><br>
@@ -151,7 +150,7 @@ After brainstorming and discussions, we decided to use the brick breaker game as
   <img src="./assets/paper-prototype-block.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-Following this, Erik began the initial development of the brick breaker game, which became the first prototype of our game.
+Following this, Erik began initial development based on the brick breaker genre, which became the first prototype of our game.
 
 <p align="center">
  <b>Figure 5</b><br>
@@ -159,7 +158,7 @@ Following this, Erik began the initial development of the brick breaker game, wh
  <img src="./assets/game-prototype.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-When designing the levels, we referred to many templates, and some of the cartoon-style levels sparked new ideas. After some discussion, we decided to use animals as the visual theme for the levels and incorporated this concept into our digital prototype, further brainstorming and refining the game design from there. Ultimately, we chose the Chinese Zodiac as the core theme for the game, combining it with the brick-breaking gameplay, resulting in the creation of Zodiac Catch.
+When designing the levels, we referred to many templates, and some of the cartoonish levels sparked new ideas. After some discussion, we decided to incorporate animals into the visual design of the levels, which was subsequently reflected in our digital prototype. From there, further brainstorming and refinement led to us chosing the Chinese zodiac as the core theme for the game. Combined with the brick-breaking gameplay, this resulted in the creation of Zodiac Catch.
 
 <p align="center">
   <b>Figure 6</b><br>
@@ -174,8 +173,8 @@ When designing the levels, we referred to many templates, and some of the cartoo
   <img src="./assets/stakeholders.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-The stakeholders of Zodiac Catch are divided into four key groups:
-At the core level, the product itself—Zodiac Catch—delivers a fun and challenging brick-breaker experience with Chinese zodiac elements.
+The stakeholders of Zodiac Catch can be divided into four key groups.
+At the core level, the product itself — Zodiac Catch — delivers a fun and challenging brick-breaker experience with Chinese zodiac elements.
 The development team, consisting of developers, designers, and a Scrum Master, is responsible for building, testing, and refining the game to ensure its quality and playability.
 In the containing system, professors and experts provide guidance, technical insights, and evaluation to support the game’s development.
 Finally, in the wider environment, casual and competitive gamers engage with the game, offering valuable feedback that helps enhance its quality and overall experience.
@@ -189,9 +188,9 @@ Finally, in the wider environment, casual and competitive gamers engage with the
   <img src="./assets/use-case-diagram.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-Before creating the use case diagram, we thoroughly analyzed the stakeholders and user stories to capture all key interactions within the game system. This helped us design a diagram that accurately reflects both player behavior and system functionality.
+Before creating the use case diagram, we thoroughly analyzed all stakeholders and user stories to capture key interactions within the game system. This helped us design a diagram that accurately reflects both player behaviour and system functionality.
 
-As Zodiac Catch targets a broad range of players, converting user stories into use case diagrams was crucial. It allowed us to better understand the relationships between players, the development team, and the game system, while also streamlining the development process and anticipating potential challenges.
+As Zodiac Catch targets a broad range of players, converting user stories into use case diagrams was a crucial part of pre-planning. Not only did it improve our understanding of the relationships between players, the development team, and the game system, but allowed us to streamline the development process while also anticipating potential challenges.
 
 <!-- ## Feasibility Studies
 (Add later) -->
@@ -212,19 +211,16 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
     <td>
       Given certain bricks contain a specific power-up, when the players break
-      one of these bricks, then the corresponding power-up, such as double
-      points or paddle expansion, will drop for the player to collect.
+      one of these bricks, then the corresponding power-up, such as infinite balls or paddle expansion, will drop for the player to collect.
     </td>
   </tr>
   <tr>
-    <td>Speedrun Competitor</td>
+    <td>Competitive gamer</td>
     <td>
-      As a speedrun competitor, I want to have different records to pass the
-      game.
+      As a competitive gamer, I want to beat the game with the highest score and break the world record.
     </td>
     <td>
-      Given the game has time trials, when I play the game, then I can try to
-      beat my previous records and climb the leaderboard.
+      Given the game has a scoring system, I can try to beat my previous records and climb the leaderboard.
     </td>
   </tr>
   <tr>
@@ -283,8 +279,8 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
     <td>
       Given I want to teach kids the concept about Chinese zodiac, when kids
-      enter the main page of the game, then they can know the number and the
-      animal of Chinese zodiac.
+      enter the main page of the game, then they can know the number of and the
+      animals included in the Chinese zodiac.
     </td>
   </tr>
   <tr>
@@ -292,83 +288,85 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     <td>
       As a user, I want to know my Chinese zodiac, so that in the future, I can
       know more about myself and go to fortune teller. When I go to Asian
-      countries, I have more topic to have a conversation.
+      countries, I have more conversation starters.
     </td>
     <td>
-      Given I want to know my Chinese zodiac, when I enter the game select page
-      and enter my birthday, then I can know about my Chinese zodiac.
+      Given I want to know my Chinese zodiac, when I enter the selection page
+      and enter my birthday, I can learn about the Chinese zodiac that corresponds to my birthday.
     </td>
   </tr>
 </table>
 
+---
+
 # Design
-To create an engaging and personalized gaming experience, we carefully designed our game’s core mechanics, system architecture, and visual effects while maintaining usability.
+To create an engaging and personalised gaming experience, we carefully designed our game’s core mechanics, system architecture, and visual effects with an emphasis on usability.
 ## Initial Prototyping and Planning
-In our initial meeting, we identified the game's essential components, such as the ball, paddle, and blocks. We then outlined the functions of each component, the unique features of different game stages, and how these elements interact. From this, we developed a basic class diagram.
-Our design journey began with paper prototypes and wireframe sketches, which helped us conceptualize the core game mechanics and user interactions. Through these early prototypes, we refined ideas about paddle control, brick patterns, special effects, and stage progression. This process allowed us to brainstorm innovative solutions before diving into development.
-After finalizing the wireframes, we moved on to designing the system architecture through every week meetings. These discussions ensured that all team members had a shared understanding of system structure and served as a solid reference for implementing the code. 
-To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates concerns between game data, rendering, and user interaction logic. 
--	**Controllers** handle application logic and user input, acting as intermediaries between the model and view:  
-•EffectController.js - Manages effects in gameplay.  
-•KeyboardController.js - Handles keyboard inputs for game actions and controlls.  
-•PageController.js - Manages navigation between different game views.  
-•StageController.js - Manages game functions and gameplay logic.  
-•Stage0NController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents number)  
--	**Views** manage the user interface and rendering, listening to model updates:  
-•WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.  
-•GameView.js - Displays the main gameplay view.  
-•GodView.js - Plays the story introduction animation.  
-•ModeView.js - Shows before game start for user to choose game level: easy or hard.  
-•NewStageMapView.js - Shows available stages for selection.  
-•SidebarView.js - Displays control info, special tools, and scoring during gameplay.  
-•StageMapView.js - This view enables users customize own zodiac animal.  
-•YourZodiacView.js - Implement logic for StageMapView.  
-•AnimalAnimation.js, CloudAnimation.js, RoadAnimation.js – Create animations for the welcome view.  
-•SettingDialog.js - Provides settings and info dialogs for customizing key bindings and background music.  
--	**Models** store core game components and special effects:  
-•Effect.js - Base class for managing durations, applying or removing effects, managing timer for game tools or power-ups effects.  
-•Ball.js - Tracks ball position, movement and collision.  
-•Brick.js - Defines different functions and tracks brick state.  
-•Paddle.js - Defines behavior of paddle and tracks movement.  
-•Tool.js - Defines tools' behavior.  
-•BallInfiniteEffect.js - Defines infinite balls effect temporarily.  
-•BallSizeEffect.js - Defines changing the size of ball temporarily.  
-•BallSpeedEffect.js - Defines a 'speedup' effect by increasing ball speed temporarily.  
-•GravityEffect.js - Adds gravity effect for balls.  
-•PaddleDirectionEffect.js - Defines inversed keyboard control direction effect.  
-•PaddleSizeEffect.js - Defines changing the size of paddle temporarily.  
-•TimeEffect.js - Applies time adding or subtracting effect for game timer.  
-•StageState.js - Manages game components, updates game state and applies game mode.  
+Prior to transforming our game idea into code, we first identified the game's essential components, including the ball, paddle, and blocks. We then outlined the functions of all components, unique features found in each difficulty level, as well as how these elements should interact with each other. Making use of paper prototypes and wireframe sketches, we further mapped out ways to implement paddle control, brick patterns, special effects, and stage progression. 
+
+Upon finalising the core game mechanics and desired user interactions, the team moved on to designing the system architecture. By treacking the development process in the form of weekly meetings, all team members had a shared understanding of system structure, which served as a solid reference for code implementation. To ensure a well-structured and maintainable codebase, we decide to follow the Model-View-Controller(MVC) design pattern, which separates game data, rendering, and user interaction logic into three dinstinct yet interconnected sections. 
+-	**Controllers** handle game logic and user input, acting as intermediaries between the model and view:  
+    - EffectController.js - Manages power-up effects.  
+    - KeyboardController.js - Handles keyboard inputs for game actions and controls.  
+    - PageController.js - Allows for navigation between different game views.  
+    - StageController.js - Manages game functions and gameplay logic.  
+    - StageNController.js - Implements logic for stage N, loads stage data from JSON, and handles transitions to the next stage.(N represents the stage number)  
+-	**Views** manage the user interface and rendering whilst also listening to model updates:  
+    - WelcomeView.js - Entry view with START/YOUR ZODIAC/SETTING/INFORMATION options.  
+    - GameView.js - Displays the main gameplay view.  
+    - GodView.js - Plays the story introduction animation.  
+    - ModeView.js - Appears before start of game, allows user to select game level: Easy or Hard.  
+    - NewStageMapView.js - Handles new stage creation view.  
+    - SidebarView.js - Displays control info, special tools, and scoring during gameplay.  
+    - StageMapView.js - Renders the stage map.  
+    - YourZodiacView.js - Allows player to find their zodiac animal.  
+    - PrivacyDialogView.js - Relays privacy policy to player regarding the use of birthdays in "Your Zodiac".  
+    - AnimalAnimation.js, CloudAnimation.js, RoadAnimation.js – Create animations for the welcome view.  
+    - SettingDialog.js - Provides settings and info dialogs for customising key bindings and background music.  
+-	**Models** define core game components and special effects:
+    - StagePattern.js - Brick layout for each stage.     
+    - Ball.js - Ball properties and behaviour.  
+    - Brick.js - Brick properties and collision logic.  
+    - Paddle.js - Paddle movement and interactions.  
+    - Tool.js - Behaviour of power-ups.  
+    - Effect.js - Base class for managing effect duration and the application/removal of effects.
+        - BallInfiniteEffect.js - Temporarily grants infinite number of balls.  
+        - BallSizeEffect.js - Temporarily alters size of ball.  
+        - BallSpeedEffect.js - Temporarily increases ball speed.  
+        - GravityEffect.js - Temporarily adds gravity.  
+        - PaddleDirectionEffect.js - Temporarily reverses paddle direction.  
+        - PaddleSizeEffect.js - Temporarily adjusts paddle size.  
+        - TimeEffect.js - Adds or subtracts time from game timer.  
+    - BlackHoleEffect.js - Bricks desginated with this effect will absorb nearby balls. 
+    - StageState.js - Tracks stage progression and status.  
 ## Core gameplay and Flow
-The core flow begins when the player selects their zodiac animal and difficulty level. The game includes 12 stages, each representing a zodiac animal. In each stage, player controls a paddle to hit the ball, break bricks and score points. Hitting specific bricks triggers effects. Different effects are applied based on the selected difficulty mode.  
-Based on above game flow, we created sequence diagram, which indicates the order of game flow and make us improve game flow to be smoother.  
+Our system architecture begins with the welcome menu. Here players can either start a new game, find out their zodiac animal based on their birthday, or customise key bindings and background music. Gameplay starts after the player selects one of twelve zodiac animals and their desired difficulty level. In each stage, player controls a paddle to hit the ball, break bricks and score points. Hitting specific bricks will trigger random effects, with different effects being applied based on the selected difficulty mode. In accordance to the above, we created a sequence diagram that clearly specified how the game flow was to be ordered.  
 <p align="center">
   <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
-  <b>Figure </b><br>
+  <b>Figure 9</b><br>
   <i>Sequence Diagram</i><br>
 </p>
-We developed a system architecture that begins with welcome menu. Here players can choose to start game, getting their own zodiac animal based on birthday or customize key setting and background music.  
-Following the sequence diagram, we developed and iterated on class diagram. Class diagram provides an overall view of our system and indicates the structure of our game and structural relationships between game objects.   
+Building on top of the sequence diagram, we developed and iterated on a simple class diagram based on our intial discussions. This provided an overall view of our system, along with indicating the general structure of our game and structural relationships between game objects.   
 <p align="center">
   <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
-  <b>Figure 8</b><br>
+  <b>Figure 10</b><br>
   <i>Initial Class Diagram</i><br>
 </p>
 <p align="center">
   <img src="./assets/finalClassDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
-  <b>Figure 8</b><br>
-  <i>Class Diagram</i><br>
+  <b>Figure 11</b><br>
+  <i>Final Class Diagram</i><br>
 </p>
-The above 2 class diagrams show how our design evolved as game complexity increased and new features were added.  
-We used Agile methodology to manage the development lifecycle, promoting continuous delivery, rapid iteration, and strong team collaboration. We tracked work using ZenHub, organized sprints, and monitored progress through detailed issue tracking.
+Having adopted Agile methodology in managing our workflow, continuous changes were made throughout the development lifecycle in response to new ideas or user feedback. As a result, our eventual codebase differed greatly from what we initially envisioned.
+The difference between the two class diagrams above thus visualise how our design evolved in light of increasing game complexity and the addition of new features. 
 
 ---
 # Implementation
-Before starting development, we first had to learn how to use the p5.js programming language and get comfortable with object-oriented programming (OOP) to structure our game effectively. As we do the design and planned the implementation, we anticipated several challenges that we thought would be major obstacles. However, once we started coding, these concerns turned out to be more manageable than expected. Instead, we encountered unexpected challenges in other areas. The following sections outline both the anticipated and unforeseen challenges we faced during development and how we addressed them.
+Before starting development, we first had to learn how to use the p5.js programming language and get comfortable with object-oriented programming (OOP) to structure our game effectively. In the process of designing and planning the implementation, we anticipated several challenges that we thought would be major obstacles. However, once we started coding, these concerns turned out to be less problematic than expected. Instead, we encountered unexpected challenges in other areas. The following sections outline both the anticipated and unforeseen challenges we faced during development and how we addressed them.
 
 ## Anticipated Challenges
-Before the development stage, we anticipated several challenges:
-* **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult and require advanced physics knowledge.
+Ahead of the development stage, we predicted several challenges:
+* **Ball Physics**: We were uncertain whether implementing realistic ball behaviour upon collision, including angle and speed adjustments, would be difficult or require advanced physics knowledge.
 * **Difficulty Balancing**: Various factors could influence the game's difficulty, such as ball speed, block patterns, black hole positioning, and the drop rate of power-ups. Managing these to create a balanced experience seemed challenging.  <br/>
 
 However, as we progressed, these concerns proved manageable. Since the ball moves without gravity, its position could be updated simply by adding or deducting to its x and y values. For difficulty balancing, we refined the parameters through iterative testing between our group members, and got positive feedback from the user evaluations. 
@@ -381,69 +379,69 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     However, implementing this became complex due to interactions with other power-ups (such as speed up) and toggle ball, that also influenced the ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen. 
     <p align="center"> 
       <img src="./assets/ballConstructor.png" width="500" alt="Block" style="border: 5px solid black;"><br/>     
-      <b>Figure X</b> <i>Ball Class Constructor</i><br>  
+      <b>Figure 12</b> 
+      <i>Ball Class Constructor</i><br>  
       <img src="./assets/exampleOfEffectClass.png" width="400" alt="Block" style="border: 5px solid black;"><br/>      
-      <b>Figure X</b><i> An Example of Effect Class</i><br>
+      <b>Figure 13</b>
+      <i> An Example of Effect Class</i><br>
     </p>
       
-    Through the use of clear separation of ball state and effect classes, the game logic became more manageable. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviors. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
+    Through the use of clear separation of ball state and effect classes, the game logic became more clearly defined. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviours. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
 * **Displaying Active Power-Ups and Timers**  
     Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
     <p align="center">
       <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;"><br/>
-      <b>Figure X </b><i>Display of Power-Ups in Sidebar</i><br>
+      <b>Figure 14</b>
+      <i>Display of Power-Ups in Sidebar</i><br>
     </p>
     <b>Implementation Approach:</b><br/>  
     1. Separate Instance for Each Type:<br/>  
-       - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.  
-       - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
+      - When a player collects a power-up, a new timer instance is created for that specific power-up type. This timer continuously tracks the remaining duration.<br/>  
+      - Each power-up type is managed independently to allow multiple active effects at once without interference.  <br/>
     2. The sidebar dynamically updates to reflect active power-ups, ensuring players can easily see which effects are in play and for how long.<br/>  
     3. Handling Duplicate Power-Ups:<br/>  
-       - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
-       - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
-       - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
+      - If a player collects the same type of power-up while its effect is still active, the `EffectController` first resets the existing timer instead of creating a new one.  <br/>
+      - The remaining time for that power-up is updated on the sidebar to reflect the newly collected power-up’s extended duration.  <br/>
+      - This prevents power-ups from stacking uncontrollably while ensuring their effect lasts as expected.<br/>
     4. Once the timer for a power-up reaches zero, the effect will be removed from the sidebar, indicating the effect is no longer active   
 
 ---
 # Evaluation
-It is very important to understand user’s reaction and their feedback. Since the project started, we have been carried out several evaluations to understand how well the game met players' expectations. At the same times, these feedback also help us to identify areas for improvement and assess.
+In order to identify areas for improvement and assess the degree to which our game has met player expectations, two major evaluations were held in the middle of the development process and near the end of the project respectively. Each of these can be segmented into two components: qualitative and quantitative.
 
-The two major evaluation was held in the middle of the game, and the end of the project. These evaluation also segmented into two components: qualitative and quantitative.
 ## Qualitative Evaluation
-Just after we finished the basic game prototype, we carried out first major evaluations, in the qualitative evaluation part, we asked each player to play our games several minutes and give us some feedback used Heuristic Evaluation to understand how players felt about the game.
+After finishing the basic game prototype, we carried out our first major evaluation. Making use of Heuristic evaluation, we asked each user to play our games for several minutes and provide feedback to understand how players felt about the game.
 
 ### Player’s Feedback: 
-In the later stages of development, our discussions and revisions were consistently guided by player feedback.
-
-By understanding what players cared about during gameplay and collecting questionnaire responses, we summarised the following strengths and areas for improvement.
+Since the beginning of the project, our discussions and revisions have consistently been guided by player feedback, especially in the later stages of development. By recognising what players cared about during gameplay through collecting questionnaire responses, we summarised the following strengths and areas for improvement.
 
 ### What Players Enjoyed:
 
-* **Art Design:** Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistent pixel-style aesthetic, including the fonts and background.
+* **Art Design:** Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistency of our overall aesthetic, including the fonts and background.
 
-* **Difficulty Balance:** Players noticed that in easy mode, they could become familiar with the gameplay mechanics and gain a sense of achievement after clearing a stage, while in hard mode, they could challenge themselves and become immersed in the variety of tools that added fun to the gameplay.
+* **Difficulty Balance:** Players noticed that in Easy mode, they could familiarise themselves with the gameplay mechanics and gain a sense of achievement after clearing a stage; in Hard mode, they were able to challenge themselves and become immersed in the variety of tools that made the gameplay experience more enjoyable.
 
-* **Variety of tools:** The variety and design of the tool were enjoyable, adding fun and excitement to the gameplay.
+* **Variety of tools:** The variety and design of the tools added fun and excitement to each level.
 
 ### What Players think it can be improved:
 
-* **Lack of Instructions**: Several users found it unclear which keys or mouse actions were needed to progress through the game. Adding clearer instructions or a tutorial was suggested.
+* **Lack of Instructions**: Several users were unsure which keys or mouse actions were needed to progress through the game. They suggested adding clearer instructions or a tutorial.
 
-* **Paddle Visibility**: The low contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.
+* **Paddle Visibility**: The lack of contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.
 
-* **Infinity Ball Indicator**: Players struggled to recognise when the Infinity Ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.
+* **Infinite Ball Indicator**: Players struggled to recognise when the infinite ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.
 
-* **Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. It was suggested that using distinct colours or shapes could improve clarity.
+* **Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. They suggested using distinct colours or shapes to improve clarity.
 
 * **Ball-Paddle Collision Mechanics**: One user recommended that the ball should reflect at different angles depending on where it hits the paddle. This would provide players with greater control and add more variety to the gameplay.
 
-* **Zodiac Year Explanation**: Users wanted more context on the Chinese Zodiac years and how they relate to birthdays. Adding a brief explanation in the stage selection view would help players understand why they should enter their birthdate.
+* **Zodiac Year Explanation**: Users wanted more context on the Chinese zodiac and how they relate to birthdays. Adding a brief explanation in the stage selection view would help players understand why they should enter their birthdate.
 
 
 
 <p align="center">
-  <b>Figure 11</b><br>
-  <i>Zodiac Catch</i><br>
+  <b>Figure 15</b><br>
+  <i>Original Zodiac Catch interface</i><br>
   <img src="./assets/evaluation-improvements.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
@@ -460,7 +458,7 @@ By understanding what players cared about during gameplay and collecting questio
   </tr>
   <tr>
     <td align="center">Stage Map</td>
-    <td align="center">Confusing about how to pin in birthday and why?</td>
+    <td align="center">Confused about how to enter in birthday and why it's necessary</td>
     <td align="center">Visibility of system status, User control and freedom</td>
     <td align="center">4</td>
     <td align="center">4</td>
@@ -469,7 +467,7 @@ By understanding what players cared about during gameplay and collecting questio
   </tr>
   <tr>
     <td align="center">Game View</td>
-    <td align="center">Celing and Sidewall is invisiable</td>
+    <td align="center">Ceiling and sidewall are invisible</td>
     <td align="center">User control and freedom</td>
     <td align="center">2</td>
     <td align="center">1</td>
@@ -478,7 +476,7 @@ By understanding what players cared about during gameplay and collecting questio
   </tr>
   <tr>
     <td align="center">Game View</td>
-    <td align="center">colour of the background and paddle clash</td>
+    <td align="center">Background colour clashes with the paddle</td>
     <td align="center">Visibility of system status</td>
     <td align="center">4</td>
     <td align="center">1</td>
@@ -487,7 +485,7 @@ By understanding what players cared about during gameplay and collecting questio
   </tr>
   <tr>
     <td align="center">Game View</td>
-    <td align="center">wish that there were more visual cues to notify that a power up has been eaten</td>
+    <td align="center">Wish that there were more visual cues to notify that a power up has been eaten</td>
     <td align="center">Visibility of system status</td>
     <td align="center">4</td>
     <td align="center">1</td>
@@ -506,15 +504,15 @@ there</td>
   </tr>
 </table>
 
-The result of Heuristic Evaluation shows that nearly most of the sever problem are related to “Visibility of system status”, 
+The result of Heuristic evaluation shows that the most severe problems are related to “Visibility of system status”, 
 
 1. Players didn’t understand the relationship between the Chinese Zodiac and their birthday, which caused confusion about why they were asked to enter their birthdate. Based on this feedback, we plan to add an **explanation page** to clarify the reason behind this feature.
-2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background. Additionally, some players reported that the icons for effects were hard to recognize due to the lack of contrast.
+2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background. Additionally, some players reported that the icons for effects were hard to recognise due to the lack of contrast.
 
 ## Quantitative Evaluation
-In this part, we use NASA TLX and System Usability Scale to analyse how player feels about both easy mode and hard mode.
+For quantitative evaluation, both NASA TLX and System Usability Scale were employed to analyse how player felt about the two different difficulty settings.
 
-#### NASA TLX
+### NASA TLX
 We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
 
 
@@ -525,10 +523,11 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
 [Click here to view Hard Mode results.](./assets/easy-mode.md)
 
 
-### Compare between easy and hard mode
+#### Comparison between Easy and Hard mode
 
 <p align="center">
-  <b>Figure 2</b><br>
+  <b>Figure 16</b><br>
+  <i>Graph depicting NASA TLX results</i><br>
   <img src="./assets/compare_easy_hard.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
@@ -577,28 +576,29 @@ We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physic
   </tr>
 </table>
 
-Our analysis indicates that the Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in increasing challenge, but also highlight the need for balancing difficulty with player satisfaction.
+Our analysis indicates that Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in terms of increasing challenge, but also highlights the need for balancing difficulty with player satisfaction.
 
 
-#### System Usability Scale
+### System Usability Scale
 
-We conducted a System Usability Scale (SUS) evaluation across both Easy and Hard game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system on 10 standardised SUS questions, leading to an aggregate score out of 100.
+We conducted a System Usability Scale (SUS) evaluation across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
 
 [Click here to view raw System Usability Scale results.](./assets/SUS-raw.md)
 
 [Click here to view converted System Usability Scale results.](./assets/SUS-converted.md)
 
 <p align="center">
-  <b>Figure 2</b><br>
+  <b>Figure 17</b><br>
+  <i>Graph depicting SUS results</i><br>
   <img src="./assets/sus-before.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
 The SUS evaluation shows that the game is generally perceived as usable and user-friendly, with particularly strong ratings for ease of use, learning speed, and system integration. The consistency of responses between Easy and Hard modes suggests that the core interface is well-designed and scales effectively with difficulty. Some improvements may be explored to further reduce perceived complexity or technical support needs in the harder levels, but overall usability remains strong.
 
-### Finding
+### Findings
 Based on the Wilcoxon Signed-Rank Test:
 
--  By using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
+-  Using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
 
 -  The NASA-TLX score is statistically significant, indicating that there may be a notable difference in perceived workload between the Easy and Hard levels. From the user data, we observed that Temporal Demand and Physical Demand were generally higher when users played the Hard mode. High temporal demand implies users may feel time pressure or that tasks are too fast-paced. High physical demand suggests users had to put in more effort to interact with the game, possibly due to complex controls or rapid actions.
   
@@ -620,20 +620,20 @@ Based on the Wilcoxon Signed-Rank Test:
 ---
 # Process
 ## Collaboration
-Our team adopted an Agile development process, incorporating Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
+Adopting an Agile development approach, our team incorporated Scrum and Extreme Programming (XP) principles to ensure efficiency, adaptability, and high-quality code.
 
 ### Agile Development
 #### Scrum & Iterative Development
-In the first eight weeks, Erik hosted our Scrum meetings, ensuring a structured workflow. Later, he proposed rotating the hosting role among all team members to foster leadership and shared responsibility. This allowed everyone to gain experience in facilitating discussions, reviewing code, and adapting to different coding styles, ultimately strengthening both individual and team skills.
+In the first eight weeks, Erik hosted our Scrum meetings, ensuring a structured workflow. Later, he proposed rotating the hosting role among all team members to foster leadership and shared responsibility. This allowed everyone to gain experience in facilitating discussions, reviewing code, and adjusting to different coding styles, ultimately strengthening both individual and team skills.
 
 We conducted Scrum meetings twice a week:
-- Tuesdays: A comprehensive Kanban board review, where we created new tasks, reviewed outstanding ones, and planned weekly improvements.
+- Tuesdays: A comprehensive Kanban board review, where we assigned new tasks, reviewed outstanding ones, and planned weekly improvements.
 - Thursdays: A stand-up meeting focused on addressing development challenges and ensuring smooth progress.
 
-With the new rotation system, the weekly host also served as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned reviewer. Previously, only a few members handled code reviews, leading to an uneven workload. By distributing these responsibilities, we improved collaboration, knowledge sharing, and overall development efficiency.
+With the new rotation system, the weekly host also served as the designated code reviewer for that sprint. While all members could review code, the final approval and merge required confirmation from the assigned reviewer. Previously, only a few members handled code reviews, leading to an uneven workload. By distributing these responsibilities, we improved overall teamwork and development productivity.
 
 #### Task Management & Workflow Refinement
-Initially, we lacked a clear workflow, but through continuous adjustments, we developed an effective process. The Scrum rotation and structured code reviews improved collaboration and ensured long-term sustainability. To maintain steady progress and avoid last-minute rushes, we set one-week deadlines for each task, aligning with the XP Sustainable Pace principle. This structured approach kept each sprint well-paced and balanced.
+Though we initially lacked a clear workflow, we developed an effective process through continuous adjustments. The Scrum rotation and structured code reviews improved collaboration and ensured long-term sustainability. This structured approach kept each sprint well-paced and balanced.
 
 ### Version Control & Code Reviews
 We adopted a structured Git branching model:
@@ -645,12 +645,12 @@ Code reviews were mandatory before merging into the develop branch, promoting qu
 
 ### Extreme Programming (XP) Practices
 #### Simple Design
-We adopted the Model-View-Controller (MVC) architecture to ensure a clear separation of concerns, making the system more modular and easier to maintain. Each component was organized based on its functionality, allowing for better code reusability and reducing complexity. This structured approach not only streamlined development but also facilitated collaboration among team members.
+We adopted the Model-View-Controller (MVC) architecture to ensure a clear separation of concerns, making the system more modular and easier to maintain. Each component was organised based on its functionality, allowing for better code reusability while also reducing complexity. This structured approach not only streamlined development but also facilitated collaboration among team members.
 
 [Reference: MVC Architecture](https://github.com/UoB-COMSM0166/2025-group-19/tree/main/docs)
 
 #### Sustainable Pace
-To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a consistent and manageable workload.
+To prevent last-minute rushes, we assigned a one-week deadline to each task, ensuring a steady workflow and avoiding `heroic efforts` before submission. This practice aligned with Extreme Programming’s (XP) Sustainable Pace principle, allowing us to maintain a manageable workload.
 
 #### Coding Standards
 We adhered to a consistent development standard, encompassing maintainability, readability, the MVC architecture, and object-oriented principles. After completing the implementation of a feature, we submitted a pull request for peer review by other team members.
@@ -659,35 +659,35 @@ We adhered to a consistent development standard, encompassing maintainability, r
 All team members had ownership of the entire codebase, enabling anyone to modify any part when needed. This reduced bottlenecks and improved code quality. When challenges arose, such as issues with the black hole effect, ball physics, or sidebar power-ups, we collaborated to troubleshoot and refine solutions, enhancing the overall implementation.
 
 #### Whole Team Approach
-Everyone actively participated in all stages of the project, from planning to implementation, fostering cross-functional collaboration and improving overall development efficiency. During `Reading Week`, we focused on making significant progress, reducing stress from other deadlines. This effort led to our most productive week, delivering 112 commits, demonstrating our commitment to high-quality development.
+From planning to implementation, all team members actively participated in all stages of the project, fostering cross-functional collaboration and improving overall development efficiency. During `Reading Week`, we focused on making significant progress, reducing stress from other deadlines.
 
-As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimizing last-minute pressure.
+As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimising last-minute pressure.
 
 <p align="center">
-  <b>Figure 12</b><br>
+  <b>Figure 18</b><br>
   <i>Productive Period</i><br>
   <img src="./assets/reading-week-commit.png" width="400" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Project Management Tools
-Throughout the development process, we utilized ZenHub Kanban and Whimsical Wireframe to enhance project management and collaboration efficiency. These tools helped us track development progress, plan system architecture, and ensure seamless communication among team members.
+Throughout the development process, we utilised ZenHub Kanban and Whimsical Wireframe to enhance project management and collaboration efficiency. These tools helped us track development progress, plan system architecture, and ensure seamless communication among team members.
 
 ### Zenhub Kanban
 ZenHub’s seamless GitHub integration allowed us to manage tasks without switching platforms. It also supported Epics for organizing related issues, making it ideal for tracking larger tasks. The real-time sync between ZenHub and GitHub ensured data consistency, enhancing team efficiency.
 
 <p align="center">
-  <b>Figure 13</b><br>
-  <i>Zenhub integrate Github</i><br>
+  <b>Figure 19</b><br>
+  <i>Zenhub integrated into Github</i><br>
   <img src="./assets/zenhub.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 
 ### Whimsical Wireframe
 
-We use Whimsical to store and organize our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It provides real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for efficient planning and coordination.
+We use Whimsical to store and organise our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It allows for real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for planning and coordination.
 
 <p align="center">
-  <b>Figure 14</b><br>
+  <b>Figure 20</b><br>
   <i>Whimsical</i><br>
   <img src="./assets/whimsical.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -695,18 +695,18 @@ We use Whimsical to store and organize our `brainstorming drafts`, `level wirefr
 ---
 # Sustainability, ethics and accessibility
 ## Environmental Impact
-To minimize the environmental impact of our game, we have implemented sustainable software practices based on the **Green Software Foundation Implementation Patterns**. These efforts help reduce energy consumption and improve efficiency.
+To minimise the environmental impact of our game, we have implemented sustainable software practices based on the **Green Software Foundation Implementation Patterns**. 
 
 ### Avoid an Excessive DOM Size
 - Our game dynamically renders elements using JavaScript instead of relying on a large, pre-defined DOM structure.
-- This approach optimizes memory usage, reduces rendering time, and lowers CPU workload, contributing to energy efficiency.
+- This approach optimises memory usage, reduces rendering time, and lowers CPU workload, all of which improve energy efficiency.
 
 ### Avoid Tracking Unnecessary Data
 - We ensure that no player data is stored or tracked.
 - By eliminating the need for data collection and storage, we reduce resource consumption related to data processing and database management, decreasing overall energy demand.
 
 ### Remove Unused CSS Definitions
-- We maintain a lightweight and optimized stylesheet, including only essential CSS.
+- We maintain a lightweight and optimised stylesheet, including only essential CSS.
 - This reduces unnecessary computations in the rendering process, leading to better efficiency and lower power consumption.
 
 ## Applying the Sustainability Awareness Framework: Environmental & Economic Aspects
@@ -773,7 +773,7 @@ To minimize the environmental impact of our game, we have implemented sustainabl
     <tr>
         <td>Biodiversity</td>
         <td>
-            a. Optimizing energy efficiency in development can help reduce power consumption and carbon emissions.<br>
+            a. Optimising energy efficiency in development can help reduce power consumption and carbon emissions.<br>
             b. Lower demand for electricity can indirectly reduce pollution and deforestation, benefiting ecosystems and biodiversity.
         </td>
     </tr>
@@ -787,7 +787,7 @@ To minimize the environmental impact of our game, we have implemented sustainabl
         <td>Logistics</td>
         <td>
             a. Highlights the importance of wildlife conservation and sustainability.<br>
-            b. Reduces the need for excessive hardware manufacturing by optimizing development practices.
+            b. Reduces the need for excessive hardware manufacturing by optimising development practices.
         </td>
     </tr>
     <tr>
@@ -808,7 +808,7 @@ To minimize the environmental impact of our game, we have implemented sustainabl
     <tr>
         <td>Supply Chain</td>
         <td>
-            a. May utilize cloud services (e.g., AWS) if a multiplayer version is developed.
+            a. May utilise cloud services (e.g., AWS) if a multiplayer version is developed.
         </td>
     </tr>
     <tr>
@@ -828,18 +828,18 @@ To minimize the environmental impact of our game, we have implemented sustainabl
 </table>
 
 ## Ethics
-### 1. Potential Influence on Player Behavior
-The game provides an interactive platform for players to explore the principles of ball reflection in physics, offering educational value, particularly in physics learning. Additionally, the incorporation of the Chinese zodiac fosters cultural awareness and exchange by allowing players to input their birthday to discover their zodiac sign. The game promotes a positive and family-friendly environment, free from violence or inappropriate content. Its simple yet engaging design encourages meaningful interactions, making it suitable for all age groups, including parents and children.
+### 1. Potential Influence on Player behaviour
+The game provides an interactive platform for players to explore the principles of ball reflection in physics, offering educational value, particularly in physics learning. Additionally, the incorporation of the Chinese zodiac fosters cultural awareness and exchange by allowing players to input their birthday to discover their zodiac sign. The game promotes a positive and family-friendly environment, free from violence or inappropriate content. Its simple yet engaging design encourages meaningful interactions, making it suitable for all age groups.
 
 ### 2. Data Privacy Considerations
 The game does not pose any data privacy risks. Although players have the option to input their birthday to determine their zodiac sign, this information is neither stored nor tracked. The absence of a database ensures that no personal data is collected or retained, eliminating concerns regarding privacy breaches. Furthermore, as birthdays are not classified as highly sensitive information, this feature does not compromise player security.
 
 ### 3. Impact on Player Emotions
-The game is designed to provide a stress-free and enjoyable experience. To prevent frustration, it includes both easy and hard difficulty modes, with the easy mode specifically adjusted for beginners and children. There are no limitations on the number of attempts, allowing players to retry levels freely without pressure. Additionally, players have full control over level selection, choosing any zodiac sign as their starting point. The game avoids punishing mechanics that could lead to negative emotions. Instead, it incorporates hidden surprises within each level, enhancing player engagement and fostering a sense of accomplishment and joy. The flexible gameplay ensures that players remain motivated and can share positive experiences with friends and family.
+The game is designed to provide a stress-free and enjoyable experience. To prevent frustration, it includes both easy and hard difficulty modes, with the easy mode specifically adjusted for beginners and children. There are no limitations on the number of attempts, allowing players to retry levels freely without pressure. Additionally, players have full control over level selection, with the ability to choose any zodiac sign as their starting point. The game avoids punishing mechanics that could lead to negative emotions. Instead, it incorporates hidden surprises within each level, enhancing player engagement and fostering a sense of accomplishment and joy. The flexible gameplay ensures that players remain motivated and can share positive experiences with friends and family.
 
 ## Accessibility
-### 1. Input and Control Customization
-The game is fully controlled via the keyboard, with clear on-screen instructions provided at appropriate moments. Additionally, players can customize key bindings through the settings menu, allowing them to tailor the controls to their preferred play style. Future updates may introduce additional input options, such as mouse support, to enhance accessibility.
+### 1. Input and Control Customisation
+The game is fully controlled using the keyboard, with clear on-screen instructions provided at appropriate moments. Additionally, players can customise key bindings through the settings menu, allowing them to tailor the controls to their preferred play style. Future updates may introduce additional input options, such as mouse and controller support, to enhance accessibility.
 
 ### 2. Compatibility with Low-End Hardware
 The game operates entirely within a web browser and does not require installation or specific operating system compatibility. As a lightweight application, it can run efficiently on devices with limited hardware capabilities, ensuring accessibility for a broader range of users.
@@ -864,9 +864,7 @@ On top of catering to the needs of prospective users, evaluative feedback was a 
 
 Apart from obstacles pertaining to game mechanics and difficulty which were anticipated in advance, we ran into unexpected challenges at different stages of development, for instance ball speed effects or displaying advanced information in the sidebar. However, this was mitigated by the adoption of Agile techniques. Conducting twice-a-week meetings alongside setting goals and deadlines ensured consistent communication that promoted teamwork as well as reducing the impact of problem areas on the overall workflow. Additionally, balancing Scrum-related workload via a rotation system allowed each of us to fully experience the entire development cycle whilst leveraging our own strengths to lead individual sprints.
 
-Though we have achieved most of what we envisioned for Zodiac Catch within this limited time frame, there is still much potential for growth and development looking forward. Given a longer development period or extended manpower, visual effects could be improved on through the inclusion of game-specific animations with the aim of adding to the overall player experience. Furthermore, we would like to implement an online leaderboard system. By ranking players based on cumulative scoring, it provides a concrete indicator of their performance while introducing a competitive aspect into our game.
+Though we have achieved most of what we envisioned for Zodiac Catch within this limited time frame, there is still much potential for growth and development looking forward. Given a longer development period or extended manpower, visual effects could be improved on and extra accessability options such as gesture-based control or colour blind mode could be added. Furthermore, we would like to implement an online leaderboard system. By ranking players based on cumulative scoring, it provides a concrete indicator of their performance while introducing a competitive aspect into our game.
 
 This project has provided us with an invaluable, hands-on opportunity to contribute towards a group software project. In the process, we have been able to improve our coding abilities, learn how to better collaborate with fellow engineers, and understand the skills necessary to craft effective solutions from scratch. All of these takeaways will certainly inform and be applied to larger scale projects in our future careers.
 
----
-# References
