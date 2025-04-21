@@ -342,20 +342,20 @@ Upon finalising the core game mechanics and desired user interactions, the team 
 ## Core gameplay and Flow
 Our system architecture begins with the welcome menu. Here players can either start a new game, find out their zodiac animal based on their birthday, or customise key bindings and background music. Gameplay starts after the player selects one of twelve zodiac animals and their desired difficulty level. In each stage, player controls a paddle to hit the ball, break bricks and score points. Hitting specific bricks will trigger random effects, with different effects being applied based on the selected difficulty mode. In accordance to the above, we created a sequence diagram that clearly specified how the game flow was to be ordered.  
 <p align="center">
-  <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
   <b>Figure 9</b><br>
   <i>Sequence Diagram</i><br>
+  <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 Building on top of the sequence diagram, we developed and iterated on a simple class diagram based on our intial discussions. This provided an overall view of our system, along with indicating the general structure of our game and structural relationships between game objects.   
 <p align="center">
-  <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
   <b>Figure 10</b><br>
   <i>Initial Class Diagram</i><br>
+  <img src="./assets/Initial-Class-Diagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 <p align="center">
-  <img src="./assets/finalClassDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
   <b>Figure 11</b><br>
   <i>Final Class Diagram</i><br>
+  <img src="./assets/finalClassDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 Having adopted Agile methodology in managing our workflow, continuous changes were made throughout the development lifecycle in response to new ideas or user feedback. As a result, our eventual codebase differed greatly from what we initially envisioned.
 The difference between the two class diagrams above thus visualise how our design evolved in light of increasing game complexity and the addition of new features. 
@@ -377,22 +377,22 @@ While the above anticipated difficulties were easier to resolve, we faced unexpe
     One of our power-ups introduces a gravity mode where all balls experience gravitational acceleration.  
     Our initial approach applied a downward acceleration similar to real-world physics. Since each frame represents a fraction of a second, ball speed was measured in pixels per frame. Gravity, as a form of acceleration, changes the ball's velocity, which we simulated by adjusting its vertical speed each frame.  
     However, implementing this became complex due to interactions with other power-ups (such as speed up) and toggle ball, that also influenced the ball speed. During testing, it was difficult to isolate and evaluate the effects of gravity, especially with multiple balls on the screen. 
-    <p align="center"> 
-      <img src="./assets/ballConstructor.png" width="500" alt="Block" style="border: 5px solid black;"><br/>     
+    <p align="center">    
       <b>Figure 12</b> 
       <i>Ball Class Constructor</i><br>  
-      <img src="./assets/exampleOfEffectClass.png" width="400" alt="Block" style="border: 5px solid black;"><br/>      
+      <img src="./assets/ballConstructor.png" width="500" alt="Block" style="border: 5px solid black;"><br/>        
       <b>Figure 13</b>
       <i> An Example of Effect Class</i><br>
+      <img src="./assets/exampleOfEffectClass.png" width="400" alt="Block" style="border: 5px solid black;"><br/>
     </p>
       
     Through the use of clear separation of ball state and effect classes, the game logic became more clearly defined. All ball properties, including speed and acceleration, are encapsulated within the Ball class. This design ensures that power-ups only modify specific properties rather than overriding entire behaviours. Each power-up acts as a separate effect class that simply toggles certain ball properties on or off, such as enabling gravity or increasing speed. By structuring power-ups as layered modifications rather than direct overrides, we ensured that gravity could be toggled smoothly without disrupting other speed adjustments. This also allowed us to debug individual power-ups in isolation, making it easier to fine-tune their interactions. Ultimately, this approach improved gameplay consistency and made any future enhancements easier to integrate.  
 * **Displaying Active Power-Ups and Timers**  
     Another challenge was accurately displaying the active power-ups and their countdowns on the sidebar. Ensuring the correct visuals and timings, particularly when multiple power-ups were active simultaneously, required additional debugging and adjustments. We needed a system that could handle overlapping power-ups, update timers dynamically, and provide a clear visual representation for the player.  
     <p align="center">
-      <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;"><br/>
       <b>Figure 14</b>
       <i>Display of Power-Ups in Sidebar</i><br>
+      <img src="./assets/activePower-UpsInSidebar.png" width="150" alt="Block" style="border: 5px solid black;"><br/>
     </p>
     <b>Implementation Approach:</b><br/>  
     1. Separate Instance for Each Type:<br/>  
@@ -589,7 +589,7 @@ We conducted a System Usability Scale (SUS) evaluation across both game modes to
 
 <p align="center">
   <b>Figure 17</b><br>
-  <i>Graph depicting SUS results</i><br>
+  <i>Graph depicting old SUS results</i><br>
   <img src="./assets/sus-before.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
@@ -612,20 +612,22 @@ Based on the Wilcoxon Signed-Rank Test:
 ## Final Evaluation
 
 ### Improvement
-*  **Lack of Instructions**: In the final version, we added comprehensive instructions at the beginning of the game and in the sidebar to ensure that users clearly understand how to play. These additions help guide players through the gameplay mechanics from the very start.
+*  **Lack of Instructions**: In the final version, we added comprehensive instructions at the beginning of the game and in the sidebar to ensure that users can easily refer back to the rules to play. These additions help guide players through essential gameplay mechanics from the very start.
 
 <p align="center">
-  <b>Figure</b><br>
-  <i>added instructions</i><br>
+  <b>Figure 18</b><br>
+  <i>Added instructions</i><br>
   <img src="./assets/evaluation_final_instructions.jpg" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
 * **Paddle Visibility**:
-We redesigned both the background and the paddle's colour scheme. Players can now more easily identify the position of the paddle and the ball during gameplay. In addition, we updated the power-up icons and added a highlighted indicator for the Infinity Ball. All active effects are now clearly visible in the sidebar, improving overall visual clarity.
+We redesigned the colour scheme of both the background and paddle. Players can now more easily identify the position of the paddle and the ball during gameplay. Moreover, we updated the power-up icons and added a highlighted indicator for the infinite ball effect. All active effects are now clearly visible in the sidebar, improving overall visual clarity.
 
 * **Zodiac Year Explanation**:
-To help users understand the purpose of entering their birthdate, we added a dedicated animation at the start of the game. This animation explains the connection between the Chinese Zodiac and the player’s birthday in an intuitive and engaging way.
-  <i>added instructions</i><br>
+To help users understand the purpose of entering their birthdate, we included a dedicated animation at the start of the game, which explains the connection between the Chinese zodiac and the player’s birthday in an intuitive and engaging way.
+<p align="center">
+  <b>Figure 19</b><br>
+  <i>Explanation of zodiac story</i><br>
   <img src="./assets/evaluation_zodiac.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
@@ -635,15 +637,16 @@ To help users understand the purpose of entering their birthdate, we added a ded
 [Click here to view new System Usability Scale results.](./assets/SUS-final.md)
 
 <p align="center">
-  <b>Figure 17</b><br>
-  <i>Graph depicting SUS results</i><br>
+  <b>Figure 20</b><br>
+  <i>Graph depicting new SUS results</i><br>
   <img src="./assets/evaluation_final_pic.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
 ### Compare
 
 <p align="center">
-  <b>Figure 17</b><br>
+  <b>Figure 21</b><br>
+  <i>Comparison of results</i><br>
   <img src="./assets/evaluation_compare.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
@@ -694,7 +697,7 @@ From planning to implementation, all team members actively participated in all s
 As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimising last-minute pressure.
 
 <p align="center">
-  <b>Figure 18</b><br>
+  <b>Figure 22</b><br>
   <i>Productive Period</i><br>
   <img src="./assets/reading-week-commit.png" width="400" alt="Block" style="border: 5px solid black;">
 </p>
@@ -706,7 +709,7 @@ Throughout the development process, we utilised ZenHub Kanban and Whimsical Wire
 ZenHub’s seamless GitHub integration allowed us to manage tasks without switching platforms. It also supported Epics for organizing related issues, making it ideal for tracking larger tasks. The real-time sync between ZenHub and GitHub ensured data consistency, enhancing team efficiency.
 
 <p align="center">
-  <b>Figure 19</b><br>
+  <b>Figure 23</b><br>
   <i>Zenhub integrated into Github</i><br>
   <img src="./assets/zenhub.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -717,7 +720,7 @@ ZenHub’s seamless GitHub integration allowed us to manage tasks without switch
 We use Whimsical to store and organise our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It allows for real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for planning and coordination.
 
 <p align="center">
-  <b>Figure 20</b><br>
+  <b>Figure 24</b><br>
   <i>Whimsical</i><br>
   <img src="./assets/whimsical.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
