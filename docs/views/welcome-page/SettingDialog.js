@@ -2,8 +2,11 @@ class SettingDialog {
     /**
      * @param {*} 
      */
-    constructor(welcomeView) {
+    constructor(welcomeView, keyboardController) {
         this.welcomeView = welcomeView;
+        this.keyboardController = keyboardController;
+        this.awaitingKeyPress = false;
+        this.currentRebindAction = null;
         this.updateScale();
         this.dialogOn = false;
         this.displayOption = 0;
@@ -21,13 +24,31 @@ class SettingDialog {
         this.selectedSliderIndex = 0;
         this.selectedBtnIndex = -1;
         this.isInRightContent = false;
-        this.keyboard_btns = {
-            shortBall: createButton("SHORT\nBALL"),
-            moveLeft: createButton("MOVE\nLEFT"),
-            moveRight: createButton("MOVE\nRIGHT"),
-            bounce: createButton("BOUNCE"),
+        this.warntext = "P, C, M, Enter, Tab, Shift \n can't be control keys \n No duplicate keys allowed";
+        /*
+        this.keyBindings = {
+            shootBall: 'SPACE',
+            moveLeft: 'ArrowLeft',
+            moveRight: 'ArrowRight',
+            togglePaddle: 'ArrowUp'
         };
-        Object.values(this.keyboard_btns).forEach(btn => btn.hide());
+        */
+        if (keyboardController) {
+            const controllerBindings = keyboardController.getKeyBindings();
+            this.keyBindings = {
+                shootBall: controllerBindings.shootBall || 'SPACE',
+                moveLeft: controllerBindings.moveLeft || 'ArrowLeft',
+                moveRight: controllerBindings.moveRight || 'ArrowRight',
+                togglePaddle: controllerBindings.togglePaddle || 'ArrowUp'
+            };
+            this.keyDisplay = {
+                shootBall: this.formatKey(this.keyBindings.shootBall),
+                moveLeft: this.formatKey(this.keyBindings.moveLeft),
+                moveRight: this.formatKey(this.keyBindings.moveRight),
+                togglePaddle: this.formatKey(this.keyBindings.togglePaddle)
+            };
+        }
+        
         this.teamImg = teamImg;
         this.teamNames = ["Areta", "Daisy", "Elle", "Erik",  "Lucas", "Mikas"];
         this.scrollOffset = 0;
@@ -81,7 +102,6 @@ class SettingDialog {
                     this.popupVisible = false;
                     this.slider_bgMusic.hide();
                     this.slider_soundEffect.hide();
-                    Object.values(this.keyboard_btns).forEach(btn => btn.hide());
                     this.closeDialog();
                 } else if (key === 'ArrowRight') {
                     this.isInRightContent = true;
@@ -103,14 +123,56 @@ class SettingDialog {
         }
     }
 
+    formatKey(key) {
+        const specialKeys = {
+            'ArrowLeft': '←',
+            'ArrowRight': '→',
+            'ArrowUp': '↑',
+            'ArrowDown': '↓',
+            ' ': 'SPACE'
+        };
+        return specialKeys[key] || key.toUpperCase();
+    }
+
     handleSettingKeyboard(key) {
-        if (key === 'ArrowUp') {
-            this.selectedBtnIndex = (this.selectedBtnIndex - 1 + 4) % 4;
-        } else if (key === 'ArrowDown') {
-            this.selectedBtnIndex = (this.selectedBtnIndex + 1) % 4;
-        } else if (key === 'Escape') {
-            this.selectedBtnIndex = -1;
-            this.isInRightContent = false;
+        if (this.awaitingKeyPress) {
+            if (key.toUpperCase() === 'P' || key.toUpperCase() === 'C' || key.toUpperCase() === 'M' || key.toUpperCase() === 'ENTER' || key.toUpperCase() === 'TAB' || key.toUpperCase() === 'SHIFT') {
+                this.awaitingKeyPress = false;
+                this.currentRebindAction = null;
+                return;
+            }
+            const alreadyBoundAction = Object.keys(this.keyBindings).find(action => 
+                this.keyBindings[action].toUpperCase() === key.toUpperCase()
+            );
+            if (alreadyBoundAction) {
+                this.awaitingKeyPress = false;
+                this.currentRebindAction = null;
+                return;
+            }
+            globalKeyBindings[this.currentRebindAction] = key;
+            const displayMap = {
+                shootBall: 'shootBall',
+                moveLeft: 'moveLeft',
+                moveRight: 'moveRight',
+                togglePaddle: 'togglePaddle'
+            };
+            this.keyDisplay[displayMap[this.currentRebindAction]] = this.formatKey(key);
+            this.keyBindings[this.currentRebindAction] = key;
+            this.awaitingKeyPress = false;
+            this.currentRebindAction = null;
+        } else {
+            if (key === 'ArrowUp') {
+                this.selectedBtnIndex = (this.selectedBtnIndex - 1 + 4) % 4;
+            } else if (key === 'ArrowDown') {
+                this.selectedBtnIndex = (this.selectedBtnIndex + 1) % 4;
+            } else if (key === 'Escape') {
+                this.selectedBtnIndex = -1;
+                this.isInRightContent = false;
+            } else if (key === 'Enter' && this.selectedBtnIndex >= 0) {
+                this.awaitingKeyPress = true;
+                const actions = ['shootBall', 'moveLeft', 'moveRight', 'togglePaddle'];
+                this.currentRebindAction = actions[this.selectedBtnIndex];
+            }
         }
     }
 
@@ -148,12 +210,14 @@ class SettingDialog {
         rect(this.dialogX, this.dialogY, this.dialogWidth, this.dialogHeight, 20 * this.scaleFactor); 
         fill(0);
         textAlign(CENTER, CENTER);
-        textSize(23 * this.scaleFactor);
-        text('Press ESC to return to left menu and/or close dialog\n Press arrow keys to control', this.dialogX + this.dialogWidth / 2, this.dialogY - 50); 
         if (this.displayOption === 0 ) {
+            textSize(20 * this.scaleFactor);
+            text('Press ESC to return to left menu or close dialog\n Press ENTER to change key bindings and Arrow Keys to control', this.dialogX + this.dialogWidth / 2, this.dialogY - 50); 
             this.showSettingPopup(this.dialogX, this.dialogY, this.dialogWidth, this.dialogHeight);
         }
         else if (this.displayOption === 1) {
+            textSize(23 * this.scaleFactor);
+            text('Press ESC to return to left menu and/or close dialog\n Press arrow keys to control', this.dialogX + this.dialogWidth / 2, this.dialogY - 50); 
             this.showInfoPopup(this.dialogX, this.dialogY, this.dialogWidth, this.dialogHeight);
         }
         
@@ -226,7 +290,6 @@ class SettingDialog {
         }
         const lineHeight = 24 * this.scaleFactor;
         const textHeight = wrappedLines.length * lineHeight;
-        //const maxScrollOffset = textHeight + height;
         const maxScrollOffset = max(textHeight - height, 0);
         this.scrollOffset = constrain(this.scrollOffset, 0, maxScrollOffset);
         const startLine = floor(this.scrollOffset / lineHeight);
@@ -309,9 +372,6 @@ class SettingDialog {
             this.slider_bgMusic.hide();
             this.slider_soundEffect.hide();
         }
-        if(this.settingOption !== 1){
-            Object.values(this.keyboard_btns).forEach(btn => btn.hide());
-        }
         
     }
     showSettingSound(x, y, width, height) {
@@ -345,24 +405,31 @@ class SettingDialog {
     }
 
     showSettingKeyboard(x, y , width, height) {
-        let actions = ["SHORT\nBALL", "MOVE\nLEFT", "MOVE\nRIGHT", "BOUNCE"];
-        let action_cons = ["shortBall", "moveLeft", "moveRight", "bounce"];
+        let actions = ["SHOOT\nBALL", "MOVE\nLEFT", "MOVE\nRIGHT", "TOGGLE\nPADDLE"];
+        let action_cons = ["shootBall", "moveLeft", "moveRight", "togglePaddle"];
         textAlign(CENTER, CENTER);
         textSize(25 * this.scaleFactor);
         for (let i = 0; i < actions.length; i++) {
             let actionX = x + width / 6;
-            let btnX = x + width / 2;
+            let btnX = x + width / 5 * 3;
             let actionY = y + height / actions.length * i + height / 10;
-            let btn = this.keyboard_btns[action_cons[i]];
+            let warnX = x + width / 5 * 3;
+            let warnY = actionY + 25 * this.scaleFactor;
+            noStroke();
             if(this.selectedBtnIndex === i) {
-                noStroke();
                 fill("yellow");
-            } else {
-                noStroke();
+                if(this.awaitingKeyPress) {
+                    text(" ", btnX, actionY);
+                    textSize(18 * this.scaleFactor);
+                    text(this.warntext, btnX, actionY);
+                } else {
+                    text(this.keyDisplay[action_cons[i]], btnX, actionY);
+                }
+            } else{
                 fill(255);
+                text(this.keyDisplay[action_cons[i]], btnX, actionY);
             }
-            btn.position(btnX, actionY);
-            btn.show();
+            textSize(25 * this.scaleFactor);
             text(actions[i], actionX, actionY);
         }
     }
@@ -392,4 +459,3 @@ class SettingDialog {
         }
     }
 }
-  

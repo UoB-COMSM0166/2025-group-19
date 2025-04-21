@@ -2,18 +2,20 @@ class KeyboardController {
     constructor(paddle, onShootBall) {
       this.paddle = paddle;
       this.onShootBall = onShootBall;
-      this.keyBindings = {
-        moveLeft: 'ArrowLeft',
-        moveRight: 'ArrowRight',
-        shootBall: ' ',
-        togglePaddle: 'ArrowUp'
-      };
+      this.keyBindings = {...globalKeyBindings};
     }
 
     setKeyBinding(action, key) {
         if (this.keyBindings[action] !== undefined) {
-        this.keyBindings[action] = key;
+            globalKeyBindings[action] = key;
+            this.keyBindings[action] = key;
+            return true;
         }
+        return false;
+    }
+
+    getKeyBindings() {
+        return this.keyBindings;
     }
 
     handleKeyPressed(key) {

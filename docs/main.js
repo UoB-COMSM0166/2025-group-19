@@ -1,6 +1,12 @@
 let mainController;
 let skyBackground;
 let bgMusic;
+const globalKeyBindings = {
+  moveLeft: 'ArrowLeft',
+  moveRight: 'ArrowRight',
+  shootBall: ' ',
+  togglePaddle: 'ArrowUp'
+};
 
 function preload() {
   skyBackground = loadImage('assets/images/skyBackground.webp');
