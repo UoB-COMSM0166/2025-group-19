@@ -612,10 +612,40 @@ Based on the Wilcoxon Signed-Rank Test:
 ## Final Evaluation
 
 ### Improvement
+*  **Lack of Instructions**: In the final version, we added comprehensive instructions at the beginning of the game and in the sidebar to ensure that users clearly understand how to play. These additions help guide players through the gameplay mechanics from the very start.
+
+<p align="center">
+  <b>Figure</b><br>
+  <i>added instructions</i><br>
+  <img src="./assets/evaluation_final_instructions.jpg" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
+* **Paddle Visibility**:
+We redesigned both the background and the paddle's colour scheme. Players can now more easily identify the position of the paddle and the ball during gameplay. In addition, we updated the power-up icons and added a highlighted indicator for the Infinity Ball. All active effects are now clearly visible in the sidebar, improving overall visual clarity.
+
+* **Zodiac Year Explanation**:
+To help users understand the purpose of entering their birthdate, we added a dedicated animation at the start of the game. This animation explains the connection between the Chinese Zodiac and the player’s birthday in an intuitive and engaging way.
+  <i>added instructions</i><br>
+  <img src="./assets/evaluation_zodiac.png" width="600" alt="Block" style="border: 5px solid black;">
+</p>
+
 
 ### New SUS
 
+[Click here to view new System Usability Scale results.](./assets/SUS-final.md)
+
+<p align="center">
+  <b>Figure 17</b><br>
+  <i>Graph depicting SUS results</i><br>
+  <img src="./assets/evaluation_final_pic.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
+
 ### Compare
+
+<p align="center">
+  <b>Figure 17</b><br>
+  <img src="./assets/evaluation_compare.png" width="500" alt="Block" style="border: 5px solid black;">
+</p>
 
 ---
 # Process
