@@ -699,7 +699,7 @@ As shown in the chart below, our team delivered 96 commits in the week of Februa
 <p align="center">
   <b>Figure 22</b><br>
   <i>Productive Period</i><br>
-  <img src="./assets/reading-week-commit.png" width="400" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/reading-week-commit.png" width="700" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Project Management Tools
