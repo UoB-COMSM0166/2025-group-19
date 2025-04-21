@@ -8,7 +8,8 @@ class WelcomeView {
     this.animalAnimation = new AnimalAnimation();
     this.cloudAnimation1 = new CloudAnimation(1, 30);
     this.dialogOn = false;
-    this.settingDialog = new SettingDialog(this);
+    this.keyboardController = new KeyboardController(null, null);
+    this.settingDialog = new SettingDialog(this, this.keyboardController);
     this.isInRightContent = false;
     this.dialogOption = 0;
     
