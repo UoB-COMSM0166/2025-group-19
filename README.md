@@ -694,12 +694,12 @@ All team members had ownership of the entire codebase, enabling anyone to modify
 #### Whole Team Approach
 From planning to implementation, all team members actively participated in all stages of the project, fostering cross-functional collaboration and improving overall development efficiency. During `Reading Week`, we focused on making significant progress, reducing stress from other deadlines.
 
-As shown in the chart below, our team delivered 112 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimising last-minute pressure.
+As shown in the chart below, our team delivered 96 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimising last-minute pressure.
 
 <p align="center">
   <b>Figure 22</b><br>
   <i>Productive Period</i><br>
-  <img src="./assets/reading-week-commit.png" width="400" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/reading-week-commit.png" width="700" alt="Block" style="border: 5px solid black;">
 </p>
 
 ## Project Management Tools
