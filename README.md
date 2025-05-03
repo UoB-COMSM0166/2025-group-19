@@ -862,29 +862,29 @@ To minimise the environmental impact of our game, we have implemented sustainabl
 
 ## Ethics
 ### 1. Potential Influence on Player behaviour
-The game provides an interactive platform for players to explore the principles of ball reflection in physics, offering educational value, particularly in physics learning. Additionally, the incorporation of the Chinese zodiac fosters cultural awareness and exchange by allowing players to input their birthday to discover their zodiac sign. The game promotes a positive and family-friendly environment, free from violence or inappropriate content. Its simple yet engaging design encourages meaningful interactions, making it suitable for all age groups.
+The game offers an interactive way to learn physics through ball reflection mechanics. It also promotes cultural awareness by letting players discover their Chinese zodiac via birthday input. With a simple, engaging, and non-violent design, it encourages positive interactions suitable for all ages.
 
 ### 2. Data Privacy Considerations
-The game does not pose any data privacy risks. Although players have the option to input their birthday to determine their zodiac sign, this information is neither stored nor tracked. The absence of a database ensures that no personal data is collected or retained, eliminating concerns regarding privacy breaches. Furthermore, as birthdays are not classified as highly sensitive information, this feature does not compromise player security.
+There are no privacy risks—birthday input is optional, used only to display the zodiac, and is neither stored nor tracked. No personal data is collected, as the game has no backend database, ensuring full user privacy.
 
 ### 3. Impact on Player Emotions
-The game is designed to provide a stress-free and enjoyable experience. To prevent frustration, it includes both easy and hard difficulty modes, with the easy mode specifically adjusted for beginners and children. There are no limitations on the number of attempts, allowing players to retry levels freely without pressure. Additionally, players have full control over level selection, with the ability to choose any zodiac sign as their starting point. The game avoids punishing mechanics that could lead to negative emotions. Instead, it incorporates hidden surprises within each level, enhancing player engagement and fostering a sense of accomplishment and joy. The flexible gameplay ensures that players remain motivated and can share positive experiences with friends and family.
+The game ensures a relaxing and enjoyable experience. Easy and hard modes cater to different skill levels, and players can retry levels without restrictions. Free level selection and hidden surprises promote a sense of joy, reduce frustration, and support player motivation and positive emotional engagement.
 
 ## Accessibility
-### 1. Input and Control Customisation
-The game is fully controlled using the keyboard, with clear on-screen instructions provided at appropriate moments. Additionally, players can customise key bindings through the settings menu, allowing them to tailor the controls to their preferred play style. Future updates may introduce additional input options, such as mouse and controller support, to enhance accessibility.
+### 1. Customisable Controls
+Keyboard-based with clear instructions and adjustable key bindings; future updates may add mouse/controller support.
 
-### 2. Compatibility with Low-End Hardware
-The game operates entirely within a web browser and does not require installation or specific operating system compatibility. As a lightweight application, it can run efficiently on devices with limited hardware capabilities, ensuring accessibility for a broader range of users.
+### 2. Low-End Hardware Friendly
+Browser-based and lightweight, runs smoothly without installation on most devices.
 
 ### 3. Multilingual Support
-At present, the game is only available in English. However, future iterations aim to incorporate additional language options to make the game accessible to a more diverse audience.
+Currently in English; more languages planned for future versions.
 
 ### 4. Responsive Design
-The game employs a responsive web design (RWD) approach, ensuring optimal performance and a consistent user experience across various screen sizes and device resolutions. Players can seamlessly interact with the game on different platforms without compromising functionality or usability.
+Adapts to all screen sizes for consistent performance across devices.
 
 ### 5. Audio Assistance
-The game features background music with adjustable volume settings accessible through the settings menu. Future updates will introduce additional auditory cues, such as collision sounds when the ball bounces, to improve both gameplay feedback and accessibility for players who rely on audio cues for enhanced interaction.
+Includes adjustable background music; upcoming features include sound effects for better feedback and accessibility.
 
 ---
 # Conclusion
