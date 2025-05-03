@@ -151,7 +151,7 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
   </tr>
   <tr>
-    <td rowspan="2">Try to learn from failure and frustrations</td>
+    <td>Try to learn from failure and frustrations</td>
     <td>Parents</td>
     <td>
       As parents, I want my children to train their focus and reaction speed.
@@ -163,20 +163,20 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
   </tr>
   <tr>
-    <td rowspan="2">Training Response Time</td>
+    <td>Training Response Time</td>
     <td>User</td>
     <td>
       As a user, I want to improve my response time so that in the future, when
       something happens, especially in dangerous situations, I can react quickly
       and increase my chances of survival.
     </td>
-    <td rowspan="2">
+    <td>
       Given that I want to train my response time, when the ball falls, I must
       catch it within a limited time in order to pass the stage.
     </td>
   </tr>
   <tr>
-    <td rowspan="2">Educational</td>
+    <td>Educational</td>
     <td>Parents</td>
     <td>
       As parents and teachers, I want my kids or students to learn Chinese
