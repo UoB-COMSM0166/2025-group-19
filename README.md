@@ -140,7 +140,7 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     <th>Requirement</th>
   </tr>
   <tr>
-    <td rowspan="2">Creating an intriguing and various game experience</td>
+    <td>Creating an intriguing and various game experience</td>
     <td>User</td>
     <td>
       As a user, I want certain bricks to drop power-ups, such as paddle expansion, to add variety to the game.
