@@ -176,7 +176,7 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
   </tr>
   <tr>
-    <td>Educational</td>
+    <td rowspan="2">Educational</td>
     <td>Parents</td>
     <td>
       As parents and teachers, I want my kids or students to learn Chinese
