@@ -758,7 +758,7 @@ To minimise the environmental impact of our game, we have implemented sustainabl
         </td>
     </tr>
     <tr>
-        <td>Physical</td>
+        <td>Physical Health</td>
         <td>
             a. Enhances reflexes through interactive gameplay.
         </td>
@@ -806,21 +806,20 @@ To minimise the environmental impact of our game, we have implemented sustainabl
     <tr>
         <td>Biodiversity</td>
         <td>
-            a. Optimising energy efficiency in development can help reduce power consumption and carbon emissions.<br>
-            b. Lower demand for electricity can indirectly reduce pollution and deforestation, benefiting ecosystems and biodiversity.
+            a. Raises awareness about Earth’s diverse wildlife and encourages players to appreciate and protect nature.<br>
+            b. Lower demand for resources can indirectly reduce pollution and deforestation, benefiting ecosystems and biodiversity.
         </td>
     </tr>
     <tr>
         <td>Energy</td>
         <td>
-            a. Raises awareness about Earth’s diverse wildlife and encourages players to appreciate and protect nature.
+            a. Optimising energy efficiency in development can help reduce power consumption and carbon emissions.
         </td>
     </tr>
     <tr>
         <td>Logistics</td>
         <td>
-            a. Highlights the importance of wildlife conservation and sustainability.<br>
-            b. Reduces the need for excessive hardware manufacturing by optimising development practices.
+            a. Reduced need for excessive hardware manufacturing also reduces the need for physical transportation of components.
         </td>
     </tr>
     <tr>
