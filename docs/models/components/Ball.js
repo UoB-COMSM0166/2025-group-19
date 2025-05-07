@@ -11,6 +11,7 @@ class Ball {
     this.y = y;
     this.speedX = ballSpeedX;
     this.speedY = ballSpeedY;
+    this.initialSpeedY = ballSpeedY;
     this.borderSize = borderSize;
     this.gameWidth = gameWidth - this.borderSize;
     this.gameHeight = gameHeight;
@@ -34,7 +35,7 @@ class Ball {
       this.speedY += this.gravity;
     } else {
       if (Math.abs(this.speedY) < this.minSpeedY) {
-        this.speedY = this.y < this.gameHeight / 2 ? this.minSpeedY : -this.minSpeedY;
+        this.speedY = this.y < this.gameHeight / 2 ? this.initialSpeedY : -this.initialSpeedY;
       }
     }
     if (this.increaseSpeed && Math.abs(this.speedY) <= this.maxSppedY) {
