@@ -27,8 +27,8 @@ function preload() {
   pigImg = loadImage('assets/images/characters/Pig.webp');
   godImg = loadImage('assets/images/characters/God.webp');
   // Load sound effects
-  breakBlockSound = loadSound('assets/sounds/breakBlockSound.wav');
-  paddlePowerUpSound = loadSound('assets/sounds/paddlePowerUp.wav');
+  breakBlockSound = loadSound('assets/sounds/breakBlockSound.mp3');
+  paddlePowerUpSound = loadSound('assets/sounds/paddlePowerUp.mp3');
   // welcome-page
   roadImg = loadImage('assets/images/welcome-page/road.webp');
   cloudImg1 = loadImage('assets/images/welcome-page/cloud-1.webp');
@@ -74,7 +74,7 @@ function preload() {
   // Set the volume for each sound effect
   bgMusic.setVolume(0.01);
   breakBlockSound.setVolume(0.05);
-  paddlePowerUpSound.setVolume(0.05);
+  paddlePowerUpSound.setVolume(0.03);
 }
 
 function setup() {
