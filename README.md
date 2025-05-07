@@ -8,9 +8,9 @@
 </p>
 
 ## Links
-
 [PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/) <br>
-[Weekly Assignment 📚](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Readme.md)
+[Weekly Assignment 📚](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Readme.md) <br>
+[Click here to see our video 📹](https://youtu.be/lvsW0Xz3iis) <br>
 
 # Table of Contents
 - [Team Members](#team-members)
@@ -22,6 +22,7 @@
 - [Process](#process)
 - [Sustainability, ethics, and accessibility](#sustainability-ethics-and-accessibility)
 - [Conclusion](#conclusion)
+- [Contribution Statement](#contribution-statement)
 
 ---
 # Team Members
@@ -32,12 +33,12 @@
 
 | No.  | Name | Email | Role | 
 | :-: | :-: | :-: | :-: |
-| 01 | Hsin-Hsien Ho (Erik) | fp24955@bristol.ac.uk | `Developer` |
-| 02 | Mingqiao Fan (Daisy) | yi24612@bristol.ac.uk | `Developer` |
-| 03 | Shinchuan Chen (Lucas) | wj24296@bristol.ac.uk | `Developer` |
-| 04 | Yu-Jin Chen (Elle) | nj24628@bristol.ac.uk | `Developer` |
-| 05 | Lee Areta | wb24440@bristol.ac.uk | `Developer` |
-| 06 |Mikas Vong | tg24484@bristol.ac.uk | `Developer` |
+| 01 | Areta Lee | wb24440@bristol.ac.uk | `Developer` |
+| 02 | Hsin-Hsien Ho (Erik) | fp24955@bristol.ac.uk | `Developer` |
+| 03 | Mikas Vong | tg24484@bristol.ac.uk | `Developer` |
+| 04 | Mingqiao Fan (Daisy) | yi24612@bristol.ac.uk | `Developer` |
+| 05 | Shinchuan Chen (Lucas) | wj24296@bristol.ac.uk | `Developer` |
+| 06 | Yu-Jin Chen (Elle) | nj24628@bristol.ac.uk | `Developer` |
 
 </div>
 
@@ -64,76 +65,12 @@ To further put a spin on the typically non-narrative genre, our game is themed a
   <img src="./assets/animals.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test and learn about Chinese mythology along the way.
+With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your gaming skills to the test and learn about Chinese mythology along the way.
 
 ---
 
 # Requirements
 In the early stages of our project, each of the team members came up with an idea based on existing game archetypes. We took inspiration from personal interests whilst also considering how feasible it would be to develop our ideas from scratch. To facilitate creative brainstorming, we used Google Docs to record ideas and suggestions, enabling real-time sharing and collaboration.
-
-<table>
-    <tr>
-        <th>Game Type</th>
-        <th>Game Inspiration</th>
-        <th>Game Description</th>
-        <th>Possible Game Twists</th>
-    </tr>
-    <tr>
-        <td><strong>Block</strong> 🟣</td>
-        <td><a href="https://www.youtube.com/watch?v=aU1Hrpr2igM" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A classic ball-and-brick game where players break bricks by bouncing a ball off a paddle.
-        </td>
-        <td>
-            - Power-Ups: Special bricks drop power-ups like paddle enlargement or extra balls. <br>
-            - Multi-Ball Chaos: Introduce multiple balls with different behaviours.
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Bombie</strong> 💣</td>
-        <td><a href="https://www.youtube.com/watch?v=W5vcOb7laG0" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A bomb-based strategy game where players place bombs to destroy walls and eliminate opponents.
-        </td>
-        <td>
-            - Smart AI Opponents: Enemies can strategically place bombs and evade explosions. <br>
-            - Customisable Maps: Players can modify the layout and design of the battlefield. <br>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Temple Escape</strong> ⛩️</td>
-        <td><a href="https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A maze-based puzzle game where players move in straight lines until they hit a wall.
-        </td>
-        <td>
-            - Traps & Timed Puzzles: Moving obstacles force players to think ahead. <br>
-            - Power-ups & Outfits: Collectables provide unique perks. <br>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Ladder Master</strong> 🪜</td>
-        <td><a href="https://www.youtube.com/watch?v=OkTk5ky-GWc" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A challenging platformer where players must time movements carefully to cross obstacles.
-        </td>
-        <td>
-            - 2D River Crossing: Instead of climbing, make it about crossing a river with unstable platforms. <br>
-            - Character Color Change: Random color changes affect mechanics.
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Level Devil</strong> 😈</td>
-        <td><a href="https://www.youtube.com/watch?v=nn2EUssloa4" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A tricky platformer filled with deceptive mechanics and unexpected traps.
-        </td>
-        <td>
-            - Hidden Traps: Fake platforms and misleading paths test the player's observation skills. <br>
-            - Dynamic Triggers: Actions change the level unpredictably. <br>
-        </td>
-    </tr>
-</table>
 
 <p align="center">
   <b>Figure 3</b><br>
@@ -204,7 +141,7 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     <th>Requirement</th>
   </tr>
   <tr>
-    <td rowspan="2">Creating an intriguing and various game experience</td>
+    <td>Creating an intriguing and various game experience</td>
     <td>User</td>
     <td>
       As a user, I want certain bricks to drop power-ups, such as paddle expansion, to add variety to the game.
@@ -215,16 +152,7 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
   </tr>
   <tr>
-    <td>Competitive gamer</td>
-    <td>
-      As a competitive gamer, I want to beat the game with the highest score and break the world record.
-    </td>
-    <td>
-      Given the game has a scoring system, I can try to beat my previous records and climb the leaderboard.
-    </td>
-  </tr>
-  <tr>
-    <td rowspan="2">Try to learn from failure and frustrations</td>
+    <td>Try to learn from failure and frustrations</td>
     <td>Parents</td>
     <td>
       As parents, I want my children to train their focus and reaction speed.
@@ -236,63 +164,39 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
   </tr>
   <tr>
-    <td>Positive Reinforcer</td>
-    <td>
-      As a person who does better with positive encouragement, I want there to
-      be a reward system, so that I’m more motivated to keep playing and
-      complete harder levels.
-    </td>
-    <td>
-      Given there is a completion ladder, when a certain level is
-      completed/threshold is met, then rewards will be granted.
-    </td>
-  </tr>
-  <tr>
-    <td rowspan="2">Training Response Time</td>
+    <td>Training Response Time</td>
     <td>User</td>
     <td>
       As a user, I want to improve my response time so that in the future, when
       something happens, especially in dangerous situations, I can react quickly
       and increase my chances of survival.
     </td>
-    <td rowspan="2">
+    <td>
       Given that I want to train my response time, when the ball falls, I must
       catch it within a limited time in order to pass the stage.
     </td>
   </tr>
   <tr>
-    <td>Gamer</td>
-    <td>
-      As a gamer, I want to train my response time so that in the future, when I
-      participate in gaming competitions, I can react quickly to increase my
-      chances of winning.
-    </td>
-  </tr>
-
-  <tr>
     <td rowspan="2">Educational</td>
     <td>Parents</td>
     <td>
       As parents and teachers, I want my kids or students to learn Chinese
-      culture through this game, so that they can explore different culture and
-      immerse their experience.
+      culture through this game.
     </td>
     <td>
-      Given I want to teach kids the concept about Chinese zodiac, when kids
-      enter the main page of the game, then they can know the number of and the
-      animals included in the Chinese zodiac.
+      Given I want to teach kids about the Chinese zodiac, when kids
+      enter the main page, they can know the the animals included in the Chinese zodiac.
     </td>
   </tr>
   <tr>
     <td>User</td>
     <td>
       As a user, I want to know my Chinese zodiac, so that in the future, I can
-      know more about myself and go to fortune teller. When I go to Asian
-      countries, I have more conversation starters.
+      know more about myself and have more conversation starters.
     </td>
     <td>
       Given I want to know my Chinese zodiac, when I enter the selection page
-      and enter my birthday, I can learn about the Chinese zodiac that corresponds to my birthday.
+      and enter my birthday, I can discover the Chinese zodiac that corresponds to my birthday.
     </td>
   </tr>
 </table>
@@ -344,7 +248,7 @@ Our system architecture begins with the welcome menu. Here players can either st
 <p align="center">
   <b>Figure 9</b><br>
   <i>Sequence Diagram</i><br>
-  <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/sequenceDiagram_latest.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 Building on top of the sequence diagram, we developed and iterated on a simple class diagram based on our intial discussions. This provided an overall view of our system, along with indicating the general structure of our game and structural relationships between game objects.   
 <p align="center">
@@ -419,8 +323,6 @@ Since the beginning of the project, our discussions and revisions have consisten
 
 * **Art Design:** Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistency of our overall aesthetic, including the fonts and background.
 
-* **Difficulty Balance:** Players noticed that in Easy mode, they could familiarise themselves with the gameplay mechanics and gain a sense of achievement after clearing a stage; in Hard mode, they were able to challenge themselves and become immersed in the variety of tools that made the gameplay experience more enjoyable.
-
 * **Variety of tools:** The variety and design of the tools added fun and excitement to each level.
 
 ### What Players think it can be improved:
@@ -430,8 +332,6 @@ Since the beginning of the project, our discussions and revisions have consisten
 * **Paddle Visibility**: The lack of contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.
 
 * **Infinite Ball Indicator**: Players struggled to recognise when the infinite ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.
-
-* **Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. They suggested using distinct colours or shapes to improve clarity.
 
 * **Ball-Paddle Collision Mechanics**: One user recommended that the ball should reflect at different angles depending on where it hits the paddle. This would provide players with greater control and add more variety to the gameplay.
 
@@ -446,176 +346,38 @@ Since the beginning of the project, our discussions and revisions have consisten
 </p>
 
 ### Heuristic Evaluation: 
-<table align="center">
-  <tr>
-    <th align="center">Interface Issue</th>
-    <th align="center">Issues</th>
-    <th align="center">Heuristic(s)</th>
-    <th align="center">Frequency</th>
-    <th align="center">Impact</th>
-    <th align="center">Persistence</th>
-    <th align="center">Severity</th>
-  </tr>
-  <tr>
-    <td align="center">Stage Map</td>
-    <td align="center">Confused about how to enter in birthday and why it's necessary</td>
-    <td align="center">Visibility of system status, User control and freedom</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-  </tr>
-  <tr>
-    <td align="center">Game View</td>
-    <td align="center">Ceiling and sidewall are invisible</td>
-    <td align="center">User control and freedom</td>
-    <td align="center">2</td>
-    <td align="center">1</td>
-    <td align="center">1</td>
-    <td align="center">1.33</td>
-  </tr>
-  <tr>
-    <td align="center">Game View</td>
-    <td align="center">Background colour clashes with the paddle</td>
-    <td align="center">Visibility of system status</td>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-  </tr>
-  <tr>
-    <td align="center">Game View</td>
-    <td align="center">Wish that there were more visual cues to notify that a power up has been eaten</td>
-    <td align="center">Visibility of system status</td>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">1</td>
-    <td align="center">2</td>
-  </tr>
-  <tr>
-    <td align="center">Stage Selection</td>
-    <td align="center">Unclear that user can enter their birth year, may be better to add a cursor
-there</td>
-    <td align="center">Visibility of system status</td>
-    <td align="center">3</td>
-    <td align="center">2</td>
-    <td align="center">1</td>
-    <td align="center">2</td>
-  </tr>
-</table>
+
+[Click here to view Heruistic Evaluation results.](./assets/heuristicEvaluation.md)
+
 
 The result of Heuristic evaluation shows that the most severe problems are related to “Visibility of system status”, 
 
 1. Players didn’t understand the relationship between the Chinese Zodiac and their birthday, which caused confusion about why they were asked to enter their birthdate. Based on this feedback, we plan to add an **explanation page** to clarify the reason behind this feature.
-2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background. Additionally, some players reported that the icons for effects were hard to recognise due to the lack of contrast.
+2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background.
 
 ## Quantitative Evaluation
-For quantitative evaluation, both NASA TLX and System Usability Scale were employed to analyse how player felt about the two different difficulty settings.
+For quantitative evaluation, System Usability Scale was employed to analyse how player felt about the two different difficulty settings.
 
-### NASA TLX
-We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
-
-
-#### Easy Mode
-[Click here to view Easy Mode results.](./assets/easy-mode.md)
-
-#### Hard Mode
-[Click here to view Hard Mode results.](./assets/easy-mode.md)
-
-
-#### Comparison between Easy and Hard mode
-
-<p align="center">
-  <b>Figure 16</b><br>
-  <i>Graph depicting NASA TLX results</i><br>
-  <img src="./assets/compare_easy_hard.png" width="500" alt="Block" style="border: 5px solid black;">
-</p>
-
-<table align="center">
-  <tr>
-    <th align="center">Evaluation Aspect</th>
-    <th align="center">Easy Avg. Score</th>
-    <th align="center">Hard Avg. Score</th>
-    <th align="center">Observation</th>
-  </tr>
-  <tr>
-    <td align="center">Mental Demand</td>
-    <td align="center">33.21</td>
-    <td align="center">41.43</td>
-    <td align="center">↑ Increased cognitive effort</td>
-  </tr>
-  <tr>
-    <td align="center">Physical Demand</td>
-    <td align="center">38.21</td>
-    <td align="center">40.71</td>
-    <td align="center">↑ Increased physical/operational strain</td>
-  </tr>
-  <tr>
-    <td align="center">Temporal Demand</td>
-    <td align="center">47.86</td>
-    <td align="center">54.64</td>
-    <td align="center">↑ Increased time pressure</td>
-  </tr>
-  <tr>
-    <td align="center">Performance<br>(higher = worse)</td>
-    <td align="center">67.14</td>
-    <td align="center">64.29</td>
-    <td align="center">↓  Decreased perceived performance</td>
-  </tr>
-  <tr>
-    <td align="center">Effort</td>
-    <td align="center">43.57</td>
-    <td align="center">53.93</td>
-    <td align="center">↑ More effort required</td>
-  </tr>
-  <tr>
-    <td align="center">Frustration</td>
-    <td align="center">29.29</td>
-    <td align="center">39.64</td>
-    <td align="center">↑ Higher frustration level</td>
-  </tr>
-</table>
-
-Our analysis indicates that Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in terms of increasing challenge, but also highlights the need for balancing difficulty with player satisfaction.
-
-
-### System Usability Scale
-
-We conducted a System Usability Scale (SUS) evaluation across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
+We evaluated Zodiac Catch across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
 
 [Click here to view raw System Usability Scale results.](./assets/SUS-raw.md)
 
 [Click here to view converted System Usability Scale results.](./assets/SUS-converted.md)
 
 <p align="center">
-  <b>Figure 17</b><br>
+  <b>Figure 16</b><br>
   <i>Graph depicting old SUS results</i><br>
   <img src="./assets/sus-before.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
 The SUS evaluation shows that the game is generally perceived as usable and user-friendly, with particularly strong ratings for ease of use, learning speed, and system integration. The consistency of responses between Easy and Hard modes suggests that the core interface is well-designed and scales effectively with difficulty. Some improvements may be explored to further reduce perceived complexity or technical support needs in the harder levels, but overall usability remains strong.
 
-### Findings
-Based on the Wilcoxon Signed-Rank Test:
+### Final Improvement
 
--  Using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
-
--  The NASA-TLX score is statistically significant, indicating that there may be a notable difference in perceived workload between the Easy and Hard levels. From the user data, we observed that Temporal Demand and Physical Demand were generally higher when users played the Hard mode. High temporal demand implies users may feel time pressure or that tasks are too fast-paced. High physical demand suggests users had to put in more effort to interact with the game, possibly due to complex controls or rapid actions.
-  
--  The SUS score is not statistically significant, suggesting no meaningful difference in usability between the Easy and Hard levels. This indicates that users generally perceived the interface to be equally usable across difficulty modes. However, the average SUS score is 31.1, which is significantly below the standard benchmark of 68. This suggests that users struggled with the overall usability of the system, and improvements are clearly needed to enhance intuitiveness, reduce confusion, and increase user satisfaction.
-
--  Improvements based on NASA TLX: Simplify in-game processes, reduce sensory overload, and improve real-time feedback for power-ups and gameplay progress.
-   
--  Improvements based on SUS: Rework onboarding/tutorials, improve layout consistency, and streamline input methods to reduce confusion and operational strain.
-
-
-## Final Evaluation
-
-### Improvement
 *  **Lack of Instructions**: In the final version, we added comprehensive instructions at the beginning of the game and in the sidebar to ensure that users can easily refer back to the rules to play. These additions help guide players through essential gameplay mechanics from the very start.
 
 <p align="center">
-  <b>Figure 18</b><br>
+  <b>Figure 17</b><br>
   <i>Added instructions</i><br>
   <img src="./assets/evaluation_final_instructions.jpg" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -626,28 +388,9 @@ We redesigned the colour scheme of both the background and paddle. Players can n
 * **Zodiac Year Explanation**:
 To help users understand the purpose of entering their birthdate, we included a dedicated animation at the start of the game, which explains the connection between the Chinese zodiac and the player’s birthday in an intuitive and engaging way.
 <p align="center">
-  <b>Figure 19</b><br>
+  <b>Figure 18</b><br>
   <i>Explanation of zodiac story</i><br>
   <img src="./assets/evaluation_zodiac.png" width="600" alt="Block" style="border: 5px solid black;">
-</p>
-
-
-### New SUS
-
-[Click here to view new System Usability Scale results.](./assets/SUS-final.md)
-
-<p align="center">
-  <b>Figure 20</b><br>
-  <i>Graph depicting new SUS results</i><br>
-  <img src="./assets/evaluation_final_pic.png" width="500" alt="Block" style="border: 5px solid black;">
-</p>
-
-### Compare
-
-<p align="center">
-  <b>Figure 21</b><br>
-  <i>Comparison of results</i><br>
-  <img src="./assets/evaluation_compare.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
 ---
@@ -697,7 +440,7 @@ From planning to implementation, all team members actively participated in all s
 As shown in the chart below, our team delivered 96 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimising last-minute pressure.
 
 <p align="center">
-  <b>Figure 22</b><br>
+  <b>Figure 19</b><br>
   <i>Productive Period</i><br>
   <img src="./assets/reading-week-commit.png" width="700" alt="Block" style="border: 5px solid black;">
 </p>
@@ -709,7 +452,7 @@ Throughout the development process, we utilised ZenHub Kanban and Whimsical Wire
 ZenHub’s seamless GitHub integration allowed us to manage tasks without switching platforms. It also supported Epics for organizing related issues, making it ideal for tracking larger tasks. The real-time sync between ZenHub and GitHub ensured data consistency, enhancing team efficiency.
 
 <p align="center">
-  <b>Figure 23</b><br>
+  <b>Figure 20</b><br>
   <i>Zenhub integrated into Github</i><br>
   <img src="./assets/zenhub.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -720,7 +463,7 @@ ZenHub’s seamless GitHub integration allowed us to manage tasks without switch
 We use Whimsical to store and organise our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It allows for real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for planning and coordination.
 
 <p align="center">
-  <b>Figure 24</b><br>
+  <b>Figure 21</b><br>
   <i>Whimsical</i><br>
   <img src="./assets/whimsical.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -758,7 +501,7 @@ To minimise the environmental impact of our game, we have implemented sustainabl
         </td>
     </tr>
     <tr>
-        <td>Physical</td>
+        <td>Physical Health</td>
         <td>
             a. Enhances reflexes through interactive gameplay.
         </td>
@@ -806,21 +549,20 @@ To minimise the environmental impact of our game, we have implemented sustainabl
     <tr>
         <td>Biodiversity</td>
         <td>
-            a. Optimising energy efficiency in development can help reduce power consumption and carbon emissions.<br>
-            b. Lower demand for electricity can indirectly reduce pollution and deforestation, benefiting ecosystems and biodiversity.
+            a. Raises awareness about Earth’s diverse wildlife and encourages players to appreciate and protect nature.<br>
+            b. Lower demand for resources can indirectly reduce pollution and deforestation, benefiting ecosystems and biodiversity.
         </td>
     </tr>
     <tr>
         <td>Energy</td>
         <td>
-            a. Raises awareness about Earth’s diverse wildlife and encourages players to appreciate and protect nature.
+            a. Optimising energy efficiency in development can help reduce power consumption and carbon emissions.
         </td>
     </tr>
     <tr>
         <td>Logistics</td>
         <td>
-            a. Highlights the importance of wildlife conservation and sustainability.<br>
-            b. Reduces the need for excessive hardware manufacturing by optimising development practices.
+            a. Reduced need for excessive hardware manufacturing also reduces the need for physical transportation of components.
         </td>
     </tr>
     <tr>
@@ -862,29 +604,29 @@ To minimise the environmental impact of our game, we have implemented sustainabl
 
 ## Ethics
 ### 1. Potential Influence on Player behaviour
-The game provides an interactive platform for players to explore the principles of ball reflection in physics, offering educational value, particularly in physics learning. Additionally, the incorporation of the Chinese zodiac fosters cultural awareness and exchange by allowing players to input their birthday to discover their zodiac sign. The game promotes a positive and family-friendly environment, free from violence or inappropriate content. Its simple yet engaging design encourages meaningful interactions, making it suitable for all age groups.
+The game offers an interactive way to learn physics through ball reflection mechanics. It also promotes cultural awareness by letting players discover their Chinese zodiac via birthday input. With a simple, engaging, and non-violent design, it encourages positive interactions suitable for all ages.
 
 ### 2. Data Privacy Considerations
-The game does not pose any data privacy risks. Although players have the option to input their birthday to determine their zodiac sign, this information is neither stored nor tracked. The absence of a database ensures that no personal data is collected or retained, eliminating concerns regarding privacy breaches. Furthermore, as birthdays are not classified as highly sensitive information, this feature does not compromise player security.
+There are no privacy risks—birthday input is optional, used only to display the zodiac, and is neither stored nor tracked. No personal data is collected, as the game has no backend database, ensuring full user privacy.
 
 ### 3. Impact on Player Emotions
-The game is designed to provide a stress-free and enjoyable experience. To prevent frustration, it includes both easy and hard difficulty modes, with the easy mode specifically adjusted for beginners and children. There are no limitations on the number of attempts, allowing players to retry levels freely without pressure. Additionally, players have full control over level selection, with the ability to choose any zodiac sign as their starting point. The game avoids punishing mechanics that could lead to negative emotions. Instead, it incorporates hidden surprises within each level, enhancing player engagement and fostering a sense of accomplishment and joy. The flexible gameplay ensures that players remain motivated and can share positive experiences with friends and family.
+The game ensures a relaxing and enjoyable experience. Easy and hard modes cater to different skill levels, and players can retry levels without restrictions. Free level selection and hidden surprises promote a sense of joy, reduce frustration, and support player motivation and positive emotional engagement.
 
 ## Accessibility
-### 1. Input and Control Customisation
-The game is fully controlled using the keyboard, with clear on-screen instructions provided at appropriate moments. Additionally, players can customise key bindings through the settings menu, allowing them to tailor the controls to their preferred play style. Future updates may introduce additional input options, such as mouse and controller support, to enhance accessibility.
+### 1. Customisable Controls
+Keyboard-based with clear instructions and adjustable key bindings; future updates may add mouse/controller support.
 
-### 2. Compatibility with Low-End Hardware
-The game operates entirely within a web browser and does not require installation or specific operating system compatibility. As a lightweight application, it can run efficiently on devices with limited hardware capabilities, ensuring accessibility for a broader range of users.
+### 2. Low-End Hardware Friendly
+Browser-based and lightweight, runs smoothly without installation on most devices.
 
 ### 3. Multilingual Support
-At present, the game is only available in English. However, future iterations aim to incorporate additional language options to make the game accessible to a more diverse audience.
+Currently in English; more languages planned for future versions.
 
 ### 4. Responsive Design
-The game employs a responsive web design (RWD) approach, ensuring optimal performance and a consistent user experience across various screen sizes and device resolutions. Players can seamlessly interact with the game on different platforms without compromising functionality or usability.
+Adapts to all screen sizes for consistent performance across devices.
 
 ### 5. Audio Assistance
-The game features background music with adjustable volume settings accessible through the settings menu. Future updates will introduce additional auditory cues, such as collision sounds when the ball bounces, to improve both gameplay feedback and accessibility for players who rely on audio cues for enhanced interaction.
+Includes adjustable background music; upcoming features include sound effects for better feedback and accessibility.
 
 ---
 # Conclusion
@@ -900,4 +642,37 @@ Apart from obstacles pertaining to game mechanics and difficulty which were anti
 Though we have achieved most of what we envisioned for Zodiac Catch within this limited time frame, there is still much potential for growth and development looking forward. Given a longer development period or extended manpower, visual effects could be improved on and extra accessability options such as gesture-based control or colour blind mode could be added. Furthermore, we would like to implement an online leaderboard system. By ranking players based on cumulative scoring, it provides a concrete indicator of their performance while introducing a competitive aspect into our game.
 
 This project has provided us with an invaluable, hands-on opportunity to contribute towards a group software project. In the process, we have been able to improve our coding abilities, learn how to better collaborate with fellow engineers, and understand the skills necessary to craft effective solutions from scratch. All of these takeaways will certainly inform and be applied to larger scale projects in our future careers.
+
+---
+# Contribution Statement
+<table align="center">
+  <tr>
+    <th align="center">Contributor</th>
+    <th align="center">Contribution</th>
+  </tr>
+  <tr>
+    <td align="center">Areta Lee</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Hsin-Hsien Ho (Erik)</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Mikas Vong</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Mingqiao Fan (Daisy)	</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Shinchuan Chen (Lucas)</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Yu-Jin Chen (Elle)</td>
+    <td align="center">1</td>
+  </tr>
+</table>
 
