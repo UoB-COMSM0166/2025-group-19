@@ -43,7 +43,7 @@ class StageState {
       this.toolProbabilities = {
         ballGrow: 0.4,
         ballShrink: 0.7,
-        infiniteBall: 1.1,
+        infiniteBall: 1.2,
         paddleMax: 0.4,
         paddleGrow: 0.6,
         paddleShrink: 0.4,
