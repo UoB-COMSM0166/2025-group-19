@@ -8,9 +8,9 @@
 </p>
 
 ## Links
-
 [PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/) <br>
-[Weekly Assignment 📚](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Readme.md)
+[Weekly Assignment 📚](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Readme.md) <br>
+[Click here to see our video 📹](https://youtu.be/lvsW0Xz3iis) <br>
 
 # Table of Contents
 - [Team Members](#team-members)
@@ -322,8 +322,6 @@ Since the beginning of the project, our discussions and revisions have consisten
 
 * **Art Design:** Users appreciated the pixel art style of the game, particularly the zodiac animal designs and the consistency of our overall aesthetic, including the fonts and background.
 
-* **Difficulty Balance:** Players noticed that in Easy mode, they could familiarise themselves with the gameplay mechanics and gain a sense of achievement after clearing a stage; in Hard mode, they were able to challenge themselves and become immersed in the variety of tools that made the gameplay experience more enjoyable.
-
 * **Variety of tools:** The variety and design of the tools added fun and excitement to each level.
 
 ### What Players think it can be improved:
@@ -333,8 +331,6 @@ Since the beginning of the project, our discussions and revisions have consisten
 * **Paddle Visibility**: The lack of contrast between the paddle and the background made it difficult for players to locate the paddle, especially when first entering the game view. This caused confusion about what they could control.
 
 * **Infinite Ball Indicator**: Players struggled to recognise when the infinite ball feature was active. Since this mechanic is crucial for progressing through stages, users suggested making its activation more visually apparent.
-
-* **Power-Ups**: The power-ups dropping from bricks were too small for users to distinguish between different types. They suggested using distinct colours or shapes to improve clarity.
 
 * **Ball-Paddle Collision Mechanics**: One user recommended that the ball should reflect at different angles depending on where it hits the paddle. This would provide players with greater control and add more variety to the gameplay.
 
@@ -349,140 +345,17 @@ Since the beginning of the project, our discussions and revisions have consisten
 </p>
 
 ### Heuristic Evaluation: 
-<table align="center">
-  <tr>
-    <th align="center">Interface Issue</th>
-    <th align="center">Issues</th>
-    <th align="center">Heuristic(s)</th>
-    <th align="center">Frequency</th>
-    <th align="center">Impact</th>
-    <th align="center">Persistence</th>
-    <th align="center">Severity</th>
-  </tr>
-  <tr>
-    <td align="center">Stage Map</td>
-    <td align="center">Confused about how to enter in birthday and why it's necessary</td>
-    <td align="center">Visibility of system status, User control and freedom</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-    <td align="center">4</td>
-  </tr>
-  <tr>
-    <td align="center">Game View</td>
-    <td align="center">Ceiling and sidewall are invisible</td>
-    <td align="center">User control and freedom</td>
-    <td align="center">2</td>
-    <td align="center">1</td>
-    <td align="center">1</td>
-    <td align="center">1.33</td>
-  </tr>
-  <tr>
-    <td align="center">Game View</td>
-    <td align="center">Background colour clashes with the paddle</td>
-    <td align="center">Visibility of system status</td>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">4</td>
-    <td align="center">3</td>
-  </tr>
-  <tr>
-    <td align="center">Game View</td>
-    <td align="center">Wish that there were more visual cues to notify that a power up has been eaten</td>
-    <td align="center">Visibility of system status</td>
-    <td align="center">4</td>
-    <td align="center">1</td>
-    <td align="center">1</td>
-    <td align="center">2</td>
-  </tr>
-  <tr>
-    <td align="center">Stage Selection</td>
-    <td align="center">Unclear that user can enter their birth year, may be better to add a cursor
-there</td>
-    <td align="center">Visibility of system status</td>
-    <td align="center">3</td>
-    <td align="center">2</td>
-    <td align="center">1</td>
-    <td align="center">2</td>
-  </tr>
-</table>
+
+[Click here to view Heruistic Evaluation results.](./assets/heuristicEvaluation.md)
+
 
 The result of Heuristic evaluation shows that the most severe problems are related to “Visibility of system status”, 
 
 1. Players didn’t understand the relationship between the Chinese Zodiac and their birthday, which caused confusion about why they were asked to enter their birthdate. Based on this feedback, we plan to add an **explanation page** to clarify the reason behind this feature.
-2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background. Additionally, some players reported that the icons for effects were hard to recognise due to the lack of contrast.
+2. The background was described as overly flashy and visually distracting, making it difficult for players to distinguish between the paddle they were controlling and the background.
 
 ## Quantitative Evaluation
-For quantitative evaluation, both NASA TLX and System Usability Scale were employed to analyse how player felt about the two different difficulty settings.
-
-### NASA TLX
-We used the NASA Task Load Index (NASA-TLX) to evaluate the cognitive and physical workload imposed by both Easy and Hard game modes. The TLX assesses six dimensions: Mental Demand, Physical Demand, Temporal Demand, Performance, Effort, and Frustration.
-
-
-#### Easy Mode
-[Click here to view Easy Mode results.](./assets/easy-mode.md)
-
-#### Hard Mode
-[Click here to view Hard Mode results.](./assets/easy-mode.md)
-
-
-#### Comparison between Easy and Hard mode
-
-<p align="center">
-  <b>Figure 16</b><br>
-  <i>Graph depicting NASA TLX results</i><br>
-  <img src="./assets/compare_easy_hard.png" width="500" alt="Block" style="border: 5px solid black;">
-</p>
-
-<table align="center">
-  <tr>
-    <th align="center">Evaluation Aspect</th>
-    <th align="center">Easy Avg. Score</th>
-    <th align="center">Hard Avg. Score</th>
-    <th align="center">Observation</th>
-  </tr>
-  <tr>
-    <td align="center">Mental Demand</td>
-    <td align="center">33.21</td>
-    <td align="center">41.43</td>
-    <td align="center">↑ Increased cognitive effort</td>
-  </tr>
-  <tr>
-    <td align="center">Physical Demand</td>
-    <td align="center">38.21</td>
-    <td align="center">40.71</td>
-    <td align="center">↑ Increased physical/operational strain</td>
-  </tr>
-  <tr>
-    <td align="center">Temporal Demand</td>
-    <td align="center">47.86</td>
-    <td align="center">54.64</td>
-    <td align="center">↑ Increased time pressure</td>
-  </tr>
-  <tr>
-    <td align="center">Performance<br>(higher = worse)</td>
-    <td align="center">67.14</td>
-    <td align="center">64.29</td>
-    <td align="center">↓  Decreased perceived performance</td>
-  </tr>
-  <tr>
-    <td align="center">Effort</td>
-    <td align="center">43.57</td>
-    <td align="center">53.93</td>
-    <td align="center">↑ More effort required</td>
-  </tr>
-  <tr>
-    <td align="center">Frustration</td>
-    <td align="center">29.29</td>
-    <td align="center">39.64</td>
-    <td align="center">↑ Higher frustration level</td>
-  </tr>
-</table>
-
-Our analysis indicates that Hard mode imposes a significantly greater workload than the Easy mode, particularly in terms of Mental Demand, Temporal Demand, and Frustration. While self-reported performance scores remained consistent across modes, players reported higher exertion and emotional tension when playing in Hard mode. These findings support the effectiveness of our difficulty design in terms of increasing challenge, but also highlights the need for balancing difficulty with player satisfaction.
-
-
-### System Usability Scale
+For quantitative evaluation, System Usability Scale was employed to analyse how player felt about the two different difficulty settings.
 
 We conducted a System Usability Scale (SUS) evaluation across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
 
@@ -498,23 +371,8 @@ We conducted a System Usability Scale (SUS) evaluation across both game modes to
 
 The SUS evaluation shows that the game is generally perceived as usable and user-friendly, with particularly strong ratings for ease of use, learning speed, and system integration. The consistency of responses between Easy and Hard modes suggests that the core interface is well-designed and scales effectively with difficulty. Some improvements may be explored to further reduce perceived complexity or technical support needs in the harder levels, but overall usability remains strong.
 
-### Findings
-Based on the Wilcoxon Signed-Rank Test:
+### Final Improvement
 
--  Using the Wilcoxon Signed Rank Test, we obtained a score of 10 for the System Usability Survey (SUS) and a score of 17 for NASA TLX from surveys collected from 14 users. The alpha value is set to 0.05.
-
--  The NASA-TLX score is statistically significant, indicating that there may be a notable difference in perceived workload between the Easy and Hard levels. From the user data, we observed that Temporal Demand and Physical Demand were generally higher when users played the Hard mode. High temporal demand implies users may feel time pressure or that tasks are too fast-paced. High physical demand suggests users had to put in more effort to interact with the game, possibly due to complex controls or rapid actions.
-  
--  The SUS score is not statistically significant, suggesting no meaningful difference in usability between the Easy and Hard levels. This indicates that users generally perceived the interface to be equally usable across difficulty modes. However, the average SUS score is 31.1, which is significantly below the standard benchmark of 68. This suggests that users struggled with the overall usability of the system, and improvements are clearly needed to enhance intuitiveness, reduce confusion, and increase user satisfaction.
-
--  Improvements based on NASA TLX: Simplify in-game processes, reduce sensory overload, and improve real-time feedback for power-ups and gameplay progress.
-   
--  Improvements based on SUS: Rework onboarding/tutorials, improve layout consistency, and streamline input methods to reduce confusion and operational strain.
-
-
-## Final Evaluation
-
-### Improvement
 *  **Lack of Instructions**: In the final version, we added comprehensive instructions at the beginning of the game and in the sidebar to ensure that users can easily refer back to the rules to play. These additions help guide players through essential gameplay mechanics from the very start.
 
 <p align="center">
@@ -532,25 +390,6 @@ To help users understand the purpose of entering their birthdate, we included a 
   <b>Figure 19</b><br>
   <i>Explanation of zodiac story</i><br>
   <img src="./assets/evaluation_zodiac.png" width="600" alt="Block" style="border: 5px solid black;">
-</p>
-
-
-### New SUS
-
-[Click here to view new System Usability Scale results.](./assets/SUS-final.md)
-
-<p align="center">
-  <b>Figure 20</b><br>
-  <i>Graph depicting new SUS results</i><br>
-  <img src="./assets/evaluation_final_pic.png" width="500" alt="Block" style="border: 5px solid black;">
-</p>
-
-### Compare
-
-<p align="center">
-  <b>Figure 21</b><br>
-  <i>Comparison of results</i><br>
-  <img src="./assets/evaluation_compare.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
 
 ---
