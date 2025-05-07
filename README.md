@@ -332,7 +332,7 @@ To ensure a well-structured and maintainable codebase, we decide to follow the M
 The core flow begins when the player selects their zodiac animal and difficulty level. The game includes 12 stages, each representing a zodiac animal. In each stage, player controls a paddle to hit the ball, break bricks and score points. Hitting specific bricks triggers effects. Different effects are applied based on the selected difficulty mode.  
 Based on above game flow, we created sequence diagram, which indicates the order of game flow and make us improve game flow to be smoother.  
 <p align="center">
-  <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/sequenceDiagram_latest.png" width="1000" alt="Block" style="border: 5px solid black;">
   <b>Figure </b><br>
   <i>Sequence Diagram</i><br>
 </p>
