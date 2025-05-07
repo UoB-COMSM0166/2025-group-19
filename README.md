@@ -65,76 +65,12 @@ To further put a spin on the typically non-narrative genre, our game is themed a
   <img src="./assets/animals.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test and learn about Chinese mythology along the way.
+With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your gaming skills to the test and learn about Chinese mythology along the way.
 
 ---
 
 # Requirements
 In the early stages of our project, each of the team members came up with an idea based on existing game archetypes. We took inspiration from personal interests whilst also considering how feasible it would be to develop our ideas from scratch. To facilitate creative brainstorming, we used Google Docs to record ideas and suggestions, enabling real-time sharing and collaboration.
-
-<table>
-    <tr>
-        <th>Game Type</th>
-        <th>Game Inspiration</th>
-        <th>Game Description</th>
-        <th>Possible Game Twists</th>
-    </tr>
-    <tr>
-        <td><strong>Block</strong> 🟣</td>
-        <td><a href="https://www.youtube.com/watch?v=aU1Hrpr2igM" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A classic ball-and-brick game where players break bricks by bouncing a ball off a paddle.
-        </td>
-        <td>
-            - Power-Ups: Special bricks drop power-ups like paddle enlargement or extra balls. <br>
-            - Multi-Ball Chaos: Introduce multiple balls with different behaviours.
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Bombie</strong> 💣</td>
-        <td><a href="https://www.youtube.com/watch?v=W5vcOb7laG0" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A bomb-based strategy game where players place bombs to destroy walls and eliminate opponents.
-        </td>
-        <td>
-            - Smart AI Opponents: Enemies can strategically place bombs and evade explosions. <br>
-            - Customisable Maps: Players can modify the layout and design of the battlefield. <br>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Temple Escape</strong> ⛩️</td>
-        <td><a href="https://www.youtube.com/watch?v=eCpVc_ELSBk&list=PLEufPunsvT1cysv42S52Y6u59wxtlPb6j&index=1" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A maze-based puzzle game where players move in straight lines until they hit a wall.
-        </td>
-        <td>
-            - Traps & Timed Puzzles: Moving obstacles force players to think ahead. <br>
-            - Power-ups & Outfits: Collectables provide unique perks. <br>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Ladder Master</strong> 🪜</td>
-        <td><a href="https://www.youtube.com/watch?v=OkTk5ky-GWc" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A challenging platformer where players must time movements carefully to cross obstacles.
-        </td>
-        <td>
-            - 2D River Crossing: Instead of climbing, make it about crossing a river with unstable platforms. <br>
-            - Character Color Change: Random color changes affect mechanics.
-        </td>
-    </tr>
-    <tr>
-        <td><strong>Level Devil</strong> 😈</td>
-        <td><a href="https://www.youtube.com/watch?v=nn2EUssloa4" target="_blank">Watch Gameplay</a></td>
-        <td>
-            A tricky platformer filled with deceptive mechanics and unexpected traps.
-        </td>
-        <td>
-            - Hidden Traps: Fake platforms and misleading paths test the player's observation skills. <br>
-            - Dynamic Triggers: Actions change the level unpredictably. <br>
-        </td>
-    </tr>
-</table>
 
 <p align="center">
   <b>Figure 3</b><br>
@@ -205,7 +141,7 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     <th>Requirement</th>
   </tr>
   <tr>
-    <td rowspan="2">Creating an intriguing and various game experience</td>
+    <td>Creating an intriguing and various game experience</td>
     <td>User</td>
     <td>
       As a user, I want certain bricks to drop power-ups, such as paddle expansion, to add variety to the game.
@@ -216,16 +152,7 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
   </tr>
   <tr>
-    <td>Competitive gamer</td>
-    <td>
-      As a competitive gamer, I want to beat the game with the highest score and break the world record.
-    </td>
-    <td>
-      Given the game has a scoring system, I can try to beat my previous records and climb the leaderboard.
-    </td>
-  </tr>
-  <tr>
-    <td rowspan="2">Try to learn from failure and frustrations</td>
+    <td>Try to learn from failure and frustrations</td>
     <td>Parents</td>
     <td>
       As parents, I want my children to train their focus and reaction speed.
@@ -237,63 +164,39 @@ As Zodiac Catch targets a broad range of players, converting user stories into u
     </td>
   </tr>
   <tr>
-    <td>Positive Reinforcer</td>
-    <td>
-      As a person who does better with positive encouragement, I want there to
-      be a reward system, so that I’m more motivated to keep playing and
-      complete harder levels.
-    </td>
-    <td>
-      Given there is a completion ladder, when a certain level is
-      completed/threshold is met, then rewards will be granted.
-    </td>
-  </tr>
-  <tr>
-    <td rowspan="2">Training Response Time</td>
+    <td>Training Response Time</td>
     <td>User</td>
     <td>
       As a user, I want to improve my response time so that in the future, when
       something happens, especially in dangerous situations, I can react quickly
       and increase my chances of survival.
     </td>
-    <td rowspan="2">
+    <td>
       Given that I want to train my response time, when the ball falls, I must
       catch it within a limited time in order to pass the stage.
     </td>
   </tr>
   <tr>
-    <td>Gamer</td>
-    <td>
-      As a gamer, I want to train my response time so that in the future, when I
-      participate in gaming competitions, I can react quickly to increase my
-      chances of winning.
-    </td>
-  </tr>
-
-  <tr>
     <td rowspan="2">Educational</td>
     <td>Parents</td>
     <td>
       As parents and teachers, I want my kids or students to learn Chinese
-      culture through this game, so that they can explore different culture and
-      immerse their experience.
+      culture through this game.
     </td>
     <td>
-      Given I want to teach kids the concept about Chinese zodiac, when kids
-      enter the main page of the game, then they can know the number of and the
-      animals included in the Chinese zodiac.
+      Given I want to teach kids about the Chinese zodiac, when kids
+      enter the main page, they can know the the animals included in the Chinese zodiac.
     </td>
   </tr>
   <tr>
     <td>User</td>
     <td>
       As a user, I want to know my Chinese zodiac, so that in the future, I can
-      know more about myself and go to fortune teller. When I go to Asian
-      countries, I have more conversation starters.
+      know more about myself and have more conversation starters.
     </td>
     <td>
       Given I want to know my Chinese zodiac, when I enter the selection page
-      and enter my birthday, I can learn about the Chinese zodiac that corresponds to my birthday.
+      and enter my birthday, I can discover the Chinese zodiac that corresponds to my birthday.
     </td>
   </tr>
 </table>
@@ -455,7 +358,7 @@ The result of Heuristic evaluation shows that the most severe problems are relat
 ## Quantitative Evaluation
 For quantitative evaluation, System Usability Scale was employed to analyse how player felt about the two different difficulty settings.
 
-We conducted a System Usability Scale (SUS) evaluation across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
+We evaluated Zodiac Catch across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
 
 [Click here to view raw System Usability Scale results.](./assets/SUS-raw.md)
 
@@ -598,7 +501,7 @@ To minimise the environmental impact of our game, we have implemented sustainabl
         </td>
     </tr>
     <tr>
-        <td>Physical</td>
+        <td>Physical Health</td>
         <td>
             a. Enhances reflexes through interactive gameplay.
         </td>
@@ -646,21 +549,20 @@ To minimise the environmental impact of our game, we have implemented sustainabl
     <tr>
         <td>Biodiversity</td>
         <td>
-            a. Optimising energy efficiency in development can help reduce power consumption and carbon emissions.<br>
-            b. Lower demand for electricity can indirectly reduce pollution and deforestation, benefiting ecosystems and biodiversity.
+            a. Raises awareness about Earth’s diverse wildlife and encourages players to appreciate and protect nature.<br>
+            b. Lower demand for resources can indirectly reduce pollution and deforestation, benefiting ecosystems and biodiversity.
         </td>
     </tr>
     <tr>
         <td>Energy</td>
         <td>
-            a. Raises awareness about Earth’s diverse wildlife and encourages players to appreciate and protect nature.
+            a. Optimising energy efficiency in development can help reduce power consumption and carbon emissions.
         </td>
     </tr>
     <tr>
         <td>Logistics</td>
         <td>
-            a. Highlights the importance of wildlife conservation and sustainability.<br>
-            b. Reduces the need for excessive hardware manufacturing by optimising development practices.
+            a. Reduced need for excessive hardware manufacturing also reduces the need for physical transportation of components.
         </td>
     </tr>
     <tr>
