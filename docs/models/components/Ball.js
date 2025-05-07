@@ -28,6 +28,11 @@ class Ball {
   update() {
     if (this.gravityOn) {
       this.speedY += this.gravity;
+    } else {
+      const minVerticalSpeed = 5;
+      if (Math.abs(this.speedY) < minVerticalSpeed) {
+        this.speedY = this.y < this.gameHeight / 2 ? minVerticalSpeed : -minVerticalSpeed;
+      }
     }
     if (this.increaseSpeed && Math.abs(this.speedY) <= 15) {
       this.speedY *= this.incSpeedVal;
