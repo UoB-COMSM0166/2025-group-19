@@ -3,7 +3,9 @@ class Ball {
   static normalSizeBall = 15;
   static bigSizeBall = 25;
 
-  constructor(x, y, gameWidth, gameHeight, borderSize, radius = Ball.normalSizeBall, ballSpeedX = random(-3, 3), ballSpeedY = -10, gravityOn = false) {
+  constructor(x, y, gameWidth, gameHeight, borderSize,
+              ballSpeedX, ballSpeedY, minSpeedY, maxSpeedY,
+              radius = Ball.normalSizeBall, gravityOn = false) {
     this.radius = radius;
     this.x = x;
     this.y = y;
@@ -18,6 +20,8 @@ class Ball {
     this.incSpeedVal = 1.5;
     this.incSpeedTime = 1200;
     this.isBeingAbsorbed = false;
+    this.minSpeedY = minSpeedY,
+    this.maxSppedY = maxSpeedY
   }
 
   display(canvas = window) {
@@ -29,12 +33,11 @@ class Ball {
     if (this.gravityOn) {
       this.speedY += this.gravity;
     } else {
-      const minVerticalSpeed = 5;
-      if (Math.abs(this.speedY) < minVerticalSpeed) {
-        this.speedY = this.y < this.gameHeight / 2 ? minVerticalSpeed : -minVerticalSpeed;
+      if (Math.abs(this.speedY) < this.minSpeedY) {
+        this.speedY = this.y < this.gameHeight / 2 ? this.minSpeedY : -this.minSpeedY;
       }
     }
-    if (this.increaseSpeed && Math.abs(this.speedY) <= 15) {
+    if (this.increaseSpeed && Math.abs(this.speedY) <= this.maxSppedY) {
       this.speedY *= this.incSpeedVal;
       setTimeout(() => (this.speedY = Math.sign(this.speedY) * 5), this.incSpeedTime);
     }

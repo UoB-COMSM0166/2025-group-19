@@ -19,7 +19,9 @@ class StageController {
       this.difficultyMode = state.mode;
       // ping tool array
       this.ballRadius = 10; // shoting ball size
-      this.speedMultiplier = 1;
+      this.initialSpeedY = 7;
+      this.minSpeedY = 5;
+      this.maxSpeedY = 13;
       this.gravityOn = false;
       this.paused = false;
       this.state.balls = []; // Will not generate ball in the beginning.
@@ -91,6 +93,10 @@ class StageController {
   }
 
   shootBall() {
+    if (this.difficultyMode === 'hard'){
+        this.initialSpeedY = 10
+        this.maxSpeedY = 20
+    }
     if (this.paused) return;
     if (this.ballRemain > 0){
       const ball = new Ball(
@@ -99,9 +105,11 @@ class StageController {
         this.state.gameWidth,
         this.state.gameHeight,
         this.state.borderSize,
+        random(-3,3),
+        this.initialSpeedY,
+        this.minSpeedY,
+        this.maxSpeedY,
         this.ballRadius,
-        random(-3,3)*this.speedMultiplier,
-        -10*this.speedMultiplier,
         this.gravityOn
       );
       this.state.balls.push(ball);
