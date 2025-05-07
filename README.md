@@ -64,7 +64,7 @@ To further put a spin on the typically non-narrative genre, our game is themed a
   <img src="./assets/animals.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
 
-With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your video gaming skills to the test and learn about Chinese mythology along the way.
+With fast-paced action and engaging mechanics, Zodiac Catch is a great way to put your gaming skills to the test and learn about Chinese mythology along the way.
 
 ---
 
@@ -357,7 +357,7 @@ The result of Heuristic evaluation shows that the most severe problems are relat
 ## Quantitative Evaluation
 For quantitative evaluation, System Usability Scale was employed to analyse how player felt about the two different difficulty settings.
 
-We conducted a System Usability Scale (SUS) evaluation across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
+We evaluated Zodiac Catch across both game modes to assess the overall usability and player perception. The scores were averaged per participant across both modes, and the results were rounded to the nearest integer for clarity. Each participant rated the system based on 10 standardised SUS questions, leading to an aggregate score out of 100.
 
 [Click here to view raw System Usability Scale results.](./assets/SUS-raw.md)
 
