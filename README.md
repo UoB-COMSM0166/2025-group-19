@@ -900,4 +900,35 @@ Apart from obstacles pertaining to game mechanics and difficulty which were anti
 Though we have achieved most of what we envisioned for Zodiac Catch within this limited time frame, there is still much potential for growth and development looking forward. Given a longer development period or extended manpower, visual effects could be improved on and extra accessability options such as gesture-based control or colour blind mode could be added. Furthermore, we would like to implement an online leaderboard system. By ranking players based on cumulative scoring, it provides a concrete indicator of their performance while introducing a competitive aspect into our game.
 
 This project has provided us with an invaluable, hands-on opportunity to contribute towards a group software project. In the process, we have been able to improve our coding abilities, learn how to better collaborate with fellow engineers, and understand the skills necessary to craft effective solutions from scratch. All of these takeaways will certainly inform and be applied to larger scale projects in our future careers.
+## Team Contributions for Game Project
+<table align="center">
+  <tr>
+    <th align="center">Contributor</th>
+    <th align="center">Contribution</th>
+  </tr>
+  <tr>
+    <td align="center">Areta Lee</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Hsin-Hsien Ho (Erik)</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Mikas Vong</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Mingqiao Fan (Daisy)	</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Shinchuan Chen (Lucas)</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Yu-Jin Chen (Elle)</td>
+    <td align="center">1</td>
+  </tr>
+</table>
 
