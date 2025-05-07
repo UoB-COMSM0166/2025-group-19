@@ -93,6 +93,8 @@ class Ball {
       return distB < distA ? brick : closest;
     });
 
+    breakBlockSound.play();
+
     this.handleSpecialBricks(closestBrick, bricks, stageController);
     this.destroyBricks([closestBrick], sidebar);
     this.generateTools([closestBrick], tools, stageController);

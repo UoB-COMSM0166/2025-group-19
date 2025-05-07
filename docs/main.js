@@ -1,6 +1,8 @@
 let mainController;
 let skyBackground;
 let bgMusic;
+let breakBlockSound;
+let paddlePowerUpSound;
 const globalKeyBindings = {
   moveLeft: 'ArrowLeft',
   moveRight: 'ArrowRight',
@@ -24,6 +26,9 @@ function preload() {
   dogImg = loadImage('assets/images/characters/Dog.webp');
   pigImg = loadImage('assets/images/characters/Pig.webp');
   godImg = loadImage('assets/images/characters/God.webp');
+  // Load sound effects
+  breakBlockSound = loadSound('assets/sounds/breakBlockSound.mp3');
+  paddlePowerUpSound = loadSound('assets/sounds/paddlePowerUp.mp3');
   // welcome-page
   roadImg = loadImage('assets/images/welcome-page/road.webp');
   cloudImg1 = loadImage('assets/images/welcome-page/cloud-1.webp');
@@ -66,6 +71,10 @@ function preload() {
   roosterSilhouette = loadImage('assets/images/silhouette/rooster.webp');
   dogSilhouette = loadImage('assets/images/silhouette/dog.webp');
   pigSilhouette = loadImage('assets/images/silhouette/pig.webp');
+  // Set the volume for each sound effect
+  bgMusic.setVolume(0.01);
+  breakBlockSound.setVolume(0.05);
+  paddlePowerUpSound.setVolume(0.03);
 }
 
 function setup() {
@@ -74,7 +83,6 @@ function setup() {
   pageController = new PageController();
   userStartAudio().then(() => {
     bgMusic.loop();
-    bgMusic.setVolume(0.5);
   });
 }
 
