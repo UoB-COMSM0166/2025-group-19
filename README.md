@@ -22,6 +22,7 @@
 - [Process](#process)
 - [Sustainability, ethics, and accessibility](#sustainability-ethics-and-accessibility)
 - [Conclusion](#conclusion)
+- [Contribution Statement](#contribution-statement)
 
 ---
 # Team Members
@@ -32,12 +33,12 @@
 
 | No.  | Name | Email | Role | 
 | :-: | :-: | :-: | :-: |
-| 01 | Hsin-Hsien Ho (Erik) | fp24955@bristol.ac.uk | `Developer` |
-| 02 | Mingqiao Fan (Daisy) | yi24612@bristol.ac.uk | `Developer` |
-| 03 | Shinchuan Chen (Lucas) | wj24296@bristol.ac.uk | `Developer` |
-| 04 | Yu-Jin Chen (Elle) | nj24628@bristol.ac.uk | `Developer` |
-| 05 | Lee Areta | wb24440@bristol.ac.uk | `Developer` |
-| 06 |Mikas Vong | tg24484@bristol.ac.uk | `Developer` |
+| 01 | Areta Lee | wb24440@bristol.ac.uk | `Developer` |
+| 02 | Hsin-Hsien Ho (Erik) | fp24955@bristol.ac.uk | `Developer` |
+| 03 | Mikas Vong | tg24484@bristol.ac.uk | `Developer` |
+| 04 | Mingqiao Fan (Daisy) | yi24612@bristol.ac.uk | `Developer` |
+| 05 | Shinchuan Chen (Lucas) | wj24296@bristol.ac.uk | `Developer` |
+| 06 | Yu-Jin Chen (Elle) | nj24628@bristol.ac.uk | `Developer` |
 
 </div>
 
@@ -739,4 +740,35 @@ Apart from obstacles pertaining to game mechanics and difficulty which were anti
 Though we have achieved most of what we envisioned for Zodiac Catch within this limited time frame, there is still much potential for growth and development looking forward. Given a longer development period or extended manpower, visual effects could be improved on and extra accessability options such as gesture-based control or colour blind mode could be added. Furthermore, we would like to implement an online leaderboard system. By ranking players based on cumulative scoring, it provides a concrete indicator of their performance while introducing a competitive aspect into our game.
 
 This project has provided us with an invaluable, hands-on opportunity to contribute towards a group software project. In the process, we have been able to improve our coding abilities, learn how to better collaborate with fellow engineers, and understand the skills necessary to craft effective solutions from scratch. All of these takeaways will certainly inform and be applied to larger scale projects in our future careers.
+# Contribution Statement
+<table align="center">
+  <tr>
+    <th align="center">Contributor</th>
+    <th align="center">Contribution</th>
+  </tr>
+  <tr>
+    <td align="center">Areta Lee</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Hsin-Hsien Ho (Erik)</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Mikas Vong</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Mingqiao Fan (Daisy)	</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Shinchuan Chen (Lucas)</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center">Yu-Jin Chen (Elle)</td>
+    <td align="center">1</td>
+  </tr>
+</table>
 
