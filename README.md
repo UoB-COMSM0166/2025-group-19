@@ -365,7 +365,7 @@ We evaluated Zodiac Catch across both game modes to assess the overall usability
 [Click here to view converted System Usability Scale results.](./assets/SUS-converted.md)
 
 <p align="center">
-  <b>Figure 17</b><br>
+  <b>Figure 16</b><br>
   <i>Graph depicting old SUS results</i><br>
   <img src="./assets/sus-before.png" width="500" alt="Block" style="border: 5px solid black;">
 </p>
@@ -377,7 +377,7 @@ The SUS evaluation shows that the game is generally perceived as usable and user
 *  **Lack of Instructions**: In the final version, we added comprehensive instructions at the beginning of the game and in the sidebar to ensure that users can easily refer back to the rules to play. These additions help guide players through essential gameplay mechanics from the very start.
 
 <p align="center">
-  <b>Figure 18</b><br>
+  <b>Figure 17</b><br>
   <i>Added instructions</i><br>
   <img src="./assets/evaluation_final_instructions.jpg" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -388,7 +388,7 @@ We redesigned the colour scheme of both the background and paddle. Players can n
 * **Zodiac Year Explanation**:
 To help users understand the purpose of entering their birthdate, we included a dedicated animation at the start of the game, which explains the connection between the Chinese zodiac and the player’s birthday in an intuitive and engaging way.
 <p align="center">
-  <b>Figure 19</b><br>
+  <b>Figure 18</b><br>
   <i>Explanation of zodiac story</i><br>
   <img src="./assets/evaluation_zodiac.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -440,7 +440,7 @@ From planning to implementation, all team members actively participated in all s
 As shown in the chart below, our team delivered 96 commits in the week of February 23—our most productive period. This effort demonstrated our commitment to working efficiently as a team, ensuring high development quality while minimising last-minute pressure.
 
 <p align="center">
-  <b>Figure 22</b><br>
+  <b>Figure 19</b><br>
   <i>Productive Period</i><br>
   <img src="./assets/reading-week-commit.png" width="700" alt="Block" style="border: 5px solid black;">
 </p>
@@ -452,7 +452,7 @@ Throughout the development process, we utilised ZenHub Kanban and Whimsical Wire
 ZenHub’s seamless GitHub integration allowed us to manage tasks without switching platforms. It also supported Epics for organizing related issues, making it ideal for tracking larger tasks. The real-time sync between ZenHub and GitHub ensured data consistency, enhancing team efficiency.
 
 <p align="center">
-  <b>Figure 23</b><br>
+  <b>Figure 20</b><br>
   <i>Zenhub integrated into Github</i><br>
   <img src="./assets/zenhub.png" width="600" alt="Block" style="border: 5px solid black;">
 </p>
@@ -463,7 +463,7 @@ ZenHub’s seamless GitHub integration allowed us to manage tasks without switch
 We use Whimsical to store and organise our `brainstorming drafts`, `level wireframes`, `mind maps`, and other project ideas. It allows for real-time collaboration, allowing our team to work together seamlessly, co-edit documents, and share feedback instantly. Additionally, the sticky note feature enables quick discussions and idea exchanges, fostering smooth communication within the team. Its intuitive interface and versatile tools make it an essential part of our workflow for planning and coordination.
 
 <p align="center">
-  <b>Figure 24</b><br>
+  <b>Figure 21</b><br>
   <i>Whimsical</i><br>
   <img src="./assets/whimsical.gif" width="600" alt="Block" style="border: 5px solid black;">
 </p>
