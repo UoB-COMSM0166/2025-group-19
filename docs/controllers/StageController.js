@@ -116,7 +116,7 @@ class StageController {
       this.ballRemain--;
 
       //Make sure when shoot ball, update sidebar simutanously.
-      this.sidebar.update(this.sidebar.score, this.ballRemain, this.state.timer);
+      this.sidebar.update(this.sidebar.score, this.ballRemain, this.timer);
     }
 
   }
