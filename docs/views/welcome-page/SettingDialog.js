@@ -17,22 +17,16 @@ class SettingDialog {
         this.leftOptions =  ["Sound\nEffects", "Keyboards"];
         this.leftOptions_info = ["Team\n Members", "Game\n Intro"];
         this.bgMusic = bgMusic;
-        this.slider_bgMusic = createSlider(0, 100, 50);
-        this.slider_soundEffect = createSlider(0, 255, 128);
+        this.breakBlockSound = breakBlockSound;
+        this.paddlePowerUpSound = paddlePowerUpSound;
+        this.slider_bgMusic = createSlider(0, 100, 30);
+        this.slider_soundEffect = createSlider(0, 100, 50);
         this.slider_bgMusic.hide();
         this.slider_soundEffect.hide();
         this.selectedSliderIndex = 0;
         this.selectedBtnIndex = -1;
         this.isInRightContent = false;
         this.warntext = "P, C, M, Enter, Tab, Shift \n can't be control keys \n No duplicate keys allowed";
-        /*
-        this.keyBindings = {
-            shootBall: 'SPACE',
-            moveLeft: 'ArrowLeft',
-            moveRight: 'ArrowRight',
-            togglePaddle: 'ArrowUp'
-        };
-        */
         if (keyboardController) {
             const controllerBindings = keyboardController.getKeyBindings();
             this.keyBindings = {
@@ -184,16 +178,24 @@ class SettingDialog {
                 let newValue = constrain(this.slider_bgMusic.value() - 10, 0, 100);
                 this.slider_bgMusic.value(newValue);
                 this.bgMusic.setVolume(newValue / 100);
-            } else {
-                this.slider_soundEffect.value(this.slider_soundEffect.value() - 10);
+            } else if (this.selectedSliderIndex === 1){
+                let newValue = constrain(this.slider_soundEffect.value() - 10, 0, 100);
+                this.slider_soundEffect.value(newValue);
+                let volume = newValue / 100;
+                this.breakBlockSound.setVolume(volume);
+                this.paddlePowerUpSound.setVolume(volume);
             }
         } else if (key === 'ArrowRight') {
             if (this.selectedSliderIndex === 0) {
                 let newValue = constrain(this.slider_bgMusic.value() + 10, 0, 100);
                 this.slider_bgMusic.value(newValue);
                 this.bgMusic.setVolume(newValue / 100);
-            } else {
-                this.slider_soundEffect.value(this.slider_soundEffect.value() + 10);
+            } else if (this.selectedSliderIndex === 1){
+                let newValue = constrain(this.slider_soundEffect.value() + 10, 0, 100);
+                this.slider_soundEffect.value(newValue);
+                let volume = newValue / 100;
+                this.breakBlockSound.setVolume(volume);
+                this.paddlePowerUpSound.setVolume(volume);
             }
         } else if (key === 'Escape') {
             this.selectedSliderIndex = 0;

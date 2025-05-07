@@ -44,6 +44,7 @@ class EffectController {
 
       if (effect) {
         effect.toolType = tool.type;
+        paddlePowerUpSound.play();
         this.activateEffect(effect);
       }
     }

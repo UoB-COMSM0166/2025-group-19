@@ -30,7 +30,7 @@ class StageState {
 
   setDifficultyMode() {
     if (this.mode === 'easy') {
-      this.toolDropRate = 0.5;
+      this.toolDropRate = 0.3;
       this.toolProbabilities = {
         ballGrow: 0.6,
         ballShrink: 0.4,
@@ -39,19 +39,19 @@ class StageState {
         paddleGrow: 1,
       };
     } else if (this.mode === 'hard') {
-      this.toolDropRate = 0.4;
+      this.toolDropRate = 0.3;
       this.toolProbabilities = {
-        ballGrow: 0.6,
-        ballShrink: 0.4,
-        infiniteBall: 0.5,
-        paddleMax: 0.6,
-        paddleGrow: 1,
-        ballShrink: 0.6,
+        ballGrow: 0.4,
+        ballShrink: 0.7,
+        infiniteBall: 1.2,
+        paddleMax: 0.4,
+        paddleGrow: 0.6,
+        paddleShrink: 0.4,
         ballSpeedUp: 0.4,
         gravityUp: 0.3,
-        timeIncrease: 0.6,
+        timeIncrease: 0.4,
         timeDecrease: 0.6,
-        paddleReverse: 1.5,
+        paddleReverse: 0.9,
       };
     } else {
       throw new Error('Unknown mode');
