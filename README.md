@@ -7,10 +7,9 @@
     <img src="./assets/zodiac-catch.gif" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 
-## Links
-
 [PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/) <br>
 [Weekly Assignment 📚](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Readme.md)
+[Click here to see our video](https://youtu.be/lvsW0Xz3iis)
 
 # Table of Contents
 - [Team Members](#team-members)
