@@ -344,7 +344,7 @@ Our system architecture begins with the welcome menu. Here players can either st
 <p align="center">
   <b>Figure 9</b><br>
   <i>Sequence Diagram</i><br>
-  <img src="./assets/sequenceDiagram.png" width="1000" alt="Block" style="border: 5px solid black;">
+  <img src="./assets/sequenceDiagram_latest.png" width="1000" alt="Block" style="border: 5px solid black;">
 </p>
 Building on top of the sequence diagram, we developed and iterated on a simple class diagram based on our intial discussions. This provided an overall view of our system, along with indicating the general structure of our game and structural relationships between game objects.   
 <p align="center">
