@@ -1,12 +1,10 @@
-# 2025-group-19
-2025 COMSM0166 group 19
-
 # Our Game - ZODIAC CATCH
 
 <p align="center">
     <a href="https://youtu.be/lvsW0Xz3iis" target="_blank">
         <img src="./assets/zodiac-catch.gif" width="1000" alt="Block" style="border: 5px solid black;">
     </a>
+    <b>Please click on the GIF above to watch a video demonstration of our game.</b>
 </p>
 
 ## Links
