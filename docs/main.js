@@ -1,5 +1,4 @@
 let mainController;
-let skyBackground;
 let bgMusic;
 let breakBlockSound;
 let paddlePowerUpSound;
@@ -11,7 +10,6 @@ const globalKeyBindings = {
 };
 
 function preload() {
-  skyBackground = loadImage('assets/images/skyBackground.webp');
   mouseImg = loadImage('assets/images/characters/Rat.webp');
   cowImg = loadImage('assets/images/characters/Ox.webp');
   tigerImg = loadImage('assets/images/characters/Tiger.webp');

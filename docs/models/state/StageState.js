@@ -1,10 +1,9 @@
 class StageState {
-  constructor(stageName, bgImage, mode) {
+  constructor(stageName, mode) {
     this.gameWidth = 800;
     this.gameHeight = 600;
     this.borderSize = 10;
     this.stageName = stageName;
-    this.bgImage = bgImage;
     this.paddle = new Paddle(this.gameWidth, this.gameHeight, this.borderSize);
     this.balls = [new Ball(this.paddle.x + this.paddle.width / 2, this.paddle.y - 10, this.gameWidth, this.gameHeight)];
     this.tools = [];

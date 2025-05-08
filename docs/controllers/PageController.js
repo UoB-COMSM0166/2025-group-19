@@ -6,8 +6,7 @@ class PageController {
   }
 
   switchToStage() {
-      const bgImage = skyBackground;
-      const state = new StageState(this.stageName, bgImage, this.mode);
+      const state = new StageState(this.stageName, this.mode);
       const sidebarCanvas = createGraphics(200, 600);
       const gameCanvas = createGraphics(800, 600);
       const infoCanvas = createGraphics(500, 500);
