@@ -1,16 +1,14 @@
-# 2025-group-19
-2025 COMSM0166 group 19
-
 # Our Game - ZODIAC CATCH
 
 <p align="center">
     <a href="https://youtu.be/lvsW0Xz3iis" target="_blank">
         <img src="./assets/zodiac-catch.gif" width="1000" alt="Block" style="border: 5px solid black;">
     </a>
+    <b>Please click on the GIF above to watch a video demonstration of our game.</b>
 </p>
 
 ## Links
-[PLAY HERE ▶️](https://uob-comsm0166.github.io/2025-group-19/) <br>
+[<b>PLAY HERE</b> ▶️](https://uob-comsm0166.github.io/2025-group-19/) <br>
 [Weekly Assignment 📚](https://github.com/UoB-COMSM0166/2025-group-19/blob/main/assignments/Readme.md) <br>
 [Click here to see our video 📹](https://youtu.be/lvsW0Xz3iis) <br>
 
