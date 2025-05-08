@@ -22,8 +22,7 @@ class Ball {
     this.incSpeedTime = 1200;
     this.isBeingAbsorbed = false;
     this.minSpeedY = minSpeedY,
-    this.maxSpeedY = maxSpeedY,
-    this.increaseSpeed = false
+    this.maxSpeedY = maxSpeedY
   }
 
   display(canvas = window) {
