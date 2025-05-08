@@ -22,7 +22,7 @@ class Ball {
     this.incSpeedTime = 1200;
     this.isBeingAbsorbed = false;
     this.minSpeedY = minSpeedY,
-    this.maxSppedY = maxSpeedY
+    this.maxSpeedY = maxSpeedY
   }
 
   display(canvas = window) {
@@ -38,9 +38,14 @@ class Ball {
         this.speedY = this.y < this.gameHeight / 2 ? this.initialSpeedY : -this.initialSpeedY;
       }
     }
-    if (this.increaseSpeed && Math.abs(this.speedY) <= this.maxSppedY) {
+
+    if (this.increaseSpeed && Math.abs(this.speedY) <= this.maxSpeedY && !this.isIncreasingSpeed) {
       this.speedY *= this.incSpeedVal;
-      setTimeout(() => (this.speedY = Math.sign(this.speedY) * 5), this.incSpeedTime);
+      this.isIncreasingSpeed = true;
+      setTimeout(() => {
+        this.speedY = Math.sign(this.speedY) * this.initialSpeedY;
+        this.isIncreasingSpeed = false;
+      }, this.incSpeedTime);
     }
 
     const minSpeed = 1;
@@ -78,7 +83,9 @@ class Ball {
       this.applyPaddleBounce(paddle);
       if (stageController.state.paddle.toggleOn) {
         this.increaseSpeed = true;
-        setTimeout(() => (this.increaseSpeed = false), 300);
+        setTimeout(() => {
+          this.increaseSpeed = false;
+        }, 300)
       }
     }
   }
