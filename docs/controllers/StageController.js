@@ -262,7 +262,7 @@ class StageController {
     text(this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight) + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 2.3/ 12);
     text(" " + this.formatKey(this.keyBindings.togglePaddle) + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 2.9/ 12);
     image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 1.9/ 12, 80,80);
-    text(" " + this.formatKey(this.keyBindings.shootBall) + " to\nshoot ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 2.6/ 12);
+    text(" " + this.formatKey(this.keyBindings.shootBall) + " to\nshoot ball", this.menuX + this.menuWidth *4.6/ 8, this.menuY + this.menuHeight * 2.6/ 12);
     image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 2.1/ 12, 60,60);
     text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 2.6/ 12);
 
@@ -329,7 +329,7 @@ class StageController {
     text(this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight) + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
     text(" " + this.formatKey(this.keyBindings.togglePaddle) + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
     image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
-    text(" " + this.formatKey(this.keyBindings.shootBall) + " to\nshoot ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
+    text(" " + this.formatKey(this.keyBindings.shootBall) + " to\nshoot ball", this.menuX + this.menuWidth *4.6/ 8, this.menuY + this.menuHeight * 3.5/ 12);
     image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
     text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
 
@@ -385,7 +385,7 @@ class StageController {
     text(this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight) + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
     text(" " + this.formatKey(this.keyBindings.togglePaddle) + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
     image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
-    text(" " + this.formatKey(this.keyBindings.shootBall) + " to shoot ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
+    text(" " + this.formatKey(this.keyBindings.shootBall) + " to\nshoot ball", this.menuX + this.menuWidth *4.6/ 8, this.menuY + this.menuHeight * 3.5/ 12);
     image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
     text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
 
@@ -452,7 +452,7 @@ class StageController {
     text(this.formatKey(this.keyBindings.moveLeft) + " " + this.formatKey(this.keyBindings.moveRight) + " to move paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.2/ 12);
     text(" " + this.formatKey(this.keyBindings.togglePaddle) + " to toggle paddle", this.menuX + this.menuWidth *2/ 8, this.menuY + this.menuHeight * 3.8/ 12);
     image(this.spaceBarImg, this.menuX + this.menuWidth* 3.4/ 8, this.menuY + this.menuHeight * 2.8/ 12, 80,80);
-    text(" " + this.formatKey(this.keyBindings.shootBall) + " to shoot ball", this.menuX + this.menuWidth *4.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
+    text(" " + this.formatKey(this.keyBindings.shootBall) + " to\nshoot ball", this.menuX + this.menuWidth *4.6/ 8, this.menuY + this.menuHeight * 3.5/ 12);
     image(this.pKeyImg, this.menuX + this.menuWidth*5.7 / 8, this.menuY + this.menuHeight * 3/ 12, 60,60);
     text(" Pause game", this.menuX + this.menuWidth *6.8/ 8, this.menuY + this.menuHeight * 3.5/ 12);
 
