@@ -22,7 +22,8 @@ class Ball {
     this.incSpeedTime = 1200;
     this.isBeingAbsorbed = false;
     this.minSpeedY = minSpeedY,
-    this.maxSppedY = maxSpeedY
+    this.maxSpeedY = maxSpeedY,
+    this.dragFactor = 0.98;
   }
 
   display(canvas = window) {
@@ -38,9 +39,17 @@ class Ball {
         this.speedY = this.y < this.gameHeight / 2 ? this.initialSpeedY : -this.initialSpeedY;
       }
     }
-    if (this.increaseSpeed && Math.abs(this.speedY) <= this.maxSppedY) {
+    if (this.increaseSpeed && Math.abs(this.speedY) <= this.maxSpeedY) {
       this.speedY *= this.incSpeedVal;
-      setTimeout(() => (this.speedY = Math.sign(this.speedY) * 5), this.incSpeedTime);
+    }
+
+    if (Math.abs(this.speedY) > this.maxSpeedY) {
+        console.log("-");
+        this.speedY *= this.dragFactor;
+    }
+    if (Math.abs(this.speedY) < this.minSpeedY) {
+      console.log("+");
+      this.speedY = this.minSpeedY * Math.sign(this.speedY);
     }
 
     const minSpeed = 1;
