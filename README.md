@@ -4,7 +4,9 @@
 # Our Game - ZODIAC CATCH
 
 <p align="center">
-    <img src="./assets/zodiac-catch.gif" width="1000" alt="Block" style="border: 5px solid black;">
+    <a href="https://youtu.be/lvsW0Xz3iis" target="_blank">
+        <img src="./assets/zodiac-catch.gif" width="1000" alt="Block" style="border: 5px solid black;">
+    </a>
 </p>
 
 ## Links
