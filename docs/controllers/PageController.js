@@ -9,7 +9,6 @@ class PageController {
       const state = new StageState(this.stageName, this.mode);
       const sidebarCanvas = createGraphics(200, 600);
       const gameCanvas = createGraphics(800, 600);
-      const infoCanvas = createGraphics(500, 500);
       const gameview = new GameView(state, gameCanvas);
       const sidebar = new SidebarView(this.stageName, sidebarCanvas);
 
