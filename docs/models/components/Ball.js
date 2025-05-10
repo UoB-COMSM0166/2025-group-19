@@ -70,7 +70,7 @@ class Ball {
 
   checkCollision(paddle, bricks, tools, sidebar, stageController) {
     this.handlePaddleCollision(paddle, stageController);
-    this.handleBrickCollision(bricks, tools, sidebar, stageController);
+    this.handleBrickCollision(bricks, tools, sidebar, stageController,);
   }
 
   handlePaddleCollision(paddle, stageController) {
@@ -108,8 +108,7 @@ class Ball {
       let distB = Math.hypot(this.x - brick.x, this.y - brick.y);
       return distB < distA ? brick : closest;
     });
-
-    breakBlockSound.play();
+    stageController.soundController.playBreakBlockSound();
 
     this.handleSpecialBricks(closestBrick, bricks, stageController);
     this.destroyBricks([closestBrick], sidebar);

@@ -1,5 +1,4 @@
 let mainController;
-let skyBackground;
 let bgMusic;
 let breakBlockSound;
 let paddlePowerUpSound;
@@ -11,7 +10,6 @@ const globalKeyBindings = {
 };
 
 function preload() {
-  skyBackground = loadImage('assets/images/skyBackground.webp');
   mouseImg = loadImage('assets/images/characters/Rat.webp');
   cowImg = loadImage('assets/images/characters/Ox.webp');
   tigerImg = loadImage('assets/images/characters/Tiger.webp');
@@ -26,9 +24,9 @@ function preload() {
   pigImg = loadImage('assets/images/characters/Pig.webp');
   godImg = loadImage('assets/images/characters/God.webp');
   // Load sound effects
-  bgMusic = loadSound('assets/sounds/bgMusic.mp3'); 
-  breakBlockSound = loadSound('assets/sounds/breakBlockSound.mp3');
-  paddlePowerUpSound = loadSound('assets/sounds/paddlePowerUp.mp3');
+  bgMusic = loadSound('assets/sounds/bgMusic.mp3');
+  breakBlockSound = loadSound('assets/sounds/breakBlockSound.aac');
+  paddlePowerUpSound = loadSound('assets/sounds/paddlePowerUp.aac');
   // welcome-page
   roadImg = loadImage('assets/images/welcome-page/road.webp');
   cloudImg1 = loadImage('assets/images/welcome-page/cloud-1.webp');
@@ -73,7 +71,7 @@ function preload() {
   pigSilhouette = loadImage('assets/images/silhouette/pig.webp');
   // Set the volume for each sound effect
   bgMusic.setVolume(0.03);
-  breakBlockSound.setVolume(0.05);
+  breakBlockSound.setVolume(0.5);
   paddlePowerUpSound.setVolume(0.05);
 }
 
