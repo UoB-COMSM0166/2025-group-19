@@ -1,7 +1,10 @@
 class EffectController {
+    static paddlePowerUpSoundCooldown = 500
+
     constructor(stageController) {
       this.stageController = stageController;
       this.activeEffects = [];
+      this.lastPaddlePowerUpSoundPlayTime = 0
     }
 
     applyToolEffect(tool) {
@@ -44,7 +47,13 @@ class EffectController {
 
       if (effect) {
         effect.toolType = tool.type;
-        paddlePowerUpSound.play();
+        let currentTime = millis();
+        if (currentTime - this.lastPaddlePowerUpSoundPlayTime > EffectController.paddlePowerUpSoundCooldown) {
+          if (paddlePowerUpSound && typeof paddlePowerUpSound.play === 'function') {
+              paddlePowerUpSound.play();
+              this.lastPaddlePowerUpSoundPlayTime = currentTime;
+          }
+        }
         this.activateEffect(effect);
       }
     }
