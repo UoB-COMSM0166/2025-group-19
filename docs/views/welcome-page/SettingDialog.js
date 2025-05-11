@@ -17,7 +17,6 @@ class SettingDialog {
         this.leftOptions =  ["Sound\nEffects", "Keyboards"];
         this.leftOptions_info = ["Team\n Members", "Game\n Intro"];
         this.bgMusic = bgMusic;
-        this.breakBlockSound = breakBlockSound;
         this.paddlePowerUpSound = paddlePowerUpSound;
         this.slider_bgMusic = createSlider(0, 100, 30);
         this.slider_soundEffect = createSlider(0, 100, 50);
@@ -181,9 +180,7 @@ class SettingDialog {
             } else if (this.selectedSliderIndex === 1){
                 let newValue = constrain(this.slider_soundEffect.value() - 10, 0, 100);
                 this.slider_soundEffect.value(newValue);
-                let volume = newValue / 100;
-                this.breakBlockSound.setVolume(volume);
-                this.paddlePowerUpSound.setVolume(volume);
+                this.paddlePowerUpSound.setVolume(newValue / 100);
             }
         } else if (key === 'ArrowRight') {
             if (this.selectedSliderIndex === 0) {
@@ -193,9 +190,7 @@ class SettingDialog {
             } else if (this.selectedSliderIndex === 1){
                 let newValue = constrain(this.slider_soundEffect.value() + 10, 0, 100);
                 this.slider_soundEffect.value(newValue);
-                let volume = newValue / 100;
-                this.breakBlockSound.setVolume(volume);
-                this.paddlePowerUpSound.setVolume(volume);
+                this.paddlePowerUpSound.setVolume(newValue / 100);
             }
         } else if (key === 'Escape') {
             this.selectedSliderIndex = 0;
