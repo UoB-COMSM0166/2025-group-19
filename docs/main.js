@@ -68,8 +68,8 @@ function preload() {
   dogSilhouette = loadImage('assets/images/silhouette/dog.webp');
   pigSilhouette = loadImage('assets/images/silhouette/pig.webp');
   // Set the volume for each sound effect
-  bgMusic.setVolume(0.03);
-  paddlePowerUpSound.setVolume(0.05);
+  bgMusic.setVolume(0.5);
+  paddlePowerUpSound.setVolume(0.5);
 }
 
 function setup() {
