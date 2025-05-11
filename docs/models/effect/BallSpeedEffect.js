@@ -8,7 +8,7 @@ class BallSpeedEffect extends Effect {
   applyEffect(stageController) {
     const balls = stageController.state.balls;
     if (this.speedType === 'speedUp'){
-      this.multiplier = 1.5;
+      this.multiplier = 2;
     }
     else {
       throw new Error("applyEffect() should be 'speedUp'");
