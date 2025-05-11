@@ -11,7 +11,6 @@ class StageController {
       this.sidebar = sidebar;
       this.pageController = pageController;
       this.effectController = new EffectController(this);
-      this.soundController = new SoundController();
       this.keyboardController = new KeyboardController(this.state.paddle, () => this.shootBall());
       this.showingDialog = false;
       this.dialogText = '';

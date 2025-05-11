@@ -108,7 +108,7 @@ class Ball {
       let distB = Math.hypot(this.x - brick.x, this.y - brick.y);
       return distB < distA ? brick : closest;
     });
-    stageController.soundController.playBreakBlockSound();
+
 
     this.handleSpecialBricks(closestBrick, bricks, stageController);
     this.destroyBricks([closestBrick], sidebar);
