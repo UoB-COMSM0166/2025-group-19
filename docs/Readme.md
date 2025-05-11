@@ -17,6 +17,7 @@ code/
 │   ├── KeyboardController.js        # Manages keyboard input for paddle movement
 │   ├── PageController.js            # Controls page navigation
 │   ├── StageController.js           # Manages overall stage logic
+│   ├── SoundController.js           # Manages sound logic
 │   └── stage/                       # Specific controllers for each stage
 │       ├── Stage01Controller.js
 │       ├── Stage02Controller.js
