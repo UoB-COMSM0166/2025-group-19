@@ -18,7 +18,7 @@ class SettingDialog {
         this.leftOptions_info = ["Team\n Members", "Game\n Intro"];
         this.bgMusic = bgMusic;
         this.paddlePowerUpSound = paddlePowerUpSound;
-        this.slider_bgMusic = createSlider(0, 100, 30);
+        this.slider_bgMusic = createSlider(0, 100, 50);
         this.slider_soundEffect = createSlider(0, 100, 50);
         this.slider_bgMusic.hide();
         this.slider_soundEffect.hide();
@@ -181,6 +181,7 @@ class SettingDialog {
                 let newValue = constrain(this.slider_soundEffect.value() - 10, 0, 100);
                 this.slider_soundEffect.value(newValue);
                 this.paddlePowerUpSound.setVolume(newValue / 100);
+                this.paddlePowerUpSound.play();
             }
         } else if (key === 'ArrowRight') {
             if (this.selectedSliderIndex === 0) {
@@ -191,6 +192,7 @@ class SettingDialog {
                 let newValue = constrain(this.slider_soundEffect.value() + 10, 0, 100);
                 this.slider_soundEffect.value(newValue);
                 this.paddlePowerUpSound.setVolume(newValue / 100);
+                this.paddlePowerUpSound.play();
             }
         } else if (key === 'Escape') {
             this.selectedSliderIndex = 0;
