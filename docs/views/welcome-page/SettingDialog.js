@@ -181,6 +181,7 @@ class SettingDialog {
                 let newValue = constrain(this.slider_soundEffect.value() - 10, 0, 100);
                 this.slider_soundEffect.value(newValue);
                 this.paddlePowerUpSound.setVolume(newValue / 100);
+                this.paddlePowerUpSound.play();
             }
         } else if (key === 'ArrowRight') {
             if (this.selectedSliderIndex === 0) {
@@ -191,6 +192,7 @@ class SettingDialog {
                 let newValue = constrain(this.slider_soundEffect.value() + 10, 0, 100);
                 this.slider_soundEffect.value(newValue);
                 this.paddlePowerUpSound.setVolume(newValue / 100);
+                this.paddlePowerUpSound.play();
             }
         } else if (key === 'Escape') {
             this.selectedSliderIndex = 0;
